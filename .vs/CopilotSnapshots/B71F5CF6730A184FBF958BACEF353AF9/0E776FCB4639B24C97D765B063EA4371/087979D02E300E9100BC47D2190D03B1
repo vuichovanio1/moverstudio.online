@@ -1,0 +1,33 @@
+﻿# Requires ImageMagick (magick.exe on Windows)
+# Place your source image as matrix.jpg in this folder before running.
+
+$src = "matrix.jpg"
+if (-not (Test-Path $src)) {
+  Write-Error "Source image $src not found in current directory."
+  exit 1
+}
+
+# Create output directory structure
+$out = "..\images"
+if (-not (Test-Path $out)) { New-Item -ItemType Directory -Path $out | Out-Null }
+
+# OG image: 1200x630 webp
+magick convert $src -resize 1200x630^ -gravity center -extent 1200x630 -strip -quality 85 "$out\matrix-og.webp"
+
+# Favicons: 32x32 and 16x16
+magick convert $src -resize 256x256^ -gravity center -extent 256x256 -strip -quality 90 "$out\favicon-32.png"
+magick convert $src -resize 32x32! -strip -quality 90 "$out\favicon-16.png"
+
+# Apple touch icon 180x180
+magick convert $src -resize 180x180^ -gravity center -extent 180x180 -strip -quality 90 "$out\apple-touch-icon.png"
+
+# Generate ICO (contains 16,32,48 sizes)
+magick convert $src -resize 48x48 -strip "$out\favicon-48.png"
+magick convert $out\favicon-16.png $out\favicon-32.png $out\favicon-48.png -colors 256 "$out\favicon.ico"
+
+# Optional SVG: create simple SVG that embeds PNG as data URI fallback
+$pngData = [Convert]::ToBase64String([IO.File]::ReadAllBytes("$out\favicon-32.png"))
+$svg = "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><image href='data:image/png;base64,$pngData' width='32' height='32'/></svg>"
+Set-Content -Path "$out\matrix.svg" -Value $svg -Encoding UTF8
+
+Write-Output "Generated files in $out"

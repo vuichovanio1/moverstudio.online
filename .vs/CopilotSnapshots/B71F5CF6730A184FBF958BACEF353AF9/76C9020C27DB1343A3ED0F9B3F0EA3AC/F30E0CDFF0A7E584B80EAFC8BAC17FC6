@@ -1,0 +1,536 @@
+﻿<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MOVER Studio – Escape the WordPress Matrix</title>
+  <meta name="description" content="Излез от матрицата на бавните WordPress сайтове. Избери реалността: 100 PageSpeed, нулева поддръжка, максимална конверсия.">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://moverstudio.online/">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="MOVER Studio – Escape the WordPress Matrix">
+  <meta property="og:description" content="Излез от матрицата на бавните WordPress сайтове. Избери реалността: 100 PageSpeed, нулева поддръжка, максимална конверсия.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://moverstudio.online/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css">
+
+  <style>
+    :root {
+      --matrix-bg: #000000;
+      --matrix-dark: #0a0a0a;
+      --matrix-green: #00ff41;
+      --matrix-green-bright: #39ff14;
+      --matrix-green-dim: #00aa2b;
+      --text-primary: #f0fff0;
+      --text-bright: #ffffff;
+      --text-muted: #8fbc8f;
+      --red-pill: #ff0040;
+      --blue-pill: #0080ff;
+      --radius: 4px;
+      --max: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: var(--matrix-bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(transparent 90%, rgba(0, 255, 65, 0.1) 100%),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 255, 65, 0.02) 3px,
+          transparent 4px
+        );
+      pointer-events: none;
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      color: var(--matrix-green-bright);
+      text-decoration: none;
+      transition: all 0.2s;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+      border-bottom: 1px solid var(--matrix-green-bright);
+      text-shadow: 0 0 10px var(--matrix-green);
+    }
+
+    header {
+      padding: 2rem 1rem;
+      max-width: var(--max);
+      margin: auto;
+      border-bottom: 2px solid var(--matrix-green-dim);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Courier New', monospace;
+    }
+
+    nav strong {
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      color: var(--matrix-green-bright);
+      text-shadow: 0 0 15px var(--matrix-green);
+    }
+
+    nav span {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    main {
+      max-width: var(--max);
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--matrix-green-bright);
+      text-shadow: 0 0 25px rgba(0, 255, 65, 0.6);
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      margin-bottom: 1.5rem;
+      color: var(--matrix-green-bright);
+      border-left: 5px solid var(--matrix-green);
+      padding-left: 1rem;
+    }
+
+    h3 {
+      color: var(--matrix-green-bright);
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      max-width: 70ch;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      text-align: left;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin: 1.5rem 0;
+      font-style: italic;
+      border-left: 4px solid var(--matrix-green-dim);
+      padding-left: 1.2rem;
+    }
+
+    .pill-choice {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 1.1rem 2.2rem;
+      font-weight: 700;
+      border-radius: var(--radius);
+      border: 3px solid;
+      font-family: 'Courier New', monospace;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 1rem;
+    }
+
+    .red-pill {
+      background: var(--red-pill);
+      color: var(--text-bright);
+      border-color: var(--red-pill);
+      box-shadow: 0 0 25px rgba(255, 0, 64, 0.5);
+    }
+
+    .red-pill:hover {
+      box-shadow: 0 0 40px rgba(255, 0, 64, 0.9);
+      transform: scale(1.06);
+      border-bottom: none;
+    }
+
+    .blue-pill {
+      background: transparent;
+      color: var(--text-bright);
+      border-color: var(--blue-pill);
+    }
+
+    .blue-pill:hover {
+      background: rgba(0, 128, 255, 0.15);
+      box-shadow: 0 0 20px rgba(0, 128, 255, 0.4);
+      border-bottom: none;
+    }
+
+    .manifesto {
+      background: var(--matrix-dark);
+      padding: 2.5rem;
+      border-left: 5px solid var(--matrix-green);
+      margin: 2rem 0;
+      border-radius: var(--radius);
+      border: 2px solid var(--matrix-green-dim);
+    }
+
+    .manifesto p {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+
+    .manifesto strong {
+      color: var(--matrix-green-bright);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--matrix-dark);
+      padding: 2rem;
+      border: 2px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      border-color: var(--matrix-green);
+      box-shadow: 0 0 25px rgba(0, 255, 65, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: var(--matrix-dark);
+      border: 2px solid var(--matrix-green-dim);
+    }
+
+    th, td {
+      padding: 1.2rem;
+      text-align: left;
+      border: 1px solid var(--matrix-green-dim);
+    }
+
+    th {
+      color: var(--matrix-green-bright);
+      font-weight: 700;
+      background: rgba(0, 255, 65, 0.08);
+      font-size: 1.05rem;
+    }
+
+    td {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .reality {
+      color: var(--matrix-green-bright);
+      font-weight: bold;
+    }
+
+    .illusion {
+      color: var(--red-pill);
+      opacity: 0.85;
+    }
+
+    .proof {
+      background: rgba(0, 255, 65, 0.06);
+      border: 2px solid var(--matrix-green-dim);
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: var(--radius);
+    }
+
+    .proof h3 {
+      margin-bottom: 1.2rem;
+    }
+
+    .proof ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .proof li {
+      padding: 0.7rem 0;
+      padding-left: 2rem;
+      position: relative;
+      color: var(--text-primary);
+      font-size: 1.05rem;
+    }
+
+    .proof li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--matrix-green-bright);
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .proof strong {
+      color: var(--matrix-green-bright);
+    }
+
+    footer {
+      background: var(--matrix-dark);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+      border-top: 2px solid var(--matrix-green-dim);
+      margin-top: 4rem;
+    }
+
+    .terminal {
+      font-family: 'Courier New', monospace;
+      color: var(--matrix-green-bright);
+      font-size: 1rem;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .cursor {
+      animation: blink 1s infinite;
+    }
+
+    strong {
+      color: var(--text-bright);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebDesignService",
+    "name": "MOVER Studio",
+    "url": "https://moverstudio.online",
+    "areaServed": "BG",
+    "priceRange": "799-3000 BGN"
+  }
+  </script>
+
+</head>
+<body>
+
+<header>
+  <nav>
+    <strong>MOVER_STUDIO</strong>
+    <span class="terminal">[ HTML | SPEED | REALITY ]</span>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1>WAKE UP.</h1>
+    <p class="tagline">
+      WordPress сайтовете, които виждаш, са илюзия.<br>
+      Бавни. Сложни. Скъпи за поддръжка.
+    </p>
+    <p>
+      Ние ти предлагаме <strong style="color: var(--matrix-green-bright);">червеното хапче</strong> – 
+      истината за това какъв трябва да бъде един уеб сайт: светкавично бърз, непробиваем и свободен от месечни такси.
+    </p>
+
+    <div class="pill-choice">
+      <a href="#manifesto" class="pill red-pill">Вземи червеното хапче</a>
+      <a href="https://wordpress.org" class="pill blue-pill">Остани в матрицата</a>
+    </div>
+  </section>
+
+  <section id="manifesto">
+    <h2>Манифестът на MOVER Studio</h2>
+    <div class="manifesto">
+      <p>
+        <strong>"Невъзможното е отправна точка."</strong>
+      </p>
+      <p>
+        Успявали сме да класираме <strong>free.bg поддомейни на първа страница в Google</strong>. 
+        Издигали сме статични HTML сайтове до <strong>100 точки PageSpeed</strong>. 
+        Правим неща, които "експертите" казват че са невъзможни.
+      </p>
+      <p>
+        Защото <strong>не вярваме в ограничения</strong>. Вярваме в резултати.
+      </p>
+    </div>
+
+    <div class="proof">
+      <h3>Доказателства:</h3>
+      <ul>
+        <li><strong>roadassistancesofia.bg</strong> – 100/100 PageSpeed. Статичен HTML. Нула поддръжка.</li>
+        <li><strong>patnapomosht.alle.bg</strong> – Първа страница Google за "пътна помощ Петрохан". Безплатен хостинг.</li>
+        <li><strong>patnapomoshtkostinbrod.free.bg</strong> – Топ позиции за "пътна помощ Калотина". WordPress? Не, благодаря.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Реалността срещу илюзията</h2>
+    <table>
+      <tr>
+        <th></th>
+        <th class="reality">Реалност (HTML)</th>
+        <th class="illusion">Илюзия (WordPress)</th>
+      </tr>
+      <tr>
+        <td><strong>PageSpeed</strong></td>
+        <td class="reality">95–100</td>
+        <td class="illusion">50–70 (с късмет)</td>
+      </tr>
+      <tr>
+        <td><strong>Месечна поддръжка</strong></td>
+        <td class="reality">0 лв</td>
+        <td class="illusion">100–300 лв</td>
+      </tr>
+      <tr>
+        <td><strong>Сигурност</strong></td>
+        <td class="reality">Непробиваема</td>
+        <td class="illusion">Зависи от 47 плъгина</td>
+      </tr>
+      <tr>
+        <td><strong>Време за зареждане</strong></td>
+        <td class="reality">&lt; 1 секунда</td>
+        <td class="illusion">3–7 секунди</td>
+      </tr>
+      <tr>
+        <td><strong>Хакове</strong></td>
+        <td class="reality">Няма какво да се хакне</td>
+        <td class="illusion">Ежедневни опити</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Защо HTML е реалността?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>⚡ Скорост = Пари</h3>
+        <p>Всяка секунда забавяне = 7% по-малко конверсии. WordPress те коства пари с всяко зареждане.</p>
+      </div>
+      <div class="card">
+        <h3>🔒 Нула уязвимости</h3>
+        <p>Няма база данни. Няма admin panel. Няма плъгини. Нищо за хакване.</p>
+      </div>
+      <div class="card">
+        <h3>💸 Плащаш веднъж</h3>
+        <p>Без месечни такси за хостинг, теми, плъгини, поддръжка, "спешни" ъпдейти...</p>
+      </div>
+      <div class="card">
+        <h3>📈 SEO без компромис</h3>
+        <p>Google обича скорост. Ние доставяме скорост. Просто математика.</p>
+      </div>
+      <div class="card">
+        <h3>🛠️ Код, който разбираш</h3>
+        <p>Отваряш файла. Виждаш HTML. Променяш го. Без черни кутии.</p>
+      </div>
+      <div class="card">
+        <h3>🎯 Фокус върху резултата</h3>
+        <p>Не правим "красиви" сайтове. Правим сайтове, които превръщат трафик в обаждания.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Готов си да напуснеш матрицата?</h2>
+    <p>
+      Ако искаш сайт, който <strong>работи</strong> – не WordPress инсталация, която изисква постоянна поддръжка –
+      свържи се с нас.
+    </p>
+    <p style="margin-top: 1.5rem;">
+      <span class="terminal">root@moverstudio:~$</span> 
+      <a href="mailto:hello@moverstudio.online">hello@moverstudio.online</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p class="terminal">
+    © 2026 MOVER_STUDIO<br>
+    &gt; Built without WordPress<br>
+    &gt; Built with HTML and a lot of stubbornness<br>
+    &gt; 99 PageSpeed е за слабаците<br>
+    &gt; <span class="cursor">_</span>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+    "Free your mind" – Morpheus
+  </p>
+</footer>
+
+</body>
+</html>

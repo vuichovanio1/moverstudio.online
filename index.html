@@ -142,6 +142,40 @@
       font-size: 0.9rem;
     }
 
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      color: var(--matrix-green-bright);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      transition: all 0.3s;
+      font-weight: bold;
+    }
+
+    .main-nav a:hover {
+      background: var(--matrix-green);
+      color: var(--matrix-bg);
+      box-shadow: 0 0 10px var(--matrix-green);
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        gap: 1rem;
+      }
+      .main-nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+
     main {
       max-width: var(--max);
       margin: auto;
@@ -554,6 +588,13 @@
     </div>
   </section>
 
+  <nav class="main-nav">
+    <a href="wordpress-alternativa.html">WordPress алтернатива</a>
+    <a href="dokazatelstva.html">Доказателства</a>
+    <a href="seo-optimizacia.html">SEO оптимизация</a>
+    <a href="calculator.html">Калкулатор</a>
+  </nav>
+
   <section id="manifesto">
     <h2>Манифестът на MOVER Studio</h2>
     <div class="manifesto">
@@ -639,7 +680,7 @@
       </div>
       <div class="card">
         <h3><i class="fas fa-search"></i> SEO Оптимизация</h3>
-        <p>Класиране на първа страница в Google. Доказани резултати с free.bg поддомейни. От 500 лв.</p>
+        <p>Класиране на първа страница в Google. <a href="seo-optimizacia.html">SEO оптимизация от 50 €</a></p>
       </div>
     </div>
     <div class="grid">

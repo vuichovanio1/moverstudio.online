@@ -317,6 +317,56 @@
       margin: 0;
     }
 
+    .pricing-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .pricing-card {
+      background: var(--matrix-dark);
+      padding: 2rem;
+      border: 2px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      text-align: center;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .pricing-card:hover {
+      border-color: var(--matrix-green);
+      box-shadow: 0 0 25px rgba(0, 255, 65, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .pricing-card h3 {
+      color: var(--matrix-green-bright);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .pricing-card .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--matrix-green-bright);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card .bg-price {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
     footer {
       background: var(--matrix-dark);
       padding: 3rem 1rem;
@@ -415,10 +465,28 @@
       <div class="quick-answer">
         <h2>Кратък отговор:</h2>
         <p>
-          SEO оптимизация за HTML сайтове започва от 50 € и включва пълна техническа оптимизация, 
-          content strategy и Google класиране. HTML сайтове доминират WordPress благодарение на 
+          SEO оптимизация за HTML сайтове започва от 50 € и включва пълна техническа оптимизация,
+          content strategy и Google класиране. HTML сайтове доминират WordPress благодарение на
           10x по-добра скорост и нулеви уязвимости.
         </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Small SEO Fix</h3>
+          <div class="price">50 €<span class="bg-price"> (~97 лв)</span></div>
+          <p>Базова SEO оптимизация за съществуващ сайт</p>
+        </div>
+        <div class="pricing-card">
+          <h3>Medium SEO Fix</h3>
+          <div class="price">200 €<span class="bg-price"> (~391 лв)</span></div>
+          <p>Пълна SEO стратегия с content оптимизация</p>
+        </div>
+        <div class="pricing-card">
+          <h3>Large SEO Fix</h3>
+          <div class="price">400 €<span class="bg-price"> (~782 лв)</span></div>
+          <p>Комплексна SEO доминация с multi-location</p>
+        </div>
       </div>
 
       <p>

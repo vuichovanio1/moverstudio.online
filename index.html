@@ -47,7 +47,7 @@
       --text-primary: #f0fff0;
       --text-bright: #ffffff;
       --text-muted: #8fbc8f;
-      --red-pill: #ff0040;
+      --red-pill: #cc0000;
       --blue-pill: #0080ff;
       --radius: 4px;
       --max: 1100px;
@@ -106,13 +106,13 @@
 
     a {
       color: var(--matrix-green-bright);
-      text-decoration: none;
-      transition: border-bottom 0.2s, text-shadow 0.2s;
-      border-bottom: 1px solid transparent;
+      text-decoration: underline;
+      text-decoration-color: var(--matrix-green-dim);
+      transition: text-decoration-color 0.2s, text-shadow 0.2s;
     }
 
     a:hover {
-      border-bottom: 1px solid var(--matrix-green-bright);
+      text-decoration-color: var(--matrix-green-bright);
       text-shadow: 0 0 10px var(--matrix-green);
     }
 

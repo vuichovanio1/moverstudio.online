@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#000000"/>
+  <text x="600" y="200" font-family="Courier New" font-size="60" fill="#00ff41" text-anchor="middle" font-weight="bold">MOVER Studio</text>
+  <text x="600" y="280" font-family="Courier New" font-size="40" fill="#39ff14" text-anchor="middle">Ултра Бързи HTML Сайтове</text>
+  <text x="600" y="340" font-family="Courier New" font-size="30" fill="#8fbc8f" text-anchor="middle">100 PageSpeed Гарантирано</text>
+  <text x="600" y="400" font-family="Courier New" font-size="25" fill="#f0fff0" text-anchor="middle">Без WordPress | Нулева Поддръжка</text>
+  <rect x="400" y="450" width="400" height="100" fill="#00aa2b" rx="10"/>
+  <text x="600" y="510" font-family="Courier New" font-size="30" fill="#000000" text-anchor="middle" font-weight="bold">moverstudio.online</text>
+</svg>

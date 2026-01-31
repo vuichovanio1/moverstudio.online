@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <!-- Performance Optimization: Charset at the very top for fastest parsing -->
+  <meta charset="utf-8">
+
+  <!-- Performance Optimization: Optimized viewport for mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Performance Optimization: Theme color for mobile browsers (Matrix green) -->
+  <meta name="theme-color" content="#00ff41">
+
+  <title>Как изграждаме бързи HTML сайтове (100 PageSpeed)</title>
+  <meta name="description" content="Как създаваме HTML сайтове с 100 PageSpeed и SEO доминиране. Без WordPress, с гарантирани резултати.">
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="language" content="Bulgarian">
+  <link rel="canonical" href="https://moverstudio.online/how-we-do-it.html">
+  
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Как Правим HTML Сайтове | MOVER Studio">
+  <meta name="twitter:description" content="Философия и процес за създаване на ултра бързи HTML сайтове без WordPress.">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.svg">
+
+  <style>
+    :root {
+      --matrix-bg: #000000;
+      --matrix-dark: #0a0a0a;
+      --matrix-green: #00ff41;
+      --matrix-green-bright: #39ff14;
+      --matrix-green-dim: #00aa2b;
+      --text-primary: #f0fff0;
+      --text-bright: #ffffff;
+      --text-muted: #8fbc8f;
+      --red-pill: #cc0000;
+      --blue-pill: #0080ff;
+      --radius: 4px;
+      --max: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: var(--matrix-bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(transparent 90%, rgba(0, 255, 65, 0.1) 100%),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 255, 65, 0.02) 3px,
+          transparent 4px
+        );
+      pointer-events: none;
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      body::before {
+        display: none;
+      }
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      color: var(--matrix-green-bright);
+      text-decoration: underline;
+      text-decoration-color: var(--matrix-green-dim);
+      transition: text-decoration-color 0.2s, text-shadow 0.2s;
+    }
+
+    a:hover {
+      text-decoration-color: var(--matrix-green-bright);
+      text-shadow: 0 0 10px var(--matrix-green);
+    }
+
+    header {
+      padding: 2rem 1rem;
+      max-width: var(--max);
+      margin: auto;
+      border-bottom: 2px solid var(--matrix-green-dim);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Courier New', monospace;
+    }
+
+    nav strong {
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      color: var(--matrix-green-bright);
+      text-shadow: 0 0 15px var(--matrix-green);
+    }
+
+    nav span {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      color: var(--matrix-green-bright);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      transition: all 0.3s;
+      font-weight: bold;
+    }
+
+    .main-nav a:hover {
+      background: var(--matrix-green);
+      color: var(--matrix-bg);
+      box-shadow: 0 0 10px var(--matrix-green);
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        gap: 1rem;
+      }
+      .main-nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    main {
+      max-width: var(--max);
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--matrix-green-bright);
+      text-shadow: 0 0 25px rgba(0, 255, 65, 0.6);
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      margin-bottom: 1.5rem;
+      color: var(--matrix-green-bright);
+      border-left: 5px solid var(--matrix-green);
+      padding-left: 1rem;
+    }
+
+    h3 {
+      color: var(--matrix-green-bright);
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      max-width: 70ch;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .manifesto {
+      background: var(--matrix-dark);
+      padding: 2.5rem;
+      border-left: 5px solid var(--matrix-green);
+      margin: 2rem 0;
+      border-radius: var(--radius);
+      border: 2px solid var(--matrix-green-dim);
+    }
+
+    .manifesto p {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+
+    .manifesto strong {
+      color: var(--matrix-green-bright);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--matrix-dark);
+      padding: 2rem;
+      border: 2px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      border-color: var(--matrix-green);
+      box-shadow: 0 0 25px rgba(0, 255, 65, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    footer {
+      background: var(--matrix-dark);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+      border-top: 2px solid var(--matrix-green-dim);
+      margin-top: 4rem;
+    }
+
+    .terminal {
+      font-family: 'Courier New', monospace;
+      color: var(--matrix-green-bright);
+      font-size: 1rem;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .cursor {
+      animation: blink 1s infinite;
+    }
+
+    strong {
+      color: var(--text-bright);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Как Правим HTML Сайтове: Философия и Процес",
+    "description": "Как създаваме ултра бързи HTML сайтове без WordPress. Философия, процес и резултати от MOVER Studio.",
+    "author": {
+      "@type": "Organization",
+      "name": "MOVER Studio"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MOVER Studio"
+    },
+    "datePublished": "2026-01-30",
+    "dateModified": "2026-01-30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://moverstudio.online/how-we-do-it.html"
+    },
+    "image": "https://moverstudio.online/og-image.svg",
+    "url": "https://moverstudio.online/how-we-do-it.html",
+    "keywords": ["как правим html сайтове", "философия mover studio", "процес разработка html"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Начало",
+        "item": "https://moverstudio.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Как го правим",
+        "item": "https://moverstudio.online/how-we-do-it.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Content Security Policy for XSS protection -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/"><strong>MOVER_STUDIO</strong></a>
+    <span class="terminal">[ HTML | SPEED | REALITY ]</span>
+  </nav>
+</header>
+
+<main>
+
+  <article>
+
+    <section>
+      <h1>Как Правим HTML Сайтове: Философия и Процес</h1>
+      <p>
+        Ние не правим "красиви" сайтове. Правим сайтове, които превръщат трафик в обаждания.
+        Ето как го постигаме.
+      </p>
+    </section>
+
+    <section>
+      <h2>Нашата Философия: Защо HTML Без WordPress</h2>
+      <div class="manifesto">
+        <p>
+          <strong>"WordPress е за аматьори. HTML е за професионалисти."</strong>
+        </p>
+        <p>
+          HTML сайтове = нулева поддръжка, непробиваема сигурност, под 1 секунда зареждане.
+          Никакви месечни такси, никакви ъпдейти, никакви хакове.
+        </p>
+        <p>
+          Фокусът ни е върху резултати: скорост, SEO доминиране, конверсии.
+          Не продаваме "услуги" – продаваме решения, които работят.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Процесът на Изработка</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Консултация</h3>
+          <p>Обсъждаме вашите нужди, целева аудитория и цели. Анализираме конкуренцията и определяме стратегия.</p>
+        </div>
+        <div class="card">
+          <h3>2. Дизайн</h3>
+          <p>Създаваме модерен, responsive дизайн който работи перфектно на всички устройства. Фокус върху UX и конверсии.</p>
+        </div>
+        <div class="card">
+          <h3>3. Разработка</h3>
+          <p>Кодираме чист HTML/CSS с максимална скорост. Имплементираме SEO елементи и структурирани данни.</p>
+        </div>
+        <div class="card">
+          <h3>4. Оптимизация</h3>
+          <p>Гарантираме 100 PageSpeed и пълна SEO готовност. Тестваме на всички устройства и браузъри.</p>
+        </div>
+        <div class="card">
+          <h3>5. Пускане</h3>
+          <p>Качваме сайта на хостинг и предоставяме 30 дни безплатна поддръжка за корекции и тестване.</p>
+        </div>
+        <div class="card">
+          <h3>6. Поддръжка</h3>
+          <p>Предлагаме пакети за месечна поддръжка от 300 лв/месец за редовни актуализации и оптимизации.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Технически Принципи</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Inline CSS/JS</h3>
+          <p>Всички стилове и скриптове са вградени в HTML. Елиминира render-blocking requests за максимална скорост.</p>
+        </div>
+        <div class="card">
+          <h3>Schema.org Markup</h3>
+          <p>Структурирани данни за Google, които подобряват разбираемостта и класирането в AI търсачки.</p>
+        </div>
+        <div class="card">
+          <h3>WebP Images</h3>
+          <p>Модерни формати с fallbacks за оптимално зареждане и PageSpeed резултати.</p>
+        </div>
+        <div class="card">
+          <h3>Mobile-First</h3>
+          <p>Responsive дизайн с CSS Grid/Flexbox за перфектно представяне на всички устройства.</p>
+        </div>
+        <div class="card">
+          <h3>Direct CTAs</h3>
+          <p>tel: линкове за директна мобилна конверсия без форми или backend.</p>
+        </div>
+        <div class="card">
+          <h3>Zero Dependencies</h3>
+          <p>Никакви jQuery, Bootstrap или други библиотеки. Чист HTML/CSS за максимална скорост.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Резултати от Нашия Подход</h2>
+      <p>
+        <strong>Виж <a href="case-studies.html">реални проекти</a>, които доминират в Google благодарение на тази философия.</strong>
+      </p>
+      <div class="manifesto">
+        <p>
+          Всеки наш проект е доказателство, че HTML без WordPress = успех.
+          От локални доминации до AI SEO – ние доставяме резултати, които се измерват.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Защо Да Изберете Нас</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Фокус върху Резултати</h3>
+          <p>Не правим сайтове за "гледане". Правим сайтове, които работят и генерират бизнес.</p>
+        </div>
+        <div class="card">
+          <h3>Техническа Експертиза</h3>
+          <p>Разбираме как работи Google. Знаем какво иска AI. Доставяме сайтове, които алгоритмите обичат.</p>
+        </div>
+        <div class="card">
+          <h3>Без Компромиси</h3>
+          <p>100 PageSpeed гарантирано. Нулева поддръжка. Непробиваема сигурност. Това е нашият стандарт.</p>
+        </div>
+      </div>
+      <p style="margin-top: 2rem; text-align: center; font-size: 0.9rem; opacity: 0.8;">
+        MOVER Studio разработва HTML сайтове и SEO решения от 2023 година.
+      </p>
+      <p style="margin-top: 2rem; text-align: center;">
+        <a href="/#contact" class="pill red-pill">Поръчай Консултация</a>
+      </p>
+    </section>
+
+  </article>
+
+</main>
+
+<footer>
+  <p class="terminal">
+    © 2026 MOVER_STUDIO<br>
+    &gt; Built without WordPress<br>
+    &gt; Built with HTML and a lot of stubbornness<br>
+    &gt; 99 PageSpeed е за слабаците<br>
+    &gt; <span class="cursor">_</span>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+    "Free your mind" – Morpheus
+  </p>
+  <section class="partners" style="margin-top: 2rem; text-align: center; color: var(--text-muted);">
+    <h3 style="color: var(--matrix-green-bright); font-size: 1.2rem; margin-bottom: 0.5rem;">Партньори</h3>
+    <p>Хостинг партньор: <a href="https://bdinhost.com" target="_blank" rel="noopener" style="color: var(--matrix-green);">BDinHost</a> - Надежден и бърз хостинг за вашия бизнес.</p>
+  </section>
+</footer>
+
+</body>
+</html>

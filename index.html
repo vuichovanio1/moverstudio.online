@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="bg">
 <head>
@@ -15,14 +16,17 @@
   <!-- Performance Optimization: No external resources - all inline for maximum speed -->
   <!-- Preload not needed as all CSS/JS is inline -->
 
-  <title>Изработка на Сайтове | Уеб Дизайн България | MOVER Studio - Професионални HTML Сайтове с 100 PageSpeed Гарантирано</title>
-  <meta name="description" content="Изработка на сайтове за бизнес в България. Уеб дизайн, HTML сайтове без WordPress, 100 PageSpeed гарантирано. Поръчай професионален сайт от 400 €. SEO оптимизация и без нужда от месечна поддръжка.">
+  <title>Изработка на HTML Сайт | 100 PageSpeed | MOVER Studio – Бързи Сайтове без WordPress</title>
+  <meta name="description" content="Изработка на HTML сайт с гарантиран 100 PageSpeed. Без WordPress, без месечни такси. Професионални статични сайтове от 400€. SEO оптимизация включена.">
+  <meta name="keywords" content="изработка на сайт, изработка на сайтове, html сайт, сайт без wordpress, pagespeed 100, бърз сайт, уеб дизайн">
 
   <!-- Deprecated tags removed for PageSpeed -->
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="language" content="Bulgarian">
   <link rel="canonical" href="https://moverstudio.online/">
+  <link rel="alternate" hreflang="bg" href="https://moverstudio.online/">
+  <link rel="alternate" hreflang="x-default" href="https://moverstudio.online/">
   
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   
@@ -35,6 +39,14 @@
   <meta name="twitter:description" content="Поръчай бърз статичен сайт с 100 PageSpeed. Професионална изработка без WordPress.">
   <meta name="twitter:image" content="https://moverstudio.online/og-image.svg">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://moverstudio.online/">
+  <meta property="og:title" content="Изработка на HTML Сайтове | MOVER Studio">
+  <meta property="og:description" content="Изработка на HTML сайт с 100 PageSpeed. Без WordPress, без месечни такси. Статични сайтове от 400€.">
+  <meta property="og:image" content="https://moverstudio.online/og-image.svg">
+  <meta property="og:locale" content="bg_BG">
+
   <style>
     :root {
       --matrix-bg: #000000;
@@ -46,7 +58,7 @@
       --text-bright: #ffffff;
       --text-muted: #8fbc8f;
       --red-pill: #cc0000;
-      --blue-pill: #0080ff;
+      --blue-pill: #00b4ff;
       --radius: 4px;
       --max: 1100px;
     }
@@ -59,6 +71,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -68,6 +81,18 @@
       line-height: 1.7;
       position: relative;
       overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    /* Matrix Digital Rain - SVG Katakana (Mobile Only) */
+    @keyframes matrix-scroll {
+      0% { background-position-y: 0; }
+      100% { background-position-y: 1000px; }
+    }
+
+    @keyframes matrix-scroll-2 {
+      0% { background-position-y: 500px; }
+      100% { background-position-y: 1500px; }
     }
 
     body::before {
@@ -77,23 +102,65 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: 
-        linear-gradient(transparent 90%, rgba(0, 255, 65, 0.1) 100%),
-        repeating-linear-gradient(
-          0deg,
-          transparent,
-          transparent 2px,
-          rgba(0, 255, 65, 0.02) 3px,
-          transparent 4px
-        );
+      background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%22400%22%3E%3Cstyle%3Etext%7Bfont:14px monospace;fill:%2300ff41;opacity:0.2%7D%3C/style%3E%3Ctext x=%225%22 y=%2220%22%3E&lt;html&gt;%3C/text%3E%3Ctext x=%225%22 y=%2245%22%3E&lt;head&gt;%3C/text%3E%3Ctext x=%225%22 y=%2270%22%3E&lt;body&gt;%3C/text%3E%3Ctext x=%225%22 y=%2295%22%3E&lt;div&gt;%3C/text%3E%3Ctext x=%225%22 y=%22120%22%3E&lt;nav&gt;%3C/text%3E%3Ctext x=%225%22 y=%22145%22%3E&lt;p&gt;%3C/text%3E%3Ctext x=%225%22 y=%22170%22%3E&lt;a&gt;%3C/text%3E%3Ctext x=%225%22 y=%22195%22%3E&lt;h1&gt;%3C/text%3E%3Ctext x=%225%22 y=%22220%22%3E&lt;h2&gt;%3C/text%3E%3Ctext x=%225%22 y=%22245%22%3E&lt;/div&gt;%3C/text%3E%3Ctext x=%225%22 y=%22270%22%3E&lt;/p&gt;%3C/text%3E%3Ctext x=%225%22 y=%22295%22%3E&lt;/a&gt;%3C/text%3E%3Ctext x=%225%22 y=%22320%22%3E&lt;/h1&gt;%3C/text%3E%3Ctext x=%225%22 y=%22345%22%3E&lt;/h2&gt;%3C/text%3E%3Ctext x=%225%22 y=%22370%22%3E&lt;span&gt;%3C/text%3E%3Ctext x=%2225%22 y=%2235%22%3E&lt;section&gt;%3C/text%3E%3Ctext x=%2225%22 y=%2260%22%3E&lt;header&gt;%3C/text%3E%3Ctext x=%2225%22 y=%2285%22%3E&lt;footer&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22110%22%3E&lt;main&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22135%22%3E&lt;/nav&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22160%22%3E&lt;/body&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22185%22%3E&lt;/html&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22210%22%3E&lt;h3&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22235%22%3E&lt;/h3&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22260%22%3E&lt;ul&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22285%22%3E&lt;li&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22310%22%3E&lt;/li&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22335%22%3E&lt;/ul&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22360%22%3Eclass=%22%22%3C/text%3E%3Ctext x=%2225%22 y=%22385%22%3Eid=%22%22%3C/text%3E%3C/svg%3E");
+      background-repeat: repeat;
       pointer-events: none;
-      opacity: 0.4;
-      z-index: 0;
+      z-index: -1;
+      animation: matrix-scroll 15s linear infinite;
+      display: none;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%22500%22%3E%3Cstyle%3Etext%7Bfont:12px monospace;fill:%2300ff41;opacity:0.12%7D%3C/style%3E%3Ctext x=%2210%22 y=%2225%22%3E&lt;article&gt;%3C/text%3E%3Ctext x=%2210%22 y=%2255%22%3E&lt;aside&gt;%3C/text%3E%3Ctext x=%2210%22 y=%2285%22%3E&lt;form&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22115%22%3E&lt;input&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22145%22%3E&lt;button&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22175%22%3E&lt;img&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22205%22%3E&lt;meta&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22235%22%3E&lt;link&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22265%22%3E&lt;script&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22295%22%3E&lt;style&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22325%22%3E&lt;/form&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22355%22%3E&lt;/aside&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22385%22%3E&lt;/article&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22415%22%3E&lt;/footer&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22445%22%3E&lt;/header&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22475%22%3E&lt;/section&gt;%3C/text%3E%3Ctext x=%2235%22 y=%2240%22%3E&lt;br&gt;%3C/text%3E%3Ctext x=%2235%22 y=%2280%22%3E&lt;hr&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22120%22%3E&lt;table&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22160%22%3E&lt;tr&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22200%22%3E&lt;td&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22240%22%3E&lt;/td&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22280%22%3E&lt;/tr&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22320%22%3E&lt;/table&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22360%22%3E&lt;code&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22400%22%3E&lt;pre&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22440%22%3E&lt;/code&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22480%22%3E&lt;/main&gt;%3C/text%3E%3C/svg%3E");
+      background-repeat: repeat;
+      pointer-events: none;
+      z-index: -1;
+      animation: matrix-scroll-2 20s linear infinite;
+      display: none;
+    }
+
+    /* Top glow - Mobile only */
+    html::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        ellipse at 50% 0%,
+        rgba(0, 255, 65, 0.08) 0%,
+        transparent 40%
+      );
+      pointer-events: none;
+      z-index: -2;
+      display: none;
     }
 
     @media (max-width: 768px) {
       body::before {
-        display: none;
+        display: block;
+        animation-duration: 10s;
+      }
+      body::after {
+        display: block;
+        animation-duration: 14s;
+      }
+      html::before {
+        display: block;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body::before,
+      body::after {
+        animation: none;
       }
     }
 
@@ -263,15 +330,37 @@
     }
 
     .blue-pill {
-      background: transparent;
-      color: var(--text-bright);
+      background: rgba(0, 180, 255, 0.1);
+      color: var(--blue-pill);
       border-color: var(--blue-pill);
+      box-shadow: 0 0 15px rgba(0, 180, 255, 0.3);
     }
 
     .blue-pill:hover {
-      background: rgba(0, 128, 255, 0.15);
-      box-shadow: 0 0 20px rgba(0, 128, 255, 0.4);
+      background: rgba(0, 180, 255, 0.25);
+      box-shadow: 0 0 30px rgba(0, 180, 255, 0.6);
       border-bottom: none;
+    }
+
+    .pill-choice {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      padding: 1rem 2rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 4px;
+      border: 2px solid;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.95rem;
     }
 
     .manifesto {
@@ -455,9 +544,9 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Изработка на Ултра Бързи HTML Сайтове - Без WordPress, Без Компромиси",
-    "description": "Професионална изработка на HTML сайтове с 100 PageSpeed гарантирано. Поръчай статичен сайт за бизнеса си.",
+    "@type": "WebPage",
+    "name": "Изработка на Ултра Бързи HTML Сайтове - Без WordPress, Без Компромиси",
+    "description": "Изработка на HTML сайт с гарантиран 100 PageSpeed. Без WordPress, без месечни такси. Професионални статични сайтове от 400€.",
     "author": {
       "@type": "Organization",
       "name": "MOVER Studio"
@@ -506,7 +595,7 @@
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "HTML Сайтове",
+        "name": "Начало",
         "item": "https://moverstudio.online/"
       }
     ]
@@ -555,7 +644,7 @@
       "name": "България"
     },
     "openingHours": "Mo-Su 00:00-23:59",
-    "priceRange": "200-1000 EUR"
+    "priceRange": "400-2000 EUR"
   }
   </script>
 
@@ -587,11 +676,6 @@
     "publisher": {
       "@type": "Organization",
       "name": "MOVER Studio"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://moverstudio.online/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
     }
   }
   </script>
@@ -601,7 +685,7 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Пакет Старт",
-    "description": "Landing page с 95+ PageSpeed, бърза изработка за 3 дни",
+    "description": "Landing page с 95+ PageSpeed и професионална изработка",
     "image": "https://moverstudio.online/og-image.svg",
     "brand": {
       "@type": "Brand",
@@ -609,7 +693,7 @@
     },
     "offers": {
       "@type": "Offer",
-      "price": "200",
+      "price": "400",
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock",
       "priceValidUntil": "2026-12-31",
@@ -624,7 +708,7 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Пакет Бизнес",
-    "description": "Multi-page сайт с 100 PageSpeed, SEO оптимизация включена",
+    "description": "Multi-page сайт с 100 PageSpeed, базово on-page SEO",
     "image": "https://moverstudio.online/og-image.svg",
     "brand": {
       "@type": "Brand",
@@ -632,7 +716,7 @@
     },
     "offers": {
       "@type": "Offer",
-      "price": "500",
+      "price": "1000",
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock",
       "priceValidUntil": "2026-12-31",
@@ -690,7 +774,7 @@
       {
         "@type": "HowToStep",
         "name": "Пускане",
-        "text": "Качваме сайта на хостинг и предоставяме 30 дни безплатна поддръжка.",
+        "text": "Качваме сайта на хостинг и предоставяме 30 дни за корекции след пускане.",
         "position": 5
       }
     ]
@@ -725,8 +809,8 @@
 <body>
 
 <header>
-  <nav>
-    <strong>MOVER_STUDIO</strong>
+  <nav aria-label="Основна навигация">
+    <a href="/" style="border-bottom: none;"><strong>MOVER_STUDIO</strong></a>
     <span class="terminal">[ HTML | SPEED | REALITY ]</span>
   </nav>
 </header>
@@ -736,7 +820,7 @@
   <article>
 
     <section class="hero">
-    <h1>Изработка на Сайтове – Професионални Решения за Вашия Бизнес</h1>
+    <h1>Изработка на HTML Сайтове – Професионални Решения за Вашия Бизнес</h1>
     <p class="tagline">
       Търсите изработка на сайт? Ние създаваме бързи, сигурни и ефективни уебсайтове.<br>
       Специалисти по HTML сайтове без WordPress – най-доброто решение за бизнес.
@@ -746,17 +830,21 @@
       Защо да харчите стотици левове месечно за WordPress, когато можете да имате <strong>HTML сайт</strong> който работи перфектно без никакви разходи?
     </p>
     <p>
-      <strong>Какво получавате:</strong> Бърз сайт, SEO оптимизация, мобилна адаптация и 30 дни безплатна поддръжка за корекции и тестване.
-      <strong>Цени от 400 €</strong> за landing page до 2,000 € за пълно бизнес решение.
+      <strong>Какво получавате:</strong> Бърз сайт, базово on-page SEO, мобилна адаптация и 30 дни за корекции след пускане.
+      <strong>Цени от 400€</strong> – <a href="calculator.html">изчисли точната цена с калкулатора</a>.
     </p>
-      <p>
-        <strong>Виж <a href="case-studies.html">реални HTML проекти</a> от нашите проекти</strong>, които вече доминират в Google с HTML без WordPress.
-      </p>
+
+    <div class="pill-choice">
+      <a href="calculator.html" class="pill red-pill">Вземи червеното хапче</a>
+      <a href="wordpress-alternativa.html" class="pill blue-pill">Остани в матрицата</a>
     </div>
   </section>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Навигация на сайта">
     <a href="wordpress-alternativa.html">WordPress алтернатива</a>
+    <a href="izrabotka-na-sait.html">Изработка на сайт</a>
+    <a href="sait-vizitka.html">Сайт Визитка</a>
+    <a href="korporativen-sait.html">Корпоративен Сайт</a>
     <a href="pagespeed-100-html.html">PageSpeed 100 HTML</a>
     <a href="seo-optimizacia.html">SEO оптимизация</a>
     <a href="how-we-do-it.html">Как го правим</a>
@@ -768,10 +856,10 @@
     <h2>Защо HTML Сайтове Без WordPress Са Победата</h2>
     <div class="manifesto">
       <p>
-        <strong>"WordPress е за аматьори. HTML е за професионалисти."</strong>
+        <strong>"WordPress беше добро решение... преди 10 години. HTML е за днес."</strong>
       </p>
       <p>
-        Доказахме го с проекти като <strong><a href="https://roadassistancesofia.bg">roadassistancesofia.bg</a></strong> – статичен HTML сайт, класиран на първа страница в Google за "пътна помощ софия". 
+        Доказахме го с проекти като <strong><a href="https://roadassistancesofia.bg">roadassistancesofia.bg</a></strong> – статичен HTML сайт, класиран на първа страница в Google за 95% от зоните,които обслужва . 
         Без WordPress, без база данни, без проблеми.
       </p>
       <p>
@@ -794,10 +882,10 @@
         2. <strong>Дизайн</strong> – Създаваме модерен, responsive дизайн.<br>
         3. <strong>Разработка</strong> – Кодираме чист HTML/CSS с максимална скорост.<br>
         4. <strong>Оптимизация</strong> – Гарантираме 100 PageSpeed и SEO готовност.<br>
-        5. <strong>Пускане</strong> – Качваме сайта и предоставяме поддръжка.
+        5. <strong>Пускане</strong> – Качваме сайта и индексираме в Google Search Console.
       </p>
       <p>
-        <strong>Всяка изработка включва:</strong> Безплатна консултация, responsive дизайн, SEO оптимизация, 100 PageSpeed гаранция, 30 дни безплатна поддръжка за корекции и тестване.
+        <strong>Всяка изработка включва:</strong> Безплатна консултация, responsive дизайн, базово on-page SEO, 100 PageSpeed гаранция и 30 дни за корекции след пускане.
       </p>
     </div>
   </section>
@@ -874,7 +962,6 @@
       <ul>
         <li>Партньорски outbound links към luxury77.com, myve.bg, primewheels.bg</li>
         <li>Footer backlinks към social profiles (FB, IG, TikTok, YouTube)</li>
-        <li>Google Maps embed с location coordinates</li>
       </ul>
 
       <h3>4. <a href="https://nikoautogaz.github.io">nikoautogaz.github.io</a> – GitHub Pages + CI/CD Workflow</h3>
@@ -963,7 +1050,7 @@
         <li>WebP Images - Modern format с fallbacks за browser compatibility</li>
         <li>Mobile-First Design - Responsive layouts с CSS Grid/Flexbox</li>
         <li>Direct CTAs - tel: links за instant mobile conversion</li>
-        <li>Fast Hosting - GitHub Pages или Cloudflare Pages за speed + security</li>
+        <li>Fast Hosting - Професионален хостинг за максимална скорост и сигурност</li>
         <li>Multi-Location Pages - Dedicated HTML files за всяка geographic zone</li>
         <li>Internal Linking - Strategic cross-linking между локации и услуги</li>
         <li>No External Dependencies - Никакви jQuery, Bootstrap, Font Awesome bloat</li>
@@ -1013,7 +1100,7 @@
     <div class="grid">
       <div class="card">
         <h3><i class="fas fa-clock"></i> Бърза Изработка</h3>
-        <p>Landing page за 3 дни. Multi-page сайт за 5-7 дни. Готови за пускане без забавяния.</p>
+        <p>Професионална изработка без месеци чакане. Готови за пускане без забавяния. Значително по-бързо от WordPress агенции.</p>
       </div>
       <div class="card">
         <h3><i class="fas fa-tools"></i> Професионални Инструменти</h3>
@@ -1021,7 +1108,7 @@
       </div>
       <div class="card">
         <h3><i class="fas fa-handshake"></i> Гаранция за Качество</h3>
-        <p>100 PageSpeed гарантирано. 30 дни безплатна поддръжка за корекции и тестване. Пълно удовлетворение.</p>
+        <p>100 PageSpeed гарантирано. 30 дни за корекции след пускане. Пълно удовлетворение.</p>
       </div>
     </div>
   </section>
@@ -1038,9 +1125,9 @@
         <p>Многостраничен сайт с услуги, екип, контакти. За средни и големи бизнеси. От 1,000 €.</p>
       </div>
       <div class="card">
-        <h3><i class="fas fa-shopping-cart"></i> Продуктов Каталог</h3>
-        <p>Статичен каталог с продукти, цени и контакти за поръчки. Идеално за малки бизнеси без сложна логистика. От 1,500 €.</p>
-        <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;"><em>Забележка: Не предлагаме пълни онлайн магазини с количка и плащания, защото се фокусираме върху статични HTML сайтове.</em></p>
+        <h3><i class="fas fa-cogs"></i> Custom Project</h3>
+        <p>Специализирани HTML проекти с индивидуални функционалности. Multi-language, калкулатори, review системи, сложна архитектура. От 1,500 €.</p>
+        <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;"><em>Примери: roadassistancesofia.bg (14 локации), matiyhelp.bg (4 езика), patna-pomosht (калкулатор).</em></p>
       </div>
     </div>
     <div class="manifesto" style="margin-top: 2rem;">
@@ -1056,11 +1143,11 @@
     <div class="grid">
       <div class="card">
         <h3><i class="fas fa-building"></i> Корпоративни Сайтове</h3>
-        <p>Представителни сайтове за бизнеса ви с калкулатори, форми и локализация. От 1,199 лв.</p>
+        <p>Представителни сайтове за бизнеса ви с калкулатори, форми и локализация. От 1,000€ (1,956 лв).</p>
       </div>
       <div class="card">
         <h3><i class="fas fa-home"></i> Визитки & Landing Pages</h3>
-        <p>Бързи, ефективни визитки за малък бизнес. Готови за 3-5 дни. От 400 € (781 лв).</p>
+        <p>Бързи, ефективни визитки за малък бизнес. Професионална изработка. От 400 € (781 лв).</p>
       </div>
       <div class="card">
         <h3><i class="fas fa-search"></i> SEO Оптимизация</h3>
@@ -1101,7 +1188,7 @@
       <details class="faq-item">
         <summary class="faq-question">Как да избера правилния тип сайт за моя бизнес?</summary>
         <div class="faq-answer">
-          <p>Зависи от нуждите ви: за представяне на услугите - визитка сайт; за комплексен бизнес - корпоративен сайт; за представяне на продукти - продуктов каталог. Ще ви помогнем да изберете най-подходящото решение.</p>
+          <p>Зависи от нуждите ви: за представяне на услугите - визитка сайт; за комплексен бизнес - корпоративен сайт; за специфични изисквания - custom project. Ще ви помогнем да изберете най-подходящото решение.</p>
         </div>
       </details>
       <details class="faq-item">
@@ -1119,13 +1206,13 @@
       <details class="faq-item">
         <summary class="faq-question">Мога ли да актуализирам съдържанието на HTML сайт сам?</summary>
         <div class="faq-answer">
-          <p>Да, но изисква базови HTML познания. Повечето наши клиенти предпочитат да ни изпращат промените и ние ги правим в рамките на 24 часа. Предлагаме и пакети за месечна поддръжка от 300 лв/месец за редовни актуализации.</p>
+          <p>Да, но изисква базови HTML познания. Повечето наши клиенти предпочитат да ни изпращат промените и ние ги правим в рамките на 24 часа срещу малка такса за промяна.</p>
         </div>
       </details>
       <details class="faq-item">
         <summary class="faq-question">Колко време отнема изработката на сайт?</summary>
         <div class="faq-answer">
-          <p>Landing page (Пакет Старт) е готов за 3 дни. Multi-page сайт (Пакет Бизнес) - 5-7 дни. Сложни проекти с калкулатори и SEO оптимизация (Пакет Доминация) - до 2 седмици.</p>
+          <p>Бърза професионална изработка в зависимост от сложността и обема на проекта. Значително по-бързо от WordPress агенции благодарение на липсата на CMS overhead. Свържете се за конкретна оценка на времето за вашия проект.</p>
         </div>
       </details>
       <details class="faq-item">
@@ -1193,7 +1280,7 @@
           "name": "Мога ли да актуализирам съдържанието на HTML сайт сам?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Да, но изисква базови HTML познания. Повечето наши клиенти предпочитат да ни изпращат промените и ние ги правим в рамките на 24 часа. Предлагаме и пакети за месечна поддръжка от 300 лв/месец за редовни актуализации."
+            "text": "Да, но изисква базови HTML познания. Повечето наши клиенти предпочитат да ни изпращат промените и ние ги правим в рамките на 24 часа срещу малка такса за промяна."
           }
         },
         {
@@ -1201,7 +1288,7 @@
           "name": "Колко време отнема изработката на сайт?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Landing page (Пакет Старт) е готов за 3 дни. Multi-page сайт (Пакет Бизнес) - 5-7 дни. Сложни проекти с калкулатори и SEO оптимизация (Пакет Доминация) - до 2 седмици."
+            "text": "Бърза професионална изработка в зависимост от сложността и обема на проекта. Значително по-бързо от WordPress агенции благодарение на липсата на CMS overhead."
           }
         },
         {
@@ -1339,6 +1426,13 @@
   </p>
   <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
     "Free your mind" – Morpheus
+  </p>
+  <p style="margin-top: 1rem;">
+    <a href="/">Начало</a> | 
+    <a href="/izrabotka-na-sait.html">Услуги</a> | 
+    <a href="/calculator.html">Калкулатор</a> | 
+    <a href="/dokazatelstva.html">Доказателства</a> | 
+    <a href="/#contact">Контакт</a>
   </p>
   <section class="partners" style="margin-top: 2rem; text-align: center; color: var(--text-muted);">
     <h3 style="color: var(--matrix-green-bright); font-size: 1.2rem; margin-bottom: 0.5rem;">Партньори</h3>

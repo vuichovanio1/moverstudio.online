@@ -19,10 +19,23 @@
   <meta name="description" content="Изработка на сайтове като алтернатива на WordPress. HTML сайтове 10x по-бързи, по-сигурни, без месечни такси. Поръчай професионален сайт с 100 PageSpeed и SEO оптимизация от 400 €.">
   <meta name="keywords" content="wordpress алтернатива, html вместо wordpress, бърза wordpress алтернатива, статични сайтове">
   <link rel="canonical" href="https://moverstudio.online/wordpress-alternativa.html">
+  <link rel="alternate" hreflang="bg" href="https://moverstudio.online/wordpress-alternativa.html">
+  <link rel="alternate" hreflang="x-default" href="https://moverstudio.online/wordpress-alternativa.html">
   
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   
   <!-- FontAwesome REMOVED for PageSpeed - using Unicode emojis instead -->
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="language" content="Bulgarian">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="WordPress Алтернатива | HTML Сайтове | MOVER Studio">
+  <meta property="og:description" content="HTML сайтове като алтернатива на WordPress. 10x по-бързи, по-сигурни, без месечни такси. 100 PageSpeed гарантирано.">
+  <meta property="og:image" content="https://moverstudio.online/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://moverstudio.online/wordpress-alternativa.html">
+  <meta property="og:locale" content="bg_BG">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
@@ -54,10 +67,105 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: var(--matrix-bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      position: relative;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    /* Matrix HTML Code Rain - Mobile Only */
+    @keyframes matrix-scroll {
+      0% { background-position-y: 0; }
+      100% { background-position-y: 1000px; }
+    }
+
+    @keyframes matrix-scroll-2 {
+      0% { background-position-y: 500px; }
+      100% { background-position-y: 1500px; }
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%22400%22%3E%3Cstyle%3Etext%7Bfont:14px monospace;fill:%2300ff41;opacity:0.2%7D%3C/style%3E%3Ctext x=%225%22 y=%2220%22%3E&lt;html&gt;%3C/text%3E%3Ctext x=%225%22 y=%2245%22%3E&lt;head&gt;%3C/text%3E%3Ctext x=%225%22 y=%2270%22%3E&lt;body&gt;%3C/text%3E%3Ctext x=%225%22 y=%2295%22%3E&lt;div&gt;%3C/text%3E%3Ctext x=%225%22 y=%22120%22%3E&lt;nav&gt;%3C/text%3E%3Ctext x=%225%22 y=%22145%22%3E&lt;p&gt;%3C/text%3E%3Ctext x=%225%22 y=%22170%22%3E&lt;a&gt;%3C/text%3E%3Ctext x=%225%22 y=%22195%22%3E&lt;h1&gt;%3C/text%3E%3Ctext x=%225%22 y=%22220%22%3E&lt;h2&gt;%3C/text%3E%3Ctext x=%225%22 y=%22245%22%3E&lt;/div&gt;%3C/text%3E%3Ctext x=%225%22 y=%22270%22%3E&lt;/p&gt;%3C/text%3E%3Ctext x=%225%22 y=%22295%22%3E&lt;/a&gt;%3C/text%3E%3Ctext x=%225%22 y=%22320%22%3E&lt;/h1&gt;%3C/text%3E%3Ctext x=%225%22 y=%22345%22%3E&lt;/h2&gt;%3C/text%3E%3Ctext x=%225%22 y=%22370%22%3E&lt;span&gt;%3C/text%3E%3Ctext x=%2225%22 y=%2235%22%3E&lt;section&gt;%3C/text%3E%3Ctext x=%2225%22 y=%2260%22%3E&lt;header&gt;%3C/text%3E%3Ctext x=%2225%22 y=%2285%22%3E&lt;footer&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22110%22%3E&lt;main&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22135%22%3E&lt;/nav&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22160%22%3E&lt;/body&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22185%22%3E&lt;/html&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22210%22%3E&lt;h3&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22235%22%3E&lt;/h3&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22260%22%3E&lt;ul&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22285%22%3E&lt;li&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22310%22%3E&lt;/li&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22335%22%3E&lt;/ul&gt;%3C/text%3E%3Ctext x=%2225%22 y=%22360%22%3Eclass=%22%22%3C/text%3E%3Ctext x=%2225%22 y=%22385%22%3Eid=%22%22%3C/text%3E%3C/svg%3E");
+      background-repeat: repeat;
+      pointer-events: none;
+      z-index: -1;
+      animation: matrix-scroll 15s linear infinite;
+      display: none;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%22500%22%3E%3Cstyle%3Etext%7Bfont:12px monospace;fill:%2300ff41;opacity:0.12%7D%3C/style%3E%3Ctext x=%2210%22 y=%2225%22%3E&lt;article&gt;%3C/text%3E%3Ctext x=%2210%22 y=%2255%22%3E&lt;aside&gt;%3C/text%3E%3Ctext x=%2210%22 y=%2285%22%3E&lt;form&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22115%22%3E&lt;input&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22145%22%3E&lt;button&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22175%22%3E&lt;img&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22205%22%3E&lt;meta&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22235%22%3E&lt;link&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22265%22%3E&lt;script&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22295%22%3E&lt;style&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22325%22%3E&lt;/form&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22355%22%3E&lt;/aside&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22385%22%3E&lt;/article&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22415%22%3E&lt;/footer&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22445%22%3E&lt;/header&gt;%3C/text%3E%3Ctext x=%2210%22 y=%22475%22%3E&lt;/section&gt;%3C/text%3E%3Ctext x=%2235%22 y=%2240%22%3E&lt;br&gt;%3C/text%3E%3Ctext x=%2235%22 y=%2280%22%3E&lt;hr&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22120%22%3E&lt;table&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22160%22%3E&lt;tr&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22200%22%3E&lt;td&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22240%22%3E&lt;/td&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22280%22%3E&lt;/tr&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22320%22%3E&lt;/table&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22360%22%3E&lt;code&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22400%22%3E&lt;pre&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22440%22%3E&lt;/code&gt;%3C/text%3E%3Ctext x=%2235%22 y=%22480%22%3E&lt;/main&gt;%3C/text%3E%3C/svg%3E");
+      background-repeat: repeat;
+      pointer-events: none;
+      z-index: -1;
+      animation: matrix-scroll-2 20s linear infinite;
+      display: none;
+    }
+
+    /* Top glow - Mobile only */
+    html::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        ellipse at 50% 0%,
+        rgba(0, 255, 65, 0.08) 0%,
+        transparent 40%
+      );
+      pointer-events: none;
+      z-index: -2;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      body::before {
+        display: block;
+        animation-duration: 10s;
+      }
+      body::after {
+        display: block;
+        animation-duration: 14s;
+      }
+      html::before {
+        display: block;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body::before,
+      body::after {
+        animation: none;
+      }
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
       background: var(--matrix-bg);
       color: var(--text-primary);
       line-height: 1.7;
@@ -392,8 +500,8 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Изработка на HTML Сайтове – Перфектната WordPress Алтернатива",
+    "@type": "WebPage",
+    "name": "Изработка на HTML Сайтове – Перфектната WordPress Алтернатива",
     "description": "Професионална изработка на HTML сайтове като алтернатива на WordPress. Поръчай статичен сайт с 100 PageSpeed.",
     "author": {
       "@type": "Organization",
@@ -450,7 +558,7 @@
         "name": "Трудно ли се актуализира HTML сайт?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Изисква базови HTML познания. Повечето клиенти ни изпращат промените и ние ги правим в рамките на 24 часа. Предлагаме месечна поддръжка от 50 € (98 лв) за редовни актуализации."
+          "text": "Изисква базови HTML познания. Повечето клиенти ни изпращат промените и ние ги правим в рамките на 24 часа срещу малка такса за промяна."
         }
       },
       {
@@ -468,77 +576,7 @@
           "@type": "Answer",
           "text": "Не, ако е направено правилно. Използваме 301 redirects и запазваме всички URLs. Обикновено SEO се подобрява заради по-добрата скорост."
         }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Additional Performance Optimizations -->
-  <!-- Enable mobile web app capabilities -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <!-- Apple status bar style -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "Как да замениш WordPress с HTML сайт",
-    "description": "Стъпка по стъпка ръководство за преминаване от WordPress към бърз HTML сайт",
-    "image": "https://moverstudio.online/og-image.svg",
-    "totalTime": "P7D",
-    "supply": [
-      {
-        "@type": "HowToSupply",
-        "name": "Текущ WordPress сайт"
-      }
-    ],
-    "tool": [
-      {
-        "@type": "HowToTool",
-        "name": "HTML/CSS редактор"
-      }
-    ],
-    "step": [
-      {
-        "@type": "HowToStep",
-        "name": "Анализ на съдържанието",
-        "text": "Експортираме всички страници, постове и медии от WordPress. Определяме кои елементи са наистина нужни.",
-        "position": 1
       },
-      {
-        "@type": "HowToStep",
-        "name": "Дизайн и структура",
-        "text": "Създаваме чист HTML дизайн без излишни елементи. Фокус върху скорост и потребителско изживяване.",
-        "position": 2
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Миграция на съдържанието",
-        "text": "Прехвърляме текста, изображенията и SEO елементите в новия HTML сайт.",
-        "position": 3
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Оптимизация",
-        "text": "Гарантираме 100 PageSpeed и подобряваме SEO класирането.",
-        "position": 4
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Пускане",
-        "text": "Качваме сайта и пренасочваме трафика от стария WordPress сайт.",
-        "position": 5
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
       {
         "@type": "Question",
         "name": "Как да избера правилния тип сайт?",
@@ -575,11 +613,31 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Как да замениш WordPress с HTML сайт",
+    "description": "Стъпка по стъпка ръководство за преминаване от WordPress към бърз HTML сайт",
+    "image": "https://moverstudio.online/og-image.svg",
+    "totalTime": "P7D",
+    "supply": [{ "@type": "HowToSupply", "name": "Текущ WordPress сайт" }],
+    "tool": [{ "@type": "HowToTool", "name": "HTML/CSS редактор" }],
+    "step": [
+      { "@type": "HowToStep", "name": "Анализ на съдържанието", "text": "Експортираме всички страници, постове и медии от WordPress. Определяме кои елементи са наистина нужни.", "position": 1 },
+      { "@type": "HowToStep", "name": "Дизайн и структура", "text": "Създаваме чист HTML дизайн без излишни елементи. Фокус върху скорост и потребителско изживяване.", "position": 2 },
+      { "@type": "HowToStep", "name": "Миграция на съдържанието", "text": "Прехвърляме текста, изображенията и SEO елементите в новия HTML сайт.", "position": 3 },
+      { "@type": "HowToStep", "name": "Оптимизация", "text": "Гарантираме 100 PageSpeed и подобряваме SEO класирането.", "position": 4 },
+      { "@type": "HowToStep", "name": "Пускане", "text": "Качваме сайта и пренасочваме трафика от стария WordPress сайт.", "position": 5 }
+    ]
+  }
+  </script>
+
 </head>
 <body>
 
 <header>
-  <nav>
+  <nav aria-label="Основна навигация">
     <a href="/"><strong>MOVER_STUDIO</strong></a>
     <span class="terminal">[ HTML | SPEED | REALITY ]</span>
   </nav>
@@ -590,7 +648,7 @@
   <article>
 
     <section>
-      <h1>Изработка на Сайтове – WordPress Алтернатива с HTML</h1>
+      <h1>WordPress Алтернатива – Бързи HTML Сайтове</h1>
 
       <div class="quick-answer">
         <h2>Кратък отговор:</h2>
@@ -640,9 +698,9 @@
           <p>Многостраничен сайт с услуги, екип, контакти. За средни и големи бизнеси. От 1,000 €.</p>
         </div>
         <div class="card">
-          <h3>Продуктов Каталог</h3>
-          <p>Статичен каталог с продукти, цени и контакти за поръчки. Идеално за малки бизнеси без сложна логистика. От 1,500 €.</p>
-          <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;"><em>Забележка: Не предлагаме пълни онлайн магазини с количка и плащания, защото се фокусираме върху статични HTML сайтове.</em></p>
+          <h3>Custom Project</h3>
+          <p>Специализирани HTML проекти с индивидуални функционалности. От 1,500 €.</p>
+          <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;"><em>Примери: roadassistancesofia.bg (14 локации), matiyhelp.bg (4 езика), patna-pomosht (калкулатор).</em></p>
         </div>
       </div>
       <div class="manifesto" style="margin-top: 2rem;">
@@ -702,7 +760,7 @@
           5. <strong>Пускане</strong> – Качваме сайта и предоставяме поддръжка.
         </p>
         <p>
-          <strong>Всяка изработка включва:</strong> Безплатна консултация, responsive дизайн, SEO оптимизация, 100 PageSpeed гаранция, 30 дни безплатна поддръжка.
+          <strong>Всяка изработка включва:</strong> Безплатна консултация, responsive дизайн, базово on-page SEO, 100 PageSpeed гаранция и 30 дни за корекции след пускане.
         </p>
       </div>
     </section>
@@ -858,11 +916,7 @@
         <ul>
           <li>Партньорски outbound links към luxury77.com, myve.bg, primewheels.bg</li>
           <li>Footer backlinks към social profiles (FB, IG, TikTok, YouTube)</li>
-          <li>Google Maps embed с location coordinates</li>
-        </ul>
 
-        <h3>4. <a href="https://nikoautogaz.github.io">nikoautogaz.github.io</a> – GitHub Pages + CI/CD Workflow</h3>
-        <p><strong>Deployment Strategy:</strong></p>
         <ul>
           <li>GitHub repository като hosting platform</li>
           <li>Git version control за всяка промяна в кода</li>
@@ -947,7 +1001,7 @@
           <li>WebP Images - Modern format с fallbacks за browser compatibility</li>
           <li>Mobile-First Design - Responsive layouts с CSS Grid/Flexbox</li>
           <li>Direct CTAs - tel: links за instant mobile conversion</li>
-          <li>Fast Hosting - GitHub Pages или Cloudflare Pages за speed + security</li>
+          <li>Fast Hosting - Професионален хостинг за максимална скорост и сигурност</li>
           <li>Multi-Location Pages - Dedicated HTML files за всяка geographic zone</li>
           <li>Internal Linking - Strategic cross-linking между локации и услуги</li>
           <li>No External Dependencies - Никакви jQuery, Bootstrap, Font Awesome bloat</li>
@@ -966,7 +1020,7 @@
 
       <details>
         <summary>Трудно ли се актуализира HTML сайт?</summary>
-        <p>Изисква базови HTML познания. Повечето клиенти ни изпращат промените и ние ги правим в рамките на 24 часа. Предлагаме месечна поддръжка от 50 € (98 лв) за редовни актуализации.</p>
+        <p>Изисква базови HTML познания. Повечето клиенти ни изпращат промените и ние ги правим в рамките на 24 часа срещу малка такса за промяна.</p>
       </details>
 
       <details>
@@ -1003,7 +1057,7 @@
       <div class="grid">
         <div class="card">
           <h3>⚡ Бърза Изработка</h3>
-          <p>Landing page за 3 дни. Multi-page сайт за 5-7 дни. Готови за пускане без забавяния.</p>
+          <p>Професионална изработка без месеци чакане. Готови за пускане без забавяния. Значително по-бързо от WordPress агенции.</p>
         </div>
         <div class="card">
           <h3>🔧 Професионални Инструменти</h3>
@@ -1011,7 +1065,7 @@
         </div>
         <div class="card">
           <h3>🤝 Гаранция за Качество</h3>
-          <p>100 PageSpeed гарантирано. 30 дни безплатна поддръжка. Пълно удовлетворение.</p>
+          <p>100 PageSpeed гарантирано. 30 дни за корекции след пускане. Пълно удовлетворение.</p>
         </div>
       </div>
     </section>
@@ -1028,7 +1082,8 @@
 
     <div class="call-to-action">
       Готов си да напуснеш WordPress?
-      <a href="blog/5-prichini-da-napusnesh-wordpress-dnes.html">Прочети защо WordPress е илюзия</a>
+      <a href="blog/5-prichini-da-napusnesh-wordpress-dnes.html">Прочети защо WordPress е илюзия</a> | 
+      <a href="blog/zashto-wordpress-e-baven.html">Защо WordPress е бавен</a>
       <br><br>
       Или поръчай директно:
       <a href="index.html#contact">Свържи се с нас</a>
@@ -1049,6 +1104,13 @@
     &gt; Built with HTML and a lot of stubbornness<br>
     &gt; 99 PageSpeed е за слабаците<br>
     &gt; <span class="cursor">_</span>
+  </p>
+  <p style="margin-top: 1rem;">
+    <a href="/index.html">Начало</a> | 
+    <a href="/izrabotka-na-sait.html">Услуги</a> | 
+    <a href="/calculator.html">Калкулатор</a> | 
+    <a href="/dokazatelstva.html">Доказателства</a> | 
+    <a href="/#contact">Контакт</a>
   </p>
   <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
     "Free your mind" – Morpheus

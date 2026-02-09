@@ -11,7 +11,7 @@ MOVER Studio specializes in creating ultra-fast, secure, and SEO-optimized stati
 - **Lightning-Fast Websites**: 100/100 PageSpeed guaranteed
 - **SEO Domination**: Proven results with free subdomains ranking #1
 - **Zero Maintenance**: No plugins, no updates, no security patches
-- **Premium Pricing**: Starting from 200€ (~391 BGN) for landing pages
+- **Premium Pricing**: Starting from 400€ (~782 BGN) for landing pages
 - **Bulgarian Market Focus**: Serving businesses across Bulgaria
 
 ## 📁 Project Structure
@@ -45,14 +45,17 @@ MOVER Studio specializes in creating ultra-fast, secure, and SEO-optimized stati
 ## 📊 Pricing (EUR + BGN)
 
 ### Website Packages
-- **Small Site (Landing Page)**: 200€ (~391 BGN)
-- **Medium Site (Multi-page)**: 500€ (~978 BGN)
-- **Large Site (Full Business)**: 1000€ (~1956 BGN)
+- **Landing Page (Пакет Старт)**: 400€ (~782 BGN)
+- **Multi-page (Пакет Бизнес)**: 1000€ (~1956 BGN)
+- **Full SEO Solution (Пакет Доминация)**: 2000€ (~3912 BGN)
 
-### SEO Services
-- **Small SEO Fix**: 50€ (~98 BGN)
-- **Medium SEO Fix**: 200€ (~391 BGN)
-- **Large SEO Fix**: 400€ (~782 BGN)
+### SEO Services (за съществуващи сайтове)
+- **Small SEO Fix**: 100€ (~195 BGN)
+- **Medium SEO Fix**: 250€ (~488 BGN)
+- **Large SEO Fix**: 500€ (~977 BGN)
+
+### SEO при нов сайт
+- **Разширено SEO**: 100€ база + 20€/страница над 5
 
 *Local Bulgarian clients receive 5-10% discount in BGN pricing.*
 

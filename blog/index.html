@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00ff41">
+
+  <title>Блог за HTML Сайтове и WordPress Алтернативи | MOVER Studio</title>
+  <meta name="description" content="Статии за HTML сайтове, WordPress проблеми и уеб оптимизация. Научи защо WordPress е бавен и как да постигнеш 100 PageSpeed.">
+  <meta name="keywords" content="блог html сайтове, wordpress проблеми, pagespeed оптимизация, wordpress алтернативи">
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://moverstudio.online/blog/">
+  <link rel="alternate" hreflang="bg" href="https://moverstudio.online/blog/">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Блог за HTML Сайтове и WordPress Алтернативи | MOVER Studio">
+  <meta property="og:description" content="Статии за HTML сайтове, WordPress проблеми и уеб оптимизация от MOVER Studio.">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://moverstudio.online/blog/">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:site_name" content="MOVER Studio">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Блог за HTML Сайтове | MOVER Studio">
+  <meta name="twitter:description" content="Статии за HTML сайтове, WordPress проблеми и уеб оптимизация.">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png">
+  <meta name="twitter:site" content="@moverstudio_bg">
+
+  <style>
+    :root {
+      --matrix-bg: #000000;
+      --matrix-dark: #0a0a0a;
+      --matrix-green: #00ff41;
+      --matrix-green-bright: #39ff14;
+      --matrix-green-dim: #00aa2b;
+      --text-primary: #f0fff0;
+      --text-bright: #ffffff;
+      --text-muted: #8fbc8f;
+      --red-pill: #e60039;
+      --blue-pill: #0080ff;
+      --radius: 4px;
+      --max: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: var(--matrix-bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--matrix-green);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--matrix-green-bright);
+      text-decoration: underline;
+    }
+
+    nav {
+      background: var(--matrix-dark);
+      border-bottom: 2px solid var(--matrix-green-dim);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--matrix-green-bright);
+      margin-bottom: 0.5rem;
+      border-left: 4px solid var(--matrix-green);
+      padding-left: 1rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      padding-left: 1.2rem;
+    }
+
+    .blog-card {
+      background: var(--matrix-dark);
+      border: 2px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.3s;
+    }
+
+    .blog-card:hover {
+      border-color: var(--matrix-green);
+    }
+
+    .blog-card h2 {
+      font-size: 1.4rem;
+      color: var(--matrix-green-bright);
+      margin-bottom: 0.8rem;
+    }
+
+    .blog-card h2 a {
+      color: var(--matrix-green-bright);
+    }
+
+    .blog-card h2 a:hover {
+      color: var(--matrix-green);
+      text-decoration: none;
+    }
+
+    .blog-meta {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-excerpt {
+      color: var(--text-primary);
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .read-more {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      border: 1px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      color: var(--matrix-green);
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .read-more:hover {
+      background: var(--matrix-green);
+      color: #000;
+      text-decoration: none;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--matrix-green-dim);
+    }
+
+    .cta-section h2 {
+      color: var(--matrix-green-bright);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .cta-primary {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--matrix-green);
+      color: #000;
+      font-weight: bold;
+      border-radius: var(--radius);
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .cta-primary:hover {
+      background: var(--matrix-green-bright);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 2px solid var(--matrix-green-dim);
+      margin-top: 2rem;
+      color: var(--text-muted);
+    }
+
+    footer .terminal {
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .cursor {
+      animation: blink 1s infinite;
+      color: var(--matrix-green);
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5rem; }
+      .blog-card { padding: 1.2rem; }
+      nav a { margin: 0 0.4rem; font-size: 0.85rem; }
+    }
+  </style>
+
+  <!-- Schema: @graph markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://moverstudio.online/#organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://moverstudio.online/og-image.png"
+        },
+        "sameAs": [
+          "https://www.google.com/maps/place/MOVER+Studio/@42.6977,23.3219,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85b6b6b6b6b6:0x6b6b6b6b6b6b6b6b!8m2!3d42.6977!4d23.3219",
+          "https://www.facebook.com/moverstudio.online",
+          "https://www.linkedin.com/company/moverstudio"
+        ]
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Изработка на HTML сайтове",
+        "name": "Блог за HTML Сайтове и WordPress Алтернативи",
+        "description": "Статии за HTML сайтове, WordPress проблеми и уеб оптимизация от MOVER Studio.",
+        "provider": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "България"
+        }
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://moverstudio.online/blog/",
+        "name": "Блог за HTML Сайтове и WordPress Алтернативи",
+        "description": "Статии за HTML сайтове, WordPress проблеми и уеб оптимизация от MOVER Studio.",
+        "url": "https://moverstudio.online/blog/",
+        "inLanguage": "bg",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "MOVER Studio",
+          "url": "https://moverstudio.online"
+        },
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://moverstudio.online/blog/5-prichini-da-napusnesh-wordpress-dnes.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://moverstudio.online/blog/zashto-wordpress-e-baven.html"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "MOVER Studio - Изработка на HTML сайтове",
+        "url": "https://moverstudio.online",
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://moverstudio.online/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://moverstudio.online/" },
+          { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://moverstudio.online/blog/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <article class="blog-card">
+    <h2><a href="zashto-wordpress-e-baven.html">Защо WordPress е Бавен? Техническите Причини</a></h2>
+    <p class="blog-meta">📅 2026 &middot; ⏱️ 6 мин. четене &middot; 🏷️ WordPress, PageSpeed</p>
+    <p class="blog-excerpt">
+      PHP заявки, база данни, тежки плъгини и render-blocking ресурси — разбери техническите причини защо 
+      WordPress сайтовете не могат да постигнат 100 PageSpeed и как HTML алтернативите решават проблема.
+    </p>
+    <a href="zashto-wordpress-e-baven.html" class="read-more">Прочети статията →</a>
+  </article>
+
+  <section class="cta-section">
+    <h2>Искаш сайт с 100 PageSpeed?</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Без WordPress, без месечни такси, без компромиси.</p>
+    <a href="../calculator.html" class="cta-primary">Изчисли цена →</a>
+  </section>
+</main>
+
+<footer>
+  <p class="terminal">
+    &copy; 2026 MOVER_STUDIO<br>
+    &gt; Built without WordPress<br>
+    &gt; Built with HTML and a lot of stubbornness<br>
+    &gt; 99 PageSpeed е за слабаците<br>
+    &gt; <span class="cursor">_</span>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
+    "Free your mind" – Morpheus
+  </p>
+  <p style="margin-top: 1rem;">
+    <a href="../index.html">Начало</a> | 
+    <a href="../izrabotka-na-sait.html">Услуги</a> | 
+    <a href="../calculator.html">Калкулатор</a> | 
+    <a href="../dokazatelstva.html">Доказателства</a> | 
+    <a href="../about.html">За Нас</a> | 
+    <a href="../case-studies.html">Case Studies</a>
+  </p>
+</footer>
+
+</body>
+</html>

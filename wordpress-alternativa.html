@@ -15,33 +15,33 @@
   <!-- Performance Optimization: No external resources - all inline for maximum speed -->
   <!-- Preload not needed as all CSS/JS is inline -->
 
-  <title>Изработка на Сайтове | WordPress Алтернатива HTML | Бързи и Сигурни Сайтове Без WordPress | MOVER Studio - 100 PageSpeed Гарантирано</title>
-  <meta name="description" content="Изработка на сайтове като алтернатива на WordPress. HTML сайтове 10x по-бързи, по-сигурни, без месечни такси. Поръчай професионален сайт с 100 PageSpeed и SEO оптимизация от 400 €.">
+  <title>WordPress Алтернатива | HTML Сайт без WordPress | MOVER Studio</title>
+  <meta name="description" content="Защо HTML е по-добрата алтернатива на WordPress? 10x по-бърз, по-сигурен, без месечни такси. 100 PageSpeed гарантирано. От 400€.">
   <meta name="keywords" content="wordpress алтернатива, html вместо wordpress, бърза wordpress алтернатива, статични сайтове">
   <link rel="canonical" href="https://moverstudio.online/wordpress-alternativa.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/wordpress-alternativa.html">
-  <link rel="alternate" hreflang="x-default" href="https://moverstudio.online/wordpress-alternativa.html">
   
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   
   <!-- FontAwesome REMOVED for PageSpeed - using Unicode emojis instead -->
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="language" content="Bulgarian">
 
   <!-- Open Graph -->
   <meta property="og:title" content="WordPress Алтернатива | HTML Сайтове | MOVER Studio">
   <meta property="og:description" content="HTML сайтове като алтернатива на WordPress. 10x по-бързи, по-сигурни, без месечни такси. 100 PageSpeed гарантирано.">
-  <meta property="og:image" content="https://moverstudio.online/og-image.svg">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/wordpress-alternativa.html">
   <meta property="og:locale" content="bg_BG">
+  <meta property="og:site_name" content="MOVER Studio">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Изработка на HTML Сайтове | WordPress Алтернатива">
   <meta name="twitter:description" content="Поръчай изработка на HTML сайтове като алтернатива на WordPress. 100 PageSpeed гарантирано.">
-  <meta name="twitter:image" content="https://moverstudio.online/og-image.svg">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png">
+  <meta name="twitter:site" content="@moverstudio_bg">
 
   <style>
     :root {
@@ -53,7 +53,7 @@
       --text-primary: #f0fff0;
       --text-bright: #ffffff;
       --text-muted: #8fbc8f;
-      --red-pill: #ff0040;
+      --red-pill: #e60039;
       --blue-pill: #0080ff;
       --radius: 4px;
       --max: 1100px;
@@ -351,8 +351,7 @@
     }
 
     .illusion {
-      color: var(--red-pill);
-      opacity: 0.85;
+      color: #ff6680;
     }
 
     .proof {
@@ -497,138 +496,161 @@
     }
   </style>
 
+  <!-- Schema: @graph markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Изработка на HTML Сайтове – Перфектната WordPress Алтернатива",
-    "description": "Професионална изработка на HTML сайтове като алтернатива на WordPress. Поръчай статичен сайт с 100 PageSpeed.",
-    "author": {
-      "@type": "Organization",
-      "name": "MOVER Studio"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "MOVER Studio",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://moverstudio.online/favicon.svg"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://moverstudio.online/#organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://moverstudio.online/og-image.png"
+        },
+        "sameAs": [
+          "https://github.com/moverstudio",
+          "https://www.linkedin.com/in/ivanov-moverstudio",
+          "https://www.google.com/maps/place/MOVER+Studio+-+Изработка+на+HTML+сайтове+%26+SEO/@42.725411,25.5431784,502557m/data=!3m2!1e3!4b1!4m6!3m5!1s0x62f45cbc39443723:0x664d5ddfe7c8baef!8m2!3d42.725411!4d25.5431784!16s%2Fg%2F11yxs5tttk?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D"
+        ]
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Изработка на HTML сайтове",
+        "name": "WordPress Алтернатива - HTML Сайтове",
+        "description": "Професионална изработка на HTML сайтове като алтернатива на WordPress. 10x по-бързи, по-сигурни, без месечни такси.",
+        "provider": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "България"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "400",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "name": "Изработка на HTML Сайтове – Перфектната WordPress Алтернатива",
+        "description": "Професионална изработка на HTML сайтове като алтернатива на WordPress. Поръчай статичен сайт с 100 PageSpeed.",
+        "author": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "url": "https://moverstudio.online/wordpress-alternativa.html",
+        "datePublished": "2026-01-25",
+        "dateModified": "2026-01-30",
+        "keywords": ["изработка на html сайтове", "поръчка на статични сайтове", "wordpress алтернатива", "статични сайтове", "seo оптимизация"]
+      },
+      {
+        "@type": "WebSite",
+        "name": "MOVER Studio - Изработка на HTML сайтове",
+        "url": "https://moverstudio.online",
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://moverstudio.online/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://moverstudio.online/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "WordPress Алтернатива",
+          "item": "https://moverstudio.online/wordpress-alternativa.html"
+        }]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Може ли HTML сайт да има контакт форми?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Използваме Formspree, Netlify Forms или подобни за форми без backend. Или лек serverless function. Формите работят перфектно."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Трудно ли се актуализира HTML сайт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "HTML файловете се редактират с всеки текстов редактор — не е нужен CMS. При предаване получавате пълна документация за структурата на сайта."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Колко струва преминаване от WordPress към HTML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Зависи от сложността на WordPress сайта. Обикновено 200-500 € (391-978 лв). Включва content migration, SEO preservation, и URL redirects."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ще загубя ли SEO позиции при миграция?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Не, ако е направено правилно. Използваме \"301 redirects\" и запазваме всички URLs. Обикновено SEO се подобрява заради по-добрата скорост."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Мога ли да редактирам HTML сайт сам?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, HTML сайтове се редактират лесно с безплатни инструменти като VS Code. Няма нужда от технически знания - просто променяте текста като в Word документ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "По-скъпо ли е от WordPress?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Не, HTML сайтове са по-евтини в дългосрочен план. Еднократна инвестиция от 400€ вместо годишни такси за хостинг, теми и плъгини, които могат да достигнат 1000-3000 лв годишно."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какво става с мобилната версия?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Всички HTML сайтове включват responsive design - перфектно се адаптират към мобилни устройства, таблети и десктоп. Няма нужда от допълнителни плъгини или теми."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "Как да замениш WordPress с HTML сайт",
+        "description": "Стъпка по стъпка ръководство за преминаване от WordPress към бърз HTML сайт",
+        "image": "https://moverstudio.online/og-image.png",
+        "totalTime": "P7D",
+        "step": [
+          { "@type": "HowToStep", "name": "Анализ на съдържанието", "text": "Експортираме всички страници, постове и медии от WordPress. Определяме кои елементи са наистина нужни.", "position": 1 },
+          { "@type": "HowToStep", "name": "Дизайн и структура", "text": "Създаваме чист HTML дизайн без излишни елементи. Фокус върху скорост и потребителско изживяване.", "position": 2 },
+          { "@type": "HowToStep", "name": "Миграция на съдържанието", "text": "Прехвърляме текста, изображенията и SEO елементите в новия HTML сайт.", "position": 3 },
+          { "@type": "HowToStep", "name": "Оптимизация", "text": "Гарантираме 100 PageSpeed и подобряваме SEO класирането.", "position": 4 },
+          { "@type": "HowToStep", "name": "Пускане", "text": "Качваме сайта и пренасочваме трафика от стария WordPress сайт.", "position": 5 }
+        ]
       }
-    },
-    "url": "https://moverstudio.online/wordpress-alternativa.html",
-    "datePublished": "2026-01-25",
-    "dateModified": "2026-01-30",
-    "keywords": ["изработка на html сайтове", "поръчка на статични сайтове", "wordpress алтернатива", "статични сайтове", "seo оптимизация"]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Начало",
-      "item": "https://moverstudio.online/"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "WordPress Алтернатива",
-      "item": "https://moverstudio.online/wordpress-alternativa.html"
-    }]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Може ли HTML сайт да има контакт форми?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Да. Използваме Formspree, Netlify Forms или подобни за форми без backend. Или лек serverless function. Формите работят перфектно."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Трудно ли се актуализира HTML сайт?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Изисква базови HTML познания. Повечето клиенти ни изпращат промените и ние ги правим в рамките на 24 часа срещу малка такса за промяна."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Колко струва преминаване от WordPress към HTML?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Зависи от сложността на WordPress сайта. Обикновено 200-500 € (391-978 лв). Включва content migration, SEO preservation, и URL redirects."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ще загубя ли SEO позиции при миграция?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Не, ако е направено правилно. Използваме 301 redirects и запазваме всички URLs. Обикновено SEO се подобрява заради по-добрата скорост."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Как да избера правилния тип сайт?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Зависи от нуждите ви: за представяне на услугите - визитка сайт; за комплексен бизнес - корпоративен сайт; за продажби онлайн - електронен магазин. Ще ви помогнем да изберете най-подходящото решение."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Мога ли да редактирам HTML сайт сам?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Да, HTML сайтове се редактират лесно с безплатни инструменти като VS Code. Няма нужда от технически знания - просто променяте текста като в Word документ."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "По-скъпо ли е от WordPress?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Не, HTML сайтове са по-евтини в дългосрочен план. Еднократна инвестиция от 400€ вместо годишни такси за хостинг, теми и плъгини, които могат да достигнат 1000-3000 лв годишно."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Какво става с мобилната версия?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Всички HTML сайтове включват responsive design - перфектно се адаптират към мобилни устройства, таблети и десктоп. Няма нужда от допълнителни плъгини или теми."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "Как да замениш WordPress с HTML сайт",
-    "description": "Стъпка по стъпка ръководство за преминаване от WordPress към бърз HTML сайт",
-    "image": "https://moverstudio.online/og-image.svg",
-    "totalTime": "P7D",
-    "supply": [{ "@type": "HowToSupply", "name": "Текущ WordPress сайт" }],
-    "tool": [{ "@type": "HowToTool", "name": "HTML/CSS редактор" }],
-    "step": [
-      { "@type": "HowToStep", "name": "Анализ на съдържанието", "text": "Експортираме всички страници, постове и медии от WordPress. Определяме кои елементи са наистина нужни.", "position": 1 },
-      { "@type": "HowToStep", "name": "Дизайн и структура", "text": "Създаваме чист HTML дизайн без излишни елементи. Фокус върху скорост и потребителско изживяване.", "position": 2 },
-      { "@type": "HowToStep", "name": "Миграция на съдържанието", "text": "Прехвърляме текста, изображенията и SEO елементите в новия HTML сайт.", "position": 3 },
-      { "@type": "HowToStep", "name": "Оптимизация", "text": "Гарантираме 100 PageSpeed и подобряваме SEO класирането.", "position": 4 },
-      { "@type": "HowToStep", "name": "Пускане", "text": "Качваме сайта и пренасочваме трафика от стария WordPress сайт.", "position": 5 }
     ]
   }
   </script>
@@ -636,19 +658,30 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+
 <header>
   <nav aria-label="Основна навигация">
     <a href="/"><strong>MOVER_STUDIO</strong></a>
     <span class="terminal">[ HTML | SPEED | REALITY ]</span>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+      <a href="/index.html">Начало</a>
+      <a href="/izrabotka-na-sait.html">Услуги</a>
+      <a href="/calculator.html">Калкулатор</a>
+      <a href="/dokazatelstva.html">Доказателства</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/about.html">За Нас</a>
+    </div>
   </nav>
 </header>
 
-<main>
+<main id="main">
 
   <article>
+    <h1 style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">WordPress Алтернатива</h1>
 
     <section>
-      <h1>WordPress Алтернатива – Бързи HTML Сайтове</h1>
+      <h2>WordPress Алтернатива – Бързи HTML Сайтове</h2>
 
       <div class="quick-answer">
         <h2>Кратък отговор:</h2>
@@ -757,7 +790,7 @@
           2. <strong>Дизайн</strong> – Създаваме модерен, responsive дизайн.<br>
           3. <strong>Разработка</strong> – Кодираме чист HTML/CSS с максимална скорост.<br>
           4. <strong>Оптимизация</strong> – Гарантираме 100 PageSpeed и SEO готовност.<br>
-          5. <strong>Пускане</strong> – Качваме сайта и предоставяме поддръжка.
+          5. <strong>Пускане</strong> – Качваме сайта и го правим оперативен.
         </p>
         <p>
           <strong>Всяка изработка включва:</strong> Безплатна консултация, responsive дизайн, базово on-page SEO, 100 PageSpeed гаранция и 30 дни за корекции след пускане.
@@ -845,168 +878,10 @@
     </section>
 
     <section>
-      <h2>Технически Showcase: Как MOVER Studio Изгражда Доминиращи Сайтове</h2>
-      <div class="proof">
-        <h3>1. <a href="https://roadassistancesofia.bg">roadassistancesofia.bg</a> – Multi-Location Architecture</h3>
-        <p><strong>Техническа Структура:</strong></p>
-        <ul>
-          <li>Георегионална стратегия: 14 отделни HTML страници (sofiq.html, trebich.html, ilienci.html...) с уникално H1 таргетиране</li>
-          <li>Inline критичен CSS/JS: Елиминирани са render-blocking requests - целият styling е в &lt;style&gt; тага</li>
-          <li>Zero external dependencies: Никакви CDN библиотеки, framework-ове или external scripts</li>
-        </ul>
-        <p><strong>SEO Архитектура:</strong></p>
-        <ul>
-          <li>Всяка подстраница съдържа: локално H1 (&lt;h1&gt;Пътна Помощ [Район]&lt;/h1&gt;), уникален description meta tag, локални ключови думи в content</li>
-          <li>Структурирана навигация с anchor links към всяка локация</li>
-          <li>Schema.org LocalBusiness микроразметка дублирана за всяка зона</li>
-        </ul>
-        <p><strong>Performance Optimization:</strong></p>
-        <ul>
-          <li>WebP изображения с &lt;picture&gt; fallback</li>
-          <li>Lazy loading на галериите</li>
-          <li>Минифициран HTML без whitespace</li>
-        </ul>
-
-        <h3>2. <a href="https://patna-pomosht-kostinbrod.bg">patna-pomosht-kostinbrod.bg</a> – Калкулатор-Driven Design</h3>
-        <p><strong>Уникално Техническо Решение:</strong></p>
-        <ul>
-          <li>Vanilla JavaScript калкулатор интегриран в статичен HTML без React/Vue overhead</li>
-          <li>Калкулаторът работи изцяло client-side - никакви API calls или backend</li>
-          <li>Dynamic pricing calculation базирана на kilometric input и vehicle weight</li>
-        </ul>
-        <p><strong>Multi-Page SEO Strategy:</strong></p>
-        <ul>
-          <li>11 location-specific pages (kostinbrod.html, godech.html, buchin.html...)</li>
-          <li>Всяка страница има identical layout, но unique H1/title/meta за локалното SEO</li>
-          <li>Internal linking structure между всички локации за crawl efficiency</li>
-        </ul>
-        <p><strong>Trust Signal Integration:</strong></p>
-        <ul>
-          <li>Микроразметка AggregateRating с hardcoded 5.0 стойност и review count</li>
-          <li>Trustindex и Google review badges вградени като structured data</li>
-          <li>CTA buttons с tel: protocol за директна мобилна конверсия</li>
-        </ul>
-        <p><strong>Technical Specs:</strong></p>
-        <ul>
-          <li>Mobile-first responsive design с CSS media queries</li>
-          <li>Cookie consent banner с localStorage за GDPR compliance</li>
-          <li>Multi-language flags (BG/EN/DE/TR/RO) в header без actual translations (visual element)</li>
-        </ul>
-
-        <h3>3. <a href="https://matiyhelp.bg">matiyhelp.bg</a> – True Multi-Language Implementation</h3>
-        <p><strong>Езикова Архитектура:</strong></p>
-        <ul>
-          <li>4 отделни HTML файла: index.html (BG), index-en.html, index-ro.html, index-tr.html</li>
-          <li>Няма i18n библиотеки, JSON files или dynamic content switching</li>
-          <li>Всеки език = independent page с пълен content duplication</li>
-        </ul>
-        <p><strong>Technical Benefits:</strong></p>
-        <ul>
-          <li>Search engines индексират всеки език като отделна страница</li>
-          <li>Zero JavaScript overhead за language switching</li>
-          <li>Hreflang tags за multi-regional targeting</li>
-        </ul>
-        <p><strong>Location Pages:</strong></p>
-        <ul>
-          <li>Dedicated folder structure: /areas/godech.html, /areas/petrohan.html...</li>
-          <li>12 geographic pages с consistent layout template</li>
-          <li>Breadcrumb navigation за SEO hierarchy</li>
-        </ul>
-        <p><strong>External Link Strategy:</strong></p>
-        <ul>
-          <li>Партньорски outbound links към luxury77.com, myve.bg, primewheels.bg</li>
-          <li>Footer backlinks към social profiles (FB, IG, TikTok, YouTube)</li>
-
-        <ul>
-          <li>GitHub repository като hosting platform</li>
-          <li>Git version control за всяка промяна в кода</li>
-          <li>Automatic deployment при push to main branch</li>
-        </ul>
-        <p><strong>Image Optimization:</strong></p>
-        <ul>
-          <li>WebP gallery с 6 project images (cheroki.webp, disko.webp, ren.webp...)</li>
-          <li>Descriptive alt tags за всяка снимка (SEO + accessibility)</li>
-          <li>Optimized file sizes под 100KB per image</li>
-        </ul>
-        <p><strong>Review Integration:</strong></p>
-        <ul>
-          <li>Structured data за 96+ Google reviews</li>
-          <li>Individual review cards с име, rating stars, текст</li>
-          <li>Link към пълния Google Maps profile за external validation</li>
-        </ul>
-        <p><strong>Technical Structure:</strong></p>
-        <ul>
-          <li>Single-page layout с anchor navigation (#services, #specializations, #projects)</li>
-          <li>Smooth scroll behavior с CSS scroll-behavior: smooth</li>
-          <li>Sticky header с telefon CTA винаги visible</li>
-        </ul>
-
-        <h3>5. <a href="https://zdravencenaralfa.pages.dev">zdravencenaralfa.pages.dev</a> – Cloudflare Pages Optimization</h3>
-        <p><strong>Hosting Architecture:</strong></p>
-        <ul>
-          <li>Cloudflare Pages deployment за global CDN distribution</li>
-          <li>Automatic SSL/TLS encryption</li>
-          <li>DDoS protection и rate limiting built-in</li>
-        </ul>
-        <p><strong>Team Profile SEO:</strong></p>
-        <ul>
-          <li>Индивидуални профили (ПТ, СТ, СИ, СП) с initials като visual IDs</li>
-          <li>Всеки профил съдържа: име, специализация, visual avatar</li>
-          <li>Schema.org Person markup за всеки член на екипа</li>
-        </ul>
-        <p><strong>FAQ Optimization:</strong></p>
-        <ul>
-          <li>6 структурирани въпроса с expandable answers</li>
-          <li>FAQ schema markup за Google featured snippets</li>
-          <li>Questions оптимизирани за voice search queries</li>
-        </ul>
-        <p><strong>Conversion Elements:</strong></p>
-        <ul>
-          <li>Работно време таблица (понеделник 09:00-13:00, контролни всеки ден)</li>
-          <li>Direct CTA buttons: "Запази час" с tel: link</li>
-          <li>Multiple contact methods (phone, email, Facebook)</li>
-        </ul>
-
-        <h3>6. <a href="https://minibagerkostinbrod.pages.dev">minibagerkostinbrod.pages.dev</a> – Geographic Domination Template</h3>
-        <p><strong>Multi-Region Strategy:</strong></p>
-        <ul>
-          <li>14 location cards в grid layout (Костинброд, Сливница, Драгоман...)</li>
-          <li>Всяка карта е anchor link към dedicated section или page</li>
-          <li>Visual consistency с emoji icons за geographic representation</li>
-        </ul>
-        <p><strong>Service Showcase:</strong></p>
-        <ul>
-          <li>4 main services с визуален imagery (багер, дробилка, транспорт, монтаж)</li>
-          <li>WebP images с descriptive filenames (bagbus.jpg, drob1.jpg, bus1.jpg)</li>
-          <li>Service descriptions оптимизирани за long-tail keywords</li>
-        </ul>
-        <p><strong>Technical Performance:</strong></p>
-        <ul>
-          <li>Cloudflare Pages за edge caching</li>
-          <li>Minified HTML/CSS без external stylesheets</li>
-          <li>Mobile-optimized touch targets за CTA buttons</li>
-        </ul>
-        <p><strong>Trust Building:</strong></p>
-        <ul>
-          <li>"50+ доволни клиенти" badge</li>
-          <li>"7 дни в седмицата" availability highlight</li>
-          <li>"Оферта за 5 минути" speed promise</li>
-        </ul>
-
-        <h3>MOVER Studio Methodology: Common Technical Patterns Across All 6 Sites</h3>
-        <ul>
-          <li>Zero CMS Dependency - Pure HTML/CSS/JS без WordPress, Joomla, или database</li>
-          <li>Inline Critical CSS - Всички стилове в &lt;style&gt; tag за eliminate render-blocking</li>
-          <li>Schema.org Markup - LocalBusiness, Service, Review, Person structured data</li>
-          <li>WebP Images - Modern format с fallbacks за browser compatibility</li>
-          <li>Mobile-First Design - Responsive layouts с CSS Grid/Flexbox</li>
-          <li>Direct CTAs - tel: links за instant mobile conversion</li>
-          <li>Fast Hosting - Професионален хостинг за максимална скорост и сигурност</li>
-          <li>Multi-Location Pages - Dedicated HTML files за всяка geographic zone</li>
-          <li>Internal Linking - Strategic cross-linking между локации и услуги</li>
-          <li>No External Dependencies - Никакви jQuery, Bootstrap, Font Awesome bloat</li>
-        </ul>
-        <p><strong>Result: Мигновено зареждане, перфектна индексация, локално SEO доминиране.</strong></p>
+      <h2>Реални Проекти: 6 Сайта с Доказани Резултати</h2>
+      <p>Вижте как MOVER Studio изгражда доминиращи HTML сайтове за реални бизнеси — от мулти-локационни стратегии до SEO доминиране в Google.</p>
+      <div class="pill-choice">
+        <a href="/case-studies.html" class="pill red-pill">Виж Case Studies →</a>
       </div>
     </section>
 
@@ -1020,7 +895,7 @@
 
       <details>
         <summary>Трудно ли се актуализира HTML сайт?</summary>
-        <p>Изисква базови HTML познания. Повечето клиенти ни изпращат промените и ние ги правим в рамките на 24 часа срещу малка такса за промяна.</p>
+        <p>HTML файловете се редактират с всеки текстов редактор — не е нужен CMS. При предаване получавате пълна документация за структурата на сайта.</p>
       </details>
 
       <details>
@@ -1044,9 +919,9 @@
 
       <p>Визуализирай трите пакета накратко:</p>
       <ul>
-        <li><strong>Старт:</strong> 400 € (781 лв) - 1-3 страници</li>
+        <li><strong>Старт:</strong> 400 € (782 лв) - 1-3 страници</li>
         <li><strong>Бизнес:</strong> 1,000 € (1,956 лв) - 4-8 страници</li>
-        <li><strong>Доминация:</strong> 2,000 € (3,904 лв) - 9+ страници, SEO архитектура</li>
+        <li><strong>Custom:</strong> 1,500 € (2,934 лв) - 9+ страници, разширено SEO</li>
       </ul>
 
       <p>Link: <a href="/#services">Виж пълните пакети и features</a></p>
@@ -1110,9 +985,11 @@
     <a href="/izrabotka-na-sait.html">Услуги</a> | 
     <a href="/calculator.html">Калкулатор</a> | 
     <a href="/dokazatelstva.html">Доказателства</a> | 
-    <a href="/#contact">Контакт</a>
+    <a href="/about.html">За Нас</a> | 
+    <a href="/#contact">Контакт</a> | 
+    <a href="/blog/">Блог</a>
   </p>
-  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
     "Free your mind" – Morpheus
   </p>
 </footer>

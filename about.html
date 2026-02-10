@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00ff41">
+
+  <title>За Нас | MOVER Studio – Българска Уеб Агенция за HTML Сайтове</title>
+  <meta name="description" content="MOVER Studio е българска уеб агенция, специализирана в изработка на статични HTML сайтове с гарантиран 100 PageSpeed. Без WordPress, без компромиси.">
+  <meta name="keywords" content="mover studio, за нас, уеб агенция българия, html сайтове, кои сме ние">
+  <link rel="canonical" href="https://moverstudio.online/about.html">
+  <link rel="alternate" hreflang="bg" href="https://moverstudio.online/about.html">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="За Нас | MOVER Studio">
+  <meta property="og:description" content="Българска уеб агенция, специализирана в HTML сайтове с 100 PageSpeed. Без WordPress, без компромиси.">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://moverstudio.online/about.html">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:site_name" content="MOVER Studio">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="За Нас | MOVER Studio">
+  <meta name="twitter:description" content="Българска уеб агенция, специализирана в HTML сайтове с 100 PageSpeed.">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png">
+  <meta name="twitter:site" content="@moverstudio_bg">
+
+  <style>
+    :root {
+      --matrix-bg: #000000;
+      --matrix-dark: #0a0a0a;
+      --matrix-green: #00ff41;
+      --matrix-green-bright: #39ff14;
+      --matrix-green-dim: #00aa2b;
+      --text-primary: #f0fff0;
+      --text-bright: #ffffff;
+      --text-muted: #8fbc8f;
+      --red-pill: #e60039;
+      --blue-pill: #0080ff;
+      --radius: 4px;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: var(--matrix-bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    a { color: var(--matrix-green); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--matrix-green-bright); text-decoration: underline; }
+
+    header {
+      background: var(--matrix-dark);
+      border-bottom: 2px solid var(--matrix-green-dim);
+      padding: 1rem 2rem;
+    }
+    header nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header nav a { border-bottom: none; }
+    .terminal { color: var(--matrix-green-dim); font-size: 0.85rem; }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    h1 {
+      color: var(--matrix-green-bright);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px rgba(0,255,65,0.3);
+    }
+
+    h2 {
+      color: var(--matrix-green);
+      font-size: 1.4rem;
+      margin: 2.5rem 0 1rem;
+      border-left: 4px solid var(--matrix-green);
+      padding-left: 1rem;
+    }
+
+    h3 {
+      color: var(--matrix-green-bright);
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    p { margin-bottom: 1.2rem; }
+
+    .breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb a:hover { color: var(--matrix-green-bright); }
+
+    .about-card {
+      background: var(--matrix-dark);
+      border: 1px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: var(--matrix-dark);
+      border: 1px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .stat-card .number {
+      font-size: 2.5rem;
+      color: var(--matrix-green-bright);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .values-list {
+      list-style: none;
+      padding: 0;
+    }
+    .values-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(0,255,65,0.1);
+    }
+    .values-list li::before {
+      content: "✓ ";
+      color: var(--matrix-green);
+      font-weight: bold;
+    }
+
+    .tech-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .tech-item {
+      background: var(--matrix-dark);
+      border: 1px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid var(--matrix-green-dim);
+    }
+
+    .cta-primary {
+      display: inline-block;
+      background: var(--matrix-green);
+      color: #000;
+      padding: 0.75rem 2rem;
+      border-radius: var(--radius);
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: all 0.3s;
+    }
+    .cta-primary:hover {
+      background: var(--matrix-green-bright);
+      color: #000;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: var(--matrix-dark);
+      border-top: 2px solid var(--matrix-green-dim);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .cursor {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.5rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+
+  <!-- Schema: @graph markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://moverstudio.online/#organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online",
+        "logo": "https://moverstudio.online/og-image.png",
+        "sameAs": [
+          "https://www.google.com/maps/place/MOVER+Studio+-+Изработка+на+HTML+сайтове+%26+SEO/@42.725411,25.5431784,502557m/data=!3m2!1e3!4b1!4m6!3m5!1s0x62f45cbc39443723:0x664d5ddfe7c8baef!8m2!3d42.725411!4d25.5431784!16s%2Fg%2F11yxs5tttk?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D"
+        ]
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Изработка на HTML сайтове",
+        "name": "За MOVER Studio",
+        "description": "MOVER Studio е българска уеб агенция, специализирана в изработка на статични HTML сайтове с гарантиран 100 PageSpeed.",
+        "provider": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "България"
+        }
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://moverstudio.online/about.html",
+        "name": "За MOVER Studio",
+        "description": "MOVER Studio е българска уеб агенция, специализирана в изработка на статични HTML сайтове с гарантиран 100 PageSpeed.",
+        "url": "https://moverstudio.online/about.html",
+        "mainEntity": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".about-card"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "MOVER Studio - Изработка на HTML сайтове",
+        "url": "https://moverstudio.online",
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://moverstudio.online/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://moverstudio.online/" },
+          { "@type": "ListItem", "position": 2, "name": "За Нас", "item": "https://moverstudio.online/about.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+</head>
+<body>
+
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+
+<header>
+  <nav aria-label="Основна навигация">
+    <a href="/"><strong>MOVER_STUDIO</strong></a>
+    <span class="terminal">[ HTML | SPEED | REALITY ]</span>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+      <a href="/index.html">Начало</a>
+      <a href="/izrabotka-na-sait.html">Услуги</a>
+      <a href="/calculator.html">Калкулатор</a>
+      <a href="/dokazatelstva.html">Доказателства</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/about.html">За Нас</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <article>
+    <h1 style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">За MOVER Studio</h1>
+
+    <div class="breadcrumb">
+      <a href="/">Начало</a> &gt; За Нас
+    </div>
+
+    <h2>За MOVER Studio – Кои Сме и Какво Правим</h2>
+
+    <div class="about-card">
+      <p>
+        <strong>MOVER Studio</strong> е българска уеб агенция, специализирана в изработка на <strong>статични HTML сайтове</strong> 
+        с гарантиран <strong>100/100 Google PageSpeed</strong> резултат. Ние не използваме WordPress, Wix, 
+        Squarespace или друг CMS — всеки наш сайт е ръчно кодиран с чист HTML и CSS.
+      </p>
+      <p>
+        Нашата философия е проста: <strong>максимална скорост, минимална сложност, нулеви месечни такси</strong>. 
+        Вярваме, че повечето бизнес сайтове не се нуждаят от тежки CMS системи — а от бърз, сигурен и добре оптимизиран сайт, 
+        който се зарежда мигновено и класира на първа страница в Google.
+      </p>
+    </div>
+
+    <h2>📊 Нашите Резултати</h2>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="number">100</span>
+        PageSpeed резултат на всеки проект
+      </div>
+      <div class="stat-card">
+        <span class="number">&lt;1s</span>
+        Време за зареждане
+      </div>
+      <div class="stat-card">
+        <span class="number">0€</span>
+        Месечни такси за CMS
+      </div>
+      <div class="stat-card">
+        <span class="number">6+</span>
+        Сайта на първа страница в Google
+      </div>
+    </div>
+
+    <h2>🎯 Нашите Ценности</h2>
+
+    <ul class="values-list">
+      <li><strong>Скорост превъзхожда всичко</strong> — Всеки милисекунда е важна. Нашите сайтове се зареждат 10x по-бързо от WordPress.</li>
+      <li><strong>Простота е сила</strong> — Чист HTML код, без dependencies, без bloat. Kolkoto по-прост, толкова по-надежден.</li>
+      <li><strong>Прозрачност в цените</strong> — Фиксирана цена от 400€, без скрити такси, без месечни плащания.</li>
+      <li><strong>SEO от ден 1</strong> — Всеки сайт е оптимизиран за Google от самото начало — structured data, meta tags, Core Web Vitals.</li>
+      <li><strong>Сигурност по подразбиране</strong> — Статичен HTML = нулева attack surface. Няма база данни, няма плъгини, няма пробиви.</li>
+      <li><strong>Реални резултати</strong> — Не обещаваме — доказваме. Всеки наш проект е на първа страница в Google.</li>
+    </ul>
+
+    <h2>🛠️ Технологии и Подход</h2>
+
+    <div class="tech-stack">
+      <div class="tech-item">
+        <h3>💻 HTML5 + CSS3</h3>
+        <p>Ръчно кодирани сайтове с inline CSS за максимална скорост. Без external stylesheets, без render-blocking resources.</p>
+      </div>
+      <div class="tech-item">
+        <h3>⚡ Zero JavaScript</h3>
+        <p>Повечето от нашите сайтове работят без единствен ред JavaScript. Чист HTML — максимално бързо и достъпно.</p>
+      </div>
+      <div class="tech-item">
+        <h3>🔍 Вграден SEO</h3>
+        <p>Schema.org structured data, Open Graph, Twitter Cards, canonical URLs, hreflang — всичко от ден 1.</p>
+      </div>
+      <div class="tech-item">
+        <h3>🛡️ Security Headers</h3>
+        <p>HSTS, CSP, X-Frame-Options, Referrer-Policy — enterprise-grade сигурност без enterprise-grade бюджет.</p>
+      </div>
+    </div>
+
+    <h2>📋 Нашият Процес</h2>
+
+    <div class="about-card">
+      <p><strong>1. Консултация</strong> — Обсъждаме вашите нужди, цели и бюджет. Безплатна начална среща.</p>
+      <p><strong>2. Дизайн</strong> — Създаваме персонализиран дизайн, вдъхновен от вашия бранд.</p>
+      <p><strong>3. Разработка</strong> — Ръчно кодираме всяка страница с чист HTML и CSS.</p>
+      <p><strong>4. SEO оптимизация</strong> — Вграждаме structured data, meta tags, Core Web Vitals оптимизация.</p>
+      <p><strong>5. Тестване и пускане</strong> — Тестваме във всички браузъри и устройства. PageSpeed 100 гарантирано.</p>
+    </div>
+
+    <h2>💡 Защо Да Изберете Нас?</h2>
+
+    <div class="about-card">
+      <p>
+        Пазарът е пълен с WordPress агенции, които продават бавни сайтове на абонамент. Ние предлагаме алтернативата — 
+        <strong>еднократна цена, нулева поддръжка, максимална скорост</strong>. Всеки наш клиент получава сайт, 
+        който е по-бърз от 99% от конкуренцията.
+      </p>
+      <p>
+        Не вярвай на думите ни — <a href="/dokazatelstva.html">провери доказателствата</a>. 
+        Всички наши проекти са публично достъпни за проверка в Google PageSpeed Insights.
+      </p>
+    </div>
+
+    <h2>📞 Контакти</h2>
+
+    <div class="about-card">
+      <p>📧 Имейл: <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a></p>
+      <p>📱 Телефон: <a href="tel:+359877845569">+359 877 845 569</a></p>
+      <p>🌐 Уебсайт: <a href="https://moverstudio.online">moverstudio.online</a></p>
+    </div>
+
+    <section class="cta-section">
+      <h2 style="border-left: none; padding-left: 0;">Готов за Бърз Сайт?</h2>
+      <p>Калкулирай цената на своя HTML сайт и премини към скоростта.</p>
+      <a href="/calculator.html" class="cta-primary">Калкулатор за цената →</a>
+      <p style="margin-top: 2rem; font-size: 0.95rem;">
+        Или разгледай: <a href="/izrabotka-na-sait.html">Нашите услуги</a> | 
+        <a href="/case-studies.html">Case Studies</a> | 
+        <a href="/blog/">Блог</a>
+      </p>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <p class="terminal">
+    © 2026 MOVER_STUDIO<br>
+    &gt; Built without WordPress<br>
+    &gt; Built with HTML and a lot of stubbornness<br>
+    &gt; 99 PageSpeed е за слабаците<br>
+    &gt; <span class="cursor">_</span>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
+    "Free your mind" – Morpheus
+  </p>
+  <p style="margin-top: 1rem;">
+    <a href="/index.html">Начало</a> | 
+    <a href="/izrabotka-na-sait.html">Услуги</a> | 
+    <a href="/calculator.html">Калкулатор</a> | 
+    <a href="/dokazatelstva.html">Доказателства</a> | 
+    <a href="/about.html">За Нас</a> | 
+    <a href="/#contact">Контакт</a> | 
+    <a href="/blog/">Блог</a>
+  </p>
+  <section class="partners" style="margin-top: 2rem; text-align: center; color: var(--text-muted);">
+    <h3 style="color: var(--matrix-green-bright); font-size: 1.2rem; margin-bottom: 0.5rem;">Партньори</h3>
+    <p>Хостинг партньор: <a href="https://bdinhost.com" target="_blank" rel="noopener" style="color: var(--matrix-green);">BDinHost</a> - Надежден и бърз хостинг за вашия бизнес.</p>
+  </section>
+</footer>
+
+</body>
+</html>

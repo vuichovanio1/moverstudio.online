@@ -10,31 +10,31 @@
   <!-- Performance Optimization: Theme color for mobile browsers (Matrix green) -->
   <meta name="theme-color" content="#00ff41">
 
-  <title>Реални SEO и HTML проекти | MOVER Studio</title>
+  <title>Реални SEO и HTML Проекти с 100 PageSpeed | MOVER Studio</title>
   <meta name="description" content="Реални HTML сайтове с 100 PageSpeed, които доминират в Google. Без WordPress, с гарантирани резултати от MOVER Studio.">
   <meta name="keywords" content="case studies, html проекти, реални сайтове, pagespeed 100 примери, seo резултати">
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="language" content="Bulgarian">
   <link rel="canonical" href="https://moverstudio.online/case-studies.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/case-studies.html">
-  <link rel="alternate" hreflang="x-default" href="https://moverstudio.online/case-studies.html">
   
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Реални SEO и HTML проекти | MOVER Studio">
   <meta property="og:description" content="Реални HTML сайтове с 100 PageSpeed, които доминират в Google. Без WordPress, с гарантирани резултати.">
-  <meta property="og:image" content="https://moverstudio.online/og-image.svg">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/case-studies.html">
   <meta property="og:locale" content="bg_BG">
+  <meta property="og:site_name" content="MOVER Studio">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Case Studies: HTML Сайтове Без WordPress">
   <meta name="twitter:description" content="Реални проекти, които доминират в Google с HTML и 100 PageSpeed.">
-  <meta name="twitter:image" content="https://moverstudio.online/og-image.svg">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png">
+  <meta name="twitter:site" content="@moverstudio_bg">
 
   <style>
     :root {
@@ -46,7 +46,7 @@
       --text-primary: #f0fff0;
       --text-bright: #ffffff;
       --text-muted: #8fbc8f;
-      --red-pill: #cc0000;
+      --red-pill: #e60039;
       --blue-pill: #0080ff;
       --radius: 4px;
       --max: 1100px;
@@ -369,118 +369,139 @@
     }
   </style>
 
+  <!-- Schema: @graph markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Case Studies: Реални Проекти с HTML Без WordPress",
-    "description": "Каталог на успешни HTML сайтове, разработени от MOVER Studio, които доминират в локални търсения.",
-    "url": "https://moverstudio.online/case-studies.html",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "MOVER Studio",
-      "url": "https://moverstudio.online"
-    },
-    "hasPart": [
+    "@graph": [
       {
-        "@type": "CreativeWork",
-        "name": "roadassistancesofia.bg – Пътна Помощ в София",
-        "description": "HTML сайт за пътна помощ, доминиращ в локални търсения.",
-        "url": "https://roadassistancesofia.bg",
-        "creator": {
-          "@type": "Organization",
-          "name": "MOVER Studio",
-          "url": "https://moverstudio.online"
+        "@type": "Organization",
+        "@id": "https://moverstudio.online/#organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://moverstudio.online/og-image.png"
+        },
+        "sameAs": [
+          "https://www.google.com/maps/place/MOVER+Studio/@42.6977,23.3219,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85b6b6b6b6b6:0x6b6b6b6b6b6b6b6b!8m2!3d42.6977!4d23.3219",
+          "https://www.facebook.com/moverstudio.online",
+          "https://www.linkedin.com/company/moverstudio"
+        ]
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Изработка на HTML сайтове",
+        "name": "Case Studies: Реални Проекти с HTML Без WordPress",
+        "description": "Каталог на успешни HTML сайтове, разработени от MOVER Studio, които доминират в локални търсения.",
+        "provider": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "България"
         }
       },
       {
-        "@type": "CreativeWork",
-        "name": "patna-pomosht-kostinbrod.bg – Пътна Помощ в Костинброд",
-        "description": "HTML сайт с калкулатор за пътна помощ, постигнал топ резултати.",
-        "url": "https://patna-pomosht-kostinbrod.bg",
-        "creator": {
-          "@type": "Organization",
-          "name": "MOVER Studio",
-          "url": "https://moverstudio.online"
+        "@type": "CollectionPage",
+        "name": "Case Studies: Реални Проекти с HTML Без WordPress",
+        "description": "Каталог на успешни HTML сайтове, разработени от MOVER Studio, които доминират в локални търсения.",
+        "url": "https://moverstudio.online/case-studies.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "CreativeWork",
+              "name": "roadassistancesofia.bg – Пътна Помощ в София",
+              "description": "HTML сайт за пътна помощ, доминиращ в локални търсения.",
+              "url": "https://roadassistancesofia.bg",
+              "creator": {
+                "@id": "https://moverstudio.online/#organization"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "patna-pomosht-kostinbrod.bg – Пътна Помощ в Костинброд",
+              "description": "HTML сайт с калкулатор за пътна помощ, постигнал топ резултати.",
+              "url": "https://patna-pomosht-kostinbrod.bg",
+              "creator": {
+                "@id": "https://moverstudio.online/#organization"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "matiyhelp.bg – Пътна Помощ в Годеч, Калотина, Петрохан",
+              "description": "Многоезичен HTML сайт за пътна помощ в малки райони.",
+              "url": "https://matiyhelp.bg",
+              "creator": {
+                "@type": "Organization",
+                "name": "MOVER Studio",
+                "url": "https://moverstudio.online"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "nikoautogaz.github.io – Автогаз Услуги в София",
+              "description": "HTML сайт за автогаз системи, хостван на GitHub Pages.",
+              "url": "https://nikoautogaz.github.io",
+              "creator": {
+                "@id": "https://moverstudio.online/#organization"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "zdravencenaralfa.pages.dev – Холистичен Здравен Център",
+              "description": "HTML сайт за здравни услуги, хостван на Cloudflare Pages.",
+              "url": "https://zdravencenaralfa.pages.dev",
+              "creator": {
+                "@id": "https://moverstudio.online/#organization"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "minibagerkostinbrod.pages.dev – Мини Багер и Транспорт",
+              "description": "HTML сайт за изкопни услуги, покриващ широка област.",
+              "url": "https://minibagerkostinbrod.pages.dev",
+              "creator": {
+                "@id": "https://moverstudio.online/#organization"
+              }
+            }
+          ]
         }
       },
       {
-        "@type": "CreativeWork",
-        "name": "matiyhelp.bg – Пътна Помощ в Годеч, Калотина, Петрохан",
-        "description": "Многоезичен HTML сайт за пътна помощ в малки райони.",
-        "url": "https://matiyhelp.bg",
-        "creator": {
-          "@type": "Organization",
-          "name": "MOVER Studio",
-          "url": "https://moverstudio.online"
+        "@type": "WebSite",
+        "name": "MOVER Studio - Изработка на HTML сайтове",
+        "url": "https://moverstudio.online",
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://moverstudio.online/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
         }
       },
       {
-        "@type": "CreativeWork",
-        "name": "nikoautogaz.github.io – Автогаз Услуги в София",
-        "description": "HTML сайт за автогаз системи, хостван на GitHub Pages.",
-        "url": "https://nikoautogaz.github.io",
-        "creator": {
-          "@type": "Organization",
-          "name": "MOVER Studio",
-          "url": "https://moverstudio.online"
-        }
-      },
-      {
-        "@type": "CreativeWork",
-        "name": "zdravencenaralfa.pages.dev – Холистичен Здравен Център",
-        "description": "HTML сайт за здравни услуги, хостван на Cloudflare Pages.",
-        "url": "https://zdravencenaralfa.pages.dev",
-        "creator": {
-          "@type": "Organization",
-          "name": "MOVER Studio",
-          "url": "https://moverstudio.online"
-        }
-      },
-      {
-        "@type": "CreativeWork",
-        "name": "minibagerkostinbrod.pages.dev – Мини Багер и Транспорт",
-        "description": "HTML сайт за изкопни услуги, покриващ широка област.",
-        "url": "https://minibagerkostinbrod.pages.dev",
-        "creator": {
-          "@type": "Organization",
-          "name": "MOVER Studio",
-          "url": "https://moverstudio.online"
-        }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Начало",
+            "item": "https://moverstudio.online/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Case Studies",
+            "item": "https://moverstudio.online/case-studies.html"
+          }
+        ]
       }
     ]
   }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Начало",
-        "item": "https://moverstudio.online/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Case Studies",
-        "item": "https://moverstudio.online/case-studies.html"
-      }
-    ]
-  }
-  </script>
-
-  <!-- Content Security Policy for XSS protection -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
-
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- Additional Performance Optimizations -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -489,19 +510,30 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+
 <header>
   <nav aria-label="Основна навигация">
     <a href="/"><strong>MOVER_STUDIO</strong></a>
     <span class="terminal">[ HTML | SPEED | REALITY ]</span>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+      <a href="/index.html">Начало</a>
+      <a href="/izrabotka-na-sait.html">Услуги</a>
+      <a href="/calculator.html">Калкулатор</a>
+      <a href="/dokazatelstva.html">Доказателства</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/about.html">За Нас</a>
+    </div>
   </nav>
 </header>
 
-<main>
+<main id="main">
 
   <article>
+    <h1 style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Case Studies</h1>
 
     <section>
-      <h1>Case Studies: Реални Проекти с HTML Без WordPress</h1>
+      <h2>Case Studies: Реални Проекти с HTML Без WordPress</h2>
       <p>
         Вижте как нашите HTML сайтове доминират в локални търсения, постигайки топ резултати в Google без WordPress.
         Всеки проект е оптимизиран за скорост, SEO и AI търсачки, с реални резултати и предимства.
@@ -716,7 +748,7 @@
     &gt; 99 PageSpeed е за слабаците<br>
     &gt; <span class="cursor">_</span>
   </p>
-  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
     "Free your mind" – Morpheus
   </p>
   <p style="margin-top: 1rem;">
@@ -724,7 +756,9 @@
     <a href="/izrabotka-na-sait.html">Услуги</a> | 
     <a href="/calculator.html">Калкулатор</a> | 
     <a href="/dokazatelstva.html">Доказателства</a> | 
-    <a href="/#contact">Контакт</a>
+    <a href="/about.html">За Нас</a> | 
+    <a href="/#contact">Контакт</a> | 
+    <a href="/blog/">Блог</a>
   </p>
   <section class="partners" style="margin-top: 2rem; text-align: center; color: var(--text-muted);">
     <h3 style="color: var(--matrix-green-bright); font-size: 1.2rem; margin-bottom: 0.5rem;">Партньори</h3>

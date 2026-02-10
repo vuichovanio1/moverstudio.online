@@ -1,0 +1,26 @@
+/* humanstxt.org */
+
+/* TEAM */
+  Name: MOVER Studio
+  Role: Web Development Agency
+  Site: https://moverstudio.online
+  Contact: admin@moverstudio.online
+  Phone: +359 877 845 569
+  Location: Bulgaria
+
+/* SITE */
+  Last update: 2026-02-10
+  Language: Bulgarian
+  Doctype: HTML5
+  Standards: HTML5, CSS3, Schema.org, Open Graph
+  IDE: Visual Studio Code
+  Technology: Static HTML, Inline CSS, Zero Dependencies
+  PageSpeed: 100/100 (Guaranteed)
+  Hosting: cPanel (Apache)
+  SSL: Let's Encrypt
+  Domain: moverstudio.online
+
+/* PHILOSOPHY */
+  No WordPress. No CMS. No JavaScript frameworks.
+  Pure HTML. Maximum speed. Zero attack surface.
+  Every site scores 100/100 on Google PageSpeed.

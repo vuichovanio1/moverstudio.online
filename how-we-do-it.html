@@ -10,31 +10,31 @@
   <!-- Performance Optimization: Theme color for mobile browsers (Matrix green) -->
   <meta name="theme-color" content="#00ff41">
 
-  <title>Как изграждаме бързи HTML сайтове (100 PageSpeed) | MOVER Studio</title>
-  <meta name="description" content="Как създаваме HTML сайтове с 100 PageSpeed и SEO доминиране. Без WordPress, с гарантирани резултати.">
+  <title>Как Правим HTML Сайтове с 100 PageSpeed | MOVER Studio</title>
+  <meta name="description" content="Нашият процес: от идея до HTML сайт с 100 PageSpeed. Inline CSS, zero dependencies, SEO от първия ден. Без WordPress, без компромиси.">
   <meta name="keywords" content="как правим сайтове, html разработка, процес изработка, философия уеб дизайн, pagespeed оптимизация">
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="language" content="Bulgarian">
   <link rel="canonical" href="https://moverstudio.online/how-we-do-it.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/how-we-do-it.html">
-  <link rel="alternate" hreflang="x-default" href="https://moverstudio.online/how-we-do-it.html">
   
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Как изграждаме бързи HTML сайтове (100 PageSpeed) | MOVER Studio">
   <meta property="og:description" content="Как създаваме HTML сайтове с 100 PageSpeed и SEO доминиране. Без WordPress, с гарантирани резултати.">
-  <meta property="og:image" content="https://moverstudio.online/og-image.svg">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/how-we-do-it.html">
   <meta property="og:locale" content="bg_BG">
+  <meta property="og:site_name" content="MOVER Studio">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Как Правим HTML Сайтове | MOVER Studio">
   <meta name="twitter:description" content="Философия и процес за създаване на ултра бързи HTML сайтове без WordPress.">
-  <meta name="twitter:image" content="https://moverstudio.online/og-image.svg">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png">
+  <meta name="twitter:site" content="@moverstudio_bg">
 
   <style>
     :root {
@@ -46,7 +46,7 @@
       --text-primary: #f0fff0;
       --text-bright: #ffffff;
       --text-muted: #8fbc8f;
-      --red-pill: #cc0000;
+      --red-pill: #e60039;
       --blue-pill: #0080ff;
       --radius: 4px;
       --max: 1100px;
@@ -388,77 +388,166 @@
     }
   </style>
 
+  <!-- Schema: @graph markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Как Правим HTML Сайтове: Философия и Процес",
-    "description": "Как създаваме ултра бързи HTML сайтове без WordPress. Философия, процес и резултати от MOVER Studio.",
-    "author": {
-      "@type": "Organization",
-      "name": "MOVER Studio"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "MOVER Studio"
-    },
-    "datePublished": "2026-01-30",
-    "dateModified": "2026-01-30",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://moverstudio.online/how-we-do-it.html"
-    },
-    "image": "https://moverstudio.online/og-image.svg",
-    "url": "https://moverstudio.online/how-we-do-it.html",
-    "keywords": ["как правим html сайтове", "философия mover studio", "процес разработка html"]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Начало",
-        "item": "https://moverstudio.online/"
+        "@type": "Organization",
+        "@id": "https://moverstudio.online/#organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://moverstudio.online/og-image.png"
+        },
+        "sameAs": [
+          "https://www.google.com/maps/place/MOVER+Studio/@42.6977,23.3219,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85b6b6b6b6b6:0x6b6b6b6b6b6b6b6b!8m2!3d42.6977!4d23.3219",
+          "https://www.facebook.com/moverstudio.online",
+          "https://www.linkedin.com/company/moverstudio"
+        ]
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Как го правим",
-        "item": "https://moverstudio.online/how-we-do-it.html"
+        "@type": "Service",
+        "serviceType": "Изработка на HTML сайтове",
+        "name": "Как Правим HTML Сайтове: Философия и Процес",
+        "description": "Как създаваме ултра бързи HTML сайтове без WordPress. Философия, процес и резултати от MOVER Studio.",
+        "provider": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "България"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "name": "Как Правим HTML Сайтове: Философия и Процес",
+        "description": "Как създаваме ултра бързи HTML сайтове без WordPress. Философия, процес и резултати от MOVER Studio.",
+        "author": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-01-30",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://moverstudio.online/how-we-do-it.html"
+        },
+        "image": "https://moverstudio.online/og-image.png",
+        "url": "https://moverstudio.online/how-we-do-it.html",
+        "keywords": ["как правим html сайтове", "философия mover studio", "процес разработка html"]
+      },
+      {
+        "@type": "WebSite",
+        "name": "MOVER Studio - Изработка на HTML сайтове",
+        "url": "https://moverstudio.online",
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://moverstudio.online/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "HowTo",
+        "name": "Как се изработва HTML сайт с 100 PageSpeed",
+        "description": "Нашият 6-стъпков процес за изработка на бърз, SEO-оптимизиран HTML сайт без WordPress.",
+        "totalTime": "P14D",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Консултация",
+            "text": "Обсъждаме вашите нужди, целева аудитория и цели. Анализираме конкуренцията и определяме стратегия."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Дизайн",
+            "text": "Създаваме модерен, responsive дизайн който работи перфектно на всички устройства. Фокус върху UX и конверсии."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Разработка",
+            "text": "Кодираме чист HTML/CSS с максимална скорост. Имплементираме SEO елементи и структурирани данни."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Оптимизация",
+            "text": "Гарантираме 100 PageSpeed и базова SEO готовност. Тестваме на всички устройства и браузъри."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Пускане",
+            "text": "Качваме сайта на хостинг и предоставяме 30 дни за корекции след пускане."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Предаване",
+            "text": "Получавате пълна документация и 100% собственост над кода. Сайтът е изцяло ваш — няма нужда от поддръжка."
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Начало",
+            "item": "https://moverstudio.online/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Как го правим",
+            "item": "https://moverstudio.online/how-we-do-it.html"
+          }
+        ]
       }
     ]
   }
   </script>
-
-  <!-- Content Security Policy for XSS protection -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
-
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  }
+  </script>
 
 </head>
 <body>
+
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
 
 <header>
   <nav aria-label="Основна навигация">
     <a href="/"><strong>MOVER_STUDIO</strong></a>
     <span class="terminal">[ HTML | SPEED | REALITY ]</span>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+      <a href="/index.html">Начало</a>
+      <a href="/izrabotka-na-sait.html">Услуги</a>
+      <a href="/calculator.html">Калкулатор</a>
+      <a href="/dokazatelstva.html">Доказателства</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/about.html">За Нас</a>
+    </div>
   </nav>
 </header>
 
-<main>
+<main id="main">
 
   <article>
+    <h1 style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Как Правим HTML Сайтове</h1>
 
     <section>
-      <h1>Как Правим HTML Сайтове: Философия и Процес</h1>
+      <h2>Как Правим HTML Сайтове: Философия и Процес</h2>
       <p>
         Ние не правим "красиви" сайтове. Правим сайтове, които превръщат трафик в обаждания.
         Ето как го постигаме.
@@ -499,15 +588,15 @@
         </div>
         <div class="card">
           <h3>4. Оптимизация</h3>
-          <p>Гарантираме 100 PageSpeed и пълна SEO готовност. Тестваме на всички устройства и браузъри.</p>
+          <p>Гарантираме 100 PageSpeed и базова SEO готовност. Тестваме на всички устройства и браузъри.</p>
         </div>
         <div class="card">
           <h3>5. Пускане</h3>
           <p>Качваме сайта на хостинг и предоставяме 30 дни за корекции след пускане.</p>
         </div>
         <div class="card">
-          <h3>6. Поддръжка</h3>
-          <p>Изпращате ни промените и ние ги правим в рамките на 24 часа срещу малка такса за промяна. Без месечни абонаменти.</p>
+          <h3>6. Предаване</h3>
+          <p>Получавате пълна документация и 100% собственост над кода. Сайтът е изцяло ваш — няма нужда от поддръжка.</p>
         </div>
       </div>
     </section>
@@ -597,7 +686,7 @@
     &gt; 99 PageSpeed е за слабаците<br>
     &gt; <span class="cursor">_</span>
   </p>
-  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
     "Free your mind" – Morpheus
   </p>
   <p style="margin-top: 1rem;">
@@ -605,7 +694,9 @@
     <a href="/izrabotka-na-sait.html">Услуги</a> | 
     <a href="/calculator.html">Калкулатор</a> | 
     <a href="/dokazatelstva.html">Доказателства</a> | 
-    <a href="/#contact">Контакт</a>
+    <a href="/about.html">За Нас</a> | 
+    <a href="/#contact">Контакт</a> | 
+    <a href="/blog/">Блог</a>
   </p>
   <section class="partners" style="margin-top: 2rem; text-align: center; color: var(--text-muted);">
     <h3 style="color: var(--matrix-green-bright); font-size: 1.2rem; margin-bottom: 0.5rem;">Партньори</h3>

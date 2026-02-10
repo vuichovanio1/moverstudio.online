@@ -1,13 +1,45 @@
 # Optimized robots.txt for MOVER Studio - Web Design Agency
 # Allow all search engines to crawl the entire site
 # No restricted areas for maximum visibility
-# Crawl-delay set to 1 second for optimal indexing
 
 User-agent: *
 Disallow:
 
+# AI Bot Access - Explicitly welcome AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl и Apple Intelligence
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Sitemap location
 Sitemap: https://moverstudio.online/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
+# LLMs.txt for AI context
+# https://llmstxt.org/
+# See: https://moverstudio.online/llms.txt

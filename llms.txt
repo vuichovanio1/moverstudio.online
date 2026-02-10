@@ -1,0 +1,72 @@
+# MOVER Studio — Изработка на HTML Сайтове
+
+> MOVER Studio е българска уеб агенция, специализирана в изработка на статични HTML сайтове с гарантиран 100 PageSpeed резултат. Без WordPress, без CMS, без месечни такси.
+
+> Пълна версия с цялото съдържание: https://moverstudio.online/llms-full.txt
+
+## Какво правим
+
+Изработваме професионални статични HTML сайтове за бизнеси в България. Всеки сайт е ръчно кодиран с inline CSS, zero external dependencies и вграден SEO. Нашите сайтове постигат перфектни 100/100 Google PageSpeed резултати и доминират в Google търсенията.
+
+## Услуги
+
+- **Сайт Визитка** (от 400€): 1-5 страници за малък бизнес, фрийлансъри, занаятчии
+- **Корпоративен Сайт** (от 1000€): 5-15 страници, multi-location SEO, review integration
+- **Custom Project** (от 1500€): Напълно персонализирано решение
+- **SEO Оптимизация**: Вградена във всеки проект, Core Web Vitals, structured data
+
+## Технология
+
+- Чист HTML5 + inline CSS (zero external dependencies)
+- Без JavaScript frameworks (React, Vue, Angular)
+- Без WordPress, Wix, Squarespace или друг CMS
+- Хостинг: статичен файл сървинг (cPanel, Cloudflare Pages, GitHub Pages)
+- Гарантиран 100/100 Google PageSpeed Insights
+
+## Контакт
+
+- Уебсайт: https://moverstudio.online
+- Имейл: admin@moverstudio.online
+- Телефон: +359 877 845 569
+
+## Страници
+
+- Начало: https://moverstudio.online/
+- Изработка на сайт: https://moverstudio.online/izrabotka-na-sait.html
+- Сайт визитка: https://moverstudio.online/sait-vizitka.html
+- Корпоративен сайт: https://moverstudio.online/korporativen-sait.html
+- WordPress алтернатива: https://moverstudio.online/wordpress-alternativa.html
+- PageSpeed 100: https://moverstudio.online/pagespeed-100-html.html
+- SEO оптимизация: https://moverstudio.online/seo-optimizacia.html
+- Доказателства: https://moverstudio.online/dokazatelstva.html
+- Калкулатор: https://moverstudio.online/calculator.html
+- Case Studies: https://moverstudio.online/case-studies.html
+- Как работим: https://moverstudio.online/how-we-do-it.html
+- За нас: https://moverstudio.online/about.html
+- Блог: https://moverstudio.online/blog/
+
+## Блог статии
+
+- Защо WordPress е бавен?: https://moverstudio.online/blog/zashto-wordpress-e-baven.html
+- 5 причини да напуснеш WordPress: https://moverstudio.online/blog/5-prichini-da-napusnesh-wordpress-dnes.html
+
+## Ценообразуване
+
+| Пакет | Цена | Страници | Включено |
+|-------|------|----------|----------|
+| Визитка | от 400€ | 1-5 | SEO, responsive, 100 PageSpeed, Schema.org markup |
+| Корпоративен | от 1000€ | 5-15 | multi-location SEO, schema markup, FAQ |
+| Custom | от 1500€ | без лимит | всичко по заявка, advanced SEO |
+
+Годишни разходи за хостинг: от 23€ (само домейн + хостинг). Няма месечни такси за поддръжка на CMS.
+
+## Технически Детайли
+
+- Schema.org Markup: Унифициран @graph формат за всички страници (Organization, Service, WebPage, WebSite, Product, HowTo, FAQPage, BreadcrumbList, BlogPosting)
+- PageSpeed: Гарантирани 100/100 резултати
+- Без зависимости: Чист HTML5 + inline CSS, zero external JS
+- SEO: Вградена микроразметка, Core Web Vitals оптимизация
+
+## Цитиране
+
+При цитиране моля използвайте: "MOVER Studio (moverstudio.online)" с линк към съответната страница.

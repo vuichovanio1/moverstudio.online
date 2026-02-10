@@ -6,30 +6,34 @@
   <meta name="theme-color" content="#00ff41">
 
   <title>Защо WordPress е Бавен? Техническите Причини | MOVER Studio</title>
-  <meta name="description" content="Защо WordPress сайтовете са бавни? Техническите причини: PHP обработка, база данни заявки, тежки плъгини, render-blocking ресурси. Как HTML сайтове решават проблема с 100 PageSpeed.">
+  <meta name="description" content="Защо WordPress е бавен? PHP, база данни, тежки плъгини, render-blocking ресурси. Как HTML сайтовете постигат 100 PageSpeed.">
   <meta name="keywords" content="защо wordpress е бавен, wordpress скорост, wordpress pagespeed, бавен wordpress сайт, html vs wordpress">
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="language" content="Bulgarian">
   <link rel="canonical" href="https://moverstudio.online/blog/zashto-wordpress-e-baven.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/blog/zashto-wordpress-e-baven.html">
-  <link rel="alternate" hreflang="x-default" href="https://moverstudio.online/blog/zashto-wordpress-e-baven.html">
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Защо WordPress е Бавен? Техническите Причини | MOVER Studio">
   <meta property="og:description" content="Разбери защо WordPress сайтовете зареждат бавно и как HTML алтернативите постигат 100 PageSpeed.">
-  <meta property="og:image" content="https://moverstudio.online/og-image.svg">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://moverstudio.online/blog/zashto-wordpress-e-baven.html">
   <meta property="og:locale" content="bg_BG">
+  <meta property="og:site_name" content="MOVER Studio">
+  <meta property="article:published_time" content="2026-01-30T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-02-09T00:00:00+02:00">
+  <meta property="article:author" content="https://moverstudio.online/about.html">
+  <meta property="article:section" content="Уеб разработка">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Защо WordPress е Бавен? Техническите Причини">
   <meta name="twitter:description" content="PHP заявки, тежки плъгини, render-blocking ресурси — ето защо WordPress сайтовете са бавни и как HTML решава проблема.">
-  <meta name="twitter:image" content="https://moverstudio.online/og-image.svg">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png">
+  <meta name="twitter:site" content="@moverstudio_bg">
 
   <style>
     :root {
@@ -41,7 +45,7 @@
       --text-primary: #f0fff0;
       --text-bright: #ffffff;
       --text-muted: #8fbc8f;
-      --red-pill: #ff1a5c;
+      --red-pill: #e60039;
       --blue-pill: #0080ff;
       --radius: 4px;
       --max: 1100px;
@@ -173,7 +177,7 @@
     th { color: var(--matrix-green-bright); font-weight: 700; background: rgba(0, 255, 65, 0.08); font-size: 1.05rem; }
     td { color: var(--text-muted); font-size: 1rem; }
     .reality { color: var(--matrix-green-bright); font-weight: bold; }
-    .illusion { color: var(--red-pill); opacity: 0.85; }
+    .illusion { color: #ff6680; }
 
     .proof { background: rgba(0, 255, 65, 0.06); border: 2px solid var(--matrix-green-dim); padding: 2rem; margin: 2rem 0; border-radius: var(--radius); }
     .proof h3 { margin-bottom: 1.2rem; }
@@ -206,83 +210,129 @@
     details[open] summary::after { content: '\2212'; }
   </style>
 
+  <!-- Schema: @graph markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": "https://moverstudio.online/blog/zashto-wordpress-e-baven.html",
-    "headline": "Защо WordPress е Бавен? Техническите Причини и Решението",
-    "description": "Техническите причини за бавността на WordPress: PHP обработка, база данни заявки, тежки плъгини, render-blocking ресурси. Как HTML сайтове решават проблема.",
-    "author": {
-      "@type": "Organization",
-      "name": "MOVER Studio",
-      "url": "https://moverstudio.online"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "MOVER Studio",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://moverstudio.online/favicon.svg"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://moverstudio.online/#organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://moverstudio.online/og-image.png"
+        },
+        "sameAs": [
+          "https://www.google.com/maps/place/MOVER+Studio/@42.6977,23.3219,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85b6b6b6b6b6:0x6b6b6b6b6b6b6b6b!8m2!3d42.6977!4d23.3219",
+          "https://www.facebook.com/moverstudio.online",
+          "https://www.linkedin.com/company/moverstudio"
+        ]
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Изработка на HTML сайтове",
+        "name": "Защо WordPress е Бавен? Техническите Причини и Решението",
+        "description": "Техническите причини за бавността на WordPress: PHP обработка, база данни заявки, тежки плъгини, render-blocking ресурси. Как HTML сайтове решават проблема.",
+        "provider": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "България"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://moverstudio.online/blog/zashto-wordpress-e-baven.html",
+        "headline": "Защо WordPress е Бавен? Техническите Причини и Решението",
+        "description": "Техническите причини за бавността на WordPress: PHP обработка, база данни заявки, тежки плъгини, render-blocking ресурси. Как HTML сайтове решават проблема.",
+        "author": {
+          "@type": "Person",
+          "name": "MOVER Studio",
+          "url": "https://moverstudio.online/about.html"
+        },
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-02-09",
+        "mainEntityOfPage": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "image": "https://moverstudio.online/og-image.png",
+        "url": "https://moverstudio.online/blog/zashto-wordpress-e-baven.html",
+        "keywords": ["защо wordpress е бавен", "wordpress скорост", "wordpress pagespeed", "html vs wordpress", "бавен сайт"],
+        "articleSection": "WordPress Performance"
+      },
+      {
+        "@type": "WebSite",
+        "name": "MOVER Studio - Изработка на HTML сайтове",
+        "url": "https://moverstudio.online",
+        "publisher": {
+          "@id": "https://moverstudio.online/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://moverstudio.online/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://moverstudio.online/" },
+          { "@type": "ListItem", "position": 2, "name": "WordPress Алтернатива", "item": "https://moverstudio.online/wordpress-alternativa.html" },
+          { "@type": "ListItem", "position": 3, "name": "Защо WordPress е Бавен", "item": "https://moverstudio.online/blog/zashto-wordpress-e-baven.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Защо WordPress сайтовете са бавни?", "acceptedAnswer": { "@type": "Answer", "text": "WordPress изпълнява десетки PHP процеси и SQL заявки при всяко зареждане. Средно 50-200 database queries на страница, плюс render-blocking CSS/JS от плъгини. HTML сайтове подават готов файл директно — 0 заявки, 0 обработка." } },
+          { "@type": "Question", "name": "Колко по-бърз е HTML сайт от WordPress?", "acceptedAnswer": { "@type": "Answer", "text": "HTML сайт зарежда за 0.3-0.8 секунди и постига 100 PageSpeed. WordPress зарежда за 3-7 секунди с PageSpeed 40-70. HTML е средно 5-10 пъти по-бърз." } },
+          { "@type": "Question", "name": "Може ли WordPress да постигне 100 PageSpeed?", "acceptedAnswer": { "@type": "Answer", "text": "Теоретично — да, с екстремна оптимизация. Практически е почти невъзможно поради PHP/MySQL архитектурата. HTML постига 100 по подразбиране." } },
+          { "@type": "Question", "name": "Плъгините ли правят WordPress бавен?", "acceptedAnswer": { "@type": "Answer", "text": "Плъгините са основен фактор — средният WordPress сайт има 20-40 плъгина, всеки добавящ CSS, JS и database заявки. Но и без плъгини WordPress е по-бавен от HTML заради PHP обработката." } },
+          { "@type": "Question", "name": "Как да мигрирам от WordPress към HTML?", "acceptedAnswer": { "@type": "Answer", "text": "Процесът включва: експортиране на съдържанието, пресъздаване в чист HTML/CSS, оптимизация за PageSpeed 100, SEO миграция с 301 redirects. MOVER Studio предлага пълна миграция от 400 евро." } }
+        ]
       }
-    },
-    "datePublished": "2026-01-30",
-    "dateModified": "2026-02-09",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://moverstudio.online/blog/zashto-wordpress-e-baven.html"
-    },
-    "image": "https://moverstudio.online/og-image.svg",
-    "url": "https://moverstudio.online/blog/zashto-wordpress-e-baven.html",
-    "keywords": ["защо wordpress е бавен", "wordpress скорост", "wordpress pagespeed", "html vs wordpress", "бавен сайт"],
-    "articleSection": "WordPress Performance"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://moverstudio.online/" },
-      { "@type": "ListItem", "position": 2, "name": "WordPress Алтернатива", "item": "https://moverstudio.online/wordpress-alternativa.html" },
-      { "@type": "ListItem", "position": 3, "name": "Защо WordPress е Бавен", "item": "https://moverstudio.online/blog/zashto-wordpress-e-baven.html" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Защо WordPress сайтовете са бавни?", "acceptedAnswer": { "@type": "Answer", "text": "WordPress изпълнява десетки PHP процеси и SQL заявки при всяко зареждане. Средно 50-200 database queries на страница, плюс render-blocking CSS/JS от плъгини. HTML сайтове подават готов файл директно — 0 заявки, 0 обработка." } },
-      { "@type": "Question", "name": "Колко по-бърз е HTML сайт от WordPress?", "acceptedAnswer": { "@type": "Answer", "text": "HTML сайт зарежда за 0.3-0.8 секунди и постига 100 PageSpeed. WordPress зарежда за 3-7 секунди с PageSpeed 40-70. HTML е средно 5-10 пъти по-бърз." } },
-      { "@type": "Question", "name": "Може ли WordPress да постигне 100 PageSpeed?", "acceptedAnswer": { "@type": "Answer", "text": "Теоретично — да, с екстремна оптимизация. Практически е почти невъзможно поради PHP/MySQL архитектурата. HTML постига 100 по подразбиране." } },
-      { "@type": "Question", "name": "Плъгините ли правят WordPress бавен?", "acceptedAnswer": { "@type": "Answer", "text": "Плъгините са основен фактор — средният WordPress сайт има 20-40 плъгина, всеки добавящ CSS, JS и database заявки. Но и без плъгини WordPress е по-бавен от HTML заради PHP обработката." } },
-      { "@type": "Question", "name": "Как да мигрирам от WordPress към HTML?", "acceptedAnswer": { "@type": "Answer", "text": "Процесът включва: експортиране на съдържанието, пресъздаване в чист HTML/CSS, оптимизация за PageSpeed 100, SEO миграция с 301 redirects. MOVER Studio предлага пълна миграция от 400 евро." } }
     ]
   }
   </script>
 </head>
 <body>
 
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+
 <header>
   <nav aria-label="Основна навигация">
     <a href="../index.html" style="border-bottom: none;"><strong>MOVER_STUDIO</strong></a>
     <span class="terminal">[ BLOG | SPEED | REALITY ]</span>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+      <a href="../index.html">Начало</a>
+      <a href="../izrabotka-na-sait.html">Услуги</a>
+      <a href="../calculator.html">Калкулатор</a>
+      <a href="../dokazatelstva.html">Доказателства</a>
+      <a href="../case-studies.html">Case Studies</a>
+      <a href="../about.html">За Нас</a>
+    </div>
   </nav>
 </header>
 
-<main>
+<main id="main">
   <article>
+    <h1 style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Защо WordPress е Бавен</h1>
 
     <div class="breadcrumb">
       <a href="../index.html">Начало</a> &gt; <a href="../wordpress-alternativa.html">WordPress Алтернатива</a> &gt; Защо WordPress е Бавен
     </div>
 
     <section>
-      <h1>Защо WordPress е Бавен? Техническите Причини</h1>
+      <h2>Защо WordPress е Бавен? Техническите Причини</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        📅 Публикувано: <time datetime="2026-01-30">30 януари 2026</time> • Актуализирано: <time datetime="2026-02-09">9 февруари 2026</time> • От: MOVER Studio
+      </p>
 
       <div class="quick-answer">
         <h2>Кратък отговор:</h2>
@@ -582,14 +632,16 @@
     &gt; 99 PageSpeed е за слабаците<br>
     &gt; <span class="cursor">_</span>
   </p>
-  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
     "Free your mind" – Morpheus
   </p>
   <p style="margin-top: 1rem;">
     <a href="../index.html">Начало</a> | 
     <a href="../izrabotka-na-sait.html">Изработка на сайт</a> | 
     <a href="../wordpress-alternativa.html">WordPress Алтернатива</a> | 
-    <a href="../calculator.html">Калкулатор</a>
+    <a href="../calculator.html">Калкулатор</a> | 
+    <a href="../about.html">За Нас</a> | 
+    <a href="./">Блог</a>
   </p>
 </footer>
 

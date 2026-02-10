@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00ff41">
+
+  <title>404 – Страницата не е намерена | MOVER Studio</title>
+  <meta name="description" content="Страницата не е намерена. Върни се към началото или разгледай услугите на MOVER Studio.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <style>
+    :root {
+      --matrix-bg: #000000;
+      --matrix-dark: #0a0a0a;
+      --matrix-green: #00ff41;
+      --matrix-green-bright: #39ff14;
+      --matrix-green-dim: #00aa2b;
+      --text-primary: #f0fff0;
+      --text-bright: #ffffff;
+      --text-muted: #8fbc8f;
+      --radius: 4px;
+      --max: 800px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: var(--matrix-bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    a {
+      color: var(--matrix-green);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--matrix-green-bright);
+      text-decoration: underline;
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: bold;
+      color: var(--matrix-green);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: var(--matrix-green-bright);
+      margin-bottom: 1.5rem;
+    }
+
+    .terminal-block {
+      background: var(--matrix-dark);
+      border: 2px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      max-width: var(--max);
+      margin: 0 auto 2rem;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+
+    .terminal-block .prompt {
+      color: var(--matrix-green);
+    }
+
+    .terminal-block .error {
+      color: #ff4444;
+    }
+
+    .terminal-block .info {
+      color: var(--text-muted);
+    }
+
+    .cursor {
+      animation: blink 1s infinite;
+      color: var(--matrix-green);
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .nav-links a {
+      padding: 0.6rem 1.2rem;
+      border: 1px solid var(--matrix-green-dim);
+      border-radius: var(--radius);
+      transition: all 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      background: var(--matrix-green);
+      color: #000;
+      text-decoration: none;
+    }
+
+    .home-btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--matrix-green);
+      color: #000;
+      font-weight: bold;
+      border-radius: var(--radius);
+      font-size: 1.1rem;
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+
+    .home-btn:hover {
+      background: var(--matrix-green-bright);
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .error-code { font-size: 5rem; }
+      h1 { font-size: 1.2rem; }
+      .terminal-block { padding: 1rem; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="error-code">404</div>
+<h1>&gt; ERROR: Страницата не е намерена_</h1>
+
+<div class="terminal-block">
+  <span class="prompt">&gt; </span>GET /requested-page<br>
+  <span class="error">&gt; 404 NOT_FOUND</span><br>
+  <span class="info">&gt; Тази страница не съществува или е преместена.</span><br>
+  <span class="prompt">&gt; </span>Опитай някоя от следните:<br>
+  <span class="cursor">_</span>
+</div>
+
+<a href="/" class="home-btn">← Към Началото</a>
+
+<div class="nav-links">
+  <a href="/izrabotka-na-sait.html">Услуги</a>
+  <a href="/calculator.html">Калкулатор</a>
+  <a href="/blog/">Блог</a>
+  <a href="/dokazatelstva.html">Доказателства</a>
+  <a href="/case-studies.html">Case Studies</a>
+</div>
+
+<footer>
+  <p>&copy; 2026 MOVER Studio &middot; <a href="/">moverstudio.online</a></p>
+</footer>
+
+</body>
+</html>

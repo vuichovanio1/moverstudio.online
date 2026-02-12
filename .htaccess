@@ -1,138 +1,129 @@
 # ========================================
 # MOVER Studio - moverstudio.online
-# Apache .htaccess for cPanel hosting
+# Optimized .htaccess for cPanel & Social Sharing
 # ========================================
 
 # Enable RewriteEngine
-RewriteEngine On
+[cite_start]RewriteEngine On 
 
 # ----------------------------------------
 # 1. Force HTTPS (301 redirect)
 # ----------------------------------------
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+[cite_start]RewriteCond %{HTTPS} off 
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
 
 # ----------------------------------------
-# 2. Force www → non-www (optional, keeps canonical clean)
+# 2. Force www → non-www
 # ----------------------------------------
-RewriteCond %{HTTP_HOST} ^www\.moverstudio\.online$ [NC]
-RewriteRule ^ https://moverstudio.online%{REQUEST_URI} [L,R=301]
+[cite_start]RewriteCond %{HTTP_HOST} ^www\.moverstudio\.online$ [NC] 
+RewriteRule ^ https://moverstudio.online%{REQUEST_URI} [L,R=301] 
 
 # ----------------------------------------
 # 3. Custom Error Pages
 # ----------------------------------------
-ErrorDocument 404 /404.html
+[cite_start]ErrorDocument 404 /404.html 
 
 # ----------------------------------------
-# 4. Security Headers
-# (equivalent of _headers file for cPanel)
+# 4. Security Headers (Social Media Friendly)
 # ----------------------------------------
-<IfModule mod_headers.c>
-  # Content Security Policy - XSS protection
-  Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+[cite_start]<IfModule mod_headers.c> 
+  # CSP: Разрешаваме img-src https: за Facebook/Messenger ботовете
+  [cite_start]Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" [cite: 2, 3]
 
-  # Prevent MIME type sniffing
-  Header set X-Content-Type-Options "nosniff"
+  # Предотвратява MIME type sniffing
+  [cite_start]Header set X-Content-Type-Options "nosniff" [cite: 4]
 
-  # Prevent clickjacking attacks
-  Header set X-Frame-Options "DENY"
+  # Защита от clickjacking
+  [cite_start]Header set X-Frame-Options "DENY" [cite: 4]
 
-  # HTTP Strict Transport Security
-  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  # HSTS
+  [cite_start]Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" [cite: 4, 5]
 
-  # Cross-Origin policies
-  Header set Cross-Origin-Opener-Policy "same-origin"
-  Header set Cross-Origin-Embedder-Policy "require-corp"
+  # Cross-Origin Policies - Оправени за Messenger преглед
+  Header set Cross-Origin-Opener-Policy "unsafe-none"
+  Header unset Cross-Origin-Embedder-Policy
 
-  # Disable FLoC / Topics tracking
-  Header set Permissions-Policy "interest-cohort=()"
+  # Контрол на референтната информация
+  [cite_start]Header set Referrer-Policy "strict-origin-when-cross-origin" [cite: 4]
 
-  # Control referrer information
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
-
+  # Фикс за грешка 206 (Partial Content)
+  Header set Accept-Ranges none
+  
   # DNS Prefetch
-  Header set X-DNS-Prefetch-Control "on"
-</IfModule>
+  [cite_start]Header set X-DNS-Prefetch-Control "on" [cite: 4]
+</IfModule> 
 
 # ----------------------------------------
 # 5. MIME Types
 # ----------------------------------------
-<IfModule mod_mime.c>
-  AddType text/html .html
-  AddType text/css .css
-  AddType text/xml .xml
-  AddType application/javascript .js
-  AddType image/svg+xml .svg
-  AddType image/webp .webp
-  AddType image/png .png
-  AddType image/x-icon .ico
-</IfModule>
+[cite_start]<IfModule mod_mime.c> [cite: 5]
+  [cite_start]AddType text/html .html [cite: 5]
+  [cite_start]AddType text/css .css [cite: 5]
+  [cite_start]AddType text/xml .xml [cite: 5]
+  [cite_start]AddType application/javascript .js [cite: 5]
+  [cite_start]AddType image/svg+xml .svg [cite: 5]
+  [cite_start]AddType image/webp .webp [cite: 5]
+  [cite_start]AddType image/png .png [cite: 5]
+  [cite_start]AddType image/x-icon .ico [cite: 5]
+</IfModule> [cite: 5]
 
 # ----------------------------------------
-# 6. Compression (Gzip/Brotli)
+# 6. Compression (Gzip)
 # ----------------------------------------
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html
-  AddOutputFilterByType DEFLATE text/css
-  AddOutputFilterByType DEFLATE text/xml
-  AddOutputFilterByType DEFLATE text/javascript
-  AddOutputFilterByType DEFLATE application/javascript
-  AddOutputFilterByType DEFLATE application/json
-  AddOutputFilterByType DEFLATE application/xml
-  AddOutputFilterByType DEFLATE image/svg+xml
-</IfModule>
+[cite_start]<IfModule mod_deflate.c> [cite: 5]
+  [cite_start]AddOutputFilterByType DEFLATE text/html [cite: 5]
+  [cite_start]AddOutputFilterByType DEFLATE text/css [cite: 5]
+  [cite_start]AddOutputFilterByType DEFLATE text/xml [cite: 6]
+  [cite_start]AddOutputFilterByType DEFLATE text/javascript [cite: 6]
+  [cite_start]AddOutputFilterByType DEFLATE application/javascript [cite: 6]
+  [cite_start]AddOutputFilterByType DEFLATE application/json [cite: 6]
+  [cite_start]AddOutputFilterByType DEFLATE application/xml [cite: 6]
+  [cite_start]AddOutputFilterByType DEFLATE image/svg+xml [cite: 6]
+</IfModule> [cite: 5]
 
 # ----------------------------------------
 # 7. Browser Caching
 # ----------------------------------------
-<IfModule mod_expires.c>
-  ExpiresActive On
-
-  # HTML - 1 ден кеш (статичен сайт)
-  ExpiresByType text/html "access plus 1 day"
-
-  # CSS/JS
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-
-  # Images
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/x-icon "access plus 1 year"
-
-  # XML/Sitemap
-  ExpiresByType text/xml "access plus 1 day"
-</IfModule>
+[cite_start]<IfModule mod_expires.c> [cite: 6]
+  [cite_start]ExpiresActive On [cite: 6]
+  [cite_start]ExpiresByType text/html "access plus 1 day" [cite: 6]
+  [cite_start]ExpiresByType text/css "access plus 1 year" [cite: 6]
+  [cite_start]ExpiresByType application/javascript "access plus 1 year" [cite: 6]
+  [cite_start]ExpiresByType image/svg+xml "access plus 1 year" [cite: 6]
+  [cite_start]ExpiresByType image/png "access plus 1 year" [cite: 6]
+  [cite_start]ExpiresByType image/webp "access plus 1 year" [cite: 6]
+  [cite_start]ExpiresByType image/x-icon "access plus 1 year" [cite: 6]
+</IfModule> [cite: 6]
 
 # ----------------------------------------
-# 8. ETag (disable - using Expires instead)
+# 8. ETag (използваме само Expires за по-бърз PageSpeed)
 # ----------------------------------------
-<IfModule mod_headers.c>
-  Header unset ETag
-</IfModule>
-FileETag None
+[cite_start]<IfModule mod_headers.c> [cite: 7]
+  [cite_start]Header unset ETag [cite: 7]
+</IfModule> [cite: 7]
+FileETag None [cite: 7]
 
 # ----------------------------------------
-# 9. Prevent directory listing
+# 9. Забрана на листване на директории
 # ----------------------------------------
-Options -Indexes
+[cite_start]Options -Indexes [cite: 7]
 
 # ----------------------------------------
-# 10. Block access to sensitive files
+# 10. Блокиране на достъп до системни файлове
 # ----------------------------------------
-<FilesMatch "(^\.htaccess|_headers|\.git)">
-  <IfModule mod_authz_core.c>
-    Require all denied
-  </IfModule>
-  <IfModule !mod_authz_core.c>
-    Order Allow,Deny
-    Deny from all
-  </IfModule>
-</FilesMatch>
+[cite_start]<FilesMatch "(^\.htaccess|_headers|\.git)"> [cite: 7]
+  [cite_start]<IfModule mod_authz_core.c> [cite: 7]
+    [cite_start]Require all denied [cite: 7]
+  [cite_start]</IfModule> [cite: 7]
+</FilesMatch> [cite: 7]
 
 # ----------------------------------------
-# 11. Trailing slash for /blog/ directory
+# 11. Фикс за началната страница и блога
 # ----------------------------------------
-RewriteCond %{REQUEST_URI} ^/blog$
+
+# Уверяваме се, че коренът зарежда главния файл
+DirectoryIndex index.html
+
+# Пренасочваме /blog към /blog/ само ако е изписано точно така
+RewriteCond %{REQUEST_URI} ^/blog$ [NC]
 RewriteRule ^ /blog/ [L,R=301]

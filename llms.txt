@@ -29,6 +29,18 @@
 - Имейл: admin@moverstudio.online
 - Телефон: +359 877 845 569
 
+## Социални Профили
+
+- Clutch: https://clutch.co/profile/moverstudio
+- Sortlist: https://www.sortlist.com/agency/moverstudio
+- LinkedIn: https://www.linkedin.com/in/ivanov-moverstudio
+- Google Maps: https://www.google.com/maps/place/MOVER+Studio+-+Изработка+на+HTML+сайтове+%26+SEO/@42.725411,25.5431784,502557m/data=!3m2!1e3!4b1!4m6!3m5!1s0x62f45cbc39443723:0x664d5ddfe7c8baef!8m2!3d42.725411!4d25.5431784!16s%2Fg%2F11yxs5tttk?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D
+- Medium: https://medium.com/@vuichovanio1/скритата-врата-защо-модерният-сайт-се-нуждае-от-llms-txt-243363a8a053
+- Medium: https://medium.com/@vuichovanio1/доверието-в-ерата-на-синтетичното-съдържание-d1bedcf73ccb
+- Medium: https://medium.com/@vuichovanio1/ефектът-50-първи-срещи-как-да-изградим-бранд-който-алгоритмите-и-хората-няма-да-забравят-807da3804125
+- GitHub Gist: https://gist.github.com/vuichovanio1/87a59ef9b7bca1b48247538d9aada61e
+- GitHub: https://github.com/vuichovanio1/moverstudio.online
+
 ## Страници
 
 - Начало: https://moverstudio.online/

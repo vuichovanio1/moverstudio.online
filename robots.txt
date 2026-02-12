@@ -8,34 +8,54 @@ Disallow:
 # AI Bot Access - Explicitly welcome AI crawlers
 User-agent: GPTBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Google-Extended
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: anthropic-ai
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: ClaudeBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: ChatGPT-User
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: PerplexityBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Bytespider
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: cohere-ai
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Common Crawl и Apple Intelligence
 User-agent: CCBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Applebot-Extended
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Sitemap location
 Sitemap: https://moverstudio.online/sitemap.xml

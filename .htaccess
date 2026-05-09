@@ -18,6 +18,9 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 [cite_start]RewriteCond %{HTTP_HOST} ^www\.moverstudio\.online$ [NC] 
 RewriteRule ^ https://moverstudio.online%{REQUEST_URI} [L,R=301] 
 
+# Redirect old Sofia slug to the new singular URL
+RewriteRule ^izrabotka-na-saitove-sofia\.html$ /izrabotka-na-sait-sofia.html [L,R=301]
+
 # ----------------------------------------
 # 3. Custom Error Pages
 # ----------------------------------------

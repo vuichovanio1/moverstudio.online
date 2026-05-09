@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00ff41">
+
+  <meta name="author" content="MOVER Studio">
+  <meta name="last-modified" content="2026-05-05">
+
+  <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
+  <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
+
+  <title>Изработка на HTML сайт | Статичен уеб сайт с PageSpeed 100</title>
+  <meta name="description" content="Изработка на HTML сайт и статичен уеб сайт с реални резултати. 100/100 PageSpeed, без месечни такси и без WordPress. Виж цени и примери.">
+  <meta name="keywords" content="изработка на html сайт, html сайт, статичен сайт, бърз сайт, сайт без wordpress, pagespeed 100">
+  <link rel="canonical" href="https://moverstudio.online/html-sait.html">
+  <link rel="alternate" hreflang="bg" href="https://moverstudio.online/html-sait.html">
+  
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Изработка на HTML сайт | Статичен уеб сайт с PageSpeed 100">
+  <meta property="og:description" content="Изработка на HTML сайт и статичен уеб сайт с реални резултати. 100/100 PageSpeed, без месечни такси и без WordPress.">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://moverstudio.online/html-sait.html">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:site_name" content="MOVER Studio">
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Изработка на HTML сайт | Статичен уеб сайт с PageSpeed 100">
+  <meta name="twitter:description" content="Изработка на HTML сайт и статичен уеб сайт с реални резултати. 100/100 PageSpeed, без месечни такси и без WordPress.">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta name="twitter:site" content="@moverstudio_bg">
+
+  <style>
+:root {
+  color-scheme: light;
+  --bg: #f6efe7;
+  --bg-alt: #efe3d5;
+  --surface: rgba(255, 252, 247, 0.82);
+  --surface-strong: #fffaf4;
+  --surface-muted: #f4eadf;
+  --text: #231f1a;
+  --text-strong: #151210;
+  --muted: #665d53;
+  --line: rgba(83, 61, 41, 0.16);
+  --line-strong: rgba(83, 61, 41, 0.26);
+  --accent: #9a6232;
+  --accent-strong: #6f4323;
+  --accent-soft: #e1c39b;
+  --accent-quiet: #f2dfc7;
+  --shadow-lg: 0 24px 70px rgba(67, 43, 24, 0.12);
+  --shadow-md: 0 14px 34px rgba(67, 43, 24, 0.09);
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --max-width: 1140px;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-sans: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--font-sans) !important;
+  background:
+    radial-gradient(circle at top left, rgba(229, 196, 146, 0.44), transparent 34%),
+    radial-gradient(circle at top right, rgba(111, 67, 35, 0.16), transparent 30%),
+    linear-gradient(180deg, #fbf7f1 0%, #f6eee4 56%, #efe5d7 100%) !important;
+  color: var(--text) !important;
+  line-height: 1.7;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  width: min(var(--max-width), calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 2.25rem 0 5rem !important;
+}
+
+header {
+  width: min(var(--max-width), calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 1.2rem 0 1rem;
+  border-bottom: 1px solid var(--line) !important;
+  background: rgba(255, 250, 244, 0.72);
+  backdrop-filter: blur(14px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav strong {
+  font-family: var(--font-serif) !important;
+  color: var(--text-strong) !important;
+  letter-spacing: -0.03em;
+}
+
+a {
+  color: var(--accent) !important;
+  text-decoration-color: rgba(154, 98, 50, 0.35);
+  text-underline-offset: 0.18em;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif) !important;
+  color: var(--text-strong) !important;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1.02;
+  margin-bottom: 1.2rem;
+  max-width: 14ch;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+  line-height: 1.12;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--line);
+}
+
+p { color: var(--muted) !important; max-width: 72ch; }
+
+.card {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong)) !important;
+  color: #fff !important;
+}
+
+.price-tag {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  font-family: var(--font-serif);
+}
+
+@media (max-width: 900px) {
+  main, header { width: min(var(--max-width), calc(100vw - 1.25rem)); }
+  h1 { max-width: none; }
+}
+</style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://moverstudio.online/html-sait.html#webpage",
+        "url": "https://moverstudio.online/html-sait.html",
+        "name": "Изработка на HTML сайт",
+        "description": "Изработка на бърз HTML сайт с реални резултати. 100/100 PageSpeed, без месечни такси.",
+        "isPartOf": { "@id": "https://moverstudio.online/#website" }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Изработка на HTML сайт",
+        "name": "HTML сайтове с 100 PageSpeed",
+        "description": "Професионална изработка на HTML сайтове без WordPress. Висока скорост, ниски разходи.",
+        "provider": { "@id": "https://moverstudio.online/#organization" },
+        "areaServed": { "@type": "Country", "name": "България" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://moverstudio.online/" },
+          { "@type": "ListItem", "position": 2, "name": "HTML сайт", "item": "https://moverstudio.online/html-sait.html" }
+        ]
+      }
+    ]
+  }
+</head>
+<body>
+
+<header>
+  <nav aria-label="Основна навигация">
+    <a href="/" style="border-bottom: none;"><strong>MOVER_STUDIO</strong></a>
+    <span class="terminal">Бързи HTML сайтове без WordPress</span>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+      <a href="/services/">Услуги</a>
+      <a href="/izrabotka-na-landing-page.html">Landing page</a>
+      <a href="/html-sait.html">HTML сайт</a>
+      <a href="/izrabotka-na-sait-sofia.html">София</a>
+      <a href="/sait-vizitka.html">Визитка</a>
+      <a href="/calculator.html">Калкулатор</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/about.html">За Нас</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>Изработка на HTML сайт и статични уеб решения за бизнеса</h1>
+  
+  <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+    <strong>HTML сайтовете</strong> са бъдещето на бързото уеб присъствие. 
+    Без бази данни, без WordPress, без месечни такси — само чист код който зарежда за под 1 секунда.
+    <a href="/izrabotka-na-sait.html">← Обратно към всички услуги</a>
+  </p>
+
+  <div class="card">
+    <h2>⚡ Защо HTML сайт?</h2>
+    <ul>
+      <li><strong>Скорост:</strong> 1-5 HTTP заявки (срещу 30-80 при WordPress)</li>
+      <li><strong>Размер:</strong> 30-150KB (срещу 2-5MB)</li>
+      <li><strong>PageSpeed:</strong> 95-100 (срещу 40-70)</li>
+      <li><strong>Зареждане:</strong> под 1 секунда (срещу 3-7)</li>
+      <li><strong>Месечни разходи:</strong> 0-3€ (срещу 50-150+€ при WordPress с агенция)</li>
+    </ul>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">Разходите са само хостинг (често 0–3 €/мес. чрез Netlify/GitHub Pages), без софтуерни такси, лицензи или ъпдейти — идеални за статични бизнес презентации с 100% PageSpeed и нулева поддръжка. WordPress базовият модел (3–8 €/мес.) рискува уязвимости и конфликти между 50+ плъгина; професионалната поддръжка (50–150 €/мес.) се оправдава за бизнеси с висок трафик. Цените варират по доставчици (SuperHosting от 4 €, SiteGround от 7 €, Cloudflare безплатно за статични); HTML спестява до 90% дългосрочно. Данни за 2026 г. (1€ ≈ 1.95 лв.)</p>
+  </div>
+
+  <div class="card">
+    <h2>💰 Цени за HTML сайт</h2>
+    <p class="price-tag">От 400€</p>
+    <p>Еднократна инвестиция. Без месечни такси.</p>
+    <ul>
+      <li>Сайт визитка: 400€</li>
+      <li>Landing page: 400€</li>
+      <li>Корпоративен: 1000€</li>
+    </ul>
+    <a href="/calculator.html" class="cta-primary">Изчисли точна цена →</a>
+  </div>
+
+  <div class="card">
+    <h2>🏗️ Как изработваме HTML сайтове</h2>
+    <p>Нашият процес е оптимизиран за скорост и резултати:</p>
+    <ul>
+      <li><strong>Анализ:</strong> Разбираме бизнеса, целевата аудитория и конкуренцията</li>
+      <li><strong>Структура:</strong> Планираме йерархията на страниците за максимално SEO</li>
+      <li><strong>Дизайн:</strong> Създаваме wireframes с фокус върху конверсиите</li>
+      <li><strong>Разработка:</strong> Чист HTML5, CSS3 и Vanilla JavaScript — без библиотеки</li>
+      <li><strong>Оптимизация:</strong> Inline CSS, WebP изображения, lazy loading, schema markup</li>
+      <li><strong>Тестване:</strong> PageSpeed Insights, Core Web Vitals, mobile responsiveness</li>
+      <li><strong>Пускане:</strong> Качване на професионален хостинг + Google Search Console</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📊 Реални резултати от наши HTML сайтове</h2>
+    <p><strong>roadassistancesofia.bg</strong> — 14 локационни страници, всяка зарежда за 0.3s:</p>
+    <ul>
+      <li>PageSpeed: 100/100/100/100 на Lighthouse</li>
+      <li>Първо място в Google за "пътна помощ София" и 13 други локации</li>
+      <li>96+ Google reviews интегрирани в сайта</li>
+      <li>Zero external dependencies — всичко е inline</li>
+    </ul>
+    <p style="margin-top: 1rem;"><strong>patna-pomosht-kostinbrod.bg</strong> — калкулатор за оферти в реално време:</p>
+    <ul>
+      <li>Vanilla JS калкулатор без React/Vue overhead</li>
+      <li>11 локационни страници с unique H1/title/meta</li>
+      <li>Client-side изчисления — никакви API calls</li>
+      <li>AggregateRating микроразметка за доверие</li>
+    </ul>
+    <p style="margin-top: 1rem;"><a href="/case-studies.html">→ Виж всички case studies с детайли</a></p>
+  </div>
+
+  <div class="card">
+    <h2>⚔️ HTML vs WordPress — сравнение</h2>
+    <table style="width: 100%; margin-top: 1rem; border-collapse: collapse;">
+      <thead>
+        <tr style="border-bottom: 2px solid var(--line);">
+          <th style="text-align: left; padding: 0.5rem;">Критерий</th>
+          <th style="text-align: left; padding: 0.5rem; color: var(--accent-strong);">HTML сайт</th>
+          <th style="text-align: left; padding: 0.5rem;">WordPress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 0.5rem;">PageSpeed Score</td>
+          <td style="padding: 0.5rem; font-weight: bold; color: #22c55e;">95-100</td>
+          <td style="padding: 0.5rem;">40-70</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 0.5rem;">Време за зареждане</td>
+          <td style="padding: 0.5rem; font-weight: bold; color: #22c55e;">< 1 сек</td>
+          <td style="padding: 0.5rem;">3-7 сек</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 0.5rem;">HTTP заявки</td>
+          <td style="padding: 0.5rem; font-weight: bold; color: #22c55e;">1-5</td>
+          <td style="padding: 0.5rem;">30-80</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 0.5rem;">Размер на страницата</td>
+          <td style="padding: 0.5rem; font-weight: bold; color: #22c55e;">30-150 KB</td>
+          <td style="padding: 0.5rem;">2-5 MB</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 0.5rem;">Месечни такси</td>
+          <td style="padding: 0.5rem; font-weight: bold; color: #22c55e;">0€</td>
+          <td style="padding: 0.5rem;">35-100+€</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 0.5rem;">Сигурност</td>
+          <td style="padding: 0.5rem; font-weight: bold; color: #22c55e;">Висока</td>
+          <td style="padding: 0.5rem;">Уязвима</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem;">SEO контрол</td>
+          <td style="padding: 0.5rem; font-weight: bold; color: #22c55e;">Пълен</td>
+          <td style="padding: 0.5rem;">Ограничен</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top: 1rem;"><a href="/wordpress-alternativa.html">→ Подробно сравнение HTML vs WordPress</a></p>
+  </div>
+
+  <div class="card">
+    <h2>❓ Често задавани въпроси за HTML сайтове</h2>
+    <p style="margin-top: 1rem;"><strong>Мога ли сам да редактирам HTML сайт?</strong></p>
+    <p>Да, ако знаете основен HTML. За по-сложни промени предлагаме пакети за поддръжка или обучение. Можем да добавим и lightweight CMS ако е необходимо.</p>
+    <p style="margin-top: 1rem;"><strong>Подходящ ли е HTML сайт за SEO?</strong></p>
+    <p>Абсолютно! Google обича бързи сайтове. Нашите HTML сайтове постигат 95-100 PageSpeed, което е директен SEO фактор.</p>
+    <p style="margin-top: 1rem;"><strong>Имате ли мобилна версия?</strong></p>
+    <p>Всички наши сайтове са responsive по подразбиране — изглеждат перфектно на телефон, таблет и десктоп.</p>
+    <p style="margin-top: 1rem;"><strong>Как се хоства HTML сайт?</strong></p>
+    <p>На всеки shared hosting, VPS, cloud (Cloudflare Pages, GitHub Pages, Netlify). Препоръчваме професионален хостинг за бизнес сайтове.</p>
+  </div>
+
+  <div class="card">
+    <h2>🔗 Свързани услуги</h2>
+    <p>
+      <a href="/index.html">изработка на сайт</a><br>
+      <a href="/izrabotka-na-sait.html">← Всички услуги за изработка на сайт</a><br>
+      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт в София →</a><br>
+      <a href="/sait-vizitka.html">Сайт визитка или портфолио →</a><br>
+      <a href="/korporativen-sait.html">Корпоративен сайт →</a><br>
+      <a href="/seo-optimizacia.html">SEO оптимизация →</a><br>
+      <a href="/how-we-do-it.html">Как работим →</a>
+    </p>
+  </div>
+
+  <div style="margin-top: 3rem; text-align: center;">
+    <a href="tel:+359877845569" class="cta-primary">☎ Обади се: 0877 845 569</a>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">Или пиши на <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a></p>
+  </div>
+</main>
+
+</body>
+</html>

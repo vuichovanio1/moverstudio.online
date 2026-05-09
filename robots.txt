@@ -1,5 +1,5 @@
 # Optimized robots.txt for MOVER Studio - Web Design Agency
-# Allow all search engines to crawl the entire site
+# Allow all search engines to crawl the entire site (except for specific LLM files)
 # No restricted areas for maximum visibility
 
 User-agent: *
@@ -99,5 +99,3 @@ Allow: /llms-faq.txt
 Sitemap: https://moverstudio.online/sitemap.xml
 
 # LLMs.txt for AI context
-# https://llmstxt.org/
-# See: https://moverstudio.online/llms.txt

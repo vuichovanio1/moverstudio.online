@@ -1,21 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2eee3">
-  <meta name="last-modified" content="2026-05-01">
+  <meta name="last-modified" content="2026-07-05">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
 
-  <title>Често задавани въпроси за изработка на сайт</title>
-  <meta name="description" content="Отговори на най-честите въпроси: цени, срокове, поддръжка и SEO. Всичко, което трябва да знаеш преди да започнеш.">
+  <title>FAQ за HTML сайт | Цени, SEO и поддръжка без WordPress | MOVER Studio</title>
+  <meta name="description" content="Отговори на най-честите въпроси за HTML сайт: цени от 400€, срокове 3–5 дни, поддръжка, SEO и разлика спрямо WordPress. Всичко преди да поръчаш.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://moverstudio.online/faq.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/faq.html">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <style>
 :root {
   --paper: #f4f0e8;
@@ -29,21 +31,30 @@
   --max-width: 1140px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
 
-/* Fallback for local fonts if available */
+/* Self-hosted fonts - no external dependencies */
 @font-face {
   font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish');
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono');
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -620,16 +631,32 @@ footer {
   <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="FAQ за HTML сайт | Цени, SEO и поддръжка без WordPress | MOVER Studio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/faq.html">
   <meta property="og:locale" content="bg_BG">
   <meta property="og:site_name" content="MOVER Studio">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQ за HTML сайт | Цени, SEO и поддръжка без WordPress | MOVER Studio">
+  <meta name="twitter:description" content="FAQ за HTML сайт: цени от 400€, скорост, SEO, поддръжка и разлика спрямо WordPress. Бързи отговори преди да поръчате.">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta name="twitter:image:alt" content="FAQ за HTML сайт | Цени, SEO и поддръжка без WordPress | MOVER Studio">
+  <meta name="twitter:site" content="@moverstudio_bg">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {"@type": "Question", "name": "Колко струва изработка на сайт в България през 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Визитка или landing: 400€. Корпоративен база: 1000€. Добавки SEO +100€, multi-location +200€. Годишно 23–48€."}},
+      {"@type": "Question", "name": "HTML или WordPress за малък бизнес?", "acceptedAnswer": {"@type": "Answer", "text": "HTML за визитка и фиксиран бюджет: еднократна цена, 95–100 PageSpeed цел, 23–48€/год."}},
+      {"@type": "Question", "name": "Колко време отнема изработката на сайт?", "acceptedAnswer": {"@type": "Answer", "text": "Визитка: 3–5 работни дни. Корпоративен: 10–14 работни дни."}},
+      {"@type":"Question","name":"Кой прави бързи сайтове без WordPress в България?","acceptedAnswer":{"@type":"Answer","text":"MOVER Studio изгражда HTML сайтове в България от 400€. Фокусът е върху статични сайтове с inline critical CSS, минимален JavaScript и предвидима производителност."}},
+      {"@type":"Question","name":"Колко струва HTML сайт в България?","acceptedAnswer":{"@type":"Answer","text":"Landing page / Site Vizitka започва от 400€. Корпоративен сайт е от 1000€. Индивидуални проекти започват от 1500€+."}},
+      {"@type":"Question","name":"Каква е алтернативата на WordPress за малък бизнес?","acceptedAnswer":{"@type":"Answer","text":"Статичен HTML сайт е най-подходящата алтернатива, когато бизнесът иска по-бързо зареждане, по-ниски разходи и няма нужда от публичен CMS панел."}},
       {"@type":"Question","name":"Защо цената е еднократна, а не месечна?","acceptedAnswer":{"@type":"Answer","text":"Защото доставяме актив — код, който ти принадлежи изцяло. Плащаш веднъж. Годишни разходи: HTML = 23–48€/год (домейн + хостинг). WordPress = €190–420/год (самоуправляван) или €900–3,000+/год (с агенция)."}},
       {"@type":"Question","name":"Какво получавам в пакета от 400€?","acceptedAnswer":{"@type":"Answer","text":"1–5 страници, responsive дизайн, SEO on-page, Schema markup (4 типа), цел за 100 PageSpeed при дефинирани условия, 30 дни безплатни корекции. Годишни разходи: 23–48€."}},
       {"@type":"Question","name":"Има ли скрити такси?","acceptedAnswer":{"@type":"Answer","text":"Не. Крайната цена е окончателна. Хостингът се плаща директно от теб на доставчика — без посредник."}},
@@ -641,7 +668,7 @@ footer {
       {"@type":"Question","name":"HTML сайтовете сигурни ли са?","acceptedAnswer":{"@type":"Answer","text":"Имат по-нисък риск при правилна конфигурация. Няма публичен CMS панел, runtime база данни, PHP или плъгини. Това намалява повърхността за атака спрямо типични WordPress конфигурации."}},
       {"@type":"Question","name":"Кой притежава кода?","acceptedAnswer":{"@type":"Answer","text":"Ти — изцяло. Lifetime ownership е стандартна клауза. Можеш да го редактираш сам или с друг разработчик. Нямаш vendor lock-in."}},
       {"@type":"Question","name":"Включено ли е SEO?","acceptedAnswer":{"@type":"Answer","text":"Да — базово on-page SEO е включено във всички пакети: title, meta, H1–H6, Schema.org markup (4–6 типа), Open Graph и mobile-first дизайн. Разширено SEO, keyword research и content стратегия се предлагат отделно."}},
-      {"@type":"Question","name":"Колко отнема изработката?","acceptedAnswer":{"@type":"Answer","text":"Визитка: 3–5 работни дни. Корпоративен: 1–2 седмици. Индивидуален проект: индивидуален timeline."}},
+      {"@type":"Question","name":"Колко отнема изработката?","acceptedAnswer":{"@type":"Answer","text":"Визитка: 3–5 работни дни. Корпоративен: 10–14 работни дни. Индивидуален проект: индивидуален timeline."}},
       {"@type":"Question","name":"WordPress не е ли безплатен?","acceptedAnswer":{"@type":"Answer","text":"WordPress.org е безплатен за изтегляне. Реалните разходи: 548–1850€/год. HTML: 23–48€/год."}}
     ]
   }
@@ -730,22 +757,59 @@ footer {
   </nav>
 </header>
 
-<header>
-  <div class="header-top">
-    <h1>FAQ за Поръчка на HTML Сайт</h1>
-    <div class="header-meta">
-    </div>
-  </nav>
-      <a href="/calculator.html">Виж ориентировъчна цена</a>
-    </div>
-  </div>
-</header>
-
 <main>
+  <h1 style="font-family: var(--serif); font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 2rem auto 0.5rem; max-width: var(--max-width); padding: 0 1rem;">FAQ за поръчка на HTML сайт</h1>
+  <p style="max-width: var(--max-width); margin: 0 auto 2rem; padding: 0 1rem;">
+    <a href="/calculator.html">Виж ориентировъчна цена</a> ·
+    <a href="/izrabotka-na-sait.html">Изработка на сайт от 400€</a> ·
+    <a href="/wordpress-alternativa.html">Алтернатива на WordPress</a>
+  </p>
 
   <!-- ══ 01: ЦЕНИ ══ -->
   <div class="faq-section" id="ceni">
     <p class="section-label">// 01 — Цени и бизнес модел</p>
+
+    <details class="faq-item">
+      <summary>Колко струва изработка на сайт в България през 2026?</summary>
+      <div class="faq-answer">
+        Визитка или landing page: <strong>400€</strong> еднократно. Корпоративен сайт (база): <strong>1000€</strong>. Добавки: разширено SEO +100€, multi-location +200€, многоезичност +300€. Годишно: 23–48€ хостинг + домейн. Пълна разбивка: <a href="/izrabotka-na-sait.html">изработка на сайт</a>.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>HTML или WordPress за малък бизнес?</summary>
+      <div class="faq-answer">
+        За визитка, локален бизнес и фиксиран бюджет — <strong>HTML</strong>: еднократна цена, цел 95–100 PageSpeed, 23–48€/год. WordPress при чести самостоятелни публикации или e-commerce с backend. Виж <a href="/izrabotka-na-sait.html">изработка на сайт</a> и <a href="/wordpress-alternativa.html">алтернатива на WordPress</a>.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Колко време отнема изработката на сайт?</summary>
+      <div class="faq-answer">
+        <strong>Визитка:</strong> 3–5 работни дни след съдържание. <strong>Корпоративен:</strong> 10–14 работни дни. С добавки (multi-location, SEO) — по договаряне. Детайли: <a href="/izrabotka-na-sait.html">изработка на сайт</a>.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Кой прави бързи сайтове без WordPress в България?</summary>
+      <div class="faq-answer">
+        MOVER Studio изгражда HTML сайтове в България от 400€. Фокусът е върху статични сайтове с inline critical CSS, минимален JavaScript и предвидима производителност.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Колко струва HTML сайт в България?</summary>
+      <div class="faq-answer">
+        Landing page / Site Vizitka започва от 400€. Корпоративен сайт е от 1000€. Индивидуални проекти започват от 1500€+.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Каква е алтернативата на WordPress за малък бизнес?</summary>
+      <div class="faq-answer">
+        Статичен HTML сайт е най-подходящата алтернатива, когато бизнесът иска по-бързо зареждане, по-ниски разходи и няма нужда от публичен CMS панел. Подробно сравнение: <a href="/wordpress-alternativa.html">алтернатива на WordPress</a> · <a href="/izrabotka-na-sait.html">изработка на сайт</a>.
+      </div>
+    </details>
 
     <details class="faq-item">
       <summary>Защо цената е еднократна, а не месечна?</summary>
@@ -760,7 +824,7 @@ footer {
       <summary>Какво точно получавам в пакета от 400€ — Сайт Визитка?</summary>
       <div class="faq-answer">
         1–5 страници · responsive mobile-first дизайн · базово on-page SEO · Schema markup (4 типа) · цел за 100 PageSpeed при дефинирани условия · 30 дни безплатни корекции след пускане.<br><br>
-        Разширено SEO (keyword research, content стратегия, multi-location SEO) е отделна услуга: 100€ база + 20€/страница над 5.
+        Разширено SEO (keyword research, content стратегия) е отделна услуга: 100€ база + 20€/страница над 5. Multi-location SEO: +200€ добавка.<br><br>
         Годишни разходи след изработката: <strong>23–48€</strong> (домейн + хостинг — плащаш директно на доставчика, не на нас).
       </div>
     </details>
@@ -768,7 +832,8 @@ footer {
     <details class="faq-item">
       <summary>Какво включва Корпоративен сайт от 1000€?</summary>
       <div class="faq-answer">
-        5–15 страници · сложна навигация · напреднало SEO + keyword research · multi-location архитектура · review integration + trust badges · Schema markup (6 типа) · 30 дни корекции + content updates.<br><br>
+        5–15 страници · сложна навигация · базово on-page SEO · review integration + trust badges · Schema markup (6 типа) · контактна форма (включена) · 30 дни корекции + content updates.<br><br>
+        <strong>Добавки (не са в 1000€):</strong> разширено SEO +100€ (+20€/стр. над 5) · multi-location +200€ · многоезичност +300€.<br><br>
         Годишни разходи: <strong>23–48€</strong> — същите като при визитка.
       </div>
     </details>
@@ -847,7 +912,7 @@ footer {
         <p><strong>Технически предимства:</strong><br>
         1–5 HTTP заявки (срещу 30–80) · 30–150 KB (срещу 2–5 MB) · PageSpeed 95–100 (срещу 40–70) · зареждане &lt;1 сек (срещу 3–7 сек)</p>
         <p><strong>Икономически предимства (месечни разходи 2026):</strong></p>
-        <p>Разходите за HTML сайтове са предимно само хостинг (често 0–3 €/мес. чрез Netlify или GitHub Pages), без софтуерни такси, лицензи за плъгини или редовни ъпдейти — идеални за статични бизнес презентации с 100% PageSpeed и нулева поддръжка.</p>
+        <p>Разходите за HTML сайтове са предимно само хостинг (често 0–3 €/мес. чрез Netlify или GitHub Pages), без софтуерни такси, лицензи за плъгини или редовни ъпдейти — идеални за статични бизнес презентации с висок PageSpeed и минимална поддръжка.</p>
         <p>WordPress базовият модел започва евтино (3–8 €/мес.), но рискува уязвимости, бавно зареждане и конфликти между 50+ плъгина; професионалната поддръжка (50–150 €/мес.) се оправдава за бизнеси с висок трафик.</p>
         <p>Цените варират по доставчици (SuperHosting от 4 €, SiteGround от 7 €, Cloudflare безплатно за статични); HTML спестява до 90% дългосрочно спрямо WP с агенция. Данни от независими български източници (1€ ≈ 1.95 лв.).</p>
       </div>
@@ -878,8 +943,8 @@ footer {
     <details class="faq-item">
       <summary>Използвате ли CDN библиотеки за шрифтове?</summary>
       <div class="faq-answer">
-        Съзнателно сме се отказали от CDN зависимости — шрифтовете живеят директно при теб, зареждат се локално с <strong>font-display: swap</strong> и не зависят от трети сървъри.<br><br>
-        Резултат: по-малко render-blocking и много добър PageSpeed, дори когато Google Fonts CDN е бавен.
+        Шрифтовете са <strong>self-hosted</strong> в <code>/fonts/*.woff2</code> — без Google Fonts или други външни CDN. Зареждат се локално с <strong>font-display: swap</strong> и не зависят от трети сървъри.<br><br>
+        Резултат: по-малко render-blocking и стабилен PageSpeed без външни заявки.
       </div>
     </details>
 
@@ -920,7 +985,7 @@ footer {
       <summary>Включено ли е SEO в цената?</summary>
       <div class="faq-answer">
         Да — базово on-page SEO е включено в <strong>всички пакети</strong>: title · meta · H1–H6 структура · Schema.org markup (4–6 типа) · Open Graph · mobile-first дизайн и техническа подготовка.<br><br>
-        Разширено SEO (keyword research + content стратегия + multi-location SEO) се предлага отделно: <strong>100€ база, +20€/страница над 5.</strong>
+        Разширено SEO (keyword research + content стратегия) се предлага отделно: <strong>100€ база, +20€/страница над 5.</strong> Multi-location SEO: <strong>+200€</strong> добавка.
       </div>
     </details>
 
@@ -936,7 +1001,7 @@ footer {
       <summary>Мога ли да добавя Facebook Pixel или Google Tag Manager?</summary>
       <div class="faq-answer">
         Да, но всяка трета страна влияе на PageSpeed. Интегрираме ги оптимизирано (async, defer) и документираме влиянието.<br><br>
-        <strong>Важно:</strong> PageSpeed гаранцията важи без третостранни тагове, освен ако не е изрично уговорено.
+        <strong>Важно:</strong> Целта за висок PageSpeed важи при чист HTML без третостранни тагове (Pixel, GTM и др.), освен ако не е изрично уговорено.
       </div>
     </details>
 
@@ -1041,7 +1106,7 @@ footer {
       <summary>Колко отнема изработката?</summary>
       <div class="faq-answer">
         <strong>Сайт визитка:</strong> 3–5 работни дни<br>
-        <strong>Корпоративен сайт:</strong> 1–2 седмици<br>
+        <strong>Корпоративен сайт:</strong> 10–14 работни дни<br>
         <strong>Индивидуален проект:</strong> индивидуален timeline
       </div>
     </details>
@@ -1215,6 +1280,52 @@ footer {
     <a href="https://moverstudio.online">moverstudio.online</a>
   </span>
 </footer>
+
+<!-- Easter Egg: Mouse Coordinates Over H1 -->
+<script>
+(function() {
+  const h1 = document.querySelector('h1');
+  if (!h1) return;
+  
+  // Create coordinate display element
+  const coordDisplay = document.createElement('div');
+  coordDisplay.style.cssText = `
+    position: fixed;
+    display: none;
+    background: rgba(242, 238, 227, 0.95);
+    border: 1px solid #1a1e22;
+    padding: 0.5rem 0.75rem;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #1a1e22;
+    pointer-events: none;
+    z-index: 9999;
+    letter-spacing: 0.05em;
+    box-shadow: 2px 2px 8px rgba(26, 30, 34, 0.15);
+    white-space: nowrap;
+  `;
+  document.body.appendChild(coordDisplay);
+  
+  // Track mouse position when hovering over H1
+  h1.addEventListener('mouseenter', function() {
+    coordDisplay.style.display = 'block';
+  });
+  
+  h1.addEventListener('mouseleave', function() {
+    coordDisplay.style.display = 'none';
+  });
+  
+  h1.addEventListener('mousemove', function(event) {
+    const x = Math.round(event.clientX);
+    const y = Math.round(event.clientY);
+    coordDisplay.textContent = `X: ${x} | Y: ${y}`;
+    
+    // Position the display near the cursor (offset by a few pixels)
+    coordDisplay.style.left = (x + 12) + 'px';
+    coordDisplay.style.top = (y - 32) + 'px';
+  });
+})();
+</script>
 
 </body>
 </html>

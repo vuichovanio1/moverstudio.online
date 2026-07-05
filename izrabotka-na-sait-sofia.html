@@ -1,20 +1,26 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2eee3">
-  <meta name="last-modified" content="2026-05-01">
+  <meta name="last-modified" content="2026-07-05">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
 
-  <title>Изработка на сайтове София | SEO оптимизирани и бързи | MOVER Studio</title>
-  <meta name="description" content="Професионална изработка на сайт в София от 400€ с HTML код, 100 PageSpeed и без месечни такси. Свържете се с нас за безплатна консултация в София и локална SEO стратегия.">
+  <title>Изработка на сайт София от 400€ | уеб сайт, HTML | MOVER Studio</title>
+  <meta name="description" content="Изработка на сайт и уеб сайт в София от 400€ — HTML, цел 95–100 PageSpeed, без WordPress и месечни такси. Локално SEO за всички квартали.">
   <link rel="canonical" href="https://moverstudio.online/izrabotka-na-sait-sofia.html">
+  <link rel="alternate" hreflang="bg" href="https://moverstudio.online/izrabotka-na-sait-sofia.html">
   
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <style>
 :root {
   --paper: #f4f0e8;
@@ -28,21 +34,30 @@
   --max-width: 1140px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
 
-/* Fallback for local fonts if available */
+/* Self-hosted fonts - no external dependencies */
 @font-face {
   font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish');
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono');
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -148,10 +163,52 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero > * {
   width: 100%;
+}
+
+@keyframes scan {
+  0%   { top: -2px; }
+  100% { top: 100%; }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand), transparent);
+  animation: scan 4s linear infinite;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-grid,
+.dim-line {
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: 'HTML5 · STATIC';
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  opacity: 0.35;
+  text-transform: uppercase;
+  pointer-events: none;
 }
 
 .blueprint-wrap {
@@ -606,12 +663,22 @@ footer {
 }
 </style>
 <!-- Open Graph -->
-  <meta property="og:title" content="Изработка на сайтове София | SEO оптимизирани и бързи | MOVER Studio">
-  <meta property="og:description" content="Професионална изработка на сайт в София от 400€ с HTML код, 100 PageSpeed и без месечни такси. Свържете се с нас за безплатна консултация в София.">
+  <meta property="og:title" content="Изработка на сайт София от 400€ | уеб сайт, HTML | MOVER Studio">
+  <meta property="og:description" content="Изработка на сайт и уеб сайт в София от 400€ — HTML, цел 95–100 PageSpeed, без WordPress. Локално SEO за София.">
   <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1"> 
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Изработка на сайт София от 400€ | уеб сайт, HTML | MOVER Studio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/izrabotka-na-sait-sofia.html">
   <meta property="og:locale" content="bg_BG">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Изработка на сайт София от 400€ | уеб сайт, HTML | MOVER Studio">
+  <meta name="twitter:description" content="Изработка на сайт и уеб сайт в София от 400€ — HTML, цел 95–100 PageSpeed, без WordPress. Локално SEO за София.">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta name="twitter:image:alt" content="Изработка на сайтове София | SEO оптимизирани и бързи | MOVER Studio">
+  <meta name="twitter:site" content="@moverstudio_bg">
 
   <meta name="robots" content="index, follow">
 
@@ -626,7 +693,7 @@ footer {
         "@id": "https://moverstudio.online/#organization",
         "name": "MOVER Studio",
         "url": "https://moverstudio.online",
-        "logo": "https://moverstudio.online/favicon.svg",
+        "logo": "https://moverstudio.online/og-image.png?v=1",
         "description": "Изработка на ултра бързи HTML сайтове без WordPress",
         "telephone": "+359877845569",
         "email": "admin@moverstudio.online",
@@ -677,7 +744,7 @@ footer {
           {
             "@type": "Offer",
             "name": "Корпоративен сайт София",
-            "price": "800",
+            "price": "1000",
             "priceCurrency": "EUR",
             "description": "По-голям сайт с multi-page структура и локално SEO"
           }
@@ -757,8 +824,8 @@ footer {
         "@type": "WebPage",
         "@id": "https://moverstudio.online/izrabotka-na-sait-sofia.html#webpage",
         "url": "https://moverstudio.online/izrabotka-na-sait-sofia.html",
-        "name": "Изработка на сайт София от 400€ | Бърз HTML сайт без WordPress",
-        "description": "Професионална изработка на сайт в София с HTML код, 100 PageSpeed и без месечни такси. Локални SEO решения за квартали като Център, Младост и Люлин.",
+        "name": "Изработка на сайт в София — уеб сайт от 400€",
+        "description": "Изработка на сайт и уеб сайт в София от 400€ — HTML, цел 95–100 PageSpeed, без WordPress. Локално SEO за София.",
         "author": {
           "@id": "https://moverstudio.online/#organization"
         },
@@ -766,13 +833,13 @@ footer {
           "@id": "https://moverstudio.online/#organization"
         },
         "datePublished": "2026-05-01",
-        "dateModified": "2026-05-01",
+        "dateModified": "2026-07-05",
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": "https://moverstudio.online/izrabotka-na-sait-sofia.html"
         },
         "image": "https://moverstudio.online/og-image.png?v=1",
-        "keywords": ["изработка на сайт софия", "html сайт", "local seo", "100 pagespeed", "wordpress алтернатива", "бърз сайт"]
+        "keywords": ["изработка на сайт софия", "изработка на уеб сайт софия", "изработка на сайтове софия", "html сайт", "local seo", "wordpress алтернатива"]
       },
       {
         "@type": "WebSite",
@@ -780,11 +847,6 @@ footer {
         "url": "https://moverstudio.online",
         "publisher": {
           "@id": "https://moverstudio.online/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://moverstudio.online/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
         }
       },
       {
@@ -795,7 +857,7 @@ footer {
             "name": "Колко струва изработка на сайт в София?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Цената за изработка на сайт визитка в София започва от 400€. Корпоративните сайтове, които включват multi-location SEO и по-сложна структура, започват от 800€, като крайната цена зависи от броя страници и функционалностите."
+              "text": "Цената за изработка на сайт визитка в София започва от 400€. Корпоративните сайтове започват от 1000€ (базов пакет: 5–15 страници, сложна структура, базово on-page SEO). Multi-location (+200€) и разширено SEO (+100€) — опционални добавки; крайната цена зависи от броя страници и функционалностите."
             }
           },
           {
@@ -867,18 +929,41 @@ footer {
 <main id="main">
   <!-- HERO SECTION -->
   <section class="hero">
-    <h1>Изработка на сайтове София – SEO оптимизирани и бързи</h1>
+    <div class="scan-line" aria-hidden="true"></div>
+    <svg class="hero-grid" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+         style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;opacity:0.04;z-index:0;">
+      <defs>
+        <pattern id="hg-small-sof" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#8f4722" stroke-width="0.4"/>
+        </pattern>
+        <pattern id="hg-big-sof" width="100" height="100" patternUnits="userSpaceOnUse">
+          <rect width="100" height="100" fill="url(#hg-small-sof)"/>
+          <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#8f4722" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hg-big-sof)"/>
+    </svg>
+    <h1>Изработка на сайт в София — уеб сайт от 400€</h1>
+    <svg aria-hidden="true" class="dim-line"
+         style="width:100%;height:24px;display:block;margin:-8px 0 8px;overflow:visible;pointer-events:none;"
+         viewBox="0 0 800 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="12" x2="800" y2="12" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
+      <line x1="0" y1="6" x2="0" y2="18" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
+      <line x1="800" y1="6" x2="800" y2="18" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
+      <text x="400" y="9" text-anchor="middle" font-family="Share Tech Mono, monospace" font-size="7" fill="#8f4722" opacity="0.5">WIDTH: 100% · STATIC HTML · NO_WP</text>
+    </svg>
     <p>
-      Търсите професионална изработка на сайт в София, който да се класира високо в Google и да привлича повече клиенти?
+      Търсите професионална <strong>изработка на сайт в София</strong> или <strong>изработка на уеб сайт в София</strong>, който да се класира високо в Google и да привлича клиенти?
       MOVER Studio предлага бързи HTML сайтове, оптимизирани за локално търсене, без месечни такси и без WordPress.
     </p>
     <p>
-      Независимо дали сте малък бизнес, фрийлансър или средна компания, ние създаваме уеб присъствие, което работи за вас.
-      Фокусът ни е върху <strong>100 PageSpeed</strong>, ясна структура и силно SEO, за да доминирате местното търсене в София.
+      Независимо дали сте малък бизнес, фрийлансър или средна компания — създаваме уеб присъствие, което работи за вас.
+      За по-широк обхват вижте и <strong>изработка на сайтове в София</strong> с multi-location SEO (+200€) и цел <strong>95–100 PageSpeed</strong>.
     </p>
     <div>
-      <a href="/calculator.html" class="cta-primary">Виж цена</a>
-      <a href="tel:+359877845569" class="cta-primary">Заяви сайт</a>
+      <a href="/calculator.html" class="cta-primary">Виж ориентировъчна цена</a>
+      <a href="mailto:admin@moverstudio.online?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%3A%20%D0%B8%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%20~400%E2%82%AC%20%E2%80%94%20%5B%D1%84%D0%B8%D1%80%D0%BC%D0%B0%5D" class="cta-primary">✉ Изпрати запитване</a>
+      <a href="tel:+359877845569" class="cta-primary">☎ Обади се</a>
     </div>
     <div style="margin-top: 2rem; font-size: 0.95rem; color: var(--text-muted);">
       <p>Работим с бизнеси от всички квартали на София: <strong>Център, Младост, Люлин, Лозенец, Витоша, Овча купел, Манастирски ливади, Студентски град, Надежда</strong> и други.</p>
@@ -889,17 +974,21 @@ footer {
       <span>✔ Цена от 400€</span>
       <span>✔ Подходящ за малък и среден бизнес</span>
     </div>
+    <p style="margin-top: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; font-size: 0.95rem; color: var(--text-muted);">
+      <strong>Работим дистанционно за цяла България</strong> — процесът е онлайн; физическа среща в София не е задължителна.
+      Пълен преглед на пакети: <a href="/izrabotka-na-sait.html">изработка на сайт</a> (hub).
+    </p>
   </section>
 
   <section>
-    <h2>Изработка на сайт в София – какво включва услугата</h2>
+    <h2>Изработка на сайтове в София – какво включва услугата</h2>
     <div class="card" style="max-width: 800px; margin: 0 auto;">
       <p>Нашата услуга за изработка на сайт в София е фокусирана върху постигането на реални бизнес резултати. Тя включва:</p>
       <ul>
         <li><strong>Детайлно планиране и структура:</strong> Анализираме вашата ниша и конкуренция в София, за да изградим оптимална структура на сайта.</li>
         <li><strong>Локално keyword research:</strong> Идентифицираме най-релевантните ключови думи за вашия бизнес и локация в София.</li>
         <li><strong>On-page SEO и Schema.org разметка:</strong> Оптимизираме всяка страница с локални мета данни и структурирани данни, които помагат на Google да разбере по-добре вашия бизнес и да го показва при локални търсения.</li>
-        <li><strong>Бързо зареждане (100 PageSpeed):</strong> Използваме чист HTML код, inline critical CSS и WebP изображения, за да гарантираме светкавично зареждане на сайта, което е ключово за SEO и потребителското изживяване.</li>
+        <li><strong>Бързо зареждане:</strong> Използваме чист HTML код, inline critical CSS и WebP изображения с цел 95–100 PageSpeed при дефинирани условия — ключово за SEO и потребителското изживяване.</li>
         <li><strong>Техническа реализация:</strong> Изграждаме стабилен и сигурен HTML сайт без WordPress, който е лесен за поддръжка и не изисква месечни такси.</li>
       </ul>
       <p style="margin-top: 1rem;">Целта е вашият сайт да бъде не просто онлайн визитка, а мощен инструмент за привличане на клиенти от София.</p>
@@ -912,7 +1001,7 @@ footer {
     <h2>Реални проекти в София: Доказателства за локално SEO и скорост</h2>
       <p>Не вярвайте само на думи. Вижте как нашите HTML сайтове помагат на бизнеси в София да доминират локалното търсене:</p>
       <ul>
-        <li><a href="https://roadassistancesofia.bg" target="_blank" rel="noopener noreferrer"><strong>roadassistancesofia.bg</strong></a>: Този проект включва 14 локационни HTML страници, всяка оптимизирана за конкретен район на София. Резултатът е силно локално SEO представяне и висока видимост за търсения като "пътна помощ София Център", "пътна помощ Младост" и други. Сайтът е пример за multi-location SEO архитектура без WordPress.</li>
+        <li><a href="https://roadassistancesofia.bg" target="_blank" rel="noopener noreferrer"><strong>roadassistancesofia.bg</strong></a>: Този проект включва 14 локационни HTML страници, всяка оптимизирана за конкретен район на София. Резултатът е силно локално SEO представяне и висока видимост за търсения като "пътна помощ София Център", "пътна помощ Младост" и други. Кейс с добавка multi-location (+200€) — не е част от базовите 1000€ корпоративен пакет.</li>
         <li><a href="https://nikoautogaz.github.io" target="_blank" rel="noopener noreferrer"><strong>nikoautogaz.github.io</strong></a>: Сайт за автогаз услуги в София, хостван безплатно на GitHub Pages. Включва WebP галерия, структурирани данни за 96+ Google отзива и sticky header с телефонен CTA. Доказва, че и с безплатен хостинг може да се постигне отлично представяне в София.</li>
         <li><a href="https://re-peat.store" target="_blank" rel="noopener noreferrer"><strong>re-peat.store</strong></a>: Проект, оптимизиран за привличане на клиенти към физически обекти в София. С 100/100/100/100 Lighthouse резултат (Performance, Accessibility, Best Practices, SEO), този сайт използва HTML-first структура и локално SEO, за да насочва клиенти към магазини в райони като Център, Поп Богомил и Раковски.</li>
       </ul>
@@ -948,17 +1037,17 @@ footer {
     <div class="grid">
       <div class="card" style="text-align: center;">
         <h3>Сайт визитка</h3>
-        <div style="font-size: 2rem; color: var(--matrix-green-bright); margin: 1rem 0;">от 400€</div>
+        <div style="font-size: 2rem; color: var(--brand); margin: 1rem 0;">от 400€</div>
         <p>еднократно (без месечни такси)</p>
       </div>
       <div class="card" style="text-align: center;">
         <h3>Корпоративен сайт</h3>
-        <div style="font-size: 2rem; color: var(--matrix-green-bright); margin: 1rem 0;">от 800€</div>
+        <div style="font-size: 2rem; color: var(--brand); margin: 1rem 0;">от 1000€</div>
         <p>еднократно</p>
       </div>
       <div class="card" style="text-align: center;">
         <h3>Индивидуален сайт</h3>
-        <div style="font-size: 1.5rem; color: var(--matrix-green-bright); margin: 1.3rem 0;">Индивидуална оферта</div>
+        <div style="font-size: 1.5rem; color: var(--brand); margin: 1.3rem 0;">Индивидуална оферта</div>
         <p>според нуждите (от 1500€)</p>
       </div>
     </div>
@@ -997,7 +1086,7 @@ footer {
         <tr>
           <td>PageSpeed</td>
           <td>Често под 60/100</td>
-          <td>Гарантирано 95–100</td>
+          <td>Цел 95–100 при дефинирани условия</td>
         </tr>
         <tr> 
           <td>SEO оптимизация</td>
@@ -1007,7 +1096,7 @@ footer {
       </tbody>
     </table>
     <p style="margin-top: 1.5rem; font-size: 0.95rem;">
-      <strong>HTML разходи:</strong> Предимно само хостинг (често 0–3 €/мес. чрез Netlify/GitHub Pages), без софтуерни такси, лицензи или ъпдейти — идеални за статични бизнес презентации с 100% PageSpeed и нулева поддръжка.<br><br>
+      <strong>HTML разходи:</strong> Предимно само хостинг (често 0–3 €/мес. чрез Netlify/GitHub Pages), без софтуерни такси, лицензи или ъпдейти — идеални за статични бизнес презентации с висок PageSpeed (цел 95–100) и нулева поддръжка.<br><br>
       <strong>WordPress рискове:</strong> Базовият модел (3–8 €/мес.) рискува уязвимости, бавно зареждане и конфликти между 50+ плъгина; професионалната поддръжка (50–150 €/мес.) се оправдава за бизнеси с висок трафик.<br><br>
       <strong>Доставчици (2026):</strong> SuperHosting (от 4 €), SiteGround (от 7 €), Cloudflare (безплатно за статични). HTML спестява до 90% дългосрочно. Данни от независими български източници (1€ ≈ 1.95 лв.)
     </p>
@@ -1041,7 +1130,7 @@ footer {
     <div class="grid">
       <div class="card">
         <h3>Колко струва изработка на сайт в София?</h3>
-        <p>Стартовата ни цена е 400€ за сайт визитка. Корпоративните решения започват от 800€, като крайната цена зависи от броя страници и функционалностите.</p>
+        <p>Стартовата ни цена е 400€ за сайт визитка. Корпоративните решения започват от 1000€ (базов пакет); multi-location (+200€) и разширено SEO (+100€) се добавят при нужда.</p>
       </div>
       <div class="card">
         <h3>Колко време отнема?</h3>
@@ -1055,9 +1144,9 @@ footer {
   </section>
 
   <!-- FINAL CTA -->
-  <section style="text-align: center; background: rgba(0, 255, 65, 0.05); padding: 4rem 2rem; border-radius: var(--radius); border: 1px solid var(--matrix-green-dim);">
-    <h2>Готов ли си за изработка на сайт в София, който привлича клиенти?</h2>
-    <p style="margin-bottom: 2rem;">Свържи се с MOVER Studio днес и доминирай местното търсене в София с бърз, оптимизиран HTML сайт.</p>
+  <section style="text-align: center; background: rgba(143, 71, 34, 0.08); padding: 4rem 2rem; border-radius: var(--radius); border: 1px solid var(--line);">
+  <h2>Готов ли си за изработка на сайтове в София, които привличат клиенти?</h2>
+  <p style="margin-bottom: 2rem;">Свържи се с MOVER Studio днес и доминирай местното търсене в София с бърз, оптимизиран HTML сайт.</p>
     <a href="tel:+359877845569" class="cta-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Заяви проект</a>
   </section>
 
@@ -1066,7 +1155,7 @@ footer {
 <footer>
   <p>&copy; 2026 MOVER Studio. Професионална изработка на сайтове София.</p>
   <p style="margin-top: 1rem;">
-    <a href="/index.html">изработка на сайт</a> | 
+    <a href="/izrabotka-na-sait.html">изработка на сайт</a> | 
     <a href="/calculator.html">Калкулатор</a> | 
     <a href="/sait-vizitka.html">Сайт Визитка</a> | 
     <a href="/korporativen-sait.html">Корпоративен Сайт</a> |

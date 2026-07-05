@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
@@ -12,8 +12,13 @@
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://moverstudio.online/404.html">
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <style>
 :root {
   --paper: #f4f0e8;
@@ -27,21 +32,30 @@
   --max-width: 1140px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
 
-/* Fallback for local fonts if available */
+/* Self-hosted fonts - no external dependencies */
 @font-face {
   font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish');
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono');
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -639,6 +653,52 @@ footer {
 <footer style="text-align: center; padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line);">
   <p>&copy; 2026 MOVER Studio &middot; <a href="/">moverstudio.online</a></p>
 </footer>
+
+<!-- Easter Egg: Mouse Coordinates Over H1 -->
+<script>
+(function() {
+  const h1 = document.querySelector('h1');
+  if (!h1) return;
+  
+  // Create coordinate display element
+  const coordDisplay = document.createElement('div');
+  coordDisplay.style.cssText = `
+    position: fixed;
+    display: none;
+    background: rgba(242, 238, 227, 0.95);
+    border: 1px solid #1a1e22;
+    padding: 0.5rem 0.75rem;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #1a1e22;
+    pointer-events: none;
+    z-index: 9999;
+    letter-spacing: 0.05em;
+    box-shadow: 2px 2px 8px rgba(26, 30, 34, 0.15);
+    white-space: nowrap;
+  `;
+  document.body.appendChild(coordDisplay);
+  
+  // Track mouse position when hovering over H1
+  h1.addEventListener('mouseenter', function() {
+    coordDisplay.style.display = 'block';
+  });
+  
+  h1.addEventListener('mouseleave', function() {
+    coordDisplay.style.display = 'none';
+  });
+  
+  h1.addEventListener('mousemove', function(event) {
+    const x = Math.round(event.clientX);
+    const y = Math.round(event.clientY);
+    coordDisplay.textContent = `X: ${x} | Y: ${y}`;
+    
+    // Position the display near the cursor (offset by a few pixels)
+    coordDisplay.style.left = (x + 12) + 'px';
+    coordDisplay.style.top = (y - 32) + 'px';
+  });
+})();
+</script>
 
 </body>
 </html>

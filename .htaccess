@@ -4,102 +4,131 @@
 # ========================================
 
 # Enable RewriteEngine
-[cite_start]RewriteEngine On 
+RewriteEngine On
+
+# Ignore byte-range requests (Apache; LiteSpeed ignores this for static files)
+RewriteCond %{HTTP:Range} .+
+RewriteRule .* - [E=HTTP_RANGE:,E=HTTP_IF_RANGE:]
+
+# LiteSpeed returns 206 for static files with Range — always serve OG image via PHP (200 OK)
+RewriteRule ^og-image\.(png|jpe?g)$ og-image.php [L,QSA]
+RewriteRule ^og-image-small\.png$ og-image.php [L,QSA]
 
 # ----------------------------------------
 # 1. Force HTTPS (301 redirect)
 # ----------------------------------------
-[cite_start]RewriteCond %{HTTPS} off 
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ----------------------------------------
 # 2. Force www → non-www
 # ----------------------------------------
-[cite_start]RewriteCond %{HTTP_HOST} ^www\.moverstudio\.online$ [NC] 
-RewriteRule ^ https://moverstudio.online%{REQUEST_URI} [L,R=301] 
+RewriteCond %{HTTP_HOST} ^www\.moverstudio\.online$ [NC]
+RewriteRule ^ https://moverstudio.online%{REQUEST_URI} [L,R=301]
 
 # Redirect old Sofia slug to the new singular URL
 RewriteRule ^izrabotka-na-saitove-sofia\.html$ /izrabotka-na-sait-sofia.html [L,R=301]
 
+# Redirect removed URLs to their canonical replacements
+RewriteRule ^dokazatelstva\.html$ /case-studies.html [L,R=301]
+RewriteRule ^pagespeed-100-html\.html$ /html-sait.html [L,R=301]
+
 # ----------------------------------------
 # 3. Custom Error Pages
 # ----------------------------------------
-[cite_start]ErrorDocument 404 /404.html 
+ErrorDocument 404 /404.html
 
 # ----------------------------------------
 # 4. Security Headers (Social Media Friendly)
 # ----------------------------------------
-[cite_start]<IfModule mod_headers.c> 
+<IfModule mod_headers.c>
   # CSP: Разрешаваме img-src https: за Facebook/Messenger ботовете
-  [cite_start]Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" [cite: 2, 3]
+  Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
   # Предотвратява MIME type sniffing
-  [cite_start]Header set X-Content-Type-Options "nosniff" [cite: 4]
+  Header set X-Content-Type-Options "nosniff"
 
   # Защита от clickjacking
-  [cite_start]Header set X-Frame-Options "DENY" [cite: 4]
+  Header set X-Frame-Options "DENY"
 
   # HSTS
-  [cite_start]Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" [cite: 4, 5]
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
   # Cross-Origin Policies - Оправени за Messenger преглед
   Header set Cross-Origin-Opener-Policy "unsafe-none"
   Header unset Cross-Origin-Embedder-Policy
 
   # Контрол на референтната информация
-  [cite_start]Header set Referrer-Policy "strict-origin-when-cross-origin" [cite: 4]
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
 
   # Фикс за грешка 206 (Partial Content)
   Header set Accept-Ranges none
-  
+
   # DNS Prefetch
-  [cite_start]Header set X-DNS-Prefetch-Control "on" [cite: 4]
+  Header set X-DNS-Prefetch-Control "on"
 
   # LLMs.txt header for AI discovery
   Header set X-LLMS-TXT "/llms-full.txt"
-</IfModule> 
+</IfModule>
+
+# OG image responses: no HTML security headers (Facebook image fetch)
+<Files "og-image.php">
+  <IfModule mod_headers.c>
+    Header always unset Content-Security-Policy
+    Header always unset X-Frame-Options
+    Header always unset Strict-Transport-Security
+    Header always unset Referrer-Policy
+    Header always unset Cross-Origin-Opener-Policy
+    Header always unset X-LLMS-TXT
+    Header always unset X-Content-Type-Options
+  </IfModule>
+</Files>
 
 # ----------------------------------------
 # 5. MIME Types
 # ----------------------------------------
-[cite_start]<IfModule mod_mime.c> [cite: 5]
-  [cite_start]AddType text/html .html [cite: 5]
-  [cite_start]AddType text/css .css [cite: 5]
-  [cite_start]AddType text/xml .xml [cite: 5]
-  [cite_start]AddType application/javascript .js [cite: 5]
-  [cite_start]AddType image/svg+xml .svg [cite: 5]
-  [cite_start]AddType image/webp .webp [cite: 5]
-  [cite_start]AddType image/png .png [cite: 5]
-  [cite_start]AddType image/x-icon .ico [cite: 5]
-</IfModule> [cite: 5]
+<IfModule mod_mime.c>
+  AddType text/html .html
+  AddType text/css .css
+  AddType text/xml .xml
+  AddType application/javascript .js
+  AddType image/svg+xml .svg
+  AddType image/webp .webp
+  AddType image/png .png
+  AddType image/jpeg .jpg .jpeg
+  AddType image/x-icon .ico
+</IfModule>
 
 # ----------------------------------------
 # 6. Compression (Gzip)
 # ----------------------------------------
-[cite_start]<IfModule mod_deflate.c> [cite: 5]
-  [cite_start]AddOutputFilterByType DEFLATE text/html [cite: 5]
-  [cite_start]AddOutputFilterByType DEFLATE text/css [cite: 5]
-  [cite_start]AddOutputFilterByType DEFLATE text/xml [cite: 6]
-  [cite_start]AddOutputFilterByType DEFLATE text/javascript [cite: 6]
-  [cite_start]AddOutputFilterByType DEFLATE application/javascript [cite: 6]
-  [cite_start]AddOutputFilterByType DEFLATE application/json [cite: 6]
-  [cite_start]AddOutputFilterByType DEFLATE application/xml [cite: 6]
-  [cite_start]AddOutputFilterByType DEFLATE image/svg+xml [cite: 6]
-</IfModule> [cite: 5]
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
 
 # ----------------------------------------
 # 7. Browser Caching
 # ----------------------------------------
-[cite_start]<IfModule mod_expires.c> [cite: 6]
-  [cite_start]ExpiresActive On [cite: 6]
-  [cite_start]ExpiresByType text/html "access plus 1 day" [cite: 6]
-  [cite_start]ExpiresByType text/css "access plus 1 year" [cite: 6]
-  [cite_start]ExpiresByType application/javascript "access plus 1 year" [cite: 6]
-  [cite_start]ExpiresByType image/svg+xml "access plus 1 year" [cite: 6]
-  [cite_start]ExpiresByType image/png "access plus 1 year" [cite: 6]
-  [cite_start]ExpiresByType image/webp "access plus 1 year" [cite: 6]
-  [cite_start]ExpiresByType image/x-icon "access plus 1 year" [cite: 6]
-</IfModule> [cite: 6]
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 day"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
 
 # ----------------------------------------
 # LLMs.txt File Configuration
@@ -112,24 +141,24 @@ RewriteRule ^izrabotka-na-saitove-sofia\.html$ /izrabotka-na-sait-sofia.html [L,
 # ----------------------------------------
 # 8. ETag (използваме само Expires за по-бърз PageSpeed)
 # ----------------------------------------
-[cite_start]<IfModule mod_headers.c> [cite: 7]
-  [cite_start]Header unset ETag [cite: 7]
-</IfModule> [cite: 7]
-FileETag None [cite: 7]
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
 
 # ----------------------------------------
 # 9. Забрана на листване на директории
 # ----------------------------------------
-[cite_start]Options -Indexes [cite: 7]
+Options -Indexes
 
 # ----------------------------------------
 # 10. Блокиране на достъп до системни файлове
 # ----------------------------------------
-[cite_start]<FilesMatch "(^\.htaccess|_headers|\.git)"> [cite: 7]
-  [cite_start]<IfModule mod_authz_core.c> [cite: 7]
-    [cite_start]Require all denied [cite: 7]
-  [cite_start]</IfModule> [cite: 7]
-</FilesMatch> [cite: 7]
+<FilesMatch "(^\.htaccess|_headers|\.git)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
 
 # ----------------------------------------
 # 11. Фикс за началната страница и блога

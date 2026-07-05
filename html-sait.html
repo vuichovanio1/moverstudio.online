@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f2eee3">
 
   <meta name="author" content="MOVER Studio">
-  <meta name="last-modified" content="2026-05-05">
+  <meta name="last-modified" content="2026-07-05">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
@@ -17,8 +17,13 @@
   <link rel="canonical" href="https://moverstudio.online/html-sait.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/html-sait.html">
   
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <style>
 :root {
   --paper: #f4f0e8;
@@ -32,21 +37,30 @@
   --max-width: 1140px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
 
-/* Fallback for local fonts if available */
+/* Self-hosted fonts - no external dependencies */
 @font-face {
   font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish');
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono');
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -156,6 +170,25 @@ main {
 
 .hero > * {
   width: 100%;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: 'HTML5 · STATIC';
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  opacity: 0.35;
+  text-transform: uppercase;
+  pointer-events: none;
 }
 
 .blueprint-wrap {
@@ -615,6 +648,8 @@ footer {
   <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Изработка на HTML сайт | Статичен уеб сайт с PageSpeed 100">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/html-sait.html">
   <meta property="og:locale" content="bg_BG">
@@ -627,6 +662,7 @@ footer {
   <meta name="twitter:title" content="Изработка на HTML сайт | Статичен уеб сайт с PageSpeed 100">
   <meta name="twitter:description" content="Изработка на HTML сайт и статичен уеб сайт с реални резултати. 100/100 PageSpeed, без месечни такси и без WordPress.">
   <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta name="twitter:image:alt" content="Изработка на HTML сайт | Статичен уеб сайт с PageSpeed 100">
   <meta name="twitter:site" content="@moverstudio_bg">
 
   
@@ -657,9 +693,26 @@ footer {
           { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://moverstudio.online/" },
           { "@type": "ListItem", "position": 2, "name": "HTML сайт", "item": "https://moverstudio.online/html-sait.html" }
         ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://moverstudio.online/#organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online/",
+        "logo": "https://moverstudio.online/og-image.png?v=1",
+        "email": "admin@moverstudio.online",
+        "telephone": "+359877845569"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://moverstudio.online/#website",
+        "url": "https://moverstudio.online/",
+        "name": "MOVER Studio",
+        "publisher": { "@id": "https://moverstudio.online/#organization" }
       }
     ]
   }
+  </script>
 </head>
 <body>
 
@@ -686,7 +739,9 @@ footer {
   <p style="font-size: 1.1rem; margin-bottom: 2rem;">
     <strong>HTML сайтовете</strong> са бъдещето на бързото уеб присъствие. 
     Без бази данни, без WordPress, без месечни такси — само чист код който зарежда за под 1 секунда.
-    <a href="/izrabotka-na-sait.html">← Обратно към всички услуги</a>
+    Нашата изработка на HTML сайт е оптимизирана за PageSpeed и локално SEO, за да донесе реални клиенти.
+    Това е техническата страница за HTML и PageSpeed — за общ преглед на пакетите и цените виж
+    <a href="/izrabotka-na-sait.html">изработка на сайт</a>.
   </p>
 
   <div class="card">
@@ -698,24 +753,25 @@ footer {
       <li><strong>Зареждане:</strong> под 1 секунда (срещу 3-7)</li>
       <li><strong>Месечни разходи:</strong> 0-3€ (срещу 50-150+€ при WordPress с агенция)</li>
     </ul>
-    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">Разходите са само хостинг (често 0–3 €/мес. чрез Netlify/GitHub Pages), без софтуерни такси, лицензи или ъпдейти — идеални за статични бизнес презентации с 100% PageSpeed и нулева поддръжка. WordPress базовият модел (3–8 €/мес.) рискува уязвимости и конфликти между 50+ плъгина; професионалната поддръжка (50–150 €/мес.) се оправдава за бизнеси с висок трафик. Цените варират по доставчици (SuperHosting от 4 €, SiteGround от 7 €, Cloudflare безплатно за статични); HTML спестява до 90% дългосрочно. Данни за 2026 г. (1€ ≈ 1.95 лв.)</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">Разходите са само хостинг (често 0–3 €/мес. чрез Netlify/GitHub Pages), без софтуерни такси, лицензи или ъпдейти — идеални за статични бизнес презентации с висок PageSpeed (цел 95–100) и нулева поддръжка. WordPress базовият модел (3–8 €/мес.) рискува уязвимости и конфликти между 50+ плъгина; професионалната поддръжка (50–150 €/мес.) се оправдава за бизнеси с висок трафик. Цените варират по доставчици (SuperHosting от 4 €, SiteGround от 7 €, Cloudflare безплатно за статични); HTML спестява до 90% дългосрочно. Данни за 2026 г. (1€ ≈ 1.95 лв.)</p>
   </div>
 
   <div class="card">
     <h2>💰 Цени за HTML сайт</h2>
     <p class="price-tag">От 400€</p>
     <p>Еднократна инвестиция. Без месечни такси.</p>
+    <p><strong>Цена за изработка на HTML сайт:</strong> от 400€ (визитка/landing) до 1500€+ за персонализирани проекти.</p>
     <ul>
       <li>Сайт визитка: 400€</li>
       <li>Landing page: 400€</li>
       <li>Корпоративен: 1000€</li>
     </ul>
-    <a href="/calculator.html" class="cta-primary">Изчисли точна цена →</a>
+    <a href="/calculator.html" class="cta-primary">Виж ориентировъчна цена →</a>
   </div>
 
   <div class="card">
     <h2>🏗️ Как изработваме HTML сайтове</h2>
-    <p>Нашият процес е оптимизиран за скорост и резултати:</p>
+    <p>Нашият процес за изработка на HTML сайт е оптимизиран за скорост и резултати:</p>
     <ul>
       <li><strong>Анализ:</strong> Разбираме бизнеса, целевата аудитория и конкуренцията</li>
       <li><strong>Структура:</strong> Планираме йерархията на страниците за максимално SEO</li>
@@ -729,7 +785,7 @@ footer {
 
   <div class="card">
     <h2>📊 Реални резултати от наши HTML сайтове</h2>
-    <p><strong>roadassistancesofia.bg</strong> — 14 локационни страници, всяка зарежда за 0.3s:</p>
+    <p><strong>roadassistancesofia.bg</strong> — 14 локационни страници, всяка зарежда за 0.3s. Този пример демонстрира успешна изработка на HTML сайт за multi-location бизнес:</p>
     <ul>
       <li>PageSpeed: 100/100/100/100 на Lighthouse</li>
       <li>Първо място в Google за "пътна помощ София" и 13 други локации</li>
@@ -812,7 +868,7 @@ footer {
   <div class="card">
     <h2>🔗 Свързани услуги</h2>
     <p>
-      <a href="/index.html">изработка на сайт</a><br>
+      <a href="/izrabotka-na-sait.html">изработка на сайт</a><br>
       <a href="/izrabotka-na-sait.html">← Всички услуги за изработка на сайт</a><br>
       <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт в София →</a><br>
       <a href="/sait-vizitka.html">Сайт визитка или портфолио →</a><br>

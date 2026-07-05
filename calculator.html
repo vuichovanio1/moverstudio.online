@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <!-- Performance Optimization: Charset at the very top for fastest parsing -->
@@ -7,9 +7,9 @@
   <!-- Performance Optimization: Optimized viewport for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Performance Optimization: Theme color for mobile browsers (Matrix green) -->
+  <!-- Performance Optimization: Theme color for mobile browsers (Blueprint paper) -->
   <meta name="theme-color" content="#f2eee3">
-  <meta name="last-modified" content="2026-05-01">
+  <meta name="last-modified" content="2026-07-05">
 
   <link rel="llms-txt" href="/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
@@ -20,13 +20,15 @@
   <!-- Preload not needed as all CSS/JS is inline -->
 
   <title>Калкулатор за сайт – изчисли цена за 30 секунди</title>
-  <meta name="description" content="Колко ще струва твоят сайт? Използвай калкулатора и получи ориентировъчна цена за секунди. Без регистрация.">
+  <meta name="description" content="Колко ще струва твоят сайт? Калкулатор с ориентировъчна цена за секунди: визитка и landing от 400€, корпоративен от 1000€. Без месечни такси и без регистрация.">
   <meta name="keywords" content="калкулатор сайт, цена изработка на сайт, колко струва сайт, html сайт цена, прозрачни цени">
   <link rel="canonical" href="https://moverstudio.online/calculator.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/calculator.html">
   
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <style>
 :root {
   --paper: #f4f0e8;
@@ -40,21 +42,30 @@
   --max-width: 1140px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
 
-/* Fallback for local fonts if available */
+/* Self-hosted fonts - no external dependencies */
 @font-face {
   font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish');
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono');
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -597,6 +608,275 @@ footer {
   z-index: 1001 !important;
 }
 
+/* Calculator Type Chooser Styling */
+.tc {
+  cursor: pointer;
+  padding: 1.5rem;
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  user-select: none;
+  position: relative;
+}
+
+.tc:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--brand);
+  border-color: var(--brand);
+}
+
+.tc.active {
+  background: var(--brand);
+  color: #ffffff;
+  border-color: var(--brand);
+  font-weight: bold;
+}
+
+.tc.active .tc-name,
+.tc.active .tc-price {
+  color: #ffffff;
+}
+
+.tc-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.tc-price {
+  font-size: 0.9rem;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.tc.active .tc-price {
+  color: #ffffff;
+}
+
+/* Calculator Extras Item Styling */
+.ei {
+  cursor: pointer;
+  padding: 1.25rem;
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  transition: all 0.3s ease;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  user-select: none;
+  position: relative;
+}
+
+.ei:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--brand);
+  border-color: var(--brand);
+}
+
+.ei.active {
+  background: rgba(143, 71, 34, 0.08);
+  border-color: var(--brand);
+  font-weight: 600;
+}
+
+.echeck {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--brand);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.ei.active .echeck {
+  background: var(--brand);
+  color: #ffffff;
+  border-color: var(--brand);
+}
+
+.elabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.ename {
+  text-align: left;
+  flex: 1;
+}
+
+.eprice {
+  font-weight: 700;
+  color: var(--brand);
+  white-space: nowrap;
+}
+
+/* SEO Pages Stepper */
+.seo-pages-box {
+  display: none;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+  margin: 1.5rem 0;
+  gap: 1rem;
+}
+
+.seo-pages-box.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.seo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.seo-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.page-stepper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--ink);
+  padding: 0.5rem;
+}
+
+.ps-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--ink);
+  padding: 0 0.5rem;
+  transition: all 0.2s ease;
+  font-family: var(--mono);
+}
+
+.ps-btn:hover {
+  color: var(--brand);
+  transform: scale(1.2);
+}
+
+.ps-val {
+  min-width: 3rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.seo-note {
+  font-size: 0.9rem;
+  color: var(--brand);
+  font-style: italic;
+}
+
+/* Result Box and Buttons */
+.result-box {
+  position: relative;
+}
+
+.rrow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.rrow.total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--ink);
+  border-top: 2px solid var(--ink);
+  margin: 0.5rem 0;
+  padding: 1rem 0;
+}
+
+.rlabel {
+  text-align: left;
+}
+
+.rval {
+  text-align: right;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.cta-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-main,
+.btn-sec {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 2px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-main {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.btn-main:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 var(--brand);
+}
+
+.btn-sec:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--brand);
+}
+
+.note {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--brand);
+  opacity: 0.8;
+}
+
+.step-label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 2rem 0 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1rem;
+}
+
 @media (max-width: 900px) {
   main {
     width: min(var(--max-width), calc(100vw - 1.25rem));
@@ -615,18 +895,27 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
   }
+  .elabel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .seo-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 </style>
-<!-- FontAwesome REMOVED for PageSpeed - using Unicode emojis instead -->
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Калкулатор за цена на сайт | Ориентир за 400€+ HTML проект | MOVER Studio">
-  <meta property="og:description" content="Изчисли цена за HTML сайт според обхват и функции. Ориентир от 400€ за визитка до 1500€ за индивидуален проект с бърз път към поръчка.">
+  <meta property="og:title" content="Калкулатор за сайт – изчисли цена за 30 секунди">
+  <meta property="og:description" content="Колко ще струва твоят сайт? Калкулатор с ориентировъчна цена за секунди: визитка и landing от 400€, корпоративен от 1000€. Без месечни такси и без регистрация.">
   <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Калкулатор за цена на сайт | Ориентир за 400€+ HTML проект | MOVER Studio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/calculator.html">
   <meta property="og:locale" content="bg_BG">
@@ -634,9 +923,10 @@ footer {
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Калкулатор за цена на сайт | Ориентир за 400€+ HTML проект | MOVER Studio">
-  <meta name="twitter:description" content="Изчисли цена за HTML сайт според обхват и функции. Ориентир от 400€ за визитка до 1500€ за индивидуален проект с бърз път към поръчка.">
+  <meta name="twitter:title" content="Калкулатор за сайт – изчисли цена за 30 секунди">
+  <meta name="twitter:description" content="Колко ще струва твоят сайт? Калкулатор с ориентировъчна цена за секунди: визитка и landing от 400€, корпоративен от 1000€. Без месечни такси и без регистрация.">
   <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta name="twitter:image:alt" content="Калкулатор за цена на сайт | Ориентир за 400€+ HTML проект | MOVER Studio">
   <meta name="twitter:site" content="@moverstudio_bg">
 
   
@@ -737,11 +1027,6 @@ footer {
         "url": "https://moverstudio.online",
         "publisher": {
           "@id": "https://moverstudio.online/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://moverstudio.online/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
         }
       },
       {
@@ -774,7 +1059,7 @@ footer {
             "name": "Има ли скрити такси?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Не, цената е окончателна и включва всичко необходимо. Няма допълнителни такси за хостинг, домейн или други елементи."
+              "text": "Не, цената е окончателна за договорения обхват на изработката. Домейн и хостинг (23–48€/год) се плащат директно на доставчика — не на нас."
             }
           },
           {
@@ -791,6 +1076,18 @@ footer {
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Калкулатор за цена на сайт",
+    "url": "https://moverstudio.online/calculator.html",
+    "applicationCategory": "BusinessApplication",
+    "description": "Интерактивен калкулатор за ориентировъчна цена на изработка на HTML сайт (визитка, landing page, корпоративен).",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+
   <!-- Additional Performance Optimizations -->
   <!-- Enable mobile web app capabilities -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -799,7 +1096,7 @@ footer {
 </head>
 <body>
 
-<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
 
 <header>
   <nav aria-label="Основна навигация">
@@ -815,69 +1112,61 @@ footer {
       <a href="/case-studies.html">Case Studies</a>
       <a href="/about.html">За Нас</a>
     </div>
-    Услуги: <a href="/izrabotka-na-sait.html">Изработка на сайт</a> | 
-    <a href="/izrabotka-na-landing-page.html">Изработка на landing page</a> | 
-    <a href="/izrabotka-na-sait-sofia.html">Изработка на сайтове София</a> | 
-    <a href="/sait-vizitka.html">Сайт визитка</a> | 
-    <a href="/korporativen-sait.html">Корпоративен сайт</a> | 
-    <a href="/wordpress-alternativa.html">Алтернатива на WordPress</a> | 
-    <a href="/index.html">HTML сайт</a> | 
-    <a href="/seo-optimizacia.html">SEO Оптимизация</a>
-  </p>
   </nav>
 </header>
 
 <main id="main">
 
         <article>
+      <h1>Калкулатор за сайт — ориентировъчна цена за 30 секунди</h1>
 <div class="cw">
   <div class="step-label">стъпка 1 — избери тип сайт</div>
   <div class="type-grid">
     <div class="tc active" data-type="vizitka" data-price="400" onclick="selectType(this)">
-      <i class="ti ti-id-badge" aria-hidden="true"></i>
+      <span aria-hidden="true" style="font-size:1.5rem;">📇</span>
       <div class="tc-name">Визитка</div>
       <div class="tc-price">от 400€</div>
     </div>
     <div class="tc" data-type="landing" data-price="400" onclick="selectType(this)">
-      <i class="ti ti-layout-navbar" aria-hidden="true"></i>
+      <span aria-hidden="true" style="font-size:1.5rem;">🚀</span>
       <div class="tc-name">Landing page</div>
       <div class="tc-price">от 400€</div>
     </div>
-    <div class="tc" data-type="corporate" data-price="800" onclick="selectType(this)">
-      <i class="ti ti-building" aria-hidden="true"></i>
+    <div class="tc" data-type="corporate" data-price="1000" onclick="selectType(this)">
+      <span aria-hidden="true" style="font-size:1.5rem;">🏢</span>
       <div class="tc-name">Корпоративен</div>
-      <div class="tc-price">от 800€</div>
+      <div class="tc-price">от 1000€</div>
     </div>
   </div>
 
   <div class="step-label">стъпка 2 — добави екстри</div>
   <div class="extras-grid" id="extras-grid">
-    <div class="ei" data-key="seo" data-price="120" onclick="toggleExtra(this)">
+    <div class="ei" data-key="seo" data-price="100" onclick="toggleExtra(this)">
       <div class="echeck"></div>
       <div class="elabel">
         <div class="ename">Пълна SEO оптимизация</div>
-        <div class="eprice" id="seo-price-label">+120€</div>
+        <div class="eprice" id="seo-price-label">+100€</div>
       </div>
     </div>
-    <div class="ei" data-key="calc" data-price="80" onclick="toggleExtra(this)">
+    <div class="ei" data-key="calc" data-price="150" onclick="toggleExtra(this)">
       <div class="echeck"></div>
       <div class="elabel">
         <div class="ename">Ценови калкулатор</div>
-        <div class="eprice">+80€</div>
-      </div>
-    </div>
-    <div class="ei" data-key="multilang" data-price="150" onclick="toggleExtra(this)">
-      <div class="echeck"></div>
-      <div class="elabel">
-        <div class="ename">Многоезична версия</div>
         <div class="eprice">+150€</div>
       </div>
     </div>
-    <div class="ei" data-key="contact" data-price="60" onclick="toggleExtra(this)">
+    <div class="ei" data-key="multilang" data-price="300" onclick="toggleExtra(this)">
       <div class="echeck"></div>
       <div class="elabel">
-        <div class="ename">Контактна форма + имейл</div>
-        <div class="eprice">+60€</div>
+        <div class="ename">Многоезична версия</div>
+        <div class="eprice">+300€</div>
+      </div>
+    </div>
+    <div class="ei" data-key="multiloc" data-price="200" onclick="toggleExtra(this)">
+      <div class="echeck"></div>
+      <div class="elabel">
+        <div class="ename">Multi-location SEO страници</div>
+        <div class="eprice">+200€</div>
       </div>
     </div>
     <div class="ei" data-key="maps" data-price="90" onclick="toggleExtra(this)">
@@ -895,18 +1184,19 @@ footer {
       </div>
     </div>
   </div>
+  <div class="note" style="margin-top:0.75rem;">Контактна форма с имейл известия е включена безплатно във всеки пакет.</div>
 
   <!-- SEO pages selector — само при корпоративен + SEO -->
   <div class="seo-pages-box" id="seo-pages-box">
     <div class="seo-row">
-      <label><i class="ti ti-file-text" aria-hidden="true"></i> Брой страници за SEO оптимизация</label>
+      <label><span aria-hidden="true">📄</span> Брой страници за SEO оптимизация</label>
       <div class="page-stepper">
         <button class="ps-btn" onclick="changePages(-1)">−</button>
         <div class="ps-val" id="pages-val">5</div>
         <button class="ps-btn" onclick="changePages(1)">+</button>
       </div>
     </div>
-    <div class="seo-note" id="seo-tier-note">До 5 страници — включено в базовата SEO цена</div>
+    <div class="seo-note" id="seo-tier-note">До 5 страници — +100€ разширено SEO (add-on, не е в базовия корпоративен пакет)</div>
   </div>
 
   <div class="step-label">стъпка 3 — твоята цена</div>
@@ -924,15 +1214,16 @@ footer {
 
   <div class="cta-row">
     <button class="btn-main" onclick="sendPrompt('Искам да поръчам сайт от MOVER Studio. ' + getCalculatorSelection())">Изпрати запитване ↗</button>
+    <a class="btn-sec" href="tel:+359877845569" style="text-align:center;">☎ Обади се</a>
     <button class="btn-sec" onclick="doReset()">Нулирай</button>
   </div>
-  <div class="note">Без месечни такси · Фиксирана цена · Срокът се уточнява при запитване</div>
+  <div class="note">Без месечни такси · Ориентировъчна цена · Срокът се уточнява при запитване</div>
 </div>
   </article>
 
 </main>
 
-<footer style="background: var(--matrix-dark); padding: 3rem 1rem; text-align: center; color: var(--text-muted); font-size: 1rem; border-top: 2px solid var(--matrix-green-dim); margin-top: 4rem;">
+  <footer style="background: var(--surface); padding: 3rem 1rem; text-align: center; color: var(--text-muted); font-size: 1rem; border-top: 2px solid var(--ink); margin-top: 4rem;">
   <p class="terminal">
     © 2026 MOVER_STUDIO<br>
     &gt; Built without WordPress<br>
@@ -1008,20 +1299,20 @@ function updateSeoLabel() {
 
   if (isCorp && seoActive) {
     if (pages <= 5) {
-      note.textContent = 'До 5 страници — включено в базовата SEO цена';
-      label.textContent = '+120€';
+      note.textContent = 'До 5 страници — +100€ разширено SEO (add-on, не е в базовия корпоративен пакет)';
+      label.textContent = '+100€';
     } else if (pages <= 10) {
       note.textContent = `${pages} стр. · +${(pages-5)}×20€ за стр. 6-${pages}`;
-      label.textContent = `+${120 + extra}€`;
+      label.textContent = `+${100 + extra}€`;
     } else if (pages <= 15) {
       note.textContent = `${pages} стр. · стр. 6-10 по 20€, стр. 11-${pages} по 30€`;
-      label.textContent = `+${120 + extra}€`;
+      label.textContent = `+${100 + extra}€`;
     } else {
       note.textContent = `${pages} стр. · стр. 6-10 по 20€, 11-15 по 30€, над 15 по 40€`;
-      label.textContent = `+${120 + extra}€`;
+      label.textContent = `+${100 + extra}€`;
     }
   } else {
-    label.textContent = '+120€';
+    label.textContent = '+100€';
   }
 }
 
@@ -1046,7 +1337,7 @@ function update() {
 
     if (key === 'seo' && isCorp) {
       const extra = getSeoPageExtra();
-      price = 120 + extra;
+      price = 100 + extra;
       if (extra > 0) name += ` (${pages} стр.)`;
     }
 
@@ -1071,7 +1362,10 @@ function getCalculatorSelection() {
 }
 
 function sendPrompt(message) {
-  window.location.href = '/index.html#contact';
+  const total = document.getElementById('total').textContent;
+  const subject = encodeURIComponent('Запитване: ' + baseName + ' ~' + total + ' — [фирма]');
+  const body = encodeURIComponent(message + '\n\nФирма:\nТелефон:\nДопълнителна информация:');
+  window.location.href = 'mailto:admin@moverstudio.online?subject=' + subject + '&body=' + body;
 }
 
 function doReset() {
@@ -1087,7 +1381,7 @@ function doReset() {
   document.getElementById('extras-breakdown').innerHTML = '';
   document.getElementById('total').textContent = '400€';
   document.getElementById('seo-pages-box').classList.remove('show');
-  document.getElementById('seo-price-label').textContent = '+120€';
+  document.getElementById('seo-price-label').textContent = '+100€';
 }
 </script>
 

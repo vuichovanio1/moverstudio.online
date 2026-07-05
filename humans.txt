@@ -9,7 +9,7 @@
   Location: Bulgaria
 
 /* SITE */
-  Last update: 2026-02-10
+  Last update: 2026-07-05
   Language: Bulgarian
   Doctype: HTML5
   Standards: HTML5, CSS3, Schema.org, Open Graph

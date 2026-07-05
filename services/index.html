@@ -1,17 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2eee3">
-  <meta name="last-modified" content="2026-05-05">
+  <meta name="last-modified" content="2026-07-05">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
   <link rel="canonical" href="https://moverstudio.online/services/">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/services/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <style>
 :root {
   --paper: #f4f0e8;
@@ -25,21 +27,30 @@
   --max-width: 1140px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
 
-/* Fallback for local fonts if available */
+/* Self-hosted fonts - no external dependencies */
 @font-face {
   font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish');
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono');
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -609,12 +620,59 @@ footer {
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/services/">
   <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Услуги | SEO, уеб сайтове и AI решения | MOVER Studio">
   <meta property="og:locale" content="bg_BG">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Услуги | SEO, уеб сайтове и AI решения | MOVER Studio">
   <meta name="twitter:description" content="SEO, уеб сайтове и AI решения на едно място. Ясна структура, бързи сайтове и съдържание, готово за търсене и AI обработка.">
   <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
-  
+  <meta name="twitter:image:alt" content="Услуги | SEO, уеб сайтове и AI решения | MOVER Studio">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://moverstudio.online/#organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online/",
+        "logo": "https://moverstudio.online/og-image.png?v=1",
+        "email": "admin@moverstudio.online",
+        "telephone": "+359877845569"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://moverstudio.online/services/#webpage",
+        "url": "https://moverstudio.online/services/",
+        "name": "Услуги | SEO, уеб сайтове и AI решения | MOVER Studio",
+        "description": "Услуги на MOVER Studio: SEO, уеб сайтове и AI решения. Едно място за по-бързи сайтове, по-добро класиране и по-ясна структура.",
+        "inLanguage": "bg",
+        "publisher": { "@id": "https://moverstudio.online/#organization" },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Изработка на сайт", "url": "https://moverstudio.online/izrabotka-na-sait.html" },
+            { "@type": "ListItem", "position": 2, "name": "Сайт визитка и портфолио", "url": "https://moverstudio.online/sait-vizitka.html" },
+            { "@type": "ListItem", "position": 3, "name": "Корпоративен сайт", "url": "https://moverstudio.online/korporativen-sait.html" },
+            { "@type": "ListItem", "position": 4, "name": "Изработка на landing page", "url": "https://moverstudio.online/izrabotka-na-landing-page.html" },
+            { "@type": "ListItem", "position": 5, "name": "HTML сайт", "url": "https://moverstudio.online/html-sait.html" },
+            { "@type": "ListItem", "position": 6, "name": "WordPress алтернатива", "url": "https://moverstudio.online/wordpress-alternativa.html" },
+            { "@type": "ListItem", "position": 7, "name": "SEO оптимизация", "url": "https://moverstudio.online/seo-optimizacia.html" }
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://moverstudio.online/" },
+          { "@type": "ListItem", "position": 2, "name": "Услуги", "item": "https://moverstudio.online/services/" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
@@ -696,7 +754,12 @@ footer {
           <div class="panel">
             <h3>Бизнес уеб сайтове</h3>
             <p>По-големи сайтове с услуги, екип, доверие и ясна навигация. Ако проектът е по-сложен, това е правилният пакет.</p>
-            <p><a href="/izrabotka-na-sait.html">Виж основната услуга</a></p>
+            <p><a href="/izrabotka-na-sait.html">Виж основната услуга</a> · <a href="/korporativen-sait.html">Корпоративен сайт</a></p>
+          </div>
+          <div class="panel">
+            <h3>Landing page за реклами</h3>
+            <p>Отделна бърза страница за Google Ads и Facebook кампании — фокус върху една оферта и една конверсия.</p>
+            <p><a href="/izrabotka-na-landing-page.html">Детайли за landing page</a> · <a href="/html-sait.html">HTML сайт с PageSpeed 100</a></p>
           </div>
         </div>
       </section>
@@ -763,5 +826,52 @@ footer {
   <footer>
     <p>&copy; 2026 MOVER Studio. SEO, уеб сайтове и AI решения.</p>
   </footer>
+
+<!-- Easter Egg: Mouse Coordinates Over H1 -->
+<script>
+(function() {
+  const h1 = document.querySelector('h1');
+  if (!h1) return;
+  
+  // Create coordinate display element
+  const coordDisplay = document.createElement('div');
+  coordDisplay.style.cssText = `
+    position: fixed;
+    display: none;
+    background: rgba(242, 238, 227, 0.95);
+    border: 1px solid #1a1e22;
+    padding: 0.5rem 0.75rem;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #1a1e22;
+    pointer-events: none;
+    z-index: 9999;
+    letter-spacing: 0.05em;
+    box-shadow: 2px 2px 8px rgba(26, 30, 34, 0.15);
+    white-space: nowrap;
+  `;
+  document.body.appendChild(coordDisplay);
+  
+  // Track mouse position when hovering over H1
+  h1.addEventListener('mouseenter', function() {
+    coordDisplay.style.display = 'block';
+  });
+  
+  h1.addEventListener('mouseleave', function() {
+    coordDisplay.style.display = 'none';
+  });
+  
+  h1.addEventListener('mousemove', function(event) {
+    const x = Math.round(event.clientX);
+    const y = Math.round(event.clientY);
+    coordDisplay.textContent = `X: ${x} | Y: ${y}`;
+    
+    // Position the display near the cursor (offset by a few pixels)
+    coordDisplay.style.left = (x + 12) + 'px';
+    coordDisplay.style.top = (y - 32) + 'px';
+  });
+})();
+</script>
+
 </body>
 </html>

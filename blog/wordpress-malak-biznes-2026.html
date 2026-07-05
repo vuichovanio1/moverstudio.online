@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2eee3">
-  <meta name="last-modified" content="2026-05-01">
+  <meta name="last-modified" content="2026-07-05">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
@@ -17,8 +17,10 @@
   <link rel="canonical" href="https://moverstudio.online/blog/wordpress-malak-biznes-2026.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/blog/wordpress-malak-biznes-2026.html">
 
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <style>
 :root {
   --paper: #f4f0e8;
@@ -32,21 +34,30 @@
   --max-width: 1140px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
 
-/* Fallback for local fonts if available */
+/* Self-hosted fonts - no external dependencies */
 @font-face {
   font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish');
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono');
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -615,6 +626,7 @@ footer {
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Изработка на WordPress сайт за малък бизнес - сравнение разходи и скорост">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://moverstudio.online/blog/wordpress-malak-biznes-2026.html">
   <meta property="og:locale" content="bg_BG">
@@ -628,6 +640,7 @@ footer {
   <meta name="twitter:title" content="WordPress за Малък Бизнес: Цена, Риск и Реални Разходи в Евро (2026) | MOVER Studio">
   <meta name="twitter:description" content="WordPress за малък бизнес: цена, поддръжка, реални разходи в евро за 2026 и кога HTML е по-подходящо решение.">
   <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta name="twitter:image:alt" content="Изработка на WordPress сайт за малък бизнес - сравнение разходи и скорост">
   <meta name="twitter:site" content="@moverstudio_bg">
   <meta name="author" content="MOVER Studio">
 
@@ -763,7 +776,7 @@ footer {
 </head>
 <body>
 
-<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:#000;color:#00ff41;font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
 
 <header>
   <nav aria-label="Основна навигация">
@@ -775,7 +788,7 @@ footer {
       <a href="../izrabotka-na-landing-page.html">Изработка на landing page</a>
       <a href="../izrabotka-na-sait-sofia.html">Изработка на сайтове София</a>
       <a href="../calculator.html">Калкулатор</a>
-      <a href="../dokazatelstva.html">Доказателства</a>
+      <a href="../case-studies.html">Доказателства</a>
       <a href="../case-studies.html">Case Studies</a>
       <a href="../about.html">За Нас</a>
     </div>
@@ -843,7 +856,7 @@ footer {
       <p>Повечето бизнеси – счетоводни кантори, строителни фирми или козметични салони – имат нужда от сайт, който просто да показва услугите им и контактите. Те не променят съдържанието си ежедневно. За тях WordPress често добавя допълнителна сложност и текущи разходи, които не винаги носят реална възвръщаемост.</p>
     </section>
 
-    <section style="margin: 2rem 0; padding: 1.5rem; background: var(--matrix-dark); border: 2px solid var(--matrix-green-dim); border-radius: var(--radius);">
+    <section style="margin: 2rem 0; padding: 1.5rem; background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius);">
       <h2 style="border-left: none; padding-left: 0;">Ако искаш по-малко разходи и повече яснота</h2>
       <p>Изпрати ни кратко запитване и ще ти кажем директно дали HTML е по-логичното решение за твоя бизнес и какъв старт има смисъл.</p>
       <p style="margin-bottom: 0;"><a href="../index.html#contact" class="pill red-pill">Изпрати запитване</a> <a href="../calculator.html" class="pill blue-pill">Виж ориентировъчна цена</a></p>
@@ -877,7 +890,7 @@ footer {
         <tr><td>WordPress (с агенция/фрийлансър)</td><td>50 – 150+ €</td><td>600 – 1800+ €</td></tr>
       </table>
       <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(248, 246, 242, 0.8); border-left: 4px solid var(--accent); border-radius: 6px;">
-        <p style="margin-bottom: 0.75rem;"><strong>Разходи за HTML:</strong> Предимно само хостинг (често 0–3 €/мес. чрез Netlify или GitHub Pages), без софтуерни такси, лицензи за плъгини или редовни ъпдейти — идеални за статични бизнес презентации с 100% PageSpeed резултати и нулева нужда от поддръжка.</p>
+        <p style="margin-bottom: 0.75rem;"><strong>Разходи за HTML:</strong> Предимно само хостинг (често 0–3 €/мес. чрез Netlify или GitHub Pages), без софтуерни такси, лицензи за плъгини или редовни ъпдейти — идеални за статични бизнес презентации с висок PageSpeed (цел 95–100) резултати и нулева нужда от поддръжка.</p>
         <p style="margin-bottom: 0.75rem;"><strong>WordPress рискове:</strong> Базовият модел започва евтино (3–8 €/мес.), но рискува уязвимости, бавно зареждане и конфликти между 50+ плъгина; професионалната поддръжка (50–150 €/мес.) се оправдава за бизнеси с висок трафик, където downtime струва клиенти.</p>
         <p style="margin-bottom: 0;"><strong>Цени по доставчици (България, 2026):</strong> SuperHosting (от 4 €), SiteGround (от 7 €), Cloudflare Pages (безплатно за статични). HTML спестява до 90% дългосрочно спрямо WP с агенция.</p>
       </div>
@@ -905,7 +918,7 @@ footer {
         </figure>
         <figure class="comparison-card">
           <img src="../images/wpvshtml2.webp" alt="PageSpeed Insights сравнение между WordPress и HTML" loading="lazy" width="1200" height="675">
-          <figcaption>Google PageSpeed Insights: WordPress показва 74 performance, а HTML версията достига 100.</figcaption>
+          <figcaption>Google PageSpeed Insights: WordPress показва 75 performance, а HTML версията достига 100.</figcaption>
         </figure>
         <figure class="comparison-card">
           <img src="../images/wpvshtml3.webp" alt="Structured data сравнение между WordPress и HTML" loading="lazy" width="1200" height="675">
@@ -945,9 +958,9 @@ footer {
 
     <section>
       <h2>Следващи стъпки</h2>
-      <p><strong>→ <a href="../calculator.html">Изчислете цената на вашия нов сайт тук</a></strong> – нашият калкулатор ще ви даде точна оферта веднага.</p>
+      <p><strong>→ <a href="../calculator.html">Изчислете цената на вашия нов сайт тук</a></strong> – нашият калкулатор ще ви даде ориентировъчна цена за секунди.</p>
       <p><strong>→ <a href="../izrabotka-na-sait.html">Вижте повече за услугата изработка на сайт</a></strong> – процеси, срокове и примери.</p>
-      <p><strong>→ <a href="../pagespeed-100-html.html">Разгледайте как постигаме 90-100 PageSpeed за бизнес сайтове</a></strong> – технически подход и измерими резултати.</p>
+      <p><strong>→ <a href="../html-sait.html">Разгледайте как постигаме 90-100 PageSpeed за бизнес сайтове</a></strong> – технически подход и измерими резултати.</p>
       <p><strong>→ <a href="../index.html#contact">Искаш ли сайт без поддръжка?</a></strong> Пиши ни и ще ти кажем честно дали HTML или WordPress е по-правилният избор за твоя бизнес.</p>
     </section>
 
@@ -971,7 +984,7 @@ footer {
         <details class="faq-item">
           <summary class="faq-question">Защо HTML сайтът е по-бърз?</summary>
           <div class="faq-answer">
-            <p><a href="../pagespeed-100-html.html">HTML сайтът</a> не изисква време за обработка от сървъра – той се доставя на потребителя много бързо, което често е предимство за потребителското изживяване и техническото SEO. Може да проверите и официалното ръководство на Google за <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">базови SEO практики</a>.</p>
+            <p><a href="../html-sait.html">HTML сайтът</a> не изисква време за обработка от сървъра – той се доставя на потребителя много бързо, което често е предимство за потребителското изживяване и техническото SEO. Може да проверите и официалното ръководство на Google за <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">базови SEO практики</a>.</p>
           </div>
         </details>
       </div>

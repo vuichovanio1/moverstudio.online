@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
@@ -11,9 +11,12 @@
   <title>Landing page цена (2026) | Изработка за реклами и конверсии | от 400€</title>
   <meta name="description" content="Изработка на landing page за Google Ads и Facebook реклами. Цена от 400€. Висока конверсия, A/B testing, lead generation.">
   <link rel="canonical" href="https://moverstudio.online/izrabotka-na-landing-page.html">
+  <link rel="alternate" hreflang="bg" href="https://moverstudio.online/izrabotka-na-landing-page.html">
   
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <style>
 :root {
   --paper: #f4f0e8;
@@ -27,21 +30,30 @@
   --max-width: 1140px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
 
-/* Fallback for local fonts if available */
+/* Self-hosted fonts - no external dependencies */
 @font-face {
   font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish');
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono');
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -147,10 +159,52 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero > * {
   width: 100%;
+}
+
+@keyframes scan {
+  0%   { top: -2px; }
+  100% { top: 100%; }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand), transparent);
+  animation: scan 4s linear infinite;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-grid,
+.dim-line {
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: 'HTML5 · STATIC';
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  opacity: 0.35;
+  text-transform: uppercase;
+  pointer-events: none;
 }
 
 .blueprint-wrap {
@@ -605,15 +659,25 @@ footer {
 }
 </style>
 <meta name="author" content="MOVER Studio">
-  <meta name="last-modified" content="2026-05-01">
+  <meta name="last-modified" content="2026-07-05">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Landing page цена (2026) | Изработка за реклами и конверсии | от 400€">
   <meta property="og:description" content="Изработка на landing page за Google Ads и Facebook. Цена от 400€. Висока конверсия, A/B testing.">
   <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1"> 
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Landing page цена (2026) | Изработка за реклами и конверсии | от 400€">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/izrabotka-na-landing-page.html">
   <meta property="og:locale" content="bg_BG">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Landing page цена (2026) | Изработка за реклами и конверсии | от 400€">
+  <meta name="twitter:description" content="Изработка на landing page за Google Ads и Facebook. Цена от 400€. Висока конверсия, A/B testing.">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta name="twitter:image:alt" content="Landing page цена (2026) | Изработка за реклами и конверсии | от 400€">
+  <meta name="twitter:site" content="@moverstudio_bg">
 
   <meta name="robots" content="index, follow">
 
@@ -627,7 +691,7 @@ footer {
         "@id": "https://moverstudio.online/#organization",
         "name": "MOVER Studio",
         "url": "https://moverstudio.online",
-        "logo": "https://moverstudio.online/favicon.svg",
+        "logo": "https://moverstudio.online/og-image.png?v=1",
         "description": "Изработка на ултра бързи HTML сайтове без WordPress",
         "telephone": "+359877845569",
         "email": "admin@moverstudio.online",
@@ -714,7 +778,7 @@ footer {
       },
       {
         "@type": "WebPage",
-        "name": "Изработка на Landing Page от 400€ | По-нисък CPC и 100 PageSpeed",
+        "name": "Изработка на landing page от 400€ — цена, срок и конверсии",
         "description": "Професионална изработка на landing page с HTML код. Увеличете вашия Quality Score и намалете цената на клик (CPC) в Google Ads.",
         "author": {
           "@id": "https://moverstudio.online/#organization"
@@ -723,7 +787,7 @@ footer {
           "@id": "https://moverstudio.online/#organization"
         },
         "datePublished": "2026-05-01",
-        "dateModified": "2026-05-01",
+        "dateModified": "2026-06-21",
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": "https://moverstudio.online/izrabotka-na-landing-page.html"
@@ -738,11 +802,6 @@ footer {
         "url": "https://moverstudio.online",
         "publisher": {
           "@id": "https://moverstudio.online/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://moverstudio.online/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
         }
       },
       {
@@ -816,16 +875,45 @@ footer {
   </nav>
 </header>
 
+
+  <div style="max-width: var(--max-width); margin: 0 auto 2rem; padding: 1rem 1.25rem; background: rgba(143, 71, 34, 0.08); border-left: 4px solid var(--brand);">
+    <p style="margin: 0; font-size: 0.95rem;"><strong>Изработка на landing page от 400€</strong> · без WordPress · без месечни такси · цел 95–100 PageSpeed · <strong>5% компенсация</strong> при просрочен срок · отговор ≤24h</p>
+  </div>
 <main id="main">
   <section class="hero">
-    <h1>Изработка на Landing Page, която намалява разходите за реклама</h1>
+    <div class="scan-line" aria-hidden="true"></div>
+    <svg class="hero-grid" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+         style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;opacity:0.04;z-index:0;">
+      <defs>
+        <pattern id="hg-small-lp" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#8f4722" stroke-width="0.4"/>
+        </pattern>
+        <pattern id="hg-big-lp" width="100" height="100" patternUnits="userSpaceOnUse">
+          <rect width="100" height="100" fill="url(#hg-small-lp)"/>
+          <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#8f4722" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hg-big-lp)"/>
+    </svg>
+    <h1>Изработка на landing page от 400€ — цена, срок и конверсии</h1>
+    <svg aria-hidden="true" class="dim-line"
+         style="width:100%;height:24px;display:block;margin:-8px 0 8px;overflow:visible;pointer-events:none;"
+         viewBox="0 0 800 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="12" x2="800" y2="12" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
+      <line x1="0" y1="6" x2="0" y2="18" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
+      <line x1="800" y1="6" x2="800" y2="18" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
+      <text x="400" y="9" text-anchor="middle" font-family="Share Tech Mono, monospace" font-size="7" fill="#8f4722" opacity="0.5">WIDTH: 100% · STATIC HTML · NO_WP</text>
+    </svg>
     <p>
       Повечето landing страници на WordPress са тежки и бавни. Това убива вашия <strong>Quality Score</strong> в Google Ads.
       Ние създаваме светкавични HTML страници, които намаляват цената на клик (CPC) и вдигат конверсиите.
+      Виж и <a href="/blog/landing-page-google-ads-facebook-2026.html">структурата и цената на landing page за Google Ads и Facebook</a>.
     </p>
     <div>
-      <a href="tel:+359877845569" class="cta-primary">Заяви проект</a>
-      <a href="#math" class="cta-primary" style="background: transparent; color: var(--matrix-green); border: 1px solid var(--matrix-green);">Виж математиката</a>
+      <a href="tel:+359877845569" class="cta-primary">☎ Заяви проект</a>
+      <a href="mailto:admin@moverstudio.online?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20landing%20page" class="cta-primary">✉ Изпрати запитване</a>
+      <a href="/calculator.html" class="cta-primary" style="background: transparent; color: var(--brand); border: 1px solid var(--brand);">Изчисли цена</a>
+      <a href="#math" class="cta-primary" style="background: transparent; color: var(--brand); border: 1px solid var(--brand);">Виж математиката</a>
     </div>
   </section>
 
@@ -836,7 +924,7 @@ footer {
       <div class="card">
         <h3>Какво е Quality Score?</h3>
         <p>Google оценява вашата реклама по скала от 1 до 10. Един от най-важните фактори е <strong>Landing Page Experience</strong>.</p>
-        <p>Нашите HTML страници постигат 100/100 PageSpeed, което гарантира на Google, че потребителят получава незабавен достъп. Това вдига Quality Score автоматично.</p>
+        <p>Нашите HTML страници целят 95–100 PageSpeed при дефинирани условия — сигнал към Google, че потребителят получава бърз достъп. Това може да подобри Quality Score.</p>
       </div>
       <div class="card">
         <h3>CPC Предимството</h3>
@@ -849,7 +937,7 @@ footer {
   <!-- REAL EXAMPLE -->
   <section>
     <h2>Реален пример: matiyhelp.bg/petrohanads.html</h2>
-    <div class="card" style="border-color: var(--matrix-green-bright);">
+    <div class="card" style="border-color: var(--brand);">
       <p>Вижте как една професионална Landing страница работи на практика за транспортния сектор:</p>
       <p>
         <a href="https://matiyhelp.bg/petrohanads.html" target="_blank" rel="noopener noreferrer" style="font-size: 1.2rem; font-weight: bold;">
@@ -900,10 +988,14 @@ footer {
         <h3>Мога ли да променям съдържанието?</h3>
         <p>Предлагаме управлявани ъпдейти (request → 24h SLA). Така гарантираме, че страницата остава бърза и оптимизирана.</p>
       </div>
+      <div class="card">
+        <h3>Имам вече сайт — колко струва само landing?</h3>
+        <p>Самостоятелен landing page е 400€. Ако вече имаме изработен ваш сайт, допълнителна ads landing страница към него е 150–250€. <a href="/blog/landing-page-google-ads-facebook-2026.html">Виж структурата и цените</a>.</p>
+      </div>
     </div>
   </section>
 
-  <section style="text-align: center; background: rgba(0, 255, 65, 0.05); padding: 4rem 2rem; border-radius: var(--radius); border: 1px solid var(--matrix-green-dim);">
+  <section style="text-align: center; background: rgba(143, 71, 34, 0.08); padding: 4rem 2rem; border-radius: var(--radius); border: 1px solid var(--line);">
     <h2>Спрете да пилеете бюджет за бавни страници</h2>
     <p style="margin-bottom: 2rem;">Инвестирайте в Landing Page, който работи за вашия Quality Score.</p>
     <a href="tel:+359877845569" class="cta-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Започни сега</a>

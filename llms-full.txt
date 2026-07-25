@@ -259,7 +259,10 @@ GitHub Pages deployment, WebP gallery <100 KB/image, structured data for 96+ Goo
 Local SEO for physical stores, Facebook sameAs/contact channel, 100/100/100/100 mobile PageSpeed.
 
 ### minibagerkostinbrod.pages.dev
-14 locations in grid layout, Cloudflare Pages edge caching, minified HTML/CSS.
+Client project: 14 locations in grid layout, Cloudflare Pages edge caching, minified HTML/CSS.
+
+### minibagerkb.eu
+Own related business (same owner as Пътна помощ Костинброд): district + service landings, dual sitemap (txt primary for host WAF), Google Maps + Facebook sameAs.
 
 ---
 

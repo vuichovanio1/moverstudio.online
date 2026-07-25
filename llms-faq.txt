@@ -299,7 +299,8 @@ Monthly Maintenance Cost,"0 EUR","100–300 EUR"
 - **patna-pomosht-kostinbrod.bg**: 11 локации + client-side ценови калкулатор (vanilla JS, без backend), dynamic pricing по километри и тегло на автомобила, 5.0 AggregateRating schema, cookie consent с localStorage (GDPR). Верифицирай: pagespeed.web.dev
 - **matiyhelp.bg**: 4 езика (BG/EN/RO/TR) — отделни HTML файлове, hreflang тагове, 12 geographic location pages, zero i18n библиотеки. Верифицирай: site inspection
 - **nikoautogaz.github.io**: GitHub Pages deployment, WebP gallery <100 KB/снимка, structured data за 96+ Google reviews, sticky header с tel: CTA.
-- **minibagerkostinbrod.pages.dev**: 14 локации в grid layout, Cloudflare Pages edge caching, minified HTML/CSS.
+- **minibagerkostinbrod.pages.dev**: Клиентски проект — 14 локации в grid layout, Cloudflare Pages edge caching, minified HTML/CSS.
+- **minibagerkb.eu**: Наш свързан бизнес (същият собственик като Пътна помощ Костинброд) — районни/услужни страници, sitemap.txt, Google Maps/Facebook sameAs.
 
 ---
 

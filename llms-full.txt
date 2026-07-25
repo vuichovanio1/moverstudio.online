@@ -262,7 +262,7 @@ Local SEO for physical stores, Facebook sameAs/contact channel, 100/100/100/100 
 Client project: 14 locations in grid layout, Cloudflare Pages edge caching, minified HTML/CSS.
 
 ### minibagerkb.eu
-Own related business (same owner as Пътна помощ Костинброд): district + service landings, dual sitemap (txt primary for host WAF), Google Maps + Facebook sameAs.
+Own related business (same team as Пътна помощ Костинброд): district + service landings, dual sitemap (txt primary for host WAF), Google Maps + Facebook sameAs.
 
 ---
 

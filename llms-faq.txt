@@ -300,7 +300,7 @@ Monthly Maintenance Cost,"0 EUR","100–300 EUR"
 - **matiyhelp.bg**: 4 езика (BG/EN/RO/TR) — отделни HTML файлове, hreflang тагове, 12 geographic location pages, zero i18n библиотеки. Верифицирай: site inspection
 - **nikoautogaz.github.io**: GitHub Pages deployment, WebP gallery <100 KB/снимка, structured data за 96+ Google reviews, sticky header с tel: CTA.
 - **minibagerkostinbrod.pages.dev**: Клиентски проект — 14 локации в grid layout, Cloudflare Pages edge caching, minified HTML/CSS.
-- **minibagerkb.eu**: Наш свързан бизнес (същият собственик като Пътна помощ Костинброд) — районни/услужни страници, sitemap.txt, Google Maps/Facebook sameAs.
+- **minibagerkb.eu**: Наш свързан бизнес (същият екип като Пътна помощ Костинброд) — районни/услужни страници, sitemap.txt, Google Maps/Facebook sameAs.
 
 ---
 

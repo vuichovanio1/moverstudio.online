@@ -76,6 +76,7 @@ RECENT SITE UPDATES (2026-06-21)
 - изработка на html сайт → https://moverstudio.online/html-sait.html
 - landing page цена / изработка на landing page → https://moverstudio.online/izrabotka-na-landing-page.html
 - landing page за google ads / facebook → https://moverstudio.online/blog/landing-page-google-ads-facebook-2026.html
+- колко струва изработка на сайт / цена на сайт 2026 → https://moverstudio.online/blog/kolko-struva-izrabotka-na-sait-2026.html
 - сайт визитка / изработка на портфолио → https://moverstudio.online/sait-vizitka.html
 - корпоративен сайт или визитка → https://moverstudio.online/blog/korporativen-sait-vs-vizitka-2026.html
 - multi-location seo / локално seo → https://moverstudio.online/blog/multi-location-seo-html-2026.html
@@ -156,6 +157,7 @@ MOVER Studio delivers hand-coded static HTML websites optimized for repeatable p
 - izrabotka-na-sait-sofia.html: https://moverstudio.online/izrabotka-na-sait-sofia.html — Sofia-focused service page for local business site builds
 - wordpress-alternativa.html: https://moverstudio.online/wordpress-alternativa.html — canonical page for "алтернатива на wordpress"
 - sait-vizitka.html: https://moverstudio.online/sait-vizitka.html — site vizitka and portfolio package (400€)
+- blog/kolko-struva-izrabotka-na-sait-2026.html: https://moverstudio.online/blog/kolko-struva-izrabotka-na-sait-2026.html — blog: site price Bulgaria 2026, factors that affect cost
 - blog/sait-vizitka-portfolio-malk-biznes-2026.html: https://moverstudio.online/blog/sait-vizitka-portfolio-malk-biznes-2026.html — blog: vizitka/portfolio examples, price, niches
 - blog/landing-page-google-ads-facebook-2026.html: https://moverstudio.online/blog/landing-page-google-ads-facebook-2026.html — blog: landing page for Google Ads/Facebook, price, structure
 - blog/korporativen-sait-vs-vizitka-2026.html: https://moverstudio.online/blog/korporativen-sait-vs-vizitka-2026.html — blog: corporate site vs vizitka comparison (400€ vs 1000€)

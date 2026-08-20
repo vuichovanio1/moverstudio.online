@@ -80,9 +80,21 @@
   </url>
   <url>
     <loc>https://moverstudio.online/blog/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://moverstudio.online/blog/kolko-struva-izrabotka-na-sait-2026.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://moverstudio.online/blog/html-saitove-google-search-console-2026.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://moverstudio.online/blog/landing-page-google-ads-facebook-2026.html</loc>

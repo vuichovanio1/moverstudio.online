@@ -1,0 +1,1086 @@
+﻿<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2eee3">
+  <meta name="last-modified" content="2026-07-25">
+
+  <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
+  <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
+
+  <title>HTML сайтове в Google Search Console: реални кликове и импресии (2026) | MOVER Studio</title>
+  <meta name="description" content="Реални данни от Google Search Console за HTML сайтове на ~5–6 месеца: 6 от 9 със средна позиция под 10, два на поддомейни. Скрийншоти и какво значат цифрите.">
+  <meta name="keywords" content="google search console, html сайт seo, органичен трафик, pagespeed seo, html срещу wordpress, локално seo">
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://moverstudio.online/blog/html-saitove-google-search-console-2026.html">
+  <link rel="alternate" hreflang="bg" href="https://moverstudio.online/blog/html-saitove-google-search-console-2026.html">
+
+  <meta property="og:title" content="HTML сайтове в Google Search Console: реални кликове и импресии">
+  <meta property="og:description" content="Реални данни от Search Console за HTML сайтове без WordPress: кликове, импресии, позиции и скрийншоти — без обещания за „първо място“.">
+  <meta property="og:image" content="https://moverstudio.online/images/gsc-patna-pomosht.webp">
+  <meta property="og:image:secure_url" content="https://moverstudio.online/images/gsc-patna-pomosht.webp">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="788">
+  <meta property="og:image:alt" content="Google Search Console резултати за HTML сайт">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://moverstudio.online/blog/html-saitove-google-search-console-2026.html">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:site_name" content="MOVER Studio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML сайтове в Google Search Console: реални кликове и импресии">
+  <meta name="twitter:description" content="Реални данни от Search Console за HTML сайтове без WordPress: кликове, импресии, позиции и скрийншоти.">
+  <meta name="twitter:image" content="https://moverstudio.online/images/gsc-patna-pomosht.webp">
+  <meta name="twitter:image:alt" content="Google Search Console резултати за HTML сайт">
+  <meta name="twitter:site" content="@moverstudio_bg">
+  <meta property="article:author" content="https://moverstudio.online/about.html">
+  <meta property="article:section" content="SEO и доказателства">
+  <meta name="author" content="MOVER Studio">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<style>
+:root {
+  --paper: #f4f0e8;
+  --ink: #1a1e22;
+  --brand: #8f4722;
+  --line: rgba(26, 30, 34, 0.08);
+  --mono: 'Share Tech Mono', 'Courier New', Courier, monospace;
+  --serif: 'IM Fell English', Georgia, 'Times New Roman', serif;
+  --surface: #ffffff;
+  --shadow: rgba(26, 30, 34, 0.08);
+  --max-width: 1140px;
+}
+
+
+/* Self-hosted fonts - no external dependencies */
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Share Tech Mono';
+  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--paper);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--mono);
+  line-height: 1.6;
+  background: var(--paper);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(143, 71, 34, 0.35);
+}
+
+a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+header,
+nav {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(242, 238, 227, 0.94) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ink) !important;
+}
+
+header nav,
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+header strong,
+nav strong,
+.logo,
+nav > a > strong {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 1.05rem;
+}
+
+.logo span {
+  color: var(--brand);
+}
+
+nav a,
+nav span,
+nav div {
+  color: var(--ink);
+}
+
+nav a {
+  padding: 0.35rem 0.65rem;
+}
+
+nav a:hover {
+  background: rgba(143, 71, 34, 0.08);
+}
+
+main {
+  position: relative;
+  width: min(var(--max-width), calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 5rem 0 3rem;
+}
+
+.hero {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero > * {
+  width: 100%;
+}
+
+.blueprint-wrap {
+  width: min(1100px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--ink);
+  padding: 4rem;
+  position: relative;
+  box-shadow: 20px 20px 0 var(--line);
+}
+
+.anno {
+  position: absolute;
+  font-size: 0.65rem;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.top-l {
+  top: 1rem;
+  left: 1rem;
+}
+
+.bot-r {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--serif);
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1;
+}
+
+h1 em {
+  color: var(--brand);
+  font-style: italic;
+  border-bottom: 2px solid var(--brand);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--line);
+}
+
+p,
+ul,
+ol,
+li,
+dt,
+dd,
+label {
+  color: rgba(26, 30, 34, 0.88);
+}
+
+p {
+  max-width: 72ch;
+}
+
+section,
+article,
+aside,
+.hero,
+.calculator,
+.calculator-note,
+.price-display,
+.call-to-action,
+.portfolio-grid,
+.portfolio-item,
+.about-card,
+.faq-item,
+.type-grid,
+.extras-grid,
+.result-box,
+.card,
+.panel,
+.box,
+.tile,
+.item,
+.block,
+.step,
+.feature,
+.service,
+.pricing,
+.testimonial,
+.summary-card,
+.info-card,
+.detail-card {
+  background: var(--surface) !important;
+  border: 1px solid var(--ink) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--ink) !important;
+  padding: 1.5rem;
+}
+
+section[style],
+article[style],
+div[style],
+p[style],
+span[style] {
+  background: transparent !important;
+  border: none !important;
+}
+
+.cta-primary,
+.btn,
+.button,
+.cta-group a,
+.btn-fill,
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-fill {
+  background: var(--ink);
+  color: #fff;
+}
+
+.cta-primary:hover,
+.btn:hover,
+.button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 var(--brand);
+}
+
+.technical-drawing {
+  margin-top: 2rem;
+  border-top: 1px dashed var(--brand);
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.spec-item {
+  border-left: 2px solid var(--brand);
+  padding-left: 1rem;
+}
+
+.spec-item strong {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+.spec-item span {
+  font-size: 0.75rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--mono);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(26, 30, 34, 0.18);
+  color: var(--ink);
+  padding: 0.9rem 1rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--brand);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--ink);
+}
+
+th,
+td {
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid rgba(26, 30, 34, 0.18);
+}
+
+th {
+  text-align: left;
+  font-family: var(--mono);
+  color: var(--ink);
+}
+
+.table-wrap {
+  margin: 1.25rem 0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--ink);
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1.2rem 1.35rem;
+  border-left: 3px solid rgba(143, 71, 34, 0.25);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.55rem;
+}
+
+/* TECHNICAL ANNOTATIONS & DIMENSION LINES */
+section,
+article,
+.blueprint-wrap,
+.hero,
+.calculator,
+.result-box {
+  position: relative;
+}
+
+section::before,
+article::before,
+.blueprint-wrap::before,
+.hero::before,
+.calculator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--brand) 0%, transparent 100%);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Technical annotation corners */
+section::after,
+article::after,
+.blueprint-wrap::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-left: 1px solid var(--brand);
+  border-top: 1px solid var(--brand);
+  top: -1px;
+  left: -1px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Metadata labels in corners */
+.technical-drawing::before {
+  content: 'SYSTEM: HTML5 | CORE: STATIC | SPEED: MAX';
+  position: absolute;
+  font-size: 0.55rem;
+  color: var(--brand);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  top: -1.8rem;
+  left: 0;
+  opacity: 0.6;
+  font-family: var(--mono);
+  pointer-events: none;
+}
+
+/* Dimension lines on hover */
+.blueprint-wrap:hover::before {
+  opacity: 0.6;
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand) 50%, transparent 100%);
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.calculator:hover::before {
+  opacity: 0.5;
+  background: linear-gradient(90deg, var(--brand) 0%, transparent 60%);
+  transition: opacity 0.3s ease;
+}
+
+/* Centered layout improvements */
+main, .hero, article {
+  text-align: center;
+}
+
+p, .description {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+img, figure {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.portfolio-grid,
+.type-grid,
+.extras-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem auto;
+  justify-items: center;
+}
+
+.portfolio-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.type-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 900px;
+}
+
+.extras-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1000px;
+}
+
+/* Enhanced button styling with dimension lines */
+.cta-primary,
+.btn,
+.button {
+  position: relative;
+  border: 2px solid var(--ink);
+  transition: all 0.3s ease;
+}
+
+.cta-primary:hover::before,
+.btn:hover::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--brand);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Technical annotations metadata */
+.result-box::before {
+  content: 'LOAD_TIME: 0.34s | CLEAN_CODE: 100% | NO_WP_STRUCTURE';
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  font-size: 0.55rem;
+  color: var(--brand);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-family: var(--mono);
+  pointer-events: none;
+}
+
+/* Centered text with blueprint accent */
+h1, h2, h3 {
+  text-align: center;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--brand);
+  margin: 0.5rem auto 0;
+  opacity: 0.4;
+}
+
+/* Enhanced navigation centering */
+nav {
+  justify-content: center;
+  text-align: center;
+}
+
+nav > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Footer centering */
+footer {
+  padding: 3rem 1rem 2rem;
+  text-align: center;
+  background: rgba(242, 238, 227, 0.92);
+  border-top: 1px solid var(--ink);
+}
+
+.skip-link {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.skip-link:focus {
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  padding: 1rem !important;
+  background: #000 !important;
+  color: #fff !important;
+  z-index: 1001 !important;
+}
+
+@media (max-width: 900px) {
+  main {
+    width: min(var(--max-width), calc(100vw - 1.25rem));
+  }
+  header nav,
+  nav {
+    padding: 1rem 1rem;
+  }
+  .technical-drawing {
+    grid-template-columns: 1fr;
+  }
+  .blueprint-wrap {
+    padding: 2rem;
+  }
+  .cta-group {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  th,
+  td {
+    padding: 0.7rem 0.75rem;
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 640px) {
+  .data-table,
+  .data-table thead,
+  .data-table tbody,
+  .data-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .data-table {
+    border: none;
+    background: transparent;
+  }
+
+  .data-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .data-table tbody {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .data-table tbody tr {
+    background: var(--surface);
+    border: 1px solid var(--ink);
+  }
+
+  .data-table td {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, 36%) 1fr;
+    gap: 0.35rem 0.75rem;
+    align-items: start;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(26, 30, 34, 0.12);
+  }
+
+  .data-table td:last-child {
+    border-bottom: none;
+  }
+
+  .data-table td::before {
+    content: attr(data-label);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--brand);
+  }
+}
+</style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://moverstudio.online/blog/html-saitove-google-search-console-2026.html#blogposting",
+      "headline": "HTML сайтове в Google Search Console: реални кликове и импресии",
+      "description": "Реални данни от Google Search Console за HTML сайтове без WordPress: кликове, импресии, позиции и скрийншоти.",
+      "url": "https://moverstudio.online/blog/html-saitove-google-search-console-2026.html",
+      "inLanguage": "bg",
+      "image": "https://moverstudio.online/images/gsc-patna-pomosht.webp",
+      "keywords": [
+        "google search console",
+        "html сайт seo",
+        "органичен трафик",
+        "локално seo"
+      ],
+      "articleSection": "SEO и доказателства",
+      "datePublished": "2026-07-25",
+      "dateModified": "2026-07-25",
+      "author": {
+        "@type": "Organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MOVER Studio",
+        "url": "https://moverstudio.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://moverstudio.online/og-image.png?v=1"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://moverstudio.online/blog/html-saitove-google-search-console-2026.html"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://moverstudio.online/blog/html-saitove-google-search-console-2026.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Означава ли висок PageSpeed автоматично много кликове в Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Не. PageSpeed е техническа основа. Кликовете идват от релевантно съдържание, локални страници, ясни CTA и време. Search Console показва дали сайтът реално се появява и се кликва."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Колко време трябва, за да се появят резултати в Search Console?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Често първи импресии идват за седмици след индексация. Стабилна крива обикновено се вижда за 2–4 месеца, в зависимост от нишата и конкуренцията."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Гарантирате ли първо място в Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Не. Показваме реални Search Console данни и техническа основа (HTML, schema, скорост). Позициите зависят и от пазара, съдържанието и конкуренцията."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какво е по-важно: импресии или кликове?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Импресиите показват видимост. Кликовете показват интерес. За локален бизнес и двете са полезни — особено ако средната позиция е около първа страница."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://moverstudio.online/blog/html-saitove-google-search-console-2026.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://moverstudio.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://moverstudio.online/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HTML сайтове в Search Console",
+          "item": "https://moverstudio.online/blog/html-saitove-google-search-console-2026.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+
+<header>
+  <nav aria-label="Основна навигация">
+    <a href="../index.html" style="border-bottom: none;"><strong>MOVER_STUDIO</strong></a>
+    <span class="terminal">[ BLOG | SEARCH CONSOLE | HTML ]</span>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+      <a href="../index.html">Начало</a>
+      <a href="../izrabotka-na-sait.html">Услуги</a>
+      <a href="../izrabotka-na-landing-page.html">Изработка на landing page</a>
+      <a href="../calculator.html">Калкулатор</a>
+      <a href="../case-studies.html">Доказателства</a>
+      <a href="../about.html">За Нас</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <article>
+    <div class="breadcrumb">
+      <a href="../index.html">Начало</a> &gt; <a href="./">Блог</a> &gt; HTML сайтове в Search Console
+    </div>
+
+    <h1>HTML сайтове в Google Search Console: реални кликове и импресии</h1>
+    <p><em>Време за четене: ~7 минути</em></p>
+
+    <div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        📅 Публикувано: <time datetime="2026-07-25">25 юли 2026</time> • От: MOVER Studio
+      </p>
+
+      <p>PageSpeed 100 звучи добре. Но клиентите питат друго: <strong>появява ли се сайтът в Google и носи ли посещения?</strong></p>
+      <p class="power-sentence">По-долу са <strong>реални цифри от Google Search Console</strong> за HTML проекти без WordPress — кликове, импресии и средна позиция, плюс скрийншоти.</p>
+      <p>Важен контекст: сайтовете са на около <strong>5–6 месеца</strong>. От 9 свойства <strong>6 са със средна позиция под 10</strong>; останалите се борят за тежки ключови думи и пак са под 20. Два проекта са на поддомейни (<code>github.io</code>, <code>pages.dev</code>) — и пак трупат кликове.</p>
+      <p>Графиките в Search Console са с по-дълъг период нарочно — за да се види <strong>моментът на старт</strong> и че при BdinHost преди HTML миграцията почти нямаше импресии.</p>
+      <p>Не обещаваме „първо място“ и не измисляме проценти за продажби. Показваме това, което Search Console реално отчита.</p>
+
+      <div class="quick-answer">
+        <p><strong>Бърз отговор:</strong> Лек HTML сайт с ясна структура, schema и локални страници често влиза по-бързо в индекса — дори когато е нов или на поддомейн. Пълен преглед: <a href="../case-studies.html#search-console">доказателствата от Search Console</a>.</p>
+      </div>
+
+      <nav aria-label="Съдържание на статията" style="margin: 2rem auto; max-width: 52rem; text-align: left; padding: 1.25rem 1.5rem; background: rgba(143, 71, 34, 0.06); border: 1px solid var(--line);">
+        <p style="margin: 0 0 0.75rem; font-weight: 700;">Съдържание</p>
+        <ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+          <li><a href="#zashto">Защо Search Console е по-важен от „красив дизайн“</a></li>
+          <li><a href="#kontekst">Възраст, поддомейни и тежки ключови думи</a></li>
+          <li><a href="#cifri">Реалните цифри по проекти</a></li>
+          <li><a href="#screens">Скрийншоти</a></li>
+          <li><a href="#bdin">Случаят BdinHost: от нула към видимост</a></li>
+          <li><a href="#kakvo">Какво повтаряме във всеки HTML сайт</a></li>
+          <li><a href="#faq">Често задавани въпроси</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <section id="zashto">
+      <h2>Защо Search Console е по-важен от „красив дизайн“</h2>
+      <p>Дизайнът създава доверие. Search Console показва дали Google изобщо показва сайта.</p>
+      <ul>
+        <li><strong>Импресии</strong> — колко пъти сайтът се е появил в резултатите</li>
+        <li><strong>Кликове</strong> — колко пъти някой е кликнал</li>
+        <li><strong>Средна позиция</strong> — къде приблизително се появява</li>
+        <li><strong>CTR</strong> — колко често показването се превръща в клик</li>
+      </ul>
+      <p>Ако тези числа растат, сайтът работи като канал — не само като визитка.</p>
+    </section>
+
+    <section id="kontekst">
+      <h2>Възраст, поддомейни и тежки ключови думи</h2>
+      <p>Цифрите изглеждат още по-силно, когато се знае контекстът:</p>
+      <ul>
+        <li><strong>~5–6 месеца възраст</strong> за повечето проекти — не години на трупане на авторитет.</li>
+        <li><strong>По-дългият период в Search Console</strong> е нарочен: показва кога започва кривата след пускане — и че преди това при BdinHost почти нямаше импресии.</li>
+        <li><strong>6 от 9</strong> със средна позиция под 10 (често около първа страница).</li>
+        <li><strong>3 от 9</strong> под 20, но в конкурентни ниши: „пътна помощ София“, „хостинг“, „изработка на сайтове“.</li>
+        <li><strong>Поддомейни:</strong> <a href="https://nikoautogaz.github.io" target="_blank" rel="noopener">nikoautogaz.github.io</a> (позиция 5.9, 270 клика) и <a href="https://minibagerkostinbrod.pages.dev" target="_blank" rel="noopener">minibagerkostinbrod.pages.dev</a> (позиция ~6.2) — без собствен домейн.</li>
+      </ul>
+      <p>Собственият домейн помага. Но тези резултати показват, че добрата HTML структура, локалното съдържание и schema носят видим ефект дори при по-слаби „стартови“ условия.</p>
+    </section>
+
+    <section id="cifri">
+      <h2>Реалните цифри по проекти</h2>
+      <p>Данните са от Google Search Console. Сайтовете са на около 5–6 месеца; по-дългият филтър в графиките е за да се види стартът (и нулевият период преди него при BdinHost). Закръгляванията са както в отчетите.</p>
+      <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Сайт</th><th>Кликове</th><th>Импресии</th><th>Позиция / CTR</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Сайт"><a href="https://patna-pomosht-kostinbrod.bg" target="_blank" rel="noopener">Пътна помощ Костинброд</a></td>
+            <td data-label="Кликове"><strong>460</strong></td>
+            <td data-label="Импресии">35,3 хил.</td>
+            <td data-label="Позиция / CTR">поз. 6.7</td>
+          </tr>
+          <tr>
+            <td data-label="Сайт"><a href="https://nikoautogaz.github.io" target="_blank" rel="noopener">Niko Autogaz</a> <em>(поддомейн)</em></td>
+            <td data-label="Кликове"><strong>270</strong></td>
+            <td data-label="Импресии">3,83 хил.</td>
+            <td data-label="Позиция / CTR">CTR 7.1% · поз. 5.9</td>
+          </tr>
+          <tr>
+            <td data-label="Сайт"><a href="https://re-peat.store" target="_blank" rel="noopener">Re-Peat</a></td>
+            <td data-label="Кликове"><strong>180</strong></td>
+            <td data-label="Импресии">5,34 хил.</td>
+            <td data-label="Позиция / CTR">поз. 7.6</td>
+          </tr>
+          <tr>
+            <td data-label="Сайт"><a href="https://matiyhelp.bg" target="_blank" rel="noopener">MatiyHelp</a></td>
+            <td data-label="Кликове">133</td>
+            <td data-label="Импресии"><strong>13,4 хил.</strong></td>
+            <td data-label="Позиция / CTR">поз. 6.7</td>
+          </tr>
+          <tr>
+            <td data-label="Сайт"><a href="https://bdinhost.com" target="_blank" rel="noopener">BdinHost</a></td>
+            <td data-label="Кликове">17</td>
+            <td data-label="Импресии">599</td>
+            <td data-label="Позиция / CTR">от 0 след HTML миграция</td>
+          </tr>
+          <tr>
+            <td data-label="Сайт"><a href="https://minibagerkb.eu" target="_blank" rel="noopener">Минибагер KB</a></td>
+            <td data-label="Кликове">22 (7 дни)</td>
+            <td data-label="Импресии">139</td>
+            <td data-label="Позиция / CTR">CTR 15.8% · поз. 5.8</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Общата картина: локални HTML сайтове на няколко месеца — включително на поддомейни — често се задържат около <strong>първа страница</strong> (позиция ~6–8) и трупат кликове без WordPress и без месечни плъгини.</p>
+    </section>
+
+    <section id="screens">
+      <h2>Скрийншоти от Search Console</h2>
+      <p>Ето част от отчетите — същите, които ползваме и в <a href="../case-studies.html#search-console">case studies</a>.</p>
+      <div class="portfolio-grid">
+        <figure class="portfolio-item">
+          <img src="../images/gsc-patna-pomosht.webp" alt="Search Console: Пътна помощ Костинброд — 460 клика и 35,3 хил. импресии" loading="lazy" width="1400" height="788">
+          <figcaption>Пътна помощ Костинброд</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="../images/gsc-nikoautogaz.webp" alt="Search Console: Niko Autogaz — 270 клика, CTR 7.1%" loading="lazy" width="1400" height="788">
+          <figcaption>Niko Autogaz</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="../images/gsc-matiyhelp.webp" alt="Search Console: MatiyHelp — 13,4 хил. импресии, позиция 6.7" loading="lazy" width="1400" height="788">
+          <figcaption>MatiyHelp</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="../images/gsc-repeat.webp" alt="Search Console: Re-Peat — 180 клика и растеж на импресиите" loading="lazy" width="1400" height="788">
+          <figcaption>Re-Peat</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="bdin">
+      <h2>Случаят BdinHost: от нула към видимост</h2>
+      <p>Тук историята не е „утроихме продажбите“. Историята е по-проста и по-проверима — и точно затова графиките са с по-дълъг период:</p>
+      <ul>
+        <li>Преди HTML миграцията Search Console почти не показва импресии (плоска нула)</li>
+        <li>След преминаване към HTML сайтът започва да трупа импресии и кликове</li>
+        <li>Паралелно PageSpeed се подобри измеримо (75 → 100 в тестовия сценарий)</li>
+      </ul>
+      <div class="portfolio-grid">
+        <figure class="portfolio-item">
+          <img src="../images/gsc-bdinhost.webp" alt="Search Console: BdinHost — от нулева видимост към импресии след HTML" loading="lazy" width="1400" height="788">
+          <figcaption>BdinHost — Search Console след HTML</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="../images/bdinafter.webp" alt="PageSpeed 100 за BdinHost след HTML миграция" loading="lazy" width="1837" height="830">
+          <figcaption>PageSpeed след HTML</figcaption>
+        </figure>
+      </div>
+      <p>Повече за процеса: <a href="migratsiya-wordpress-kam-html-2026.html">миграция WordPress → HTML</a> · <a href="https://bdinhost.com" target="_blank" rel="noopener">bdinhost.com</a></p>
+    </section>
+
+    <section id="kakvo">
+      <h2>Какво повтаряме във всеки HTML сайт</h2>
+      <ul>
+        <li>Чист HTML без CMS баласт — по-лесна индексация и по-стабилна скорост</li>
+        <li>Ясни страници по услуги и райони (локално SEO)</li>
+        <li>Schema.org (LocalBusiness, FAQ, Service)</li>
+        <li>Sitemap + Search Console от първия ден</li>
+        <li>Практични CTA: телефон, калкулатор, изпращане на локация</li>
+      </ul>
+      <p>Това не е магия. Това е техническа основа + съдържание, което Google и хората разбират.</p>
+      <p>Още: <a href="../html-sait.html">HTML сайт</a> · <a href="../seo-optimizacia.html">SEO оптимизация</a> · <a href="multi-location-seo-html-2026.html">multi-location SEO</a></p>
+    </section>
+
+    <section style="margin: 2rem 0; padding: 1.5rem; background: rgba(143, 71, 34, 0.08); border-left: 4px solid var(--brand);">
+      <h2 style="border-left: none; padding-left: 0;">Следваща стъпка</h2>
+      <p>Искаш сайт, който не само изглежда добре, а се появява в Google? Изпрати кратко описание на бизнеса — ще кажем какво е реалистично за нишата ти.</p>
+      <p style="margin-bottom: 0;"><a href="../case-studies.html#search-console" class="cta-primary">Виж всички доказателства →</a> <a href="../calculator.html" class="cta-primary">Калкулатор →</a></p>
+    </section>
+
+    <section id="faq">
+      <h2>Често задавани въпроси</h2>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary class="faq-question">Означава ли висок PageSpeed автоматично много кликове в Google?</summary>
+          <div class="faq-answer">
+            <p>Не. PageSpeed е техническа основа. Кликовете идват от релевантно съдържание, локални страници, ясни CTA и време. Search Console показва дали сайтът реално се появява и се кликва.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Колко време трябва, за да се появят резултати в Search Console?</summary>
+          <div class="faq-answer">
+            <p>Често първи импресии идват за седмици след индексация. Стабилна крива обикновено се вижда за 2–4 месеца, в зависимост от нишата и конкуренцията.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Гарантирате ли първо място в Google?</summary>
+          <div class="faq-answer">
+            <p>Не. Показваме реални Search Console данни и техническа основа. Позициите зависят и от пазара, съдържанието и конкуренцията.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Какво е по-важно: импресии или кликове?</summary>
+          <div class="faq-answer">
+            <p>Импресиите показват видимост. Кликовете показват интерес. За локален бизнес и двете са полезни — особено ако средната позиция е около първа страница.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <p><strong>Накратко:</strong> HTML сайтовете ни не печелят само с дизайн. Search Console показва кликове, импресии и позиции — проверими данни, без WordPress и без празни обещания.</p>
+
+    <div style="text-align: center; padding: 2rem 0;">
+      <a href="../case-studies.html#search-console" class="cta-primary">Case studies →</a>
+      <a href="../html-sait.html" class="cta-primary">HTML сайт →</a>
+      <a href="./" class="cta-primary">Още статии →</a>
+    </div>
+
+  </article>
+</main>
+
+<footer>
+  <p class="terminal">
+    &copy; 2026 MOVER_STUDIO<br>
+    &gt; Built without WordPress<br>
+    &gt; Built with HTML and a lot of stubbornness<br>
+    &gt; 99 PageSpeed е силен резултат, но ние често гоним 100<br>
+    &gt; <span class="cursor">_</span>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
+    "Free your mind" - Morpheus
+  </p>
+  <p style="margin-top: 1rem;">
+    <a href="../index.html">Начало</a> |
+    <a href="../case-studies.html">Доказателства</a> |
+    <a href="../html-sait.html">HTML сайт</a> |
+    <a href="./">Блог</a>
+  </p>
+</footer>
+
+</body>
+</html>

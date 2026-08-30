@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BLOG = ROOT / "blog"
 TEMPLATE = BLOG / "sait-vizitka-portfolio-malk-biznes-2026.html"
 DATE = "2026-07-05"
-OG_IMAGE = "https://moverstudio.online/og-image.png?v=1"
+OG_IMAGE = "https://moverstudio.online/og-image.png?v=2"
 
 
 def load_css() -> str:
@@ -140,7 +140,10 @@ def render(article: dict, css: str) -> str:
   <meta property="article:section" content="{article["section"]}">
   <meta name="author" content="MOVER Studio">
 
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="../images/favicon.ico?v=2" sizes="48x48">
+  <link rel="icon" href="../images/favicon-32.png?v=2" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png?v=2">
   <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
 <style>{css}</style>
 

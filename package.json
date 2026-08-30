@@ -1,0 +1,13 @@
+{
+  "name": "moverstudio.online",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render:og": "node scripts/render-og-images.mjs",
+    "render:favicons": "node scripts/render-favicons.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "png-to-ico": "^2.1.8"
+  }
+}

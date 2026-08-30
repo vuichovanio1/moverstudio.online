@@ -1,13 +1,31 @@
-This folder should contain the source image `matrix.jpg`.
+# Brand assets (images/)
 
-Use the included PowerShell script `convert-images.ps1` (requires ImageMagick `magick`) to generate optimized images and favicons for the site.
+## Favicons — light variant
 
-Generated files:
-- matrix-og.webp      -> OG image (1200x630 recommended)
-- favicon-32.png      -> 32x32 PNG favicon
-- favicon-16.png      -> 16x16 PNG favicon
-- apple-touch-icon.png -> 180x180 PNG for iOS
-- matrix.svg          -> Minimal SVG fallback (optional)
+Source: `/favicon.svg` (cream grid + M logo).
 
-Run:
-  .\convert-images.ps1
+Regenerate PNG/ICO/apple-touch:
+
+```bash
+npm run render:favicons
+```
+
+Outputs: `favicon-16.png`, `favicon-32.png`, `favicon-48.png`, `apple-touch-icon.png`, `favicon.ico`.
+
+## OG image — light variant
+
+Source: `/og-image.svg`.
+
+Regenerate PNG:
+
+```bash
+npm run render:og
+```
+
+Outputs: `/og-image.png`, `/og-image-small.png`.
+
+All HTML pages reference `https://moverstudio.online/og-image.png?v=2`.
+
+## Legacy (do not use for favicons/OG)
+
+- `matrix.jpg`, `matrix-og.webp`, `matrix.svg` — old dark “matrix rain” branding.

@@ -59,6 +59,9 @@ yarn-error.log*
 screenshots/
 test-images/
 
+# Playwright browser profile (Google CAPTCHA sessions)
+.playwright-google-profile/
+
 # Local development
 .env
 .env.local

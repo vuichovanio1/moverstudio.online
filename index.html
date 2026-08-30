@@ -1,970 +1,44 @@
-﻿
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <!-- Performance Optimization: Charset at the very top for fastest parsing -->
   <meta charset="utf-8">
-
-  <!-- Performance Optimization: Optimized viewport for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Performance Optimization: Theme color for mobile browsers (Blueprint paper) -->
-  <meta name="theme-color" content="#f2eee3">
-
+  <meta name="theme-color" content="#f4f0e8">
   <meta name="author" content="MOVER Studio">
-  <meta name="last-modified" content="2026-07-05">
+  <meta name="last-modified" content="2026-08-30">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
 
-  <!-- Deprecated tags removed for PageSpeed -->
-
-  <!-- Performance Optimization: No external resources - all inline for maximum speed -->
-  <!-- Preload not needed as all CSS/JS is inline -->
-
   <title>MOVER Studio — бърз HTML сайт от 400€</title>
   <meta name="description" content="MOVER Studio — бърз HTML сайт от 400€, цел 95–100 PageSpeed, без WordPress и месечни такси. Виж услуги, цени и реални проекти.">
-  <meta name="keywords" content="mover studio, html сайт, статичен сайт, сайт без wordpress, pagespeed 100, бърз сайт, уеб дизайн">
-
-  <!-- Deprecated tags removed for PageSpeed -->
-
+  <meta name="keywords" content="mover studio, html сайт, изработка на сайт, сайт без wordpress, pagespeed, бърз сайт">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://moverstudio.online/">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/">
-  
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
-  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<style>
-:root {
-  --paper: #f4f0e8;
-  --ink: #1a1e22;
-  --brand: #8f4722;
-  --line: rgba(26, 30, 34, 0.08);
-  --mono: 'Share Tech Mono', 'Courier New', Courier, monospace;
-  --serif: 'IM Fell English', Georgia, 'Times New Roman', serif;
-  --surface: #ffffff;
-  --shadow: rgba(26, 30, 34, 0.08);
-  --max-width: 1140px;
-}
 
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
 
-/* Self-hosted fonts - no external dependencies */
-@font-face {
-  font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+  <link rel="preload" href="/fonts/share-tech-mono-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/pages.css">
 
-@font-face {
-  font-family: 'IM Fell English';
-  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  background: var(--paper);
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-body {
-  min-height: 100vh;
-  color: var(--ink);
-  font-family: var(--mono);
-  line-height: 1.6;
-  background: var(--paper);
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 40px 40px;
-  text-rendering: optimizeLegibility;
-  overflow-x: hidden; /* Additional prevention */
-}
-
-/* Mobile overflow fixes: ensure no element exceeds viewport width */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden; /* defensive: hide any residual overflow */
-}
-
-/* Constrain common wide components and ensure box-sizing */
-header, nav, main, .blueprint-wrap, .portfolio-grid, .portfolio-item, .technical-drawing {
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-img, svg, video, canvas {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: var(--brand);
-  text-decoration: none;
-  border-bottom: 1px dashed rgba(143, 71, 34, 0.35);
-}
-
-a:hover {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
-}
-
-header,
-nav {
-  position: sticky !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(242, 238, 227, 0.94) !important;
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--ink) !important;
-}
-
-header nav,
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 2rem;
-}
-
-header strong,
-nav strong,
-.logo,
-nav > a > strong {
-  font-family: var(--serif);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  font-size: 1.05rem;
-}
-
-.logo span {
-  color: var(--brand);
-}
-
-nav a,
-nav span,
-nav div {
-  color: var(--ink);
-}
-
-nav a {
-  padding: 0.35rem 0.65rem;
-}
-
-nav a:hover {
-  background: rgba(143, 71, 34, 0.08);
-}
-
-main {
-  position: relative;
-  width: min(var(--max-width), calc(100vw - 2rem));
-  margin: 0 auto;
-  padding: 5rem 0 3rem;
-}
-
-.hero {
-  padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero > * {
-  width: 100%;
-}
-
-.blueprint-wrap {
-  width: min(1100px, 100%);
-  background: var(--surface);
-  border: 1px solid var(--ink);
-  padding: 4rem;
-  position: relative;
-  box-shadow: 20px 20px 0 var(--line);
-}
-
-.anno {
-  position: absolute;
-  font-size: 0.65rem;
-  color: var(--brand);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.top-l {
-  top: 1rem;
-  left: 1rem;
-}
-
-.bot-r {
-  bottom: 1rem;
-  right: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--serif);
-  color: var(--ink);
-  margin: 0 0 1rem;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
-  line-height: 1;
-}
-
-h1 em {
-  color: var(--brand);
-  font-style: italic;
-  border-bottom: 2px solid var(--brand);
-}
-
-h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--line);
-}
-
-p,
-ul,
-ol,
-li,
-dt,
-dd,
-label {
-  color: rgba(26, 30, 34, 0.88);
-}
-
-p {
-  max-width: 72ch;
-}
-
-section,
-article,
-aside,
-.hero,
-.calculator,
-.calculator-note,
-.price-display,
-.call-to-action,
-.portfolio-grid,
-.portfolio-item,
-.about-card,
-.faq-item,
-.type-grid,
-.extras-grid,
-.result-box,
-.card,
-.panel,
-.box,
-.tile,
-.item,
-.block,
-.step,
-.feature,
-.service,
-.pricing,
-.testimonial,
-.summary-card,
-.info-card,
-.detail-card {
-  background: var(--surface) !important;
-  border: 1px solid var(--ink) !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  color: var(--ink) !important;
-  padding: 1.5rem;
-}
-
-section[style],
-article[style],
-div[style],
-p[style],
-span[style] {
-  background: transparent !important;
-  border: none !important;
-}
-
-.cta-primary,
-.btn,
-.button,
-.cta-group a,
-.btn-fill,
-.cta-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  border: 1px solid var(--ink);
-  background: transparent;
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 700;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-fill {
-  background: var(--ink);
-  color: #fff;
-}
-
-.cta-primary:hover,
-.btn:hover,
-.button:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 4px 4px 0 var(--brand);
-}
-
-.technical-drawing {
-  margin-top: 2rem;
-  border-top: 1px dashed var(--brand);
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
-.spec-item {
-  border-left: 2px solid var(--brand);
-  padding-left: 1rem;
-}
-
-.spec-item strong {
-  display: block;
-  font-size: 1.2rem;
-  color: var(--brand);
-  margin-bottom: 0.5rem;
-}
-
-.spec-item span {
-  font-size: 0.75rem;
-  color: #777;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-button,
-input,
-textarea,
-select {
-  font-family: var(--mono);
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(26, 30, 34, 0.18);
-  color: var(--ink);
-  padding: 0.9rem 1rem;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  accent-color: var(--brand);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--surface);
-  border: 1px solid var(--ink);
-}
-
-th,
-td {
-  padding: 0.95rem 1rem;
-  border-bottom: 1px solid rgba(26, 30, 34, 0.18);
-}
-
-th {
-  text-align: left;
-  font-family: var(--mono);
-  color: var(--ink);
-}
-
-/* Price comparison block rewritten as cards for mobile-first layout */
-.price-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.price-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  min-width: 0;
-  padding: 1.4rem;
-  background: var(--surface);
-  border: 1px solid var(--ink);
-  box-shadow: none;
-}
-
-.price-card {
-  position: relative;
-}
-
-.pc-meta-tl, .pc-meta-br {
-  position: absolute;
-  font-family: var(--mono);
-  font-size: 0.52rem;
-  letter-spacing: 0.1em;
-  color: var(--brand);
-  opacity: 0.45;
-  text-transform: uppercase;
-  line-height: 1.5;
-  pointer-events: none;
-}
-.pc-meta-tl { top: 6px; left: 10px; }
-.pc-meta-br { bottom: 6px; right: 10px; text-align: right; }
-
-.card { position: relative; overflow: hidden; }
-
-.card-meta {
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  font-family: var(--mono);
-  font-size: 0.5rem;
-  letter-spacing: 0.1em;
-  color: var(--brand);
-  opacity: 0.35;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-
-.portfolio-item { position: relative; overflow: hidden; cursor: crosshair; }
-
-.portfolio-item .di-t,
-.portfolio-item .di-r,
-.portfolio-item .di-b,
-.portfolio-item .di-l {
-  position: absolute;
-  background: var(--brand);
-  opacity: 0;
-  pointer-events: none;
-  transition: none;
-}
-.portfolio-item .di-t { top: 0;    left: 0;  height: 1px; width: 0; }
-.portfolio-item .di-r { top: 0;    right: 0; width: 1px;  height: 0; }
-.portfolio-item .di-b { bottom: 0; right: 0; height: 1px; width: 0; }
-.portfolio-item .di-l { bottom: 0; left: 0;  width: 1px;  height: 0; }
-
-.portfolio-item:hover .di-t { opacity:.6; width:100%;  transition: width  .22s ease; }
-.portfolio-item:hover .di-r { opacity:.6; height:100%; transition: height .22s .22s ease; }
-.portfolio-item:hover .di-b { opacity:.6; width:100%;  transition: width  .22s .44s ease; }
-.portfolio-item:hover .di-l { opacity:.6; height:100%; transition: height .22s .66s ease; }
-
-@keyframes scan {
-  0%   { top: -2px; }
-  100% { top: 100%; }
-}
-
-.scan-line {
-  position: absolute;
-  left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--brand), transparent);
-  animation: scan 4s linear infinite;
-  opacity: 0.25;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero-grid {
-  pointer-events: none;
-  z-index: 0;
-}
-
-.dim-line {
-  pointer-events: none;
-}
-
-.price-card__title {
-  margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.2;
-}
-
-.price-card__price {
-  display: inline-flex;
-  align-self: flex-start;
-  padding: 0.45rem 0.8rem;
-  background: rgba(143, 71, 34, 0.08);
-  border: 1px solid rgba(143, 71, 34, 0.22);
-  color: var(--ink);
-  font-family: var(--mono);
-  font-size: 1rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.price-card__note {
-  margin: 0;
-  text-align: left;
-  color: rgba(26, 30, 34, 0.88);
-  overflow-wrap: break-word;
-}
-
-.price-card--emphasis {
-  border-color: var(--brand);
-  box-shadow: 8px 8px 0 var(--line);
-}
-
-.price-card--emphasis .price-card__price {
-  background: rgba(143, 71, 34, 0.14);
-  border-color: rgba(143, 71, 34, 0.35);
-}
-
-@media (max-width: 900px) {
-  .price-cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-blockquote {
-  margin: 1.5rem 0;
-  padding: 1.2rem 1.35rem;
-  border-left: 3px solid rgba(143, 71, 34, 0.25);
-  background: rgba(255, 255, 255, 0.92);
-}
-
-ul,
-ol {
-  padding-left: 1.25rem;
-}
-
-li + li {
-  margin-top: 0.55rem;
-}
-
-/* TECHNICAL ANNOTATIONS & DIMENSION LINES */
-section,
-article,
-.blueprint-wrap,
-.hero,
-.calculator,
-.result-box {
-  position: relative;
-}
-
-section::before,
-article::before,
-.blueprint-wrap::before,
-.hero::before,
-.calculator::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--brand) 0%, transparent 100%);
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-/* Technical annotation corners */
-section::after,
-article::after,
-.blueprint-wrap::after {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-left: 1px solid var(--brand);
-  border-top: 1px solid var(--brand);
-  top: -1px;
-  left: -1px;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-/* Metadata labels in corners */
-.technical-drawing::before {
-  content: 'SYSTEM: HTML5 | CORE: STATIC | SPEED: MAX';
-  position: absolute;
-  font-size: 0.55rem;
-  color: var(--brand);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  top: -1.8rem;
-  left: 0;
-  opacity: 0.6;
-  font-family: var(--mono);
-  pointer-events: none;
-}
-
-/* Dimension lines on hover */
-.blueprint-wrap:hover::before {
-  opacity: 0.6;
-  background: linear-gradient(90deg, var(--brand) 0%, var(--brand) 50%, transparent 100%);
-  transition: opacity 0.3s ease, background 0.3s ease;
-}
-
-.calculator:hover::before {
-  opacity: 0.5;
-  background: linear-gradient(90deg, var(--brand) 0%, transparent 60%);
-  transition: opacity 0.3s ease;
-}
-
-/* Centered layout improvements */
-main, .hero, article {
-  text-align: center;
-}
-
-p, .description {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-img, figure {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.portfolio-grid,
-.type-grid,
-.extras-grid {
-  display: grid;
-  gap: 1rem;
-  margin: 2rem auto;
-  justify-items: center;
-}
-
-.portfolio-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  counter-reset: fig-counter;
-}
-
-.portfolio-item,
-.case-study figure {
-  position: relative;
-  counter-increment: fig-counter;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--ink);
-  padding: 0;
-  overflow: hidden;
-}
-
-.portfolio-item img,
-.case-study figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--ink);
-  filter: saturate(0.7) sepia(0.15) brightness(1.05);
-  transition: filter 0.3s ease;
-}
-
-.portfolio-item:hover img,
-.case-study figure:hover img {
-  filter: saturate(0.85) sepia(0.1) brightness(1.08);
-}
-
-.portfolio-item figcaption,
-.case-study figure figcaption {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  padding: 0.75rem;
-  background: rgba(242, 238, 227, 0.95);
-  border-top: 1px solid var(--ink);
-  color: var(--ink);
-  text-align: center;
-  letter-spacing: 0.05em;
-  position: relative;
-}
-
-.portfolio-item figcaption::before,
-.case-study figure figcaption::before {
-  content: 'FIG. ' counter(fig-counter, decimal-leading-zero);
-  display: block;
-  font-size: 0.65rem;
-  color: var(--brand);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 0.35rem;
-  opacity: 0.7;
-}
-
-.portfolio-item figcaption::after,
-.case-study figure figcaption::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--brand) 0%, transparent 100%);
-  opacity: 0.3;
-}
-
-.type-grid {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  max-width: 900px;
-}
-
-.extras-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  max-width: 1000px;
-}
-
-/* Enhanced button styling with dimension lines */
-.cta-primary,
-.btn,
-.button {
-  position: relative;
-  border: 2px solid var(--ink);
-  transition: all 0.3s ease;
-}
-
-.cta-primary:hover::before,
-.btn:hover::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--brand);
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-/* Technical annotations metadata */
-.result-box::before {
-  content: 'LOAD_TIME: 0.34s | CLEAN_CODE: 100% | NO_WP_STRUCTURE';
-  position: absolute;
-  bottom: -2rem;
-  left: 0;
-  font-size: 0.55rem;
-  color: var(--brand);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.5;
-  font-family: var(--mono);
-  pointer-events: none;
-}
-
-/* Centered text with blueprint accent */
-h1, h2, h3 {
-  text-align: center;
-  position: relative;
-}
-
-h1::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: var(--brand);
-  margin: 0.5rem auto 0;
-  opacity: 0.4;
-}
-
-/* Enhanced navigation centering */
-nav {
-  justify-content: center;
-  text-align: center;
-}
-
-nav > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  width: 100%;
-}
-
-/* Footer centering */
-footer {
-  padding: 3rem 1rem 2rem;
-  text-align: center;
-  background: rgba(242, 238, 227, 0.92);
-  border-top: 1px solid var(--ink);
-}
-
-/* IMAGE OPTIMIZATION - Blueprint Style */
-.portfolio img,
-.case-study img,
-.portfolio-item img,
-figure img {
-  border: 1px solid var(--ink);
-  filter: saturate(0.75) sepia(0.1);
-  transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.portfolio img:hover,
-.case-study img:hover,
-.portfolio-item img:hover,
-figure img:hover {
-  filter: saturate(0.85) sepia(0.15);
-  transform: scale(1.02);
-}
-
-/* Figure caption styling */
-figure {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-figure figcaption {
-  font-size: 0.7rem;
-  color: var(--brand);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-family: var(--mono);
-  margin-top: 0.75rem;
-  opacity: 0.7;
-}
-
-figure figcaption::before {
-  content: 'FIG. ';
-  color: var(--ink);
-  margin-right: 0.25rem;
-}
-
-/* Technical figure counter */
-figure:nth-of-type(1) figcaption::after { content: '01'; }
-figure:nth-of-type(2) figcaption::after { content: '02'; }
-figure:nth-of-type(3) figcaption::after { content: '03'; }
-figure:nth-of-type(4) figcaption::after { content: '04'; }
-figure:nth-of-type(5) figcaption::after { content: '05'; }
-figure:nth-of-type(6) figcaption::after { content: '06'; }
-figure:nth-of-type(7) figcaption::after { content: '07'; }
-figure:nth-of-type(8) figcaption::after { content: '08'; }
-figure:nth-of-type(9) figcaption::after { content: '09'; }
-figure:nth-of-type(10) figcaption::after { content: '10'; }
-
-/* EASTER EGG - Mouse Tracker */
-#cad-tracker {
-  position: fixed;
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  color: var(--brand);
-  background: rgba(244, 240, 232, 0.95);
-  border: 1px solid var(--brand);
-  padding: 0.5rem 0.75rem;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  line-height: 1.4;
-  box-shadow: 2px 2px 8px rgba(26, 30, 34, 0.1);
-}
-
-#cad-tracker.active {
-  opacity: 1;
-}
-
-.skip-link {
-  position: absolute !important;
-  left: -9999px !important;
-  top: auto !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-}
-
-.skip-link:focus {
-  position: fixed !important;
-  left: 0 !important;
-  top: 0 !important;
-  width: auto !important;
-  height: auto !important;
-  overflow: visible !important;
-  padding: 1rem !important;
-  background: #000 !important;
-  color: #fff !important;
-  z-index: 1001 !important;
-}
-
-@media (max-width: 900px) {
-  main {
-    width: min(var(--max-width), calc(100vw - 1.25rem));
-  }
-  header nav,
-  nav {
-    padding: 1rem 1rem;
-  }
-  .technical-drawing {
-    grid-template-columns: 1fr;
-  }
-  .blueprint-wrap {
-    padding: 2rem;
-    box-shadow: 8px 8px 0 var(--line); /* Reduced shadow to prevent overflow */
-  }
-  .cta-group {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller min-width for mobile */
-  }
-}
-
-@media (max-width: 600px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr; /* Single column on very small screens */
-  }
-}
-</style>
-
-  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MOVER Studio — бърз HTML сайт от 400€">
   <meta name="twitter:description" content="MOVER Studio — бърз HTML сайт от 400€, цел 95–100 PageSpeed, без WordPress. Виж услуги, цени и реални проекти.">
-  <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
-  <meta name="twitter:image:alt" content="MOVER Studio — бърз HTML сайт без WordPress">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=2">
   <meta name="twitter:site" content="@moverstudio_bg">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moverstudio.online/">
   <meta property="og:title" content="MOVER Studio — бърз HTML сайт от 400€">
   <meta property="og:description" content="MOVER Studio — бърз HTML сайт от 400€, цел 95–100 PageSpeed, без WordPress. Виж услуги, цени и реални проекти.">
-  <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="MOVER Studio — бърз HTML сайт без WordPress">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png?v=2">
   <meta property="og:locale" content="bg_BG">
   <meta property="og:site_name" content="MOVER Studio">
-
-  
 
   <!-- Schema: @graph markup -->
   <script type="application/ld+json">
@@ -976,7 +50,7 @@ figure:nth-of-type(10) figcaption::after { content: '10'; }
         "@id": "https://moverstudio.online/#organization",
         "name": "MOVER Studio",
         "url": "https://moverstudio.online",
-        "logo": "https://moverstudio.online/og-image.png?v=1",
+        "logo": "https://moverstudio.online/og-image.png?v=2",
         "description": "Изработка на ултра бързи HTML сайтове без WordPress",
         "telephone": "+359877845569",
         "email": "admin@moverstudio.online",
@@ -1036,12 +110,6 @@ figure:nth-of-type(10) figcaption::after { content: '10'; }
             "name": "Минибагер Костинброд (minibagerkb.eu)",
             "url": "https://minibagerkb.eu/",
             "description": "Свързан бизнес на същия екип — услуги с минибагер, локални landing pages"
-          },
-          {
-            "@type": "WebSite",
-            "name": "minibagerkostinbrod.pages.dev",
-            "url": "https://minibagerkostinbrod.pages.dev/",
-            "description": "Клиентски HTML проект за изкопни услуги"
           }
         ]
       },
@@ -1146,7 +214,7 @@ figure:nth-of-type(10) figcaption::after { content: '10'; }
           "@type": "WebPage",
           "@id": "https://moverstudio.online/"
         },
-        "image": "https://moverstudio.online/og-image.png?v=1",
+        "image": "https://moverstudio.online/og-image.png?v=2",
         "url": "https://moverstudio.online/",
         "keywords": ["изработка на html сайтове", "поръчка на статични сайтове", "pagespeed 100 html", "wordpress алтернатива", "статични сайтове", "seo оптимизация"]
       },
@@ -1163,7 +231,7 @@ figure:nth-of-type(10) figcaption::after { content: '10'; }
         "@type": "Product",
         "name": "Пакет Старт",
         "description": "Landing page с 100 PageSpeed и професионална изработка",
-        "image": "https://moverstudio.online/og-image.png?v=1",
+        "image": "https://moverstudio.online/og-image.png?v=2",
         "brand": {
           "@type": "Brand",
           "name": "MOVER Studio"
@@ -1180,7 +248,7 @@ figure:nth-of-type(10) figcaption::after { content: '10'; }
         "@type": "Product",
         "name": "Пакет Бизнес",
         "description": "Multi-page сайт с 100 PageSpeed, базово on-page SEO",
-        "image": "https://moverstudio.online/og-image.png?v=1",
+        "image": "https://moverstudio.online/og-image.png?v=2",
         "brand": {
           "@type": "Brand",
           "name": "MOVER Studio"
@@ -1197,7 +265,7 @@ figure:nth-of-type(10) figcaption::after { content: '10'; }
         "@type": "HowTo",
         "name": "Как да поръчам HTML сайт без WordPress",
         "description": "Стъпка по стъпка ръководство за изработка на бърз HTML сайт с 100 PageSpeed",
-        "image": "https://moverstudio.online/og-image.png?v=1",
+        "image": "https://moverstudio.online/og-image.png?v=2",
         "totalTime": "P7D",
         "supply": [
           {
@@ -1310,475 +378,272 @@ figure:nth-of-type(10) figcaption::after { content: '10'; }
   AI_FACT: Цена от 400€ за сайт визитка, без месечни такси
   AI_FACT: Цел 95-100 PageSpeed при дефинирани условия
   -->
+
+  <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
 
-<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+<a href="#main" class="skip-link">Прескочи към съдържанието</a>
 
-<header>
-  <nav aria-label="Основна навигация">
-    <a href="/" style="border-bottom: none;"><strong>MOVER_STUDIO</strong></a>
-    <span class="terminal">Бързи HTML сайтове без WordPress</span>
-    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
-      <a href="/services/">Услуги</a>
-      <a href="/izrabotka-na-landing-page.html">Landing page за реклами</a>
-      <a href="/html-sait.html">HTML сайт</a>
-      <a href="/izrabotka-na-sait-sofia.html">София</a>
-      <a href="/sait-vizitka.html">Визитка</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-logo">MOVER Studio</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Основна навигация">
+      <a href="/izrabotka-na-sait.html">Услуги</a>
       <a href="/calculator.html">Калкулатор</a>
       <a href="/case-studies.html">Case Studies</a>
-      <a href="/about.html">За Нас</a>
-      <a href="#contact">Контакт</a>
-    </div>
-  </nav>
+      <a href="/blog/">Блог</a>
+      <a href="/faq.html">ЧЗВ</a>
+      <a href="/about.html">За нас</a>
+      <a href="#contact" class="nav-cta">Контакт</a>
+    </nav>
+  </div>
 </header>
 
 <main id="main">
 
-  <article>
-    <h1 id="main-heading">MOVER Studio — бърз HTML сайт без WordPress (цел 95–100 PageSpeed)</h1>
-    <svg aria-hidden="true" class="dim-line"
-         style="width:100%;height:24px;display:block;margin:-8px 0 8px;overflow:visible;pointer-events:none;"
-         viewBox="0 0 800 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="0" y1="12" x2="800" y2="12"
-            stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
-      <line x1="0" y1="6" x2="0" y2="18"
-            stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
-      <line x1="800" y1="6" x2="800" y2="18"
-            stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
-      <text x="400" y="9" text-anchor="middle"
-            font-family="Share Tech Mono, monospace" font-size="7"
-            fill="#8f4722" opacity="0.5">WIDTH: 100% · STATIC HTML · NO_WP</text>
-    </svg>
-
-    <div class="hero" role="region" aria-labelledby="main-heading" style="text-align: center; padding: 2rem 0;">
-      <div class="scan-line" aria-hidden="true"></div>
-      <svg class="hero-grid" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-           style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;opacity:0.04;z-index:0;">
-        <defs>
-          <pattern id="hg-small-idx" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#8f4722" stroke-width="0.4"/>
-          </pattern>
-          <pattern id="hg-big-idx" width="100" height="100" patternUnits="userSpaceOnUse">
-            <rect width="100" height="100" fill="url(#hg-small-idx)"/>
-            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#8f4722" stroke-width="1"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#hg-big-idx)"/>
-      </svg>
-      <p style="font-size: 1.1rem; margin-bottom: 1rem; max-width: 60ch; margin-left: auto; margin-right: auto;">
-        Бързи и ефективни решения за вашия бизнес. Изберете тип проект или научете повече за <a href="/izrabotka-na-sait.html">изработка на сайт</a>:
-      </p>
-
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 1rem 0 1.5rem;">
-        <a href="/izrabotka-na-sait.html" class="cta-primary">Изработка на сайт от 400€ →</a>
-        <a href="/sait-vizitka.html" class="cta-primary">Сайт Визитка / Портфолио (400€+)</a>
-        <a href="/korporativen-sait.html" class="cta-primary">Корпоративен сайт (1000€+)</a>
-        <a href="/izrabotka-na-landing-page.html" class="cta-primary">Landing Page за реклама (400€)</a>
-      </div>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 0 0 1.5rem;">
-        <a href="tel:+359877845569" class="cta-primary">☎ Обади се сега</a>
-        <a href="mailto:admin@moverstudio.online?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20HTML%20%D1%81%D0%B0%D0%B9%D1%82" class="cta-primary">✉ Изпрати запитване</a>
-      </div>
-
-      <p style="max-width: 72ch; margin-left: auto; margin-right: auto;">
-        Избягваме WordPress, за да запазим кода лек, да подобрим Core Web Vitals и да подсигурим по-добра техническа основа за SEO. Погледнете нашите предложения за <a href="/izrabotka-na-sait.html">изработка на сайтове</a>.
-      </p>
-      <p style="max-width: 72ch; margin: 1rem auto 0;">
-        Търсите <a href="/izrabotka-na-sait-sofia.html">изработка на сайтове в София</a>?
-        Имаме отделна страница с цени, срокове и реални примери за столичния пазар.
-      </p>
-      <p style="max-width: 72ch; margin: 1rem auto 0;">
-        Между визитка и портфолио? <a href="/blog/sait-vizitka-portfolio-malk-biznes-2026.html">Виж примери по ниши, цена и checklist</a>.
-      </p>
+  <section class="hero container">
+    <h1 class="hero__title reveal" id="main-heading">Бърз <em>HTML сайт</em> от 400€</h1>
+    <p class="hero__lead reveal">Изработка на сайт без WordPress и без месечни такси — цел 95–100 PageSpeed. София и цяла България.</p>
+    <div class="hero__actions reveal">
+      <a href="/izrabotka-na-sait.html" class="btn btn--primary">Изработка на сайт →</a>
+      <a href="/calculator.html" class="btn btn--secondary">Калкулатор</a>
+      <a href="tel:+359877845569" class="btn btn--ghost">☎ Обади се</a>
+      <a href="mailto:admin@moverstudio.online?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20HTML%20%D1%81%D0%B0%D0%B9%D1%82" class="btn btn--ghost">✉ Запитване</a>
     </div>
+    <div class="hero__trust reveal">
+      <span>От 400€ еднократно</span>
+      <span>3–5 дни визитка</span>
+      <span>5% гаранция при закъснение</span>
+      <span>23–48€/год хостинг</span>
+    </div>
+  </section>
 
-  <section id="portfolio" style="text-align: center; margin-top: 2rem;">
-    <h2>Портфолио</h2>
-    <p style="max-width: 72ch; margin-left: auto; margin-right: auto; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border: 1px solid var(--line, #ddd); border-radius: 8px; background: var(--surface, #fafafa); text-align: left;">
-      <strong>Реални бизнеси от нашия екип</strong> — освен клиентските проекти, зад
-      <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a>
-      (<a href="https://g.co/kgs/p32TnaT" target="_blank" rel="noopener">5.0 от 106 отзива в Google</a>)
-      и
-      <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
-      стои същият екип — <strong>Иван Иванов</strong> и компанията. HTML и локалното SEO ги прилагаме първо върху собствените обекти.
-    </p>
-    <p style="max-width: 72ch; margin-left: auto; margin-right: auto;">
-      Избрахме няколко проекта, които показват различни бизнес модели, но една и съща логика: бърз HTML сайт, ясен фокус и път към запитване.
-    </p>
-    <div class="portfolio-grid">
-      <a href="/case-studies.html" aria-label="Виж подробните case studies за пътна помощ София">
-        <figure class="portfolio-item">
-          <div class="di-t" aria-hidden="true"></div>
-          <div class="di-r" aria-hidden="true"></div>
-          <div class="di-b" aria-hidden="true"></div>
-          <div class="di-l" aria-hidden="true"></div>
-          <img src="images/115453_roadassistancesofia.bg.webp" alt="Скрийншот на сайта за пътна помощ в София" loading="lazy" width="1853" height="881">
-          <figcaption>Пътна помощ София</figcaption>
+  <section class="section section--alt" id="solutions">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__label">Пакети</span>
+        <h2>Избери тип сайт</h2>
+        <p>Три ясни опции — пълни детайли в <a href="/izrabotka-na-sait.html">hub страницата</a> и <a href="/calculator.html">калкулатора</a>.</p>
+      </div>
+      <div class="grid grid--3 reveal">
+        <article class="card">
+          <h3>Landing page</h3>
+          <p class="card__price">400€</p>
+          <p>За Google/Meta Ads — висока конверсия и PageSpeed.</p>
+          <a href="/izrabotka-na-landing-page.html" class="btn btn--secondary" style="margin-top:1rem;">Детайли</a>
+        </article>
+        <article class="card card--highlight">
+          <h3>Сайт визитка / портфолио</h3>
+          <p class="card__price">400€</p>
+          <p>1–5 страници · локален бизнес · 3–5 работни дни.</p>
+          <a href="/sait-vizitka.html" class="btn btn--primary" style="margin-top:1rem;">Детайли</a>
+        </article>
+        <article class="card">
+          <h3>Корпоративен сайт</h3>
+          <p class="card__price">1000€</p>
+          <p>5–15 страници · review integration · 10–14 дни.</p>
+          <a href="/korporativen-sait.html" class="btn btn--secondary" style="margin-top:1rem;">Детайли</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__label">Портфолио</span>
+        <h2>Реални проекти</h2>
+      </div>
+      <div class="notice reveal">
+        <p><strong>Реални бизнеси от нашия екип</strong> — зад
+          <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a>
+          (<a href="https://g.co/kgs/p32TnaT" target="_blank" rel="noopener">5.0 / 106 отзива</a>)
+          и <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
+          стои същият екип — <strong>Иван Иванов</strong>.</p>
+      </div>
+      <div class="google-proof-banner reveal" style="margin-bottom:1.5rem;padding:1.25rem;">
+        <p style="margin:0 0 0.5rem;font-size:0.95rem;"><strong>Провери сам в Google</strong> — кликни на фраза и виж проекта сред резултатите.</p>
+        <p class="google-proof-banner__framing" style="margin:0 0 0.75rem;">При конкурентни заявки позицията може да варира — важното е, че сме на първа страница, не на петата.</p>
+        <div class="google-proof__queries" style="justify-content:center;">
+          <a class="search-chip" href="https://www.google.com/search?q=%D0%B8%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D0%BD%D0%B0+html+%D1%81%D0%B0%D0%B9%D1%82&amp;hl=bg" target="_blank" rel="noopener noreferrer">изработка на html сайт</a>
+          <a class="search-chip" href="https://www.google.com/search?q=%D0%B8%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3+%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0&amp;hl=bg" target="_blank" rel="noopener noreferrer">изработка на лендинг страница</a>
+          <a class="search-chip" href="https://www.google.com/search?q=%D0%B0%D0%BB%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%B0+%D0%BD%D0%B0+wordpress&amp;hl=bg" target="_blank" rel="noopener noreferrer">алтернатива на wordpress</a>
+        </div>
+      </div>
+      <div class="portfolio-grid reveal">
+        <figure class="portfolio-card">
+          <a href="/case-studies.html#roadassistancesofia"><img src="/images/portfolio-2026/roadassistancesofia-site.webp" alt="roadassistancesofia.bg" loading="lazy" width="1280" height="800"><figcaption>Пътна помощ София</figcaption></a>
+          <div class="portfolio-card__proof"><div class="google-proof"><div class="google-proof__queries"><a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D1%82%D1%80%D0%B5%D0%B1%D0%B8%D1%87&amp;hl=bg" target="_blank" rel="noopener noreferrer">пътна помощ требич</a><a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BD%D0%B5%D0%B3%D0%BE%D0%B2%D0%B0%D0%BD&amp;hl=bg" target="_blank" rel="noopener noreferrer">пътна помощ негован</a></div></div></div>
         </figure>
-      </a>
-      <a href="/case-studies.html" aria-label="Виж подробните case studies за пътна помощ Костинброд">
-        <figure class="portfolio-item">
-          <div class="di-t" aria-hidden="true"></div>
-          <div class="di-r" aria-hidden="true"></div>
-          <div class="di-b" aria-hidden="true"></div>
-          <div class="di-l" aria-hidden="true"></div>
-          <img src="images/121338_patna-pomosht-kostinbrod.bg.webp" alt="Скрийншот на сайта за пътна помощ в Костинброд" loading="lazy" width="1853" height="881">
-          <figcaption>Пътна помощ Костинброд</figcaption>
+        <figure class="portfolio-card">
+          <a href="/case-studies.html#patna-pomosht"><img src="/images/portfolio-2026/patna-pomosht-kostinbrod-site.webp" alt="patna-pomosht-kostinbrod.bg" loading="lazy" width="1280" height="800"><figcaption>Пътна помощ Костинброд</figcaption></a>
+          <div class="portfolio-card__proof"><div class="google-proof"><div class="google-proof__queries"><a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BA%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B1%D1%80%D0%BE%D0%B4&amp;hl=bg" target="_blank" rel="noopener noreferrer">пътна помощ костинброд</a><a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%B1%D0%BE%D0%B6%D1%83%D1%80%D0%B8%D1%89%D0%B5&amp;hl=bg" target="_blank" rel="noopener noreferrer">пътна помощ божурище</a></div></div></div>
         </figure>
-      </a>
-      <a href="/case-studies.html" aria-label="Виж подробните case studies за автогаз сервиз Niko Autogaz">
-        <figure class="portfolio-item">
-          <div class="di-t" aria-hidden="true"></div>
-          <div class="di-r" aria-hidden="true"></div>
-          <div class="di-b" aria-hidden="true"></div>
-          <div class="di-l" aria-hidden="true"></div>
-          <img src="images/115814_nikoautogaz-home.webp" alt="Скрийншот на сайта за монтаж и ремонт на газови уредби" loading="lazy" width="1853" height="881">
-          <figcaption>Niko Autogaz</figcaption>
+        <figure class="portfolio-card">
+          <a href="/case-studies.html#nikoautogaz"><img src="/images/portfolio-2026/nikoautogaz-site.webp" alt="Niko Autogaz" loading="lazy" width="1280" height="800"><figcaption>Niko Autogaz</figcaption></a>
+          <div class="portfolio-card__proof"><div class="google-proof"><div class="google-proof__queries"><a class="search-chip" href="https://www.google.com/search?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D1%87%D0%B5%D0%BD+%D0%BC%D0%B5%D1%82%D0%B0%D0%BD&amp;hl=bg" target="_blank" rel="noopener noreferrer">ремонт фабричен метан</a></div></div></div>
         </figure>
-      </a>
-      <a href="/case-studies.html" aria-label="Виж подробните case studies за магазин re-peat.store">
-        <figure class="portfolio-item">
-          <div class="di-t" aria-hidden="true"></div>
-          <div class="di-r" aria-hidden="true"></div>
-          <div class="di-b" aria-hidden="true"></div>
-          <div class="di-l" aria-hidden="true"></div>
-          <img src="images/120023_re-peat.store.webp" alt="Скрийншот на онлайн магазина re-peat.store за second hand дрехи" loading="lazy" width="1853" height="881">
-          <figcaption>re-peat.store</figcaption>
+        <figure class="portfolio-card">
+          <a href="/case-studies.html#re-peat"><img src="/images/portfolio-2026/re-peat-site.webp" alt="re-peat.store" loading="lazy" width="1280" height="800"><figcaption>re-peat.store</figcaption></a>
+          <div class="portfolio-card__proof"><div class="google-proof"><div class="google-proof__queries"><a class="search-chip" href="https://www.google.com/search?q=%D0%B4%D1%80%D0%B5%D1%85%D0%B8+%D0%B2%D1%82%D0%BE%D1%80%D0%B0+%D1%80%D1%8A%D0%BA%D0%B0+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&amp;hl=bg" target="_blank" rel="noopener noreferrer">дрехи втора ръка софия</a><a class="search-chip" href="https://www.google.com/search?q=%D0%B4%D1%80%D0%B5%D1%85%D0%B8+%D0%B2%D1%82%D0%BE%D1%80%D0%B0+%D1%83%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B0+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&amp;hl=bg" target="_blank" rel="noopener noreferrer">дрехи втора употреба софия</a><a class="search-chip" href="https://www.google.com/search?q=%D1%83%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B0%D0%B2%D0%B0%D0%BD%D0%B8+%D0%B4%D1%80%D0%B5%D1%85%D0%B8+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&amp;hl=bg" target="_blank" rel="noopener noreferrer">употребявани дрехи софия</a></div></div></div>
         </figure>
-      </a>
-    </div>
-  </section>
-
-  <section id="solutions" style="text-align: center; margin-top: 2rem;">
-    <h2>Нашите решения за вашия бизнес</h2>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); justify-content: center; max-width: 900px; margin: 0 auto;">
-      <div class="card" style="text-align: center;">
-        <span class="card-meta" aria-hidden="true">HTML5 · STATIC</span>
-        <h3>Landing Page</h3>
-        <p><strong>Фокус:</strong> Скорост и целеви действия.</p>
-        <p><strong>За кого:</strong> Google/Meta Ads кампании.</p>
-        <p><strong>Цена:</strong> От 400€.</p>
-        <a href="/izrabotka-na-landing-page.html" class="cta-primary" style="margin-top: 1rem;">Виж Landing Page</a>
+        <figure class="portfolio-card">
+          <a href="/case-studies.html#matiyhelp"><img src="/images/portfolio-2026/matiyhelp-site.webp" alt="matiyhelp.bg" loading="lazy" width="1280" height="800"><figcaption>MatiyHelp</figcaption></a>
+          <div class="portfolio-card__proof"><div class="google-proof"><div class="google-proof__queries"><a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BA%D0%B0%D0%BB%D0%BE%D1%82%D0%B8%D0%BD%D0%B0&amp;hl=bg" target="_blank" rel="noopener noreferrer">пътна помощ калотина</a><a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D1%85%D0%B0%D0%BD&amp;hl=bg" target="_blank" rel="noopener noreferrer">пътна помощ петрохан</a></div></div></div>
+        </figure>
+        <figure class="portfolio-card">
+          <a href="/case-studies.html#minibagerkb"><img src="/images/portfolio-2026/minibagerkb-site.webp" alt="minibagerkb.eu" loading="lazy" width="1280" height="800"><figcaption>Минибагер Костинброд</figcaption></a>
+          <div class="portfolio-card__proof"><div class="google-proof"><div class="google-proof__queries"><a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D0%BA%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B1%D1%80%D0%BE%D0%B4&amp;hl=bg" target="_blank" rel="noopener noreferrer">мини багер костинброд</a><a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%B8%D1%86%D0%B0&amp;hl=bg" target="_blank" rel="noopener noreferrer">мини багер сливница</a><a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D0%B4%D1%80%D0%B0%D0%B3%D0%BE%D0%BC%D0%B0%D0%BD&amp;hl=bg" target="_blank" rel="noopener noreferrer">мини багер драгоман</a></div></div></div>
+        </figure>
+        <figure class="portfolio-card">
+          <a href="/case-studies.html#bdinhost"><img src="/images/portfolio-2026/bdinhost-site.webp" alt="bdinhost.com" loading="lazy" width="1280" height="800"><figcaption>BdinHost · WP→HTML</figcaption></a>
+          <div class="portfolio-card__proof"><div class="google-proof"><div class="google-proof__queries"><a class="search-chip" href="https://www.google.com/search?q=%D0%B5%D0%B2%D1%82%D0%B8%D0%BD+%D1%85%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3&amp;hl=bg" target="_blank" rel="noopener noreferrer">евтин хостинг</a><a class="search-chip" href="https://www.google.com/search?q=%D0%B5%D0%B2%D1%82%D0%B8%D0%BD+%D1%85%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3+%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&amp;hl=bg" target="_blank" rel="noopener noreferrer">евтин хостинг българия</a></div></div></div>
+        </figure>
       </div>
-      <div class="card" style="text-align: center;">
-        <span class="card-meta" aria-hidden="true">HTML5 · STATIC</span>
-        <h3>Визитка / Портфолио</h3>
-        <p><strong>Фокус:</strong> Представителност и бранд.</p>
-        <p><strong>За кого:</strong> Фрийлансъри и малък бизнес.</p>
-        <p><strong>Цена:</strong> От 400€.</p>
-        <a href="/sait-vizitka.html" class="cta-primary" style="margin-top: 1rem;">Виж Сайт Визитка</a>
-      </div>
-      <div class="card" style="text-align: center;">
-        <span class="card-meta" aria-hidden="true">HTML5 · STATIC</span>
-        <h3>Корпоративен сайт</h3>
-        <p><strong>Фокус:</strong> Мащабируемост и функции.</p>
-        <p><strong>За кого:</strong> Фирми с комплексни услуги.</p>
-        <p><strong>Цена:</strong> От 1000€.</p>
-        <a href="/korporativen-sait.html" class="cta-primary" style="margin-top: 1rem;">Виж Корпоративен Сайт</a>
+      <div class="hero__actions reveal" style="margin-top:1.25rem;">
+        <a href="/case-studies.html#proveri-v-google" class="btn btn--primary">Провери всички проекти в Google</a>
+        <a href="/case-studies.html#search-console" class="btn btn--secondary">Search Console данни</a>
       </div>
     </div>
   </section>
 
-  <section id="proven-efficiency" style="text-align: center;">
-    <h2>Доказана ефективност: HTML срещу WordPress</h2>
-    <p style="max-width: 80ch; margin-left: auto; margin-right: auto; margin-bottom: 1.5rem;">
-      Сравнение на месечни разходи (в €) – данни от независими български източници, 2026 г.
-    </p>
-    <div class="price-cards-grid">
-      <article class="price-card price-card--emphasis">
-        <span class="pc-meta-tl" aria-hidden="true">REF: MS<br>VER: 2.1</span>
-        <span class="pc-meta-br" aria-hidden="true">NO_WP<br>HTML5</span>
-        <h3 class="price-card__title">HTML сайт (автономен)</h3>
-        <div class="price-card__price">0 – 3 €</div>
-        <p class="price-card__note">Споделен хостинг 3–8 €/мес., но често безплатен (GitHub/Netlify); без актуализации, плъгини или лицензи.</p>
-      </article>
-
-      <article class="price-card">
-        <span class="pc-meta-tl" aria-hidden="true">REF: MS<br>VER: 2.1</span>
-        <span class="pc-meta-br" aria-hidden="true">NO_WP<br>HTML5</span>
-        <h3 class="price-card__title">WordPress (базов)</h3>
-        <div class="price-card__price">3 – 8 €</div>
-        <p class="price-card__note">Споделен хостинг 3–10 €/мес. + домейн (~1–2 €/мес.); SSL безплатен. Риск от уязвимости.</p>
-      </article>
-
-      <article class="price-card">
-        <span class="pc-meta-tl" aria-hidden="true">REF: MS<br>VER: 2.1</span>
-        <span class="pc-meta-br" aria-hidden="true">NO_WP<br>HTML5</span>
-        <h3 class="price-card__title">WordPress (самостоятелна поддръжка)</h3>
-        <div class="price-card__price">5 – 15 €</div>
-        <p class="price-card__note">Управляем хостинг 5–15 €/мес. + плъгини/теми (~2–5 €/мес.); скрити разходи за време за ъпдейти.</p>
-      </article>
-
-      <article class="price-card">
-        <span class="pc-meta-tl" aria-hidden="true">REF: MS<br>VER: 2.1</span>
-        <span class="pc-meta-br" aria-hidden="true">NO_WP<br>HTML5</span>
-        <h3 class="price-card__title">WordPress (агенция/фрийлансър)</h3>
-        <div class="price-card__price">50 – 150+ €</div>
-        <p class="price-card__note">Базова поддръжка ~25–50 €/мес., разширена 50–150 €/мес.; включва ъпдейти, бекъп, сигурност.</p>
-      </article>
-    </div>
-
-    <div style="max-width: 900px; margin: 2rem auto; text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.5rem;">
-      <h3 style="text-align: center; margin-top: 0;">Ключови наблюдения</h3>
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0; color: var(--accent-strong);">✓</span>
-          <strong>HTML спестява до 90% дългосрочно</strong> – разходите са предимно хостинг (0–3 €/мес. чрез Netlify/GitHub Pages), без софтуерни такси, лицензи или нужда от поддръжка. Идеален за статични бизнес сайтове с висок PageSpeed (цел 95–100).
-        </li>
-        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0; color: var(--accent-strong);">⚠</span>
-          <strong>WordPress базовият модел рискува</strong> – започва евтино (3–8 €/мес.), но с 50+ плъгина идват бавно зареждане, конфликти и уязвимости. Професионалната поддръжка (50–150 €/мес.) се оправдава само за бизнеси с висок трафик.
-        </li>
-        <li style="padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0; color: var(--accent-strong);">€</span>
-          <strong>Цените варират по доставчици</strong> – SuperHosting (от ~4 €), SiteGround (от ~7 €), Cloudflare (безплатно за статични). Цените са ориентировъчни за България (2026 г.), 1 € ≈ 1.95 лв.
-        </li>
-      </ul>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-      <div style="text-align: center;">
-        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
-        <p style="font-weight: bold; color: var(--text-strong);">PageSpeed 100/100</p>
-        <p>Чист код.</p>
+  <section class="section section--alt" id="proven-efficiency">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__label">TCO</span>
+        <h2>HTML срещу WordPress — месечни разходи</h2>
+        <p>Ориентировъчни данни за България, 2026 · <a href="/wordpress-alternativa.html">пълно сравнение</a></p>
       </div>
-      <div style="text-align: center;">
-        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛡️</div>
-        <p style="font-weight: bold; color: var(--text-strong);">Висока сигурност</p>
-        <p>Статична архитектура без БД.</p>
+      <div class="price-grid reveal">
+        <div class="price-item price-item--best">
+          <span class="price-item__name">HTML сайт (автономен)</span>
+          <span class="price-item__val">0–3 €</span>
+          <span class="price-item__note">Хостинг 0–8 €/мес. (често безплатен); без плъгини и ъпдейти.</span>
+        </div>
+        <div class="price-item">
+          <span class="price-item__name">WordPress (базов)</span>
+          <span class="price-item__val">3–8 €</span>
+          <span class="price-item__note">Споделен хостинг + домейн; риск от уязвимости.</span>
+        </div>
+        <div class="price-item">
+          <span class="price-item__name">WordPress (самостоятелна поддръжка)</span>
+          <span class="price-item__val">5–15 €</span>
+          <span class="price-item__note">Хостинг + плъгини + време за ъпдейти.</span>
+        </div>
+        <div class="price-item">
+          <span class="price-item__name">WordPress (агенция)</span>
+          <span class="price-item__val">50–150+ €</span>
+          <span class="price-item__note">Поддръжка, бекъп, сигурност, корекции.</span>
+        </div>
       </div>
-      <div style="text-align: center;">
-        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
-        <p style="font-weight: bold; color: var(--text-strong);">0€ такси</p>
-        <p>Без разходи за плъгини.</p>
+      <p class="reveal" style="margin:1.5rem auto 0;text-align:center;max-width:52ch;font-size:0.9rem;">
+        <strong>HTML спестява до 90% дългосрочно</strong> — годишно 23–48€ домейн+хостинг vs стотици € при WordPress.
+      </p>
+      <div class="notice reveal" style="margin-top:1.5rem;text-align:left;">
+        <p><strong>Ключови наблюдения:</strong> HTML — хостинг 0–3 €/мес., без лицензи и ъпдейти. WordPress базов — риск от бавно зареждане и уязвимости при много плъгини. WordPress с агенция — 50–150 €/мес. оправдано само при висок трафик. Цените са ориентировъчни за БГ (2026), 1 € ≈ 1.95 лв.</p>
+      </div>
+      <div class="grid grid--3 reveal" style="margin-top:1.5rem;">
+        <div class="stat"><div class="stat__num">🚀</div><div class="stat__label"><strong>PageSpeed</strong> — цел 95–100 при дефинирани условия</div></div>
+        <div class="stat"><div class="stat__num">🛡️</div><div class="stat__label"><strong>Сигурност</strong> — статичен HTML, без CMS база</div></div>
+        <div class="stat"><div class="stat__num">💰</div><div class="stat__label"><strong>0€ CMS такси</strong> — без плъгини и абонаменти</div></div>
       </div>
     </div>
   </section>
 
-  <div id="social-proof" style="text-align: center; margin-top: 2rem;">
-    <h2 style="margin-bottom: 0.75rem;">Реални резултати от Google Search Console</h2>
-    <p style="max-width: 72ch; margin-left: auto; margin-right: auto;">
-      Не само PageSpeed. HTML сайтовете ни носят органични показвания и кликове —
-      с проверими данни от Search Console. Повечето проекти са на около <strong>5–6 месеца</strong>;
-      <strong>6 от 9</strong> са със средна позиция под 10, а два дори работят от поддомейни
-      (<code>github.io</code> / <code>pages.dev</code>).
-    </p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; max-width: 900px; margin: 1.5rem auto 0; text-align: left;">
-      <div style="background: var(--surface, #fff); border: 1px solid var(--ink, #1a1e22); padding: 1rem;">
-        <p style="margin: 0; font-size: 0.85rem; opacity: 0.75;">Пътна помощ Костинброд</p>
-        <p style="margin: 0.35rem 0 0; font-size: 1.45rem; font-weight: 700; color: var(--brand, #8f4722);">460 клика</p>
-        <p style="margin: 0.25rem 0 0; font-size: 0.9rem;">35,3 хил. импресии · поз. 6.7</p>
+  <section class="section" id="social-proof">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__label">Search Console</span>
+        <h2>Реални органични резултати</h2>
+        <p>Проекти на ~5–6 месеца · 6 от 9 със средна позиция под 10</p>
       </div>
-      <div style="background: var(--surface, #fff); border: 1px solid var(--ink, #1a1e22); padding: 1rem;">
-        <p style="margin: 0; font-size: 0.85rem; opacity: 0.75;">Niko Autogaz</p>
-        <p style="margin: 0.35rem 0 0; font-size: 1.45rem; font-weight: 700; color: var(--brand, #8f4722);">270 клика</p>
-        <p style="margin: 0.25rem 0 0; font-size: 0.9rem;">CTR 7.1% · поз. 5.9</p>
+      <div class="grid grid--4 reveal">
+        <div class="stat"><div class="stat__num">460</div><div class="stat__label">клика · Пътна помощ Костинброд</div></div>
+        <div class="stat"><div class="stat__num">270</div><div class="stat__label">клика · Niko Autogaz</div></div>
+        <div class="stat"><div class="stat__num">180</div><div class="stat__label">клика · Re-Peat</div></div>
+        <div class="stat"><div class="stat__num">0→✓</div><div class="stat__label">видимост · BdinHost</div></div>
       </div>
-      <div style="background: var(--surface, #fff); border: 1px solid var(--ink, #1a1e22); padding: 1rem;">
-        <p style="margin: 0; font-size: 0.85rem; opacity: 0.75;">Re-Peat</p>
-        <p style="margin: 0.35rem 0 0; font-size: 1.45rem; font-weight: 700; color: var(--brand, #8f4722);">180 клика</p>
-        <p style="margin: 0.25rem 0 0; font-size: 0.9rem;">5,34 хил. импресии · поз. 7.6</p>
-      </div>
-      <div style="background: var(--surface, #fff); border: 1px solid var(--ink, #1a1e22); padding: 1rem;">
-        <p style="margin: 0; font-size: 0.85rem; opacity: 0.75;">BdinHost</p>
-        <p style="margin: 0.35rem 0 0; font-size: 1.45rem; font-weight: 700; color: var(--brand, #8f4722);">от 0 → видимост</p>
-        <p style="margin: 0.25rem 0 0; font-size: 0.9rem;">след WordPress → HTML</p>
-      </div>
-    </div>
-    <div style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
-      <a href="/case-studies.html#search-console" class="cta-primary">Виж Search Console доказателствата</a>
-      <a href="/blog/html-saitove-google-search-console-2026.html" class="cta-primary">Прочети статията в блога</a>
-    </div>
-  </div>
-
-  <section>
-    <h2>Защо Да Поръчате HTML Сайт при Нас</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>⏱️ Бърза Изработка</h3>
-        <p>Професионална изработка без месеци чакане. Готови за пускане без забавяния. Значително по-бързо от WordPress агенции.</p>
-      </div>
-      <div class="card">
-        <h3>🛠️ Професионални Инструменти</h3>
-        <p>Използваме най-добрите практики за HTML/CSS, оптимизация и сигурност.</p>
-      </div>
-      <div class="card">
-        <h3>🤝 Гаранция за Качество</h3>
-        <p>Цел за 100 PageSpeed при дефинирани условия. 30 дни за корекции след пускане. Пълно съдействие.</p>
-      </div>
-      <div class="card">
-        <h3>📋 Без Скрити Такси</h3>
-        <p>Фиксирана еднократна цена по договор. При просрочен срок — автоматична компенсация от 5% за всеки просрочен ден. <a href="/faq.html">Виж всички гаранции</a>.</p>
+      <div class="hero__actions reveal" style="margin-top:1.5rem;">
+        <a href="/case-studies.html#search-console" class="btn btn--secondary">Search Console доказателства</a>
+        <a href="/blog/html-saitove-google-search-console-2026.html" class="btn btn--secondary">Статия в блога</a>
       </div>
     </div>
   </section>
 
-  <section id="faq">
-    <h2>Често задавани въпроси</h2>
-    <div class="grid">
-      <div class="card faq-item">
-        <h3>Колко струва изработка на сайт?</h3>
-        <p>От <strong>400€</strong> за визитка или landing page до <strong>1000€+</strong> за корпоративен сайт. Годишни разходи: 23-48€. Виж <a href="/izrabotka-na-sait.html">пълната ценова разбивка</a> или <a href="/calculator.html">калкулатора</a>.</p>
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__label">Защо ние</span>
+        <h2>Защо HTML сайт при MOVER Studio</h2>
       </div>
-      <div class="card faq-item">
-        <h3>Защо HTML вместо WordPress?</h3>
-        <p>HTML = по-бързо зареждане, по-нисък риск от хакване, без месечни такси за плъгини. Виж <a href="/wordpress-alternativa.html">WordPress алтернатива</a> или <a href="/blog/zashto-wordpress-e-baven.html">защо WordPress е бавен</a>.</p>
-      </div>
-      <div class="card faq-item">
-        <h3>Колко време отнема изработката?</h3>
-        <p>Визитка: 3-5 работни дни. Корпоративен: 10-14 работни дни. Зависи от готовността на текстовете и снимките.</p>
-      </div>
-      <div class="card faq-item">
-        <h3>Работите ли с клиенти от София?</h3>
-        <p>Да — и от цяла България. Процесът е дистанционен. За столичния пазар виж <a href="/izrabotka-na-sait-sofia.html">изработка на сайтове София</a>.</p>
-      </div>
-      <div class="card faq-item">
-        <h3>Има ли месечни такси?</h3>
-        <p>Не. Само домейн и хостинг (23-48€/год). HTML няма нужда от месечна поддръжка, плъгини или WordPress абонаменти.</p>
+      <div class="grid grid--2 reveal">
+        <article class="card"><h3>⏱️ Бърза изработка</h3><p>3–5 дни визитка, 10–14 корпоративен — без месеци чакане.</p></article>
+        <article class="card"><h3>🛠️ Чист код</h3><p>HTML/CSS best practices, schema, Core Web Vitals.</p></article>
+        <article class="card"><h3>🤝 Гаранция</h3><p>Цел 95–100 PageSpeed · 30 дни корекции · 5% компенсация при закъснение.</p></article>
+        <article class="card"><h3>📋 Без скрити такси</h3><p>Еднократна цена. <a href="/faq.html">Виж всички условия</a>.</p></article>
       </div>
     </div>
-    <p style="margin-top: 1.5rem; text-align: center;">
-      <a href="/faq.html">Виж всички въпроси и отговори →</a>
-    </p>
   </section>
 
-  <section id="contact" style="text-align: center;">
-    <h2>Вземете оферта за вашия проект</h2>
-    <p style="max-width: 72ch; margin-left: auto; margin-right: auto;">
-      Изпратете ни описание на вашия бизнес. Ще ви върнем ясна посока и цена в кратък срок.
-    </p>
-    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 1.5rem 0;">
-      <a href="mailto:admin@moverstudio.online?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20HTML%20%D1%81%D0%B0%D0%B9%D1%82&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%3A%20%0A%D0%A2%D0%B8%D0%BF%20%D1%81%D0%B0%D0%B9%D1%82%20(%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D0%B0%2F%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%B5%D0%BD%2Flanding)%3A%20%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B2%D1%80%D1%8A%D0%B7%D0%BA%D0%B0%3A%20" class="cta-primary">✉ Изпрати запитване</a>
-      <a href="tel:+359877845569" class="cta-primary">☎ +359 877 845 569</a>
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__label">ЧЗВ</span>
+        <h2>Често задавани въпроси</h2>
+      </div>
+      <div class="grid grid--2 faq-grid reveal">
+        <article class="card"><h3>Колко струва изработка на сайт?</h3><p>От <strong>400€</strong> до <strong>1000€+</strong>. Годишно 23–48€. <a href="/izrabotka-na-sait.html">Ценова разбивка</a> · <a href="/blog/kolko-struva-izrabotka-na-sait-2026.html">подробна статия</a>.</p></article>
+        <article class="card"><h3>Защо HTML вместо WordPress?</h3><p>По-бързо, по-сигурно, без месечни такси. <a href="/wordpress-alternativa.html">Алтернатива</a> · <a href="/blog/zashto-wordpress-e-baven.html">защо WP е бавен</a>.</p></article>
+        <article class="card"><h3>Колко време отнема?</h3><p>Визитка: 3–5 дни. Корпоративен: 10–14 дни.</p></article>
+        <article class="card"><h3>Работите ли от София?</h3><p>Да — дистанционно за цяла България. <a href="/izrabotka-na-sait-sofia.html">София</a>.</p></article>
+        <article class="card"><h3>Има ли месечни такси?</h3><p>Не. Само домейн + хостинг 23–48€/год.</p></article>
+      </div>
+      <p class="reveal" style="text-align:center;margin-top:1.5rem;"><a href="/faq.html">Всички въпроси →</a></p>
     </div>
-    <p style="font-weight: bold;">
-      ✉️ Email: <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a>
-    </p>
-    <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.95rem; max-width: 72ch; margin-left: auto; margin-right: auto;">
-      Работим с клиенти от цяла България. Отговаряме в рамките на 24 часа.
-    </p>
   </section>
 
-  <div id="request-brief" style="display: none;">
-    <!-- This section was repurposed for the new contact section, so it's hidden or removed -->
-  </div>
-
-  </article>
+  <section class="section" id="contact">
+    <div class="container reveal">
+      <div class="contact-block">
+        <h2>Запитване за проект</h2>
+        <p>Опишете бизнеса си — ще отговорим в рамките на 24 часа с ясна посока и цена.</p>
+        <div class="hero__actions" style="margin:1.5rem 0 1rem;">
+          <a href="mailto:admin@moverstudio.online?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20HTML%20%D1%81%D0%B0%D0%B9%D1%82" class="btn btn--primary">✉ Изпрати запитване</a>
+          <a href="tel:+359877845569" class="btn btn--secondary">☎ +359 877 845 569</a>
+        </div>
+        <p style="font-size:0.85rem;">admin@moverstudio.online · Работим с клиенти от цяла България</p>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<footer style="text-align: center;">
-  <p class="terminal">
-    © 2026 MOVER_STUDIO<br>
-    &gt; Built without WordPress<br>
-    &gt; Built with HTML and a lot of stubbornness<br>
-    &gt; 99 PageSpeed е добре, но ние гоним 100<br>
-    &gt; <span class="cursor">_</span>
-  </p>
-  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
-    "Free your mind" – Morpheus
-  </p>
-  <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-primary);">
-    Услуги: <a href="/services/">Изработка на сайт</a> | 
-    <a href="/izrabotka-na-landing-page.html">Изработка на landing page</a> | 
-    <a href="/sait-vizitka.html">Сайт визитка</a> | 
-    <a href="/korporativen-sait.html">Корпоративен сайт</a> | 
-    <a href="/wordpress-alternativa.html">Алтернатива на WordPress</a> | 
-    <a href="/index.html">HTML сайт</a> | 
-    <a href="/seo-optimizacia.html">SEO оптимизация</a>
-  </p>
-  <p style="margin-top: 1rem;">
-    <a href="/">Начало</a> | 
-    <a href="/services/">Услуги</a> | 
-    <a href="/calculator.html">Калкулатор</a> | 
-    <a href="/about.html">За Нас</a> | 
-    <a href="/#contact">Контакт</a> | 
-    <a href="/blog/">Блог</a> |
-    <a href="/blog/sait-vizitka-portfolio-malk-biznes-2026.html">Сайт визитка и портфолио</a> | 
-    <a href="/faq.html">ЧЗВ</a> | 
-    <a href="https://moverstudio.online/llms-full.txt">AI Documentation (llms-full.txt)</a>
-  </p>
-  <section class="partners" style="margin-top: 2rem; text-align: center; color: var(--text-muted);">
-    <h3 style="color: var(--brand); font-size: 1.2rem; margin-bottom: 0.5rem;">Партньори и проекти</h3>
-    <p>Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener" style="color: var(--brand);">BDinHost</a>.</p>
-    <p style="margin-top: 0.75rem;">Свързани бизнеси — същият екип:
-      <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener" style="color: var(--brand);">Пътна помощ Костинброд</a>
-      (5.0 / 106 отзива в Google) ·
-      <a href="https://minibagerkb.eu/" target="_blank" rel="noopener" style="color: var(--brand);">Минибагер Костинброд</a>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="/izrabotka-na-sait.html">Изработка на сайт</a>
+      <a href="/sait-vizitka.html">Визитка</a>
+      <a href="/korporativen-sait.html">Корпоративен</a>
+      <a href="/calculator.html">Калкулатор</a>
+      <a href="/blog/">Блог</a>
+      <a href="/faq.html">ЧЗВ</a>
+      <a href="/about.html">За нас</a>
+      <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
+      <a href="/seo-optimizacia.html">SEO</a>
+    </div>
+    <p class="footer-terminal" style="margin-top:1.5rem;">
+      © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
+      Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·
+      <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a> ·
+      <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
     </p>
-  </section>
+  </div>
 </footer>
 
-<!-- Conversion tracking placeholder: replace with real analytics snippet (Google Tag, Fathom, or server event) -->
-<script>
-  (function(){
-    window.dataLayer = window.dataLayer || [];
-    function trackConversion(name, details){
-      try{ window.dataLayer.push({event: name, details: details}); }catch(e){ console.log('trackConversion', name, details); }
-    }
-
-    // Track clicks on contact CTAs site-wide
-    document.addEventListener('click', function(e){
-      var el = e.target.closest && e.target.closest('a');
-      if(!el) return;
-      var href = el.getAttribute('href') || '';
-      if(href.indexOf('#contact') !== -1 || href.indexOf('/index.html#contact') !== -1){
-        trackConversion('contact_cta_click', {href: href, text: (el.textContent||'').trim()});
-      }
-    }, false);
-
-    // Expose simple API for server-side or build-time hooking
-    window.moverStudio = window.moverStudio || {};
-    window.moverStudio.trackConversion = trackConversion;
-  })();
-</script>
-
-<!-- Easter Egg: Mouse Coordinates Over H1 -->
-<script>
-(function() {
-  const h1 = document.querySelector('h1');
-  if (!h1) return;
-  
-  // Create coordinate display element
-  const coordDisplay = document.createElement('div');
-  coordDisplay.style.cssText = `
-    position: fixed;
-    display: none;
-    background: rgba(242, 238, 227, 0.95);
-    border: 1px solid #1a1e22;
-    padding: 0.5rem 0.75rem;
-    font-family: 'Share Tech Mono', 'Courier New', monospace;
-    font-size: 0.75rem;
-    color: #1a1e22;
-    pointer-events: none;
-    z-index: 9999;
-    letter-spacing: 0.05em;
-    box-shadow: 2px 2px 8px rgba(26, 30, 34, 0.15);
-    white-space: nowrap;
-  `;
-  document.body.appendChild(coordDisplay);
-  
-  // Track mouse position when hovering over H1
-  h1.addEventListener('mouseenter', function() {
-    coordDisplay.style.display = 'block';
-  });
-  
-  h1.addEventListener('mouseleave', function() {
-    coordDisplay.style.display = 'none';
-  });
-  
-  h1.addEventListener('mousemove', function(event) {
-    const x = Math.round(event.clientX);
-    const y = Math.round(event.clientY);
-    coordDisplay.textContent = `X: ${x} | Y: ${y}`;
-    
-    // Position the display near the cursor (offset by a few pixels)
-    coordDisplay.style.left = (x + 12) + 'px';
-    coordDisplay.style.top = (y - 32) + 'px';
-  });
-})();
-</script>
-
+<script src="/js/site.js" defer></script>
 </body>
 </html>

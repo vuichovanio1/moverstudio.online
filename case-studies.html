@@ -15,729 +15,17 @@
   <meta name="description" content="Реални доказателства от Google Search Console: органични кликове, импресии и позиции за HTML сайтове без WordPress. PageSpeed 100 и видимост в Google.">
   <link rel="canonical" href="https://moverstudio.online/case-studies.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/case-studies.html">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/images/favicon.ico" sizes="48x48">
-  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<style>
-:root {
-  --paper: #f4f0e8;
-  --ink: #1a1e22;
-  --brand: #8f4722;
-  --line: rgba(26, 30, 34, 0.08);
-  --mono: 'Share Tech Mono', 'Courier New', Courier, monospace;
-  --serif: 'IM Fell English', Georgia, 'Times New Roman', serif;
-  --surface: #ffffff;
-  --shadow: rgba(26, 30, 34, 0.08);
-  --max-width: 1140px;
-}
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
+  <link rel="preload" href="/fonts/share-tech-mono-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/pages.css">
 
-
-/* Self-hosted fonts - no external dependencies */
-@font-face {
-  font-family: 'IM Fell English';
-  src: local('IM Fell English'), local('IMFellEnglish'), url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IM Fell English';
-  src: local('IM Fell English Italic'), url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Share Tech Mono';
-  src: local('Share Tech Mono'), local('ShareTechMono'), url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  background: var(--paper);
-}
-
-body {
-  min-height: 100vh;
-  color: var(--ink);
-  font-family: var(--mono);
-  line-height: 1.6;
-  background: var(--paper);
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 40px 40px;
-  text-rendering: optimizeLegibility;
-}
-
-img, svg, video, canvas {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: var(--brand);
-  text-decoration: none;
-  border-bottom: 1px dashed rgba(143, 71, 34, 0.35);
-}
-
-a:hover {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
-}
-
-header,
-nav {
-  position: sticky !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(242, 238, 227, 0.94) !important;
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--ink) !important;
-}
-
-header nav,
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 2rem;
-}
-
-header strong,
-nav strong,
-.logo,
-nav > a > strong {
-  font-family: var(--serif);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  font-size: 1.05rem;
-}
-
-.logo span {
-  color: var(--brand);
-}
-
-nav a,
-nav span,
-nav div {
-  color: var(--ink);
-}
-
-nav a {
-  padding: 0.35rem 0.65rem;
-}
-
-nav a:hover {
-  background: rgba(143, 71, 34, 0.08);
-}
-
-main {
-  position: relative;
-  width: min(var(--max-width), calc(100vw - 2rem));
-  margin: 0 auto;
-  padding: 5rem 0 3rem;
-}
-
-.hero {
-  padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.hero > * {
-  width: 100%;
-}
-
-.blueprint-wrap {
-  width: min(1100px, 100%);
-  background: var(--surface);
-  border: 1px solid var(--ink);
-  padding: 4rem;
-  position: relative;
-  box-shadow: 20px 20px 0 var(--line);
-}
-
-.anno {
-  position: absolute;
-  font-size: 0.65rem;
-  color: var(--brand);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.top-l {
-  top: 1rem;
-  left: 1rem;
-}
-
-.bot-r {
-  bottom: 1rem;
-  right: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--serif);
-  color: var(--ink);
-  margin: 0 0 1rem;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
-  line-height: 1;
-}
-
-h1 em {
-  color: var(--brand);
-  font-style: italic;
-  border-bottom: 2px solid var(--brand);
-}
-
-h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--line);
-}
-
-p,
-ul,
-ol,
-li,
-dt,
-dd,
-label {
-  color: rgba(26, 30, 34, 0.88);
-}
-
-p {
-  max-width: 72ch;
-}
-
-section,
-article,
-aside,
-.hero,
-.calculator,
-.calculator-note,
-.price-display,
-.call-to-action,
-.portfolio-grid,
-.portfolio-item,
-.about-card,
-.faq-item,
-.type-grid,
-.extras-grid,
-.result-box,
-.card,
-.panel,
-.box,
-.tile,
-.item,
-.block,
-.step,
-.feature,
-.service,
-.pricing,
-.testimonial,
-.summary-card,
-.info-card,
-.detail-card {
-  background: var(--surface) !important;
-  border: 1px solid var(--ink) !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  color: var(--ink) !important;
-  padding: 1.5rem;
-}
-
-section[style],
-article[style],
-div[style],
-p[style],
-span[style] {
-  background: transparent !important;
-  border: none !important;
-}
-
-.cta-primary,
-.btn,
-.button,
-.cta-group a,
-.btn-fill,
-.cta-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  border: 1px solid var(--ink);
-  background: transparent;
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 700;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-fill {
-  background: var(--ink);
-  color: #fff;
-}
-
-.cta-primary:hover,
-.btn:hover,
-.button:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 4px 4px 0 var(--brand);
-}
-
-.technical-drawing {
-  margin-top: 2rem;
-  border-top: 1px dashed var(--brand);
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
-.spec-item {
-  border-left: 2px solid var(--brand);
-  padding-left: 1rem;
-}
-
-.spec-item strong {
-  display: block;
-  font-size: 1.2rem;
-  color: var(--brand);
-  margin-bottom: 0.5rem;
-}
-
-.spec-item span {
-  font-size: 0.75rem;
-  color: #777;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-button,
-input,
-textarea,
-select {
-  font-family: var(--mono);
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(26, 30, 34, 0.18);
-  color: var(--ink);
-  padding: 0.9rem 1rem;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  accent-color: var(--brand);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--surface);
-  border: 1px solid var(--ink);
-}
-
-th,
-td {
-  padding: 0.95rem 1rem;
-  border-bottom: 1px solid rgba(26, 30, 34, 0.18);
-}
-
-th {
-  text-align: left;
-  font-family: var(--mono);
-  color: var(--ink);
-}
-
-blockquote {
-  margin: 1.5rem 0;
-  padding: 1.2rem 1.35rem;
-  border-left: 3px solid rgba(143, 71, 34, 0.25);
-  background: rgba(255, 255, 255, 0.92);
-}
-
-ul,
-ol {
-  padding-left: 1.25rem;
-}
-
-li + li {
-  margin-top: 0.55rem;
-}
-
-/* TECHNICAL ANNOTATIONS & DIMENSION LINES */
-section,
-article,
-.blueprint-wrap,
-.hero,
-.calculator,
-.result-box {
-  position: relative;
-}
-
-section::before,
-article::before,
-.blueprint-wrap::before,
-.hero::before,
-.calculator::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--brand) 0%, transparent 100%);
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-/* Technical annotation corners */
-section::after,
-article::after,
-.blueprint-wrap::after {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-left: 1px solid var(--brand);
-  border-top: 1px solid var(--brand);
-  top: -1px;
-  left: -1px;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-/* Metadata labels in corners */
-.technical-drawing::before {
-  content: 'SYSTEM: HTML5 | CORE: STATIC | SPEED: MAX';
-  position: absolute;
-  font-size: 0.55rem;
-  color: var(--brand);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  top: -1.8rem;
-  left: 0;
-  opacity: 0.6;
-  font-family: var(--mono);
-  pointer-events: none;
-}
-
-/* Dimension lines on hover */
-.blueprint-wrap:hover::before {
-  opacity: 0.6;
-  background: linear-gradient(90deg, var(--brand) 0%, var(--brand) 50%, transparent 100%);
-  transition: opacity 0.3s ease, background 0.3s ease;
-}
-
-.calculator:hover::before {
-  opacity: 0.5;
-  background: linear-gradient(90deg, var(--brand) 0%, transparent 60%);
-  transition: opacity 0.3s ease;
-}
-
-/* Centered layout improvements */
-main, .hero, article {
-  text-align: center;
-}
-
-p, .description {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-img, figure {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.portfolio-grid,
-.type-grid,
-.extras-grid {
-  display: grid;
-  gap: 1rem;
-  margin: 2rem auto;
-  justify-items: center;
-}
-
-.portfolio-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  counter-reset: fig-counter;
-}
-
-.portfolio-item,
-.case-study figure {
-  position: relative;
-  counter-increment: fig-counter;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--ink);
-  padding: 0;
-  overflow: hidden;
-  background-image:
-    linear-gradient(var(--brand), var(--brand)),
-    linear-gradient(var(--brand), var(--brand)),
-    linear-gradient(var(--brand), var(--brand)),
-    linear-gradient(var(--brand), var(--brand));
-  background-repeat: no-repeat;
-  background-position: top left, top right, bottom right, bottom left;
-  background-size: 0 1px, 1px 0, 0 1px, 1px 0;
-}
-
-.portfolio-item:hover,
-.case-study figure:hover {
-  background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-  transition: background-size 0.88s ease;
-}
-
-.portfolio-item img,
-.case-study figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--ink);
-  filter: saturate(0.7) sepia(0.15) brightness(1.05);
-  transition: filter 0.3s ease;
-}
-
-.portfolio-item:hover img,
-.case-study figure:hover img {
-  filter: saturate(0.85) sepia(0.1) brightness(1.08);
-}
-
-.portfolio-item figcaption,
-.case-study figure figcaption {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  padding: 0.75rem;
-  background: rgba(242, 238, 227, 0.95);
-  border-top: 1px solid var(--ink);
-  color: var(--ink);
-  text-align: center;
-  letter-spacing: 0.05em;
-  position: relative;
-}
-
-.portfolio-item figcaption::before,
-.case-study figure figcaption::before {
-  content: 'FIG. ' counter(fig-counter, decimal-leading-zero);
-  display: block;
-  font-size: 0.65rem;
-  color: var(--brand);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 0.35rem;
-  opacity: 0.7;
-}
-
-.portfolio-item figcaption::after,
-.case-study figure figcaption::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--brand) 0%, transparent 100%);
-  opacity: 0.3;
-}
-
-.type-grid {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  max-width: 900px;
-}
-
-.extras-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  max-width: 1000px;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1.25rem;
-}
-
-.proof {
-  background: var(--surface);
-  border: 1px solid var(--ink);
-  padding: 1.25rem;
-}
-
-.proof h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.15rem;
-}
-
-.proof .metric {
-  font-family: var(--serif);
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  color: var(--brand);
-  line-height: 1.1;
-  margin: 0.35rem 0 0.5rem;
-}
-
-.gsc-note {
-  max-width: 72ch;
-  margin: 0.75rem auto 0;
-  color: rgba(26, 30, 34, 0.75);
-  font-size: 0.92rem;
-}
-
-.comparison {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-/* Enhanced button styling with dimension lines */
-.cta-primary,
-.btn,
-.button {
-  position: relative;
-  border: 2px solid var(--ink);
-  transition: all 0.3s ease;
-}
-
-.cta-primary:hover::before,
-.btn:hover::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--brand);
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-/* Technical annotations metadata */
-.result-box::before {
-  content: 'LOAD_TIME: 0.34s | CLEAN_CODE: 100% | NO_WP_STRUCTURE';
-  position: absolute;
-  bottom: -2rem;
-  left: 0;
-  font-size: 0.55rem;
-  color: var(--brand);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.5;
-  font-family: var(--mono);
-  pointer-events: none;
-}
-
-/* Centered text with blueprint accent */
-h1, h2, h3 {
-  text-align: center;
-  position: relative;
-}
-
-h1::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: var(--brand);
-  margin: 0.5rem auto 0;
-  opacity: 0.4;
-}
-
-/* Enhanced navigation centering */
-nav {
-  justify-content: center;
-  text-align: center;
-}
-
-nav > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  width: 100%;
-}
-
-/* Footer centering */
-footer {
-  padding: 3rem 1rem 2rem;
-  text-align: center;
-  background: rgba(242, 238, 227, 0.92);
-  border-top: 1px solid var(--ink);
-}
-
-.skip-link {
-  position: absolute !important;
-  left: -9999px !important;
-  top: auto !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-}
-
-.skip-link:focus {
-  position: fixed !important;
-  left: 0 !important;
-  top: 0 !important;
-  width: auto !important;
-  height: auto !important;
-  overflow: visible !important;
-  padding: 1rem !important;
-  background: #000 !important;
-  color: #fff !important;
-  z-index: 1001 !important;
-}
-
-@media (max-width: 900px) {
-  main {
-    width: min(var(--max-width), calc(100vw - 1.25rem));
-  }
-  header nav,
-  nav {
-    padding: 1rem 1rem;
-  }
-  .technical-drawing {
-    grid-template-columns: 1fr;
-  }
-  .blueprint-wrap {
-    padding: 2rem;
-  }
-  .cta-group {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-</style>
   <meta property="og:title" content="Case studies | Реални Search Console резултати | MOVER Studio">
   <meta property="og:description" content="Проверими данни от Google Search Console: кликове, импресии и позиции за HTML сайтове без WordPress. PageSpeed 100 и реална органична видимост.">
-  <meta property="og:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta property="og:image" content="https://moverstudio.online/og-image.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
@@ -750,7 +38,7 @@ footer {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Case studies | Реални Search Console резултати | MOVER Studio">
   <meta name="twitter:description" content="Проверими данни от Google Search Console: кликове, импресии и позиции за HTML сайтове без WordPress.">
-  <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=1">
+  <meta name="twitter:image" content="https://moverstudio.online/og-image.png?v=2">
   <meta name="twitter:image:alt" content="Case studies на HTML сайтове | Реални резултати и PageSpeed | MOVER Studio">
   <meta name="twitter:site" content="@moverstudio_bg">
 
@@ -768,7 +56,7 @@ footer {
         "url": "https://moverstudio.online",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://moverstudio.online/og-image.png?v=1"
+          "url": "https://moverstudio.online/og-image.png?v=2"
         },
         "subjectOf": {
           "@type": "CreativeWork",
@@ -879,15 +167,6 @@ footer {
             },
             {
               "@type": "CreativeWork",
-              "name": "minibagerkostinbrod.pages.dev – Мини Багер и Транспорт",
-              "description": "HTML сайт за изкопни услуги, покриващ широка област (клиентски проект).",
-              "url": "https://minibagerkostinbrod.pages.dev",
-              "creator": {
-                "@id": "https://moverstudio.online/#organization"
-              }
-            },
-            {
-              "@type": "CreativeWork",
               "name": "minibagerkb.eu – Минибагер Костинброд",
               "description": "Свързан бизнес на същия екип — локални SEO страници за минибагер услуги.",
               "url": "https://minibagerkb.eu",
@@ -942,23 +221,24 @@ footer {
 </head>
 <body>
 
-<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible;z-index:9999;padding:1rem;background:var(--ink);color:var(--paper);font-size:1rem;text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Прескочи към съдържанието</a>
+<a href="#main" class="skip-link">Прескочи към съдържанието</a>
 
-<header>
-  <nav aria-label="Основна навигация">
-    <a href="/" style="border-bottom: none;"><strong>MOVER_STUDIO</strong></a>
-    <span class="terminal">Бързи HTML сайтове без WordPress</span>
-    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
-      <a href="/services/">Услуги</a>
-      <a href="/izrabotka-na-landing-page.html">Landing page</a>
-      <a href="/html-sait.html">HTML сайт</a>
-      <a href="/izrabotka-na-sait-sofia.html">София</a>
-      <a href="/sait-vizitka.html">Визитка</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-logo">MOVER Studio</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Основна навигация">
+      <a href="/izrabotka-na-sait.html">Услуги</a>
       <a href="/calculator.html">Калкулатор</a>
       <a href="/case-studies.html">Case Studies</a>
-      <a href="/about.html">За Нас</a>
-    </div>
-  </nav>
+      <a href="/blog/">Блог</a>
+      <a href="/faq.html">ЧЗВ</a>
+      <a href="/about.html">За нас</a>
+      <a href="/#contact" class="nav-cta">Контакт</a>
+    </nav>
+  </div>
 </header>
 
 <main id="main">
@@ -1016,6 +296,249 @@ footer {
       </div>
     </div>
 
+
+
+      <section id="projects-overview" style="margin-top: 2.5rem;">
+        <div class="google-proof-banner" id="proveri-v-google">
+          <h2>Провери сам в Google</h2>
+          <p>Кликни на фраза — виж проекта <strong>сред резултатите</strong>, не на скрийншот. Search Console данните остават по-долу за любопитни.</p>
+          <p class="google-proof-banner__framing">При конкурентни заявки позицията може да варира — важното е, че сме на първа страница, не на петата.</p>
+          <a href="https://www.google.com/search?q=mover+studio+%D0%B8%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D0%BD%D0%B0+%D1%81%D0%B0%D0%B9%D1%82&hl=bg&gl=bg" class="cta-primary" target="_blank" rel="noopener noreferrer">Потърси MOVER Studio в Google</a>
+        </div>
+        <div class="projects-showcase">
+
+          <article class="project-card-v2" id="mover-studio">
+            <div class="project-card-v2__head">
+              <div class="project-card-v2__meta"><span class="project-badge">MOVER Studio</span><span class="project-badge">Услуги</span></div>
+              <h3><a href="/izrabotka-na-sait.html">MOVER Studio — изработка на HTML сайтове</a></h3>
+              <p class="project-card-v2__metric">От 400€ · без WordPress</p>
+              <p class="project-card-v2__desc">Нашите услуги — потърси как стоят в Google преди да поръчаш.</p>
+            </div>
+            <div class="project-card-v2__body" style="padding:0.75rem;">
+                          <div class="google-proof">
+              <p class="google-proof__lead">Провери сам в Google</p>
+              <p class="google-proof__note">Търси от телефона или desktop — резултатите може леко да се различават по локация.</p>
+              <div class="google-proof__queries">
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B8%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D0%BD%D0%B0+html+%D1%81%D0%B0%D0%B9%D1%82&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">изработка на html сайт</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B8%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3+%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">изработка на лендинг страница</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B0%D0%BB%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%B0+%D0%BD%D0%B0+wordpress&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">алтернатива на wordpress</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B8%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D0%BD%D0%B0+%D1%81%D0%B0%D0%B9%D1%82+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">изработка на сайт софия</a>
+              </div>
+            </div>
+            </div>
+            <div class="project-card-v2__foot">
+              <a href="/izrabotka-na-sait.html" class="cta-secondary">Виж услугите</a>
+              <a href="/izrabotka-na-sait.html" class="cta-primary">Още информация</a>
+            </div>
+          </article>
+
+          <article class="project-card-v2" id="roadassistancesofia">
+            <div class="project-card-v2__head">
+              <div class="project-card-v2__meta"><span class="project-badge">Корпоративен</span><span class="project-badge">14 локации</span><span class="project-badge">Multi-location</span></div>
+              <h3><a href="https://roadassistancesofia.bg" target="_blank" rel="noopener">roadassistancesofia.bg</a></h3>
+              <p class="project-card-v2__metric">14 HTML страници</p>
+              <p class="project-card-v2__desc">Пътна помощ в софийски райони — отделна landing за всеки район (не централна София).</p>
+            </div>
+            <div class="project-card-v2__body">
+              <figure>
+                <img src="/images/portfolio-2026/roadassistancesofia-site.webp" alt="roadassistancesofia.bg" loading="lazy" width="1280" height="800">
+                <figcaption>Сайт</figcaption>
+              </figure>
+                          <div class="google-proof">
+              <p class="google-proof__lead">Провери сам в Google</p>
+              <p class="google-proof__note">Покрива районите на обслужване — пробвай квартал или село около София.</p>
+              <div class="google-proof__queries">
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BC%D0%BB%D0%B0%D0%B4%D0%BE%D1%81%D1%82&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ младост</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BB%D1%8E%D0%BB%D0%B8%D0%BD&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ люлин</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D1%82%D1%80%D0%B5%D0%B1%D0%B8%D1%87&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ требич</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BD%D0%B5%D0%B3%D0%BE%D0%B2%D0%B0%D0%BD&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ негован</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BD%D0%BE%D0%B2%D0%B8+%D0%B8%D1%81%D0%BA%D1%8A%D1%80&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ нови искър</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%D1%80%D0%B0%D1%87%D0%B5%D0%BD%D0%B5&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ световрачене</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8+%D0%B3%D1%80%D0%B0%D0%B4&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ студентски град</a>
+              </div>
+            </div>
+            </div>
+            <div class="project-card-v2__foot">
+              <a href="https://roadassistancesofia.bg" class="cta-secondary" target="_blank" rel="noopener">Отвори сайта</a>
+              <a href="#portfolio-detailed" class="cta-primary">Още информация</a>
+            </div>
+          </article>
+
+          <article class="project-card-v2" id="patna-pomosht">
+            <div class="project-card-v2__head">
+              <div class="project-card-v2__meta"><span class="project-badge">Калкулатор</span><span class="project-badge">11 локации</span><span class="project-badge">5.0 / 106 отзива</span></div>
+              <h3><a href="https://patna-pomosht-kostinbrod.bg" target="_blank" rel="noopener">patna-pomosht-kostinbrod.bg</a></h3>
+              <p class="project-card-v2__metric">460 клика · GSC</p>
+              <p class="project-card-v2__desc">Пътна помощ Костинброд и региона — най-силният органичен резултат в портфолиото.</p>
+            </div>
+            <div class="project-card-v2__body">
+              <figure>
+                <img src="/images/portfolio-2026/patna-pomosht-kostinbrod-site.webp" alt="patna-pomosht-kostinbrod.bg" loading="lazy" width="1280" height="800">
+                <figcaption>Сайт</figcaption>
+              </figure>
+                          <div class="google-proof">
+              <p class="google-proof__lead">Провери сам в Google</p>
+              <div class="google-proof__queries">
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BA%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B1%D1%80%D0%BE%D0%B4&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ костинброд</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%B1%D0%BE%D0%B6%D1%83%D1%80%D0%B8%D1%89%D0%B5&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ божурище</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%B8%D1%86%D0%B0&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ сливница</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%B4%D1%80%D0%B0%D0%B3%D0%BE%D0%BC%D0%B0%D0%BD&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ драгоман</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%B3%D0%BE%D0%B4%D0%B5%D1%87&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ годеч</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%B1%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ ботевград</a>
+              </div>
+            </div>
+            </div>
+            <div class="project-card-v2__foot">
+              <a href="https://patna-pomosht-kostinbrod.bg" class="cta-secondary" target="_blank" rel="noopener">Отвори сайта</a>
+              <a href="#portfolio-detailed" class="cta-primary">Още информация</a>
+            </div>
+          </article>
+
+          <article class="project-card-v2" id="matiyhelp">
+            <div class="project-card-v2__head">
+              <div class="project-card-v2__meta"><span class="project-badge">4 езика</span><span class="project-badge">12 локации</span><span class="project-badge">hreflang</span></div>
+              <h3><a href="https://matiyhelp.bg" target="_blank" rel="noopener">matiyhelp.bg</a></h3>
+              <p class="project-card-v2__metric">13,4 хил. импресии</p>
+              <p class="project-card-v2__desc">Пътна помощ на границата и Западна София — отделни HTML файлове по език.</p>
+            </div>
+            <div class="project-card-v2__body">
+              <figure>
+                <img src="/images/portfolio-2026/matiyhelp-site.webp" alt="matiyhelp.bg" loading="lazy" width="1280" height="800">
+                <figcaption>Сайт</figcaption>
+              </figure>
+                          <div class="google-proof">
+              <p class="google-proof__lead">Провери сам в Google</p>
+              <p class="google-proof__note">Същият екип като PPK — пробвай населено място от зоната на обслужване.</p>
+              <div class="google-proof__queries">
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%B3%D0%BE%D0%B4%D0%B5%D1%87&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ годеч</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BA%D0%B0%D0%BB%D0%BE%D1%82%D0%B8%D0%BD%D0%B0&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ калотина</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D1%85%D0%B0%D0%BD&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ петрохан</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D0%B4%D1%80%D0%B0%D0%B3%D0%BE%D0%BC%D0%B0%D0%BD&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ драгоман</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BF%D1%8A%D1%82%D0%BD%D0%B0+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89+%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%B8%D1%86%D0%B0&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">пътна помощ сливница</a>
+              </div>
+            </div>
+            </div>
+            <div class="project-card-v2__foot">
+              <a href="https://matiyhelp.bg" class="cta-secondary" target="_blank" rel="noopener">Отвори сайта</a>
+              <a href="#portfolio-detailed" class="cta-primary">Още информация</a>
+            </div>
+          </article>
+
+          <article class="project-card-v2" id="minibagerkb">
+            <div class="project-card-v2__head">
+              <div class="project-card-v2__meta"><span class="project-badge">Собствен домейн</span><span class="project-badge">Локално SEO</span><span class="project-badge">Наш екип</span></div>
+              <h3><a href="https://minibagerkb.eu" target="_blank" rel="noopener">minibagerkb.eu</a></h3>
+              <p class="project-card-v2__metric">CTR 15.8% · GSC</p>
+              <p class="project-card-v2__desc">Минибагер Костинброд — районни страници за изкопни услуги.</p>
+            </div>
+            <div class="project-card-v2__body">
+              <figure>
+                <img src="/images/portfolio-2026/minibagerkb-site.webp" alt="minibagerkb.eu" loading="lazy" width="1280" height="800">
+                <figcaption>Сайт</figcaption>
+              </figure>
+                          <div class="google-proof">
+              <p class="google-proof__lead">Провери сам в Google</p>
+              <div class="google-proof__queries">
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D0%BA%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B1%D1%80%D0%BE%D0%B4&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">мини багер костинброд</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%B8%D1%86%D0%B0&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">мини багер сливница</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D0%B4%D1%80%D0%B0%D0%B3%D0%BE%D0%BC%D0%B0%D0%BD&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">мини багер драгоман</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D0%B1%D0%BE%D0%B6%D1%83%D1%80%D0%B8%D1%89%D0%B5&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">мини багер божурище</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D0%B3%D0%BE%D0%B4%D0%B5%D1%87&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">мини багер годеч</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%BC%D0%B8%D0%BD%D0%B8+%D0%B1%D0%B0%D0%B3%D0%B5%D1%80+%D1%81%D0%BE%D1%84%D0%B8%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">мини багер софия област</a>
+              </div>
+            </div>
+            </div>
+            <div class="project-card-v2__foot">
+              <a href="https://minibagerkb.eu" class="cta-secondary" target="_blank" rel="noopener">Отвори сайта</a>
+              <a href="#minibagerkb-detail" class="cta-primary">Още информация</a>
+            </div>
+          </article>
+
+          <article class="project-card-v2" id="nikoautogaz">
+            <div class="project-card-v2__head">
+              <div class="project-card-v2__meta"><span class="project-badge">GitHub Pages</span><span class="project-badge">Автогаз</span><span class="project-badge">96+ reviews</span></div>
+              <h3><a href="https://nikoautogaz.github.io" target="_blank" rel="noopener">nikoautogaz.github.io</a></h3>
+              <p class="project-card-v2__metric">270 клика · CTR 7.1%</p>
+              <p class="project-card-v2__desc">Автогаз сервиз в София — силен локален резултат дори на github.io.</p>
+            </div>
+            <div class="project-card-v2__body">
+              <figure>
+                <img src="/images/portfolio-2026/nikoautogaz-site.webp" alt="nikoautogaz.github.io" loading="lazy" width="1280" height="800">
+                <figcaption>Сайт</figcaption>
+              </figure>
+                          <div class="google-proof">
+              <p class="google-proof__lead">Провери сам в Google</p>
+              <div class="google-proof__queries">
+                <a class="search-chip" href="https://www.google.com/search?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D1%87%D0%B5%D0%BD+%D0%BC%D0%B5%D1%82%D0%B0%D0%BD&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">ремонт фабричен метан</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BD%D0%B0+%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D1%87%D0%B5%D0%BD+%D0%BC%D0%B5%D1%82%D0%B0%D0%BD&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">ремонт на фабричен метан</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BD%D0%B0+%D0%BC%D0%B5%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0+%D1%83%D1%80%D0%B5%D0%B4%D0%B1%D0%B0+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">ремонт на метанова уредба софия</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B0%D0%B2%D1%82%D0%BE%D0%B3%D0%B0%D0%B7+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">автогаз софия</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2+%D1%83%D1%80%D0%B5%D0%B4%D0%B1%D0%B0+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">газова уредба софия</a>
+              </div>
+            </div>
+            </div>
+            <div class="project-card-v2__foot">
+              <a href="https://nikoautogaz.github.io" class="cta-secondary" target="_blank" rel="noopener">Отвори сайта</a>
+              <a href="#portfolio-detailed" class="cta-primary">Още информация</a>
+            </div>
+          </article>
+
+          <article class="project-card-v2" id="re-peat">
+            <div class="project-card-v2__head">
+              <div class="project-card-v2__meta"><span class="project-badge">Локален магазин</span><span class="project-badge">PageSpeed 100</span></div>
+              <h3><a href="https://re-peat.store" target="_blank" rel="noopener">re-peat.store</a></h3>
+              <p class="project-card-v2__metric">180 клика · GSC</p>
+              <p class="project-card-v2__desc">Физически магазин за дрехи втора употреба в София — локално откриване, не онлайн магазин.</p>
+            </div>
+            <div class="project-card-v2__body">
+              <figure>
+                <img src="/images/portfolio-2026/re-peat-site.webp" alt="re-peat.store" loading="lazy" width="1280" height="800">
+                <figcaption>Сайт</figcaption>
+              </figure>
+                          <div class="google-proof">
+              <p class="google-proof__lead">Провери сам в Google</p>
+              <div class="google-proof__queries">
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B4%D1%80%D0%B5%D1%85%D0%B8+%D0%B2%D1%82%D0%BE%D1%80%D0%B0+%D1%80%D1%8A%D0%BA%D0%B0+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">дрехи втора ръка софия</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B4%D1%80%D0%B5%D1%85%D0%B8+%D0%B2%D1%82%D0%BE%D1%80%D0%B0+%D1%83%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B0+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">дрехи втора употреба софия</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D1%83%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B0%D0%B2%D0%B0%D0%BD%D0%B8+%D0%B4%D1%80%D0%B5%D1%85%D0%B8+%D1%81%D0%BE%D1%84%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">употребявани дрехи софия</a>
+              </div>
+            </div>
+            </div>
+            <div class="project-card-v2__foot">
+              <a href="https://re-peat.store" class="cta-secondary" target="_blank" rel="noopener">Отвори сайта</a>
+              <a href="#portfolio-detailed" class="cta-primary">Още информация</a>
+            </div>
+          </article>
+
+          <article class="project-card-v2" id="bdinhost">
+            <div class="project-card-v2__head">
+              <div class="project-card-v2__meta"><span class="project-badge">WP → HTML</span><span class="project-badge">Миграция</span><span class="project-badge">Хостинг</span></div>
+              <h3><a href="https://bdinhost.com" target="_blank" rel="noopener">bdinhost.com</a></h3>
+              <p class="project-card-v2__metric">75 → 100 PageSpeed</p>
+              <p class="project-card-v2__desc">Хостинг + доказана WordPress → HTML миграция на същата инфраструктура.</p>
+            </div>
+            <div class="project-card-v2__body">
+              <figure>
+                <img src="/images/portfolio-2026/bdinhost-site.webp" alt="bdinhost.com" loading="lazy" width="1280" height="800">
+                <figcaption>Сайт</figcaption>
+              </figure>
+                          <div class="google-proof">
+              <p class="google-proof__lead">Провери сам в Google</p>
+              <div class="google-proof__queries">
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B5%D0%B2%D1%82%D0%B8%D0%BD+%D1%85%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">евтин хостинг</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D0%B5%D0%B2%D1%82%D0%B8%D0%BD+%D1%85%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3+%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">евтин хостинг българия</a>
+                <a class="search-chip" href="https://www.google.com/search?q=%D1%85%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3+%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&hl=bg&gl=bg" target="_blank" rel="noopener noreferrer">хостинг българия</a>
+              </div>
+            </div>
+            </div>
+            <div class="project-card-v2__foot">
+              <a href="https://bdinhost.com" class="cta-secondary" target="_blank" rel="noopener">Отвори сайта</a>
+              <a href="#graphs" class="cta-primary">Още информация</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="results" style="margin-top: 2.5rem;">
         <h2>Резултати</h2>
         <div class="stats-grid">
@@ -1051,7 +574,7 @@ footer {
             <li>Графиките в Search Console са с по-дълъг период нарочно: така се вижда <strong>кога започва сигнал</strong> след пускане — и че преди това (при BdinHost) почти нямаше импресии.</li>
             <li>От 9 свойства <strong>6 имат средна позиция под 10</strong> (често около първа страница).</li>
             <li>Останалите 3 се борят за тежки ключови думи („пътна помощ София“, „хостинг“, „изработка на сайтове“) и пак са със средна позиция <strong>под 20</strong>.</li>
-            <li>Два проекта дори са на <strong>поддомейни</strong> (<code>github.io</code>, <code>pages.dev</code>) — без собствен домейн, и пак трупат кликове и добри позиции.</li>
+            <li>Един проект е на <strong>поддомейн</strong> (<code>github.io</code>) — без собствен домейн, и пак трупа кликове и добра позиция.</li>
           </ul>
         </div>
         <div class="stats-grid">
@@ -1365,6 +888,33 @@ footer {
           <p><strong>Search Console (реални данни):</strong> 270 клика · 3,83 хил. импресии · CTR 7.1% · средна позиция 5.9.</p>
         </div>
 
+        <div class="proof" id="minibagerkb-detail" style="margin-bottom: 2rem;">
+          <h3><a href="https://minibagerkb.eu">minibagerkb.eu</a> – Минибагер Костинброд (наш свързан бизнес)</h3>
+          <div class="portfolio-grid" style="margin-bottom: 1.25rem;">
+            <figure class="portfolio-item">
+              <img src="/images/portfolio-2026/minibagerkb-site.webp" alt="Начална страница на minibagerkb.eu" loading="lazy" width="1280" height="800">
+              <figcaption>Начална страница</figcaption>
+            </figure>
+            <figure class="portfolio-item">
+              <img src="/images/portfolio-2026/minibagerkb-mobile.webp" alt="Мобилен изглед на minibagerkb.eu" loading="lazy" width="390" height="844">
+              <figcaption>Мобилен изглед</figcaption>
+            </figure>
+            <figure class="portfolio-item">
+              <img src="images/gsc-minibagerkb.webp" alt="Search Console за minibagerkb.eu" loading="lazy" width="1400" height="788">
+              <figcaption>Search Console</figcaption>
+            </figure>
+          </div>
+          <p><strong>Какво показва проектът:</strong></p>
+          <ul>
+            <li>Собствен домейн <strong>minibagerkb.eu</strong> — районни landing pages за изкопни услуги</li>
+            <li>Multi-location SEO — отделни HTML страници по населени места</li>
+            <li>Dual sitemap, Google Maps и Facebook sameAs в schema</li>
+            <li>Mobile-first hero с ясен CTA (Viber, телефон)</li>
+          </ul>
+          <p><strong>Search Console:</strong> CTR 15.8% · 22 клика / 139 импресии · позиция 5.8.</p>
+          <p><em>Google 5.0 / 106 отзива са на Пътна помощ Костинброд — не на minibagerkb.eu.</em></p>
+        </div>
+
         <div class="proof">
           <h3>MOVER Studio Methodology: Common Technical Patterns Across All Sites</h3>
           <ul>
@@ -1419,78 +969,28 @@ footer {
 
 </main>
 
-<footer>
-  <p class="terminal">
-    © 2026 MOVER_STUDIO<br>
-    &gt; Built without WordPress<br>
-    &gt; Built with HTML and a lot of stubbornness<br>
-    &gt; 99 PageSpeed е силен резултат, но ние често гоним 100<br>
-    &gt; <span class="cursor">_</span>
-  </p>
-  <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
-    "Free your mind" – Morpheus
-  </p>
-  <p style="margin-top: 1rem;">
-    <a href="/index.html">Начало</a> | 
-    <a href="/izrabotka-na-sait.html">Услуги</a> | 
-    <a href="/calculator.html">Калкулатор</a> | 
-    <a href="/case-studies.html">Доказателства</a> | 
-    <a href="/about.html">За Нас</a> | 
-    <a href="/#contact">Контакт</a> | 
-    <a href="/blog/">Блог</a> | 
-    <a href="https://moverstudio.online/llms-full.txt">AI Documentation (llms-full.txt)</a>
-  </p>
-  <section class="partners" style="margin-top: 2rem; text-align: center; color: var(--text-muted);">
-    <h3 style="color: var(--brand); font-size: 1.2rem; margin-bottom: 0.5rem;">Партньори</h3>
-    <p>Хостинг партньор: <a href="https://bdinhost.com" target="_blank" rel="noopener" style="color: var(--brand);">BDinHost</a> - Надежден и бърз хостинг за вашия бизнес.</p>
-  </section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="/izrabotka-na-sait.html">Изработка на сайт</a>
+      <a href="/sait-vizitka.html">Визитка</a>
+      <a href="/korporativen-sait.html">Корпоративен</a>
+      <a href="/calculator.html">Калкулатор</a>
+      <a href="/blog/">Блог</a>
+      <a href="/faq.html">ЧЗВ</a>
+      <a href="/about.html">За нас</a>
+      <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
+      <a href="/seo-optimizacia.html">SEO</a>
+    </div>
+    <p class="footer-terminal" style="margin-top:1.5rem;">
+      © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
+      Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·
+      <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a> ·
+      <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
+    </p>
+  </div>
 </footer>
 
-<!-- Easter Egg: Mouse Coordinates Over H1 -->
-<script>
-(function() {
-  const h1 = document.querySelector('h1');
-  if (!h1) return;
-  
-  // Create coordinate display element
-  const coordDisplay = document.createElement('div');
-  coordDisplay.style.cssText = `
-    position: fixed;
-    display: none;
-    background: rgba(242, 238, 227, 0.95);
-    border: 1px solid #1a1e22;
-    padding: 0.5rem 0.75rem;
-    font-family: 'Share Tech Mono', 'Courier New', monospace;
-    font-size: 0.75rem;
-    color: #1a1e22;
-    pointer-events: none;
-    z-index: 9999;
-    letter-spacing: 0.05em;
-    box-shadow: 2px 2px 8px rgba(26, 30, 34, 0.15);
-    white-space: nowrap;
-  `;
-  document.body.appendChild(coordDisplay);
-  
-  // Track mouse position when hovering over H1
-  h1.addEventListener('mouseenter', function() {
-    coordDisplay.style.display = 'block';
-  });
-  
-  h1.addEventListener('mouseleave', function() {
-    coordDisplay.style.display = 'none';
-  });
-  
-  h1.addEventListener('mousemove', function(event) {
-    const x = Math.round(event.clientX);
-    const y = Math.round(event.clientY);
-    coordDisplay.textContent = `X: ${x} | Y: ${y}`;
-    
-    // Position the display near the cursor (offset by a few pixels)
-    coordDisplay.style.left = (x + 12) + 'px';
-    coordDisplay.style.top = (y - 32) + 'px';
-  });
-})();
-</script>
-
+<script src="/js/site.js" defer></script>
 </body>
 </html>

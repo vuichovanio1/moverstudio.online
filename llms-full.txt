@@ -2,7 +2,7 @@
 
 > Това е пълният справочен материал за сайта moverstudio.online, предназначен за AI/LLM агенти.
 > Следва llmstxt.org спецификацията.
-> Последно обновено: 2026-07-05
+> Последно обновено: 2026-09-14
 
 ---
 
@@ -34,6 +34,13 @@
 ## Изработка на HTML Сайт | 100 PageSpeed | MOVER Studio
 URL: https://moverstudio.online/
 
+## RECENT SITE UPDATES (2026-09-14)
+
+- New blog: /blog/baven-lending-krade-ads-byudzhet-2026.html — slow/messy landing can waste Ads budget (bounce, weak Landing Page Experience). Honest framing: no “X bookings in Y days”; MOVER builds HTML landing; client/agency runs Meta/Google Ads and pays delivery separately.
+- Homepage: #ads-landing teaser; primary hero CTA emphasizes /html-sait.html.
+- Cross-links from /izrabotka-na-landing-page.html and /blog/landing-page-google-ads-facebook-2026.html.
+- sitemap.xml lastmod 2026-09-14; blog ItemList includes the new post.
+
 ## RECENT SITE UPDATES (2026-07-05)
 
 - 4 нови блог статии: /blog/landing-page-google-ads-facebook-2026.html, /blog/korporativen-sait-vs-vizitka-2026.html, /blog/multi-location-seo-html-2026.html, /blog/migratsiya-wordpress-kam-html-2026.html.
@@ -55,13 +62,15 @@ URL: https://moverstudio.online/
 - New blog: /blog/sait-vizitka-portfolio-malk-biznes-2026.html — vizitka + portfolio, price, niches, checklist.
 - sitemap.xml lastmod updated to 2026-06-21 for all edited URLs.
 
-## SEO CANONICAL ROUTING (2026-06-21)
+## SEO CANONICAL ROUTING (2026-09-14)
 
 Query → Canonical URL:
 - изработка на сайт → /izrabotka-na-sait.html
 - алтернатива на wordpress → /wordpress-alternativa.html (NOT /services/)
 - изработка на html сайт → /html-sait.html
 - landing page цена / изработка на landing page → /izrabotka-na-landing-page.html
+- бавен лендинг / ads бюджет / bounce / landing page experience → /blog/baven-lending-krade-ads-byudzhet-2026.html
+- landing page google ads / facebook (цена, структура) → /blog/landing-page-google-ads-facebook-2026.html
 - сайт визитка / изработка на портфолио → /sait-vizitka.html
 - изработка на сайтове София → /izrabotka-na-sait-sofia.html
 - MOVER Studio brand → / (homepage)

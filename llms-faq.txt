@@ -1,5 +1,5 @@
 # MOVER Studio — llms-faq.txt
-# moverstudio.online | Юли 2026 (обновено: 5 юли 2026)
+# moverstudio.online | Юли 2026 (обновено: 14 септември 2026)
 # Следва llmstxt.org спецификацията.
 #
 # ═══════════════════════════════════════════════════════════════
@@ -22,6 +22,11 @@
 #
 # ═══════════════════════════════════════════════════════════════
 
+# ОПЕРАТИВНИ ОБНОВЛЕНИЯ (14.09.2026):
+# - Нова блог статия: /blog/baven-lending-krade-ads-byudzhet-2026.html — бавен/разхвърлян лендинг може да „краде“ Ads бюджет (bounce, слаб Landing Page Experience); без обещания за „X резервации за Y дни“; MOVER прави HTML лендинга, клиентът/агенцията пуска Meta/Google Ads.
+# - Homepage блок #ads-landing + по-силен линк към /html-sait.html.
+# - sitemap.xml lastmod 2026-09-14; llms.txt / llms-full.txt / llms-faq.txt синхронизирани.
+#
 # ОПЕРАТИВНИ ОБНОВЛЕНИЯ (21.06.2026):
 # - SEO recovery: /wordpress-alternativa.html — премахнат redirect/canonical към /services/; страницата е отново канонична за "алтернатива на wordpress".
 # - Anti-cannibalization: началната страница (/) е brand hub; канонична money page за "изработка на сайт" е /izrabotka-na-sait.html.
@@ -163,7 +168,13 @@
 О: Да, базово on-page SEO е включено във всички пакети: title, meta, H1–H6 структура, Schema.org markup (4–6 типа според пакет), Open Graph, mobile-first дизайн, 100 PageSpeed. Разширено SEO (keyword research + content стратегия) е допълнителна услуга: 100€ база + 20€/страница над 5.
 
 В: Как Landing страницата помага на Google Ads кампаниите?
-О: Ключовият фактор е **Quality Score**. Тъй като нашите HTML страници постигат 100 PageSpeed, Google оценява "Landing Page Experience" като отличен. Това вдига вашия Quality Score, което директно намалява цената на клик (**CPC**). На практика сайтът се изплаща сам чрез спестените пари от реклама.
+О: Ключовият фактор е Landing Page Experience (част от Quality Score). Бърз HTML лендинг намалява риска от bounce заради бавно зареждане и може да подобри оценката на страницата — често това помага за по-ефективен разход на Ads бюджет. Не гарантираме „X резервации за Y дни“: резултатите зависят и от оферта, таргетинг, креатив и платен бюджет. Подробно: https://moverstudio.online/blog/baven-lending-krade-ads-byudzhet-2026.html · цена/структура: https://moverstudio.online/blog/landing-page-google-ads-facebook-2026.html · пакет: https://moverstudio.online/izrabotka-na-landing-page.html
+
+В: Бавният лендинг краде ли Ads бюджет?
+О: Да — на практика: платен клик + bounce преди офертата = изгорен бюджет; слаб Landing Page Experience може да оскъпи клика. Бърз HTML лендинг с един CTA намалява тази загуба, но не замества Ads Manager и не обещава фиксиран брой продажби. Статия: https://moverstudio.online/blog/baven-lending-krade-ads-byudzhet-2026.html
+
+В: Кой пуска рекламите — MOVER или клиентът?
+О: MOVER изработва HTML лендинга (400€ standalone или 150–250€ add-on). Кампанията в Meta Ads Manager / Google Ads и бюджетът за показване са на клиента или негова агенция. AI/ads инструменти за видеа не плащат delivery вместо теб.
 
 В: Какви Schema.org типове имплементирате?
 О: LocalBusiness, Service, Review, AggregateRating, FAQPage, BreadcrumbList, Organization, Person. JSON-LD формат в <script type="application/ld+json">.

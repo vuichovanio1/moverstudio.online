@@ -21,7 +21,6 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="preload" href="/fonts/share-tech-mono-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
   <link rel="stylesheet" href="/css/pages.css">
 
@@ -153,7 +152,7 @@
       <a href="/blog/">Блог</a>
       <a href="/faq.html">ЧЗВ</a>
       <a href="/about.html">За нас</a>
-      <a href="/#contact" class="nav-cta">Контакт</a>
+      <a href="#contact" class="nav-cta">Контакт</a>
     </nav>
   </div>
 </header>
@@ -295,7 +294,10 @@
     <p>
       <a href="/izrabotka-na-sait.html">изработка на сайтове от 400€</a><br>
       <a href="/izrabotka-na-sait.html">← Всички услуги за изработка на сайтове</a><br>
-      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайтове София →</a><br>
+      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София →</a><br>
+      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив →</a><br>
+      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна →</a><br>
+      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас →</a><br>
       <a href="/sait-vizitka.html">Сайт визитка или портфолио →</a><br>
       <a href="/korporativen-sait.html">Корпоративен сайт →</a><br>
       <a href="/seo-optimizacia.html">SEO оптимизация →</a><br>
@@ -303,10 +305,28 @@
     </p>
   </div>
 
-  <div style="margin-top: 3rem; text-align: center;">
-    <a href="tel:+359877845569" class="cta-primary">☎ Обади се: 0877 845 569</a>
-    <p style="margin-top: 1rem; font-size: 0.9rem;">Или пиши на <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a></p>
+  <section class="section" id="contact">
+  <div class="container">
+    <div class="contact-block">
+      <h2>Запитване</h2>
+      <p>Ще отговорим до 24 часа.</p>
+      <form class="lead-form" action="mailto:admin@moverstudio.online" method="get">
+        <label for="htmlsait-name">Име / фирма</label>
+        <input id="htmlsait-name" name="name" type="text" required autocomplete="organization">
+        <label for="htmlsait-phone">Телефон</label>
+        <input id="htmlsait-phone" name="phone" type="tel" required autocomplete="tel">
+        <label for="htmlsait-msg">Описание</label>
+        <textarea id="htmlsait-msg" name="body" rows="3" required></textarea>
+        <input type="hidden" name="subject" value="Запитване: HTML сайт">
+        <div class="hero__actions" style="margin-top:1rem;">
+          <button type="submit" class="btn btn--primary">Изпрати</button>
+          <a href="https://wa.me/359877845569" class="btn btn--secondary" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="tel:+359877845569" class="btn btn--secondary">Обади се</a>
+        </div>
+      </form>
+    </div>
   </div>
+</section>
 </main>
 
 <script src="/js/site.js" defer></script>

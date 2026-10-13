@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bg">
 <head>
   <!-- Performance Optimization: Charset at the very top for fastest parsing -->
@@ -19,7 +19,6 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="preload" href="/fonts/share-tech-mono-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
   <link rel="stylesheet" href="/css/pages.css">
 
@@ -83,7 +82,7 @@
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://moverstudio.online/case-studies.html#serviceareabusiness",
+        "@id": "https://moverstudio.online/case-studies.html#localbusiness",
         "name": "MOVER Studio - Портфолио и Кейс Студиа България",
         "description": "Реални проекти за изработка на сайтове с локално SEO в София, Пловдив, Варна, Бургас и цяла България.",
         "url": "https://moverstudio.online/case-studies.html",
@@ -91,6 +90,7 @@
         "email": "admin@moverstudio.online",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "ул. Бяло Море 16",
           "addressLocality": "Костинброд",
           "addressRegion": "София област",
           "addressCountry": "BG"
@@ -236,7 +236,7 @@
       <a href="/blog/">Блог</a>
       <a href="/faq.html">ЧЗВ</a>
       <a href="/about.html">За нас</a>
-      <a href="/#contact" class="nav-cta">Контакт</a>
+      <a href="#contact" class="nav-cta">Контакт</a>
     </nav>
   </div>
 </header>
@@ -252,7 +252,7 @@
         Тук са проектите с реални Search Console данни — не обещания, а кликове и импресии от Google.
       </p>
       <p style="margin-top: 1rem;">
-        Ако искаш подобен резултат за твоя бизнес, <a href="/index.html#contact">изпрати запитване</a> или виж <a href="/calculator.html">цената</a>.
+        Ако искаш подобен резултат за твоя бизнес, <a href="#contact">изпрати запитване</a> или виж <a href="/calculator.html">цената</a>.
       </p>
       <div style="background: var(--surface); padding: 1.5rem; border-left: 5px solid var(--brand); margin: 1.5rem 0 2rem; border-radius: var(--radius); border: 2px solid var(--line);">
         <p style="color: var(--text-primary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
@@ -953,16 +953,29 @@
       <p>
         Ако търсиш конкретен пример за миграция WordPress → HTML, виж и <a href="blog/wordpress-malak-biznes-2026.html">сравнението с PageSpeed 75 срещу 100 и structured data 3 срещу 13</a>.
       </p>
-      <p><a href="/#contact">Изпрати запитване</a> · <a href="/calculator.html">Виж ориентировъчна цена</a></p>
+      <p><a href="#contact">Изпрати запитване</a> · <a href="/calculator.html">Виж ориентировъчна цена</a></p>
     </section>
 
-    <section style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius);">
+    <section class="section" id="contact" style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius);">
       <h2 style="color: var(--brand);">Искаш ли такива резултати и за твоя сайт?</h2>
-      <p style="color: var(--text-muted); margin-bottom: 2rem;">Изпрати ни какъв е бизнесът ти и ще ти кажем откровено какъв модел има смисъл.</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/index.html#contact" class="cta-primary" style="padding: 1rem 2rem; font-size: 1.1rem;">Изпрати запитване</a>
-        <a href="/calculator.html" class="cta-secondary" style="padding: 1rem 2rem; font-size: 1.1rem;">Виж ориентировъчна цена</a>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">Ще отговорим до 24 часа.</p>
+      <div class="contact-block" style="text-align:left; max-width:36rem; margin:0 auto;">
+      <form class="lead-form" action="mailto:admin@moverstudio.online" method="get">
+        <label for="cases-name">Име / фирма</label>
+        <input id="cases-name" name="name" type="text" required autocomplete="organization">
+        <label for="cases-phone">Телефон</label>
+        <input id="cases-phone" name="phone" type="tel" required autocomplete="tel">
+        <label for="cases-msg">Описание</label>
+        <textarea id="cases-msg" name="body" rows="3" required></textarea>
+        <input type="hidden" name="subject" value="Запитване: case studies">
+        <div class="hero__actions" style="margin-top:1rem;">
+          <button type="submit" class="btn btn--primary">Изпрати</button>
+          <a href="https://wa.me/359877845569" class="btn btn--secondary" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="tel:+359877845569" class="btn btn--secondary">Обади се</a>
+        </div>
+      </form>
       </div>
+      <p style="margin-top:1.5rem;"><a href="/calculator.html" class="cta-secondary">Виж ориентировъчна цена</a></p>
     </section>
 
   </article>
@@ -982,6 +995,14 @@
       <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
       <a href="/seo-optimizacia.html">SEO</a>
     </div>
+        <nav class="footer-locations" aria-label="Локации">
+      <span class="footer-locations__label">Локации:</span>
+      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София</a>
+      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив</a>
+      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна</a>
+      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас</a>
+    </nav>
+
     <p class="footer-terminal" style="margin-top:1.5rem;">
       © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
       Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·

@@ -51,10 +51,27 @@
     var el = e.target.closest && e.target.closest('a');
     if (!el) return;
     var href = el.getAttribute('href') || '';
-    if (href.indexOf('#contact') !== -1 || href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0) {
+    if (href.indexOf('#contact') !== -1 || href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0 || href.indexOf('wa.me') !== -1) {
       trackConversion('contact_cta_click', { href: href, text: (el.textContent || '').trim() });
     }
   });
+
+  /* Lead forms → composed mailto (static hosting, no backend) */
+  document.querySelectorAll('form.lead-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = (form.querySelector('[name="name"]') || {}).value || '';
+      var phone = (form.querySelector('[name="phone"]') || {}).value || '';
+      var msg = (form.querySelector('[name="body"], textarea') || {}).value || '';
+      var subjectEl = form.querySelector('[name="subject"]');
+      var subject = (subjectEl && subjectEl.value) || 'Запитване от сайта';
+      var body = 'Име/фирма: ' + name + '\nТелефон: ' + phone + '\n\n' + msg;
+      trackConversion('lead_form_submit', { subject: subject });
+      window.location.href = 'mailto:admin@moverstudio.online?subject=' +
+        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  });
+
   window.moverStudio = window.moverStudio || {};
   window.moverStudio.trackConversion = trackConversion;
 })();

@@ -15,14 +15,18 @@ RewriteRule ^og-image\.(png|jpe?g)$ og-image.php [L,QSA]
 RewriteRule ^og-image-small\.png$ og-image.php [L,QSA]
 
 # ----------------------------------------
-# 1. Force HTTPS (301 redirect)
+# 1–2. Single-hop canonical: HTTPS + non-www
 # ----------------------------------------
+# http://www → https://apex (one hop)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.moverstudio\.online$ [NC]
+RewriteRule ^ https://moverstudio.online%{REQUEST_URI} [L,R=301]
+
+# http://apex → https://apex
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# ----------------------------------------
-# 2. Force www → non-www
-# ----------------------------------------
+# https://www → https://apex
 RewriteCond %{HTTP_HOST} ^www\.moverstudio\.online$ [NC]
 RewriteRule ^ https://moverstudio.online%{REQUEST_URI} [L,R=301]
 
@@ -32,6 +36,38 @@ RewriteRule ^izrabotka-na-saitove-sofia\.html$ /izrabotka-na-sait-sofia.html [L,
 # Redirect removed URLs to their canonical replacements
 RewriteRule ^dokazatelstva\.html$ /case-studies.html [L,R=301]
 RewriteRule ^pagespeed-100-html\.html$ /html-sait.html [L,R=301]
+
+# ----------------------------------------
+# SEO / log-driven redirects (404 → canonical)
+# ----------------------------------------
+
+# Trailing-dot typos: /page.html. → /page.html
+RewriteRule ^(.+)\.$ /$1 [L,R=301]
+
+# Common English/path expectations
+RewriteRule ^about/?$ /about.html [L,R=301]
+RewriteRule ^about-us/?$ /about.html [L,R=301]
+RewriteRule ^contact/?$ /#contact [L,R=301,NE]
+RewriteRule ^contact-us/?$ /#contact [L,R=301,NE]
+
+# Blog posts requested without /blog/ prefix (access-log 404s)
+RewriteRule ^wordpress-malak-biznes-2026\.html$ /blog/wordpress-malak-biznes-2026.html [L,R=301]
+RewriteRule ^migratsiya-wordpress-kam-html-2026\.html$ /blog/migratsiya-wordpress-kam-html-2026.html [L,R=301]
+RewriteRule ^multi-location-seo-html-2026\.html$ /blog/multi-location-seo-html-2026.html [L,R=301]
+RewriteRule ^5-prichini-da-napusnesh-wordpress-dnes\.html$ /blog/5-prichini-da-napusnesh-wordpress-dnes.html [L,R=301]
+RewriteRule ^zashto-wordpress-e-baven\.html$ /blog/zashto-wordpress-e-baven.html [L,R=301]
+RewriteRule ^sait-vizitka-portfolio-malk-biznes-2026\.html$ /blog/sait-vizitka-portfolio-malk-biznes-2026.html [L,R=301]
+RewriteRule ^baven-lending-krade-ads-byudzhet-2026\.html$ /blog/baven-lending-krade-ads-byudzhet-2026.html [L,R=301]
+RewriteRule ^landing-page-google-ads-facebook-2026\.html$ /blog/landing-page-google-ads-facebook-2026.html [L,R=301]
+RewriteRule ^kolko-struva-izrabotka-na-sait-2026\.html$ /blog/kolko-struva-izrabotka-na-sait-2026.html [L,R=301]
+RewriteRule ^korporativen-sait-vs-vizitka-2026\.html$ /blog/korporativen-sait-vs-vizitka-2026.html [L,R=301]
+RewriteRule ^html-saitove-google-search-console-2026\.html$ /blog/html-saitove-google-search-console-2026.html [L,R=301]
+
+# Broken tel:/viber: links incorrectly requested as paths
+RewriteCond %{THE_REQUEST} \s/+tel:
+RewriteRule ^ /#contact [L,R=301,NE]
+RewriteCond %{THE_REQUEST} \s/+viber:
+RewriteRule ^ /#contact [L,R=301,NE]
 
 # ----------------------------------------
 # 3. Custom Error Pages
@@ -61,6 +97,9 @@ ErrorDocument 404 /404.html
   # Контрол на референтната информация
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 
+  # Permissions-Policy (disable unused powerful APIs)
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()"
+
   # Фикс за грешка 206 (Partial Content)
   Header set Accept-Ranges none
 
@@ -71,16 +110,16 @@ ErrorDocument 404 /404.html
   Header set X-LLMS-TXT "/llms-full.txt"
 </IfModule>
 
-# OG image responses: no HTML security headers (Facebook image fetch)
+# OG image: drop HTML-only headers; KEEP HSTS on all HTTPS responses
 <Files "og-image.php">
   <IfModule mod_headers.c>
     Header always unset Content-Security-Policy
     Header always unset X-Frame-Options
-    Header always unset Strict-Transport-Security
     Header always unset Referrer-Policy
     Header always unset Cross-Origin-Opener-Policy
     Header always unset X-LLMS-TXT
     Header always unset X-Content-Type-Options
+    Header always unset Permissions-Policy
   </IfModule>
 </Files>
 
@@ -97,6 +136,15 @@ ErrorDocument 404 /404.html
   AddType image/png .png
   AddType image/jpeg .jpg .jpeg
   AddType image/x-icon .ico
+  AddType application/trafficadvice+json traffic-advice
+</IfModule>
+
+# Chrome Privacy Sandbox / prefetch proxy
+<IfModule mod_headers.c>
+  <Files "traffic-advice">
+    Header set Content-Type "application/trafficadvice+json"
+    Header set Cache-Control "public, max-age=86400"
+  </Files>
 </IfModule>
 
 # ----------------------------------------
@@ -106,10 +154,12 @@ ErrorDocument 404 /404.html
   AddOutputFilterByType DEFLATE text/html
   AddOutputFilterByType DEFLATE text/css
   AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/javascript
   AddOutputFilterByType DEFLATE application/javascript
   AddOutputFilterByType DEFLATE application/json
   AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/trafficadvice+json
   AddOutputFilterByType DEFLATE image/svg+xml
   AddOutputFilterByType DEFLATE font/woff2
 </IfModule>
@@ -154,19 +204,32 @@ Options -Indexes
 # ----------------------------------------
 # 10. Блокиране на достъп до системни файлове
 # ----------------------------------------
-<FilesMatch "(^\.htaccess|_headers|\.git)">
+<FilesMatch "(^\.htaccess|_headers|\.git|\.bak|bak-pre-)">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
 </FilesMatch>
 
+# Block backup HTML by exact name
+<Files "index.html.bak-pre-redesign">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</Files>
+
 # ----------------------------------------
-# 11. Фикс за началната страница и блога
+# 11. Фикс за началната страница, блога и services
 # ----------------------------------------
 
 # Уверяваме се, че коренът зарежда главния файл
 DirectoryIndex index.html
 
-# Пренасочваме /blog към /blog/ само ако е изписано точно така
+# Strip trailing slash after .html (e.g. /about.html/ → /about.html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+\.html)/$ /$1 [L,R=301]
+
+# Пренасочваме /blog и /services към trailing-slash каноникал
 RewriteCond %{REQUEST_URI} ^/blog$ [NC]
 RewriteRule ^ /blog/ [L,R=301]
+RewriteCond %{REQUEST_URI} ^/services$ [NC]
+RewriteRule ^ /services/ [L,R=301]

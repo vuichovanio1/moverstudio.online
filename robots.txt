@@ -1,9 +1,10 @@
 # Optimized robots.txt for MOVER Studio - Web Design Agency
-# Allow all search engines to crawl the entire site (except for specific LLM files)
-# No restricted areas for maximum visibility
+# Full crawl allowed. Backup/system files are blocked at the server (.htaccess).
+# AI context: https://moverstudio.online/llms.txt
 
 User-agent: *
-Disallow:
+Disallow: /*.bak
+Disallow: /index.html.bak-pre-redesign
 
 # AI Bot Access - Explicitly welcome AI crawlers
 User-agent: GPTBot
@@ -99,3 +100,6 @@ Allow: /llms-faq.txt
 Sitemap: https://moverstudio.online/sitemap.xml
 
 # LLMs.txt for AI context
+# https://moverstudio.online/llms.txt
+# https://moverstudio.online/llms-full.txt
+# https://moverstudio.online/llms-faq.txt

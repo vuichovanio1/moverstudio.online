@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
@@ -19,7 +19,6 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="preload" href="/fonts/share-tech-mono-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
   <link rel="stylesheet" href="/css/pages.css">
 
@@ -105,7 +104,7 @@
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://moverstudio.online/about.html#serviceareabusiness",
+        "@id": "https://moverstudio.online/about.html#localbusiness",
         "name": "MOVER Studio - За Нас | Уеб Дизайн България",
         "description": "Екип за изработка на HTML сайтове с локално SEO за София, Пловдив, Варна, Бургас и цяла България.",
         "url": "https://moverstudio.online/about.html",
@@ -113,6 +112,7 @@
         "email": "admin@moverstudio.online",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "ул. Бяло Море 16",
           "addressLocality": "Костинброд",
           "addressRegion": "София област",
           "addressCountry": "BG"
@@ -191,7 +191,7 @@
       <a href="/blog/">Блог</a>
       <a href="/faq.html">ЧЗВ</a>
       <a href="/about.html">За нас</a>
-      <a href="/#contact" class="nav-cta">Контакт</a>
+      <a href="#contact" class="nav-cta">Контакт</a>
     </nav>
   </div>
 </header>
@@ -266,7 +266,7 @@
           Ние не разчитаме на CMS панел, а на подредена оферта, силен copywriting и управлявани съдържателни ъпдейти — за да запазим скоростта и фокуса върху продажбата.
         </p>
         <p>
-          <strong>Виж <a href="case-studies.html">реални проекти и измерими резултати</a>, които подкрепят тази логика, или отиди директно към <a href="/index.html#contact">запитването</a>.</strong>
+          <strong>Виж <a href="case-studies.html">реални проекти и измерими резултати</a>, които подкрепят тази логика, или отиди директно към <a href="#contact">запитването</a>.</strong>
         </p>
       </div>
     </div>
@@ -277,7 +277,7 @@
       <blockquote style="border-left: 4px solid var(--accent); padding-left: 1rem; font-style: normal; color: var(--text-strong); margin: 0;">
         <p><strong>MOVER Studio не започна като идеология, а като отговор на реален проблем.</strong> Първите проекти дойдоха от бизнес с висока спешност, където всяка изгубена секунда означаваше по-малко обаждания. Тогава стана ясно, че бавният сайт не е просто технически недостатък, а директна загуба на приходи.</p>
         <p>Преди да стигнем до днешния стил, тествахме различни CMS решения и видяхме същия модел отново и отново: повече плъгини, повече поддръжка, повече точки на срив. Затова преминахме към чист HTML и лек Vanilla JS подход, при който страницата зарежда бързо, логиката е ясна и клиентът не плаща за излишна сложност.</p>
-        <p>Решението да работим така се оформи около 2020-2021 г., когато реалните ни проекти показаха, че за услуги с локално търсене най-важни са скоростта, ясният CTA и стабилното SEO. Оттам насетне всяка нова страница се гради по същия принцип: първо потребителят да разбере какво получава, после да може да действа без пречки.</p>
+        <p>Подходът се оформи около 2020–2021 г. в свързана бизнес дейност; брандът MOVER Studio стартира от 2023 г., когато реалните проекти показаха, че за услуги с локално търсене най-важни са скоростта, ясният CTA и стабилното SEO. Оттам насетне всяка нова страница се гради по същия принцип: първо потребителят да разбере какво получава, после да може да действа без пречки.</p>
         <p><strong>Затова и днес MOVER Studio прави HTML сайтове:</strong> не защото е по-лесно, а защото в много бизнеси това е по-чистият и по-печеливш избор.</p>
       </blockquote>
       <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin-top: 1rem;">
@@ -299,7 +299,7 @@
       </div>
     </div>
 
-    <h2>Контакти</h2>
+    <h2 id="contact">Контакти</h2>
 
     <div class="about-card">
       <p>📧 Имейл: <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a></p>
@@ -307,7 +307,7 @@
       <p>🌐 Уебсайт: <a href="https://moverstudio.online">moverstudio.online</a></p>
       <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
         🏢 <strong>"Транспортер Иван Иванов" ЕООД</strong><br>
-        Офис: гр. Котинброд, ул. Бяло Море 16<br>
+        Офис: гр. Костинброд, ул. Бяло Море 16<br>
         Адрес за кореспонденция: гр. Драгоман, ул. Кондел 24
       </p>
       <p style="margin-top: 1rem; font-size: 0.95rem;">
@@ -319,11 +319,30 @@
       </p>
     </div>
 
+    <div class="contact-block" style="margin-top:2rem;">
+      <h3>Запитване</h3>
+      <p>Ще отговорим до 24 часа.</p>
+      <form class="lead-form" action="mailto:admin@moverstudio.online" method="get">
+        <label for="about-name">Име / фирма</label>
+        <input id="about-name" name="name" type="text" required autocomplete="organization">
+        <label for="about-phone">Телефон</label>
+        <input id="about-phone" name="phone" type="tel" required autocomplete="tel">
+        <label for="about-msg">Описание</label>
+        <textarea id="about-msg" name="body" rows="3" required></textarea>
+        <input type="hidden" name="subject" value="Запитване: за нас">
+        <div class="hero__actions" style="margin-top:1rem;">
+          <button type="submit" class="btn btn--primary">Изпрати</button>
+          <a href="https://wa.me/359877845569" class="btn btn--secondary" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="tel:+359877845569" class="btn btn--secondary">Обади се</a>
+        </div>
+      </form>
+    </div>
+
     <section style="margin-top: 2rem; padding: 1.5rem; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius);">
       <h2 style="border-left: none; padding-left: 0;">Ако искаш сайт, който носи заявки</h2>
       <p>Кажи ни какъв е бизнесът ти и ще ти върнем честна преценка дали HTML е по-добрият избор, плюс цена и следваща стъпка.</p>
       <p style="margin-bottom: 0;">
-        <a href="/index.html#contact" class="pill red-pill">Изпрати запитване</a>
+        <a href="#contact" class="pill red-pill">Изпрати запитване</a>
         <a href="/calculator.html" class="pill blue-pill">Виж ориентировъчна цена</a>
       </p>
     </section>
@@ -331,8 +350,8 @@
     <section class="cta-section">
       <h2 style="border-left: none; padding-left: 0;">Готов за Сайт, Който Води до Запитване?</h2>
       <p>Виж ориентировъчна цена за своя HTML сайт и следващата стъпка.</p>
-      <a href="/calculator.html" class="cta-primary">Виж ориентировъчна цена →</a>
-      <a href="/index.html#contact" class="cta-primary">Изпрати запитване →</a>
+      <a href="#contact" class="cta-primary">Изпрати запитване →</a>
+      <a href="/calculator.html" class="cta-secondary">Виж ориентировъчна цена →</a>
       <p style="margin-top: 2rem; font-size: 0.95rem;">
         Или разгледай: <a href="/izrabotka-na-sait.html">Нашите услуги</a> | 
         <a href="/case-studies.html">Case Studies</a> | 
@@ -356,6 +375,14 @@
       <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
       <a href="/seo-optimizacia.html">SEO</a>
     </div>
+        <nav class="footer-locations" aria-label="Локации">
+      <span class="footer-locations__label">Локации:</span>
+      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София</a>
+      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив</a>
+      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна</a>
+      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас</a>
+    </nav>
+
     <p class="footer-terminal" style="margin-top:1.5rem;">
       © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
       Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·
@@ -364,52 +391,6 @@
     </p>
   </div>
 </footer>
-
-<!-- Easter Egg: Mouse Coordinates Over H1 -->
-<script>
-(function() {
-  const h1 = document.querySelector('h1');
-  if (!h1) return;
-  
-  // Create coordinate display element
-  const coordDisplay = document.createElement('div');
-  coordDisplay.style.cssText = `
-    position: fixed;
-    display: none;
-    background: rgba(242, 238, 227, 0.95);
-    border: 1px solid #1a1e22;
-    padding: 0.5rem 0.75rem;
-    font-family: 'Share Tech Mono', 'Courier New', monospace;
-    font-size: 0.75rem;
-    color: #1a1e22;
-    pointer-events: none;
-    z-index: 9999;
-    letter-spacing: 0.05em;
-    box-shadow: 2px 2px 8px rgba(26, 30, 34, 0.15);
-    white-space: nowrap;
-  `;
-  document.body.appendChild(coordDisplay);
-  
-  // Track mouse position when hovering over H1
-  h1.addEventListener('mouseenter', function() {
-    coordDisplay.style.display = 'block';
-  });
-  
-  h1.addEventListener('mouseleave', function() {
-    coordDisplay.style.display = 'none';
-  });
-  
-  h1.addEventListener('mousemove', function(event) {
-    const x = Math.round(event.clientX);
-    const y = Math.round(event.clientY);
-    coordDisplay.textContent = `X: ${x} | Y: ${y}`;
-    
-    // Position the display near the cursor (offset by a few pixels)
-    coordDisplay.style.left = (x + 12) + 'px';
-    coordDisplay.style.top = (y - 32) + 'px';
-  });
-})();
-</script>
 
 <script src="/js/site.js" defer></script>
 </body>

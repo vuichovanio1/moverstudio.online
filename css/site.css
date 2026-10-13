@@ -1,29 +1,6 @@
 /* MOVER Studio — shared design system (v2, mobile-first) */
 
-@font-face {
-  font-family: 'IM Fell English';
-  src: url('/fonts/im-fell-english-v14-latin-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IM Fell English';
-  src: url('/fonts/im-fell-english-v14-latin-italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Share Tech Mono';
-  src: url('/fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* Cyrillic-capable system stacks (Latin-only WOFF2 subsets removed — they never covered BG text) */
 :root {
   --paper: #f4f0e8;
   --ink: #1a1e22;
@@ -32,8 +9,8 @@
   --line: rgba(26, 30, 34, 0.1);
   --surface: #ffffff;
   --muted: rgba(26, 30, 34, 0.65);
-  --mono: 'Share Tech Mono', 'Courier New', monospace;
-  --serif: 'IM Fell English', Georgia, serif;
+  --mono: ui-monospace, 'Cascadia Mono', Consolas, 'Courier New', monospace;
+  --serif: Georgia, 'Times New Roman', 'Liberation Serif', serif;
   --max: 1120px;
   --header-h: 3.5rem;
   --radius: 12px;
@@ -127,8 +104,7 @@ p + p { margin-top: 0.75rem; }
   top: 0;
   z-index: 1000;
   height: var(--header-h);
-  background: rgba(244, 240, 232, 0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(244, 240, 232, 0.97);
   border-bottom: 1px solid var(--line);
 }
 
@@ -579,6 +555,42 @@ main { padding-bottom: 4rem; }
   border: none;
 }
 
+.footer-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.85rem;
+  font-size: 0.75rem;
+}
+
+.footer-locations__label {
+  color: var(--muted);
+}
+
+.footer-locations a {
+  border: none;
+  color: var(--muted);
+}
+
+.footer-locations a:hover,
+.footer-locations a:focus-visible {
+  color: var(--brand);
+}
+
+.location-links {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.location-links a {
+  border: none;
+}
+
 .footer-terminal {
   font-size: 0.75rem;
   color: var(--muted);
@@ -602,4 +614,37 @@ main { padding-bottom: 4rem; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .card:hover, .portfolio-card:hover, .btn--primary:hover { transform: none; }
+}
+
+/* ── Lead capture form ── */
+.lead-form {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  text-align: left;
+  max-width: 28rem;
+}
+.lead-form label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+.lead-form input,
+.lead-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+.lead-form input:focus,
+.lead-form textarea:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 1px;
+}
+.lead-form .hero__actions {
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
@@ -20,7 +20,6 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="preload" href="/fonts/share-tech-mono-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
   <link rel="stylesheet" href="/css/pages.css">
 
@@ -130,7 +129,7 @@
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://moverstudio.online/sait-vizitka.html#serviceareabusiness",
+        "@id": "https://moverstudio.online/sait-vizitka.html#localbusiness",
         "name": "MOVER Studio - Сайт визитка България",
         "description": "Изработка на сайт визитка с локално SEO за цяла България. Специализирани сме в 50+ бизнес ниши: автомобилен сектор (автосервизи, автоключари), медицински услуги (зъболекари, дерматолози), beauty индустрия (фризьори, козметични салони), дом и ремонт (електротехници, ВиК), професионални услуги (адвокати, нотариуси), фитнес, логистика, фотографи, дизайнери, архитекти и още. Работим с клиенти от София, Пловдив, Варна, Бургас и всички градове.",
         "url": "https://moverstudio.online/sait-vizitka.html",
@@ -138,6 +137,7 @@
         "email": "admin@moverstudio.online",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "ул. Бяло Море 16",
           "addressLocality": "Костинброд",
           "addressRegion": "София област",
           "addressCountry": "BG"
@@ -304,7 +304,7 @@
       <a href="/blog/">Блог</a>
       <a href="/faq.html">ЧЗВ</a>
       <a href="/about.html">За нас</a>
-      <a href="/#contact" class="nav-cta">Контакт</a>
+      <a href="#contact" class="nav-cta">Контакт</a>
     </nav>
   </div>
 </header>
@@ -339,9 +339,9 @@
     <p>Бърз, модерен сайт без WordPress - идеален за малък бизнес, фрийлансъри и всеки, който иска да показва услуги или проекти.</p>
     <div class="price-hero">400€</div>
     <div>
-      <a href="/calculator.html" class="cta-primary">Виж ориентировъчна цена</a>
+      <a href="/calculator.html" class="cta-secondary">Виж ориентировъчна цена</a>
       <a href="mailto:admin@moverstudio.online?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%3A%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D0%B0%20~400%E2%82%AC%20%E2%80%94%20%5B%D1%84%D0%B8%D1%80%D0%BC%D0%B0%5D" class="cta-primary">✉ Изпрати запитване</a>
-      <a href="tel:+359877845569" class="cta-primary">☎ Обади се</a>
+      <a href="tel:+359877845569" class="cta-secondary">☎ Обади се</a>
     </div>
     <div class="trust-signals">
       <span>✓ 1-5 страници</span>
@@ -395,7 +395,7 @@
       <p>
         Допълнителен пример: <strong>re-peat.store</strong> - бърз статичен multi-page сайт,
         изграден за <strong>реални посещения в обект</strong>, а не за онлайн поръчки.
-        Проектът използва inline critical CSS/JS, custom SVG renderer и HTML-first архитектура
+        Проектът използва optimized lightweight external stylesheets/JS, custom SVG renderer и HTML-first архитектура
         без външни библиотеки или CDN зависимости.
       </p>
       <p>
@@ -750,17 +750,29 @@
     </div>
   </section>
 
-  <!-- NEXT STEP -->
-  <section style="text-align: center; padding: 3rem 0;">
+  <!-- NEXT STEP + CONTACT -->
+  <section class="section" id="contact" style="text-align: center; padding: 3rem 0;">
     <h2>Готов за сайт визитка или портфолио?</h2>
-    <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-      Започни с професионален сайт визитка или портфолио за 400€. Без месечни такси. Без скрити разходи.
-    </p>
-    <a href="/calculator.html" class="cta-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">
-      Изчисли цена за визитка или портфолио →
-    </a>
+    <p style="font-size: 1.1rem; margin-bottom: 1rem;">Ще отговорим до 24 часа.</p>
+    <div class="contact-block" style="text-align:left; max-width:36rem; margin:0 auto;">
+      <form class="lead-form" action="mailto:admin@moverstudio.online" method="get">
+        <label for="vizitka-name">Име / фирма</label>
+        <input id="vizitka-name" name="name" type="text" required autocomplete="organization">
+        <label for="vizitka-phone">Телефон</label>
+        <input id="vizitka-phone" name="phone" type="tel" required autocomplete="tel">
+        <label for="vizitka-msg">Описание</label>
+        <textarea id="vizitka-msg" name="body" rows="3" required></textarea>
+        <input type="hidden" name="subject" value="Запитване: сайт визитка">
+        <div class="hero__actions" style="margin-top:1rem;">
+          <button type="submit" class="btn btn--primary">Изпрати</button>
+          <a href="https://wa.me/359877845569" class="btn btn--secondary" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="tel:+359877845569" class="btn btn--secondary">Обади се</a>
+        </div>
+      </form>
+    </div>
     <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--text-muted);">
-      Или прегледай всички опции: <a href="/izrabotka-na-sait.html">изработка на сайт</a>
+      <a href="/calculator.html" class="cta-secondary">Виж ориентировъчна цена →</a>
+      · <a href="/izrabotka-na-sait.html">изработка на сайт</a>
     </p>
   </section>
 
@@ -779,6 +791,14 @@
       <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
       <a href="/seo-optimizacia.html">SEO</a>
     </div>
+        <nav class="footer-locations" aria-label="Локации">
+      <span class="footer-locations__label">Локации:</span>
+      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София</a>
+      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив</a>
+      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна</a>
+      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас</a>
+    </nav>
+
     <p class="footer-terminal" style="margin-top:1.5rem;">
       © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
       Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·

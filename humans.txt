@@ -6,21 +6,21 @@
   Site: https://moverstudio.online
   Contact: admin@moverstudio.online
   Phone: +359 877 845 569
-  Location: Bulgaria
+  Location: Kostinbrod, Bulgaria
 
 /* SITE */
-  Last update: 2026-07-05
+  Last update: 2026-10-13
   Language: Bulgarian
   Doctype: HTML5
-  Standards: HTML5, CSS3, Schema.org, Open Graph
+  Standards: HTML5, CSS3, Schema.org, Open Graph, llms.txt
   IDE: Visual Studio Code
-  Technology: Static HTML, Inline CSS, Zero Dependencies
-  PageSpeed: 100/100 (Guaranteed)
+  Technology: Static HTML, external CSS (/css/site.css, /css/pages.css), vanilla JS (/js/site.js)
+  PageSpeed: target 95–100 (documented Lighthouse profile)
   Hosting: cPanel (Apache)
   SSL: Let's Encrypt
   Domain: moverstudio.online
 
 /* PHILOSOPHY */
-  No WordPress. No CMS. No JavaScript frameworks.
-  Pure HTML. Maximum speed. Zero attack surface.
-  Every site scores 100/100 on Google PageSpeed.
+  No WordPress. No public CMS. Minimal JavaScript.
+  Static HTML. Deterministic performance. Low attack surface.
+  Content updates managed by the studio team.

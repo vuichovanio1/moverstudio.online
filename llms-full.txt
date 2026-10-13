@@ -36,6 +36,8 @@ URL: https://moverstudio.online/
 
 ## RECENT SITE UPDATES (2026-10-13)
 
+- P1 D/E/F: asset cache-bust ?v=20261013; DeflateCompressionLevel 9 + optional mod_brotli; unique city LP content (Plovdiv/Varna/Burgas); WhatsApp+Viber on money/city CTAs.
+- P0 A/B/C: LocalBusiness @id unified to https://moverstudio.online/#localbusiness sitewide; city LP schema name=MOVER Studio; personal sameAs removed from Organization; homepage WebPage.name + FAQ anti-cannibalization; fonts = Cyrillic system stacks; requests = HTML + shared CSS/JS.
 - P0 remediation: city LP LocalBusiness NAP = Kostinbrod HQ + streetAddress ул. Бяло Море 16 + geo 42.8167/23.2167; Service areaServed keeps city; @id #localbusiness (not #serviceareabusiness).
 - P0: /services/ and /calculator.html retargeted away from exact money query "изработка на сайт" (hub remains canonical).
 - P0: homepage hero no longer uses .reveal on LCP; primary CTA = #contact lead form + WhatsApp.
@@ -64,7 +66,7 @@ URL: https://moverstudio.online/
 - Срок за визитка унифициран: 3–5 работни дни на всички страници.
 - Калкулаторът вече изпраща избраната конфигурация по имейл (mailto с предварително попълнено запитване).
 - Структурирани данни: премахнат невалиден SearchAction; блог ItemList допълнен с всичките 8 статии; премахнати дублирани Article схеми; добавен JSON-LD на /services/; поправен незатворен JSON-LD на /html-sait.html.
-- Шрифтове self-hosted от /fonts/*.woff2 (без Google Fonts или други CDN зависимости); favicon пакет (ico/png/apple-touch) вързан на всички страници.
+- Шрифтове: Cyrillic-capable system font stacks в /css/site.css (без Google Fonts / CDN / WOFF2 preloads); favicon пакет (ico/png/apple-touch) вързан на всички страници.
 - OG изображение унифицирано на og-image.png?v=1 на всички страници.
 
 ## RECENT SITE UPDATES (2026-06-21)
@@ -205,7 +207,7 @@ PageSpeed Score,95-100,40-70
 Load Time (cold),<1s,3-7s
 Annual Operational Cost (EUR),23-48,"€190–420 (self-managed) / €900–3,000+ (agency)"
 Database Queries per page,0,50-200
-HTTP Requests per page,1-5,30-80
+HTTP Requests per page,"HTML + shared CSS/JS (+ optional images)",30-80
 Page Size (compressed),30-150 KB,2-5 MB
 Content Updates,Managed by team — request → implemented (typical SLA 24h),Direct editing via admin panel (risk of user error and plugin conflicts)
 

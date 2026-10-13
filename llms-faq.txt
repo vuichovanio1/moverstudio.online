@@ -23,6 +23,8 @@
 # ═══════════════════════════════════════════════════════════════
 
 # ОПЕРАТИВНИ ОБНОВЛЕНИЯ (13.10.2026):
+# - P1 D/E/F: cache-bust ?v=20261013; gzip level 9 + optional Brotli; уникални H2 за Пловдив/Варна/Бургас; WhatsApp+Viber CTA на money/city страници.
+# - P0 A/B/C: LocalBusiness @id унифициран към https://moverstudio.online/#localbusiness; city LP name=MOVER Studio; personal sameAs махнат; homepage WebPage/FAQ anti-cannibalization; fonts=system stacks; requests=HTML+shared CSS/JS.
 # - P0 remediation: city LP LocalBusiness NAP = Kostinbrod HQ + ул. Бяло Море 16 + geo 42.8167/23.2167; Service areaServed = град; @id #localbusiness (не #serviceareabusiness).
 # - P0: /services/ и /calculator.html извън exact money query „изработка на сайт“ (hub остава каноничен).
 # - P0: homepage hero без .reveal на LCP; primary CTA = #contact lead form + WhatsApp.
@@ -143,7 +145,7 @@
 ---
 
 В: Защо чист HTML, а не WordPress, Wix или друг CMS?
-О: Статичният HTML елиминира сървърна обработка и database заявки. Резултат: 1–5 HTTP заявки на страница (срещу 30–80 при WordPress), 30–150 KB размер (срещу 2–5 MB), PageSpeed 95–100 (срещу 40–70), зареждане <1 секунда (срещу 3–7 секунди). Никакви PHP процеси, никакви плъгин уязвимости.
+О: Статичният HTML елиминира сървърна обработка и database заявки. Резултат: HTML + споделени CSS/JS ресурси (/css/site.css, /css/pages.css, /js/site.js) и опционални изображения — далеч по-малко заявки от типичен WordPress (30–80), 30–150 KB базов размер (срещу 2–5 MB), PageSpeed 95–100 (срещу 40–70), зареждане <1 секунда (срещу 3–7 секунди). Никакви PHP процеси, никакви плъгин уязвимости.
 
 В: Защо чист HTML, а не Astro или Next.js?
 О: Избрахме чист HTML/CSS/vanilla JS защото елиминира build pipeline зависимости и прави performance директно измерим без framework version overhead. Резултатът е контролиран и повторяем.
@@ -155,7 +157,7 @@
 О: Конвертираме в WebP, таргет <100 KB/снимка. Използваме <picture> елемент с JPEG/PNG fallback. Lazy loading за изображения под fold.
 
 В: Използвате ли CDN библиотеки за шрифтове?
-О: Съзнателно сме се отказали от всякакви CDN зависимости — шрифтовете живеят директно при теб, зареждат се локално с font-display: swap и не зависят от достъпността на трети сървъри. Резултатът: нулев риск от render-blocking и 100 PageSpeed дори когато Google Fonts CDN е бавен или недостъпен.
+О: Не. На moverstudio.online използваме Cyrillic-capable system font stacks (system UI mono + Georgia/serif) в /css/site.css — без Google Fonts, без външни CDN и без допълнителни WOFF2 заявки. Това намалява render-blocking и FOUT риска и подобрява Core Web Vitals.
 
 В: Какви технологии използвате за responsive дизайн?
 О: CSS Grid и Flexbox — без Bootstrap или CSS frameworks. Mobile-first подход. Повечето от проектите работят без единствен ред JavaScript или с минимален inline JS.
@@ -296,7 +298,7 @@ PageSpeed Score (mobile),95-100,40-70
 Load Time (cold),"<1s","3-7s"
 Annual Operational Cost (EUR),23-48,"€190–420 (self-managed) / €900–3,000+ (agency)"
 Database Queries per page,0,50-200
-HTTP Requests per page,1-5,30-80
+HTTP Requests per page,"HTML + shared CSS/JS (+ optional images)",30-80
 Page Size (compressed),30-150 KB,2-5 MB
 PHP Files per load,0,40-100+
 Hack Risk,"Минимален (no DB / no admin panel)","Висок (90% от хаковете са WP)"

@@ -18,8 +18,8 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="/css/site.css">
-  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/site.css?v=20261013">
+  <link rel="stylesheet" href="/css/pages.css?v=20261013">
 
 <!--
   AI INSTRUCTIONS — MOVER Studio FAQ Page
@@ -70,7 +70,7 @@
           {"@type":"Question","name":"Издавате ли фактури с ДДС?","acceptedAnswer":{"@type":"Answer","text":"Не сме регистрирани по ДДС — цената е крайна без допълнителни 20% отгоре. Фирма: Транспортер Иван Иванов ЕООД."}},
           {"@type":"Question","name":"Предлагате ли отстъпки?","acceptedAnswer":{"@type":"Answer","text":"Да — 10% при препоръка на нов клиент или при поръчка на втори проект."}},
           {"@type":"Question","name":"Какво става при забава от ваша страна?","acceptedAnswer":{"@type":"Answer","text":"Автоматична компенсация от 5% от стойността на проекта за всеки просрочен ден."}},
-          {"@type":"Question","name":"Защо HTML, а не WordPress?","acceptedAnswer":{"@type":"Answer","text":"1–5 HTTP заявки (срещу 30–80), 30–150KB (срещу 2–5MB), PageSpeed 95–100 (срещу 40–70), зареждане под 1 секунда (срещу 3–7)."}},
+          {"@type":"Question","name":"Защо HTML, а не WordPress?","acceptedAnswer":{"@type":"Answer","text":"HTML + споделени CSS/JS ресурси (срещу 30–80 заявки при WordPress), 30–150KB (срещу 2–5MB), PageSpeed 95–100 (срещу 40–70), зареждане под 1 секунда (срещу 3–7)."}},
           {"@type":"Question","name":"Защо нямам достъп до CMS панел?","acceptedAnswer":{"@type":"Answer","text":"Умишлен избор. Управлявани ъпдейти в рамките на 24 часа с проверка на PageSpeed и SEO — без риск от грешки."}},
           {"@type":"Question","name":"HTML сайтовете сигурни ли са?","acceptedAnswer":{"@type":"Answer","text":"Имат по-нисък риск при правилна конфигурация. Няма публичен CMS панел, runtime база данни, PHP или плъгини. Това намалява повърхността за атака спрямо типични WordPress конфигурации."}},
           {"@type":"Question","name":"Кой притежава кода?","acceptedAnswer":{"@type":"Answer","text":"Ти — изцяло. Lifetime ownership е стандартна клауза. Можеш да го редактираш сам или с друг разработчик. Нямаш vendor lock-in."}},
@@ -102,7 +102,7 @@
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://moverstudio.online/faq.html#localbusiness",
+        "@id": "https://moverstudio.online/#localbusiness",
         "name": "MOVER Studio - ЧЗВ и Помощ България",
         "description": "Често задавани въпроси за изработка на сайтове. Локално SEO за София, Пловдив, Варна, Бургас и цяла България.",
         "url": "https://moverstudio.online/faq.html",
@@ -308,7 +308,7 @@
       <div class="faq-answer">
         <p>Статичният HTML елиминира сървърна обработка и database заявки.</p>
         <p><strong>Технически предимства:</strong><br>
-        1–5 HTTP заявки (срещу 30–80) · 30–150 KB (срещу 2–5 MB) · PageSpeed 95–100 (срещу 40–70) · зареждане &lt;1 сек (срещу 3–7 сек)</p>
+        HTML + споделени CSS/JS ресурси (срещу 30–80 при WordPress) · 30–150 KB (срещу 2–5 MB) · PageSpeed 95–100 (срещу 40–70) · зареждане &lt;1 сек (срещу 3–7 сек)</p>
         <p><strong>Икономически предимства (месечни разходи 2026):</strong></p>
         <p>Разходите за HTML сайтове са предимно само хостинг (често 0–3 €/мес. чрез Netlify или GitHub Pages), без софтуерни такси, лицензи за плъгини или редовни ъпдейти — идеални за статични бизнес презентации с висок PageSpeed и минимална поддръжка.</p>
         <p>WordPress базовият модел започва евтино (3–8 €/мес.), но рискува уязвимости, бавно зареждане и конфликти между 50+ плъгина; професионалната поддръжка (50–150 €/мес.) се оправдава за бизнеси с висок трафик.</p>
@@ -341,8 +341,8 @@
     <details class="faq-item">
       <summary>Използвате ли CDN библиотеки за шрифтове?</summary>
       <div class="faq-answer">
-        Шрифтовете са <strong>self-hosted</strong> в <code>/fonts/*.woff2</code> — без Google Fonts или други външни CDN. Зареждат се локално с <strong>font-display: swap</strong> и не зависят от трети сървъри.<br><br>
-        Резултат: по-малко render-blocking и стабилен PageSpeed без външни заявки.
+        Използваме <strong>Cyrillic-capable system font stacks</strong> в <code>/css/site.css</code> (system UI mono + Georgia/serif) — без Google Fonts, без външни CDN и без допълнителни WOFF2 заявки.<br><br>
+        Резултат: по-малко render-blocking, по-нисък FOUT риск и стабилен PageSpeed.
       </div>
     </details>
 
@@ -716,6 +716,6 @@
   </div>
 </footer>
 
-<script src="/js/site.js" defer></script>
+<script src="/js/site.js?v=20261013" defer></script>
 </body>
 </html>

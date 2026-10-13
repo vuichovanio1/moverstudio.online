@@ -54,6 +54,7 @@ Same team / legal entity **Транспортер Иван Иванов ЕООД
 
 RECENT SITE UPDATES (2026-10-13)
 
+- P1 score-100 pack: /lead.php primary lead capture (mailto fallback); pages.css merged into site.css (?v=20261013a); Accept-Ranges scoped to OG; timestamps synced; containedInPlace; 404 no self-canonical; orphan fonts removed; GEO copy softened.
 - P1 D/E/F: CSS/JS cache-bust ?v=20261013; aggressive gzip (level 9) + optional Brotli; Plovdiv/Varna/Burgas unique H2 blocks; WhatsApp+Viber CTAs on money/city heroes and lead forms.
 - P0 A/B/C: LocalBusiness @id unified to https://moverstudio.online/#localbusiness sitewide; city LP schema name=MOVER Studio; personal sameAs removed from Organization; homepage WebPage.name + FAQ anti-cannibalization; fonts documented as system stacks; requests = HTML + shared CSS/JS.
 - P0 remediation: city LP LocalBusiness NAP = Kostinbrod HQ + streetAddress ул. Бяло Море 16 + geo 42.8167/23.2167; Service areaServed keeps city; @id #localbusiness (not #serviceareabusiness).
@@ -133,7 +134,7 @@ ARCHITECTURAL MODEL
 - Resource constraints: optimized lightweight external stylesheets and minimized assets. The architecture excludes server‑side rendering and persistent databases to remove runtime variability; serverless or hybrid patterns are available when project requirements mandate stateful features.
 - Dependencies: baseline pages require no third‑party runtime libraries. Optional external services (forms, analytics, CDN) are supported but their inclusion and configuration are documented because they impact measurable performance.
 - Multi-region & i18n: implemented as separate static pages per location/language (one URL per target variant). This is an SEO‑first, indexable approach that avoids runtime language negotiation.
-- Dynamic features: non‑stateful interactions implemented client‑side with vanilla JS (calculators, UI enhancements). Lead capture uses direct mailto: (client-composed subject/body), WhatsApp, and tel: links for maximum speed — no external form backend required. Optional webhooks or serverless endpoints can be scoped separately; full backend services are excluded from the core offering unless scoped explicitly.
+- Dynamic features: non‑stateful interactions implemented client‑side with vanilla JS (calculators, UI enhancements). Lead capture: primary POST to same-origin `/lead.php` (PHP mail) with on-page success state; WhatsApp/Viber/tel secondary; mailto: automatic JS fallback if the endpoint fails.
 - Deployment targets: static hosts and CDNs (Cloudflare Pages, GitHub Pages, standard static hosting).
 
 TARGET USE CASES
@@ -155,7 +156,7 @@ PERFORMANCE CLAIMS (measurable)
 
 - PageSpeed Score: contractual target of 100 on Google PageSpeed Insights, measured using the agreed Lighthouse settings and the delivered page content and hosting configuration.
 - Load time: typical cold‑load <1s on modern 4G/5G networks for pages that meet the agreed asset‑size targets; measured via synthetic lab tests and field metrics when available.
-- Requests: canonical pages = HTML + shared CSS/JS (/css/site.css, /css/pages.css, /js/site.js) + optional images/favicons — far fewer than typical WordPress (30–80).
+- Requests: canonical pages = HTML + shared CSS/JS (/css/site.css, /js/site.js) + optional images/favicons — far fewer than typical WordPress (30–80).
 - Page weight: target 30–150 KB compressed for simple pages; larger pages may exceed this depending on images and content.
 - Hosting cost: estimated static hosting + domain 23–48€ per year (TLD dependent).
 

@@ -100,9 +100,6 @@ ErrorDocument 404 /404.html
   # Permissions-Policy (disable unused powerful APIs)
   Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()"
 
-  # Фикс за грешка 206 (Partial Content)
-  Header set Accept-Ranges none
-
   # DNS Prefetch
   Header set X-DNS-Prefetch-Control "on"
 
@@ -110,7 +107,7 @@ ErrorDocument 404 /404.html
   Header set X-LLMS-TXT "/llms-full.txt"
 </IfModule>
 
-# OG image: drop HTML-only headers; KEEP HSTS on all HTTPS responses
+# OG image: drop HTML-only headers; KEEP HSTS; force Accept-Ranges none (social Range/206 fix)
 <Files "og-image.php">
   <IfModule mod_headers.c>
     Header always unset Content-Security-Policy
@@ -120,6 +117,14 @@ ErrorDocument 404 /404.html
     Header always unset X-LLMS-TXT
     Header always unset X-Content-Type-Options
     Header always unset Permissions-Policy
+    Header always set Accept-Ranges "none"
+  </IfModule>
+</Files>
+
+# Lead endpoint: no long-lived caching
+<Files "lead.php">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-store"
   </IfModule>
 </Files>
 

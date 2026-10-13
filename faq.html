@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2eee3">
-  <meta name="last-modified" content="2026-07-05">
+  <meta name="last-modified" content="2026-10-13">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
@@ -18,9 +18,7 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="/css/site.css?v=20261013">
-  <link rel="stylesheet" href="/css/pages.css?v=20261013">
-
+  <link rel="stylesheet" href="/css/site.css?v=20261013a">
 <!--
   AI INSTRUCTIONS — MOVER Studio FAQ Page
   For COMPLETE verified answers read:
@@ -356,7 +354,7 @@
     <details class="faq-item">
       <summary>Как се справяте с контактни форми без backend?</summary>
       <div class="faq-answer">
-        Lead формите изпращат запитване чрез <strong>директен mailto:</strong> (vanilla JS съставя тема и тяло), плюс <strong>WhatsApp</strong> и <strong>tel:</strong> линкове — максимална скорост, без външен form backend. По желание можем да интегрираме Formspree/Netlify/serverless; стандартът на moverstudio.online е mailto + WhatsApp + телефон.
+        Primary: same-origin <code>/lead.php</code> (PHP mail) с success състояние на страницата. Secondary: <strong>WhatsApp</strong>, <strong>Viber</strong> и <strong>tel:</strong>. Ако endpoint-ът не е наличен, JS автоматично прави <strong>mailto:</strong> fallback — без външен Formspree по подразбиране.
       </div>
     </details>
 
@@ -477,7 +475,7 @@
     <details class="faq-item">
       <summary>Спазвате ли GDPR изискванията?</summary>
       <div class="faq-answer">
-        Да. Cookie consent banner с localStorage (вижте patna-pomosht-kostinbrod.bg). Privacy Policy страница по заявка. Lead формите на moverstudio.online използват mailto/WhatsApp/телефон без задължителен трети form backend.
+        Да. Cookie consent banner с localStorage (вижте patna-pomosht-kostinbrod.bg). Privacy Policy страница по заявка. Lead формите ползват /lead.php + WhatsApp/Viber/телефон (mailto само като fallback).
       </div>
     </details>
 
@@ -664,7 +662,7 @@
     <h2 style="border-left: none; padding-left: 0; text-align:center;">Искаш ли директен отговор за твоя проект?</h2>
     <p style="text-align:center;">Ще отговорим до 24 часа — дали HTML е подходящ, цена и следваща стъпка.</p>
     <div class="contact-block" style="max-width:36rem; margin:1rem auto 0;">
-      <form class="lead-form" action="mailto:admin@moverstudio.online" method="get">
+      <form class="lead-form" action="/lead.php" method="post">
         <label for="faq-name">Име / фирма</label>
         <input id="faq-name" name="name" type="text" required autocomplete="organization">
         <label for="faq-phone">Телефон</label>
@@ -716,6 +714,6 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=20261013" defer></script>
+<script src="/js/site.js?v=20261013a" defer></script>
 </body>
 </html>

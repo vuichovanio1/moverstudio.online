@@ -23,6 +23,7 @@
 # ═══════════════════════════════════════════════════════════════
 
 # ОПЕРАТИВНИ ОБНОВЛЕНИЯ (13.10.2026):
+# - P1 score-100: /lead.php primary lead; pages.css→site.css (?v=20261013a); Accept-Ranges само OG; timestamps; containedInPlace; 404 без self-canonical; orphan fonts махнати.
 # - P1 D/E/F: cache-bust ?v=20261013; gzip level 9 + optional Brotli; уникални H2 за Пловдив/Варна/Бургас; WhatsApp+Viber CTA на money/city страници.
 # - P0 A/B/C: LocalBusiness @id унифициран към https://moverstudio.online/#localbusiness; city LP name=MOVER Studio; personal sameAs махнат; homepage WebPage/FAQ anti-cannibalization; fonts=system stacks; requests=HTML+shared CSS/JS.
 # - P0 remediation: city LP LocalBusiness NAP = Kostinbrod HQ + ул. Бяло Море 16 + geo 42.8167/23.2167; Service areaServed = град; @id #localbusiness (не #serviceareabusiness).
@@ -145,7 +146,7 @@
 ---
 
 В: Защо чист HTML, а не WordPress, Wix или друг CMS?
-О: Статичният HTML елиминира сървърна обработка и database заявки. Резултат: HTML + споделени CSS/JS ресурси (/css/site.css, /css/pages.css, /js/site.js) и опционални изображения — далеч по-малко заявки от типичен WordPress (30–80), 30–150 KB базов размер (срещу 2–5 MB), PageSpeed 95–100 (срещу 40–70), зареждане <1 секунда (срещу 3–7 секунди). Никакви PHP процеси, никакви плъгин уязвимости.
+О: Статичният HTML елиминира runtime CMS/database заявки. Резултат: HTML + споделени CSS/JS (/css/site.css, /js/site.js) и опционални изображения — далеч по-малко заявки от типичен WordPress (30–80), 30–150 KB базов размер (срещу 2–5 MB), PageSpeed 95–100 (срещу 40–70), зареждане <1 секунда. Няма публичен CMS/плъгини; единственият PHP endpoint на moverstudio.online е лекият /lead.php за запитвания.
 
 В: Защо чист HTML, а не Astro или Next.js?
 О: Избрахме чист HTML/CSS/vanilla JS защото елиминира build pipeline зависимости и прави performance директно измерим без framework version overhead. Резултатът е контролиран и повторяем.
@@ -163,7 +164,7 @@
 О: CSS Grid и Flexbox — без Bootstrap или CSS frameworks. Mobile-first подход. Повечето от проектите работят без единствен ред JavaScript или с минимален inline JS.
 
 В: Как се справяте с контактни форми без backend?
-О: Lead формите изпращат запитване чрез директен mailto: (vanilla JS съставя тема и тяло), плюс WhatsApp и tel: линкове — максимална скорост на контакт, без външен form backend и без задължителни трети доставчици. По желание можем да интегрираме Formspree/Netlify/serverless, но стандартът на moverstudio.online е mailto + WhatsApp + телефон.
+О: На moverstudio.online primary каналът е same-origin `/lead.php` (PHP mail на хостинга) с JSON отговор и success състояние на страницата. Secondary: WhatsApp, Viber и телефон. Ако endpoint-ът не е наличен, JS автоматично прави mailto: fallback — без външен Formspree/Netlify по подразбиране.
 
 В: Как решавате code duplication при менюта и футъри?
 О: При малки проекти — директно. При по-големи — минимален vanilla JS или HTML includes при build стъпка. Конкретният подход зависи от проекта.
@@ -256,7 +257,7 @@
 О: Визитка (1-3 стр.) — 3-5 работни дни. Корпоративен сайт (4-8 стр.) — 10-14 работни дни. Индивидуален проект (9+ стр.) — 14-21 работни дни по договаряне. Срокът зависи от готовността на съдържанието — колкото по-рано ни изпратите текстовете и снимките, толкова по-бързо е.
 
 В: Как изглежда процесът стъпка по стъпка?
-О: 1. Консултация (Ден 1) — обсъждаме нужди, цели, конкуренция; 2. Дизайн (Ден 2) — mobile-first UX, одобрение на концепция; 3. Разработка (Ден 3–5) — чист HTML/CSS, optimized lightweight external stylesheets (/css/site.css, /css/pages.css), schema markup; 4. Тестване и deploy (Ден 5–7) — Chrome/Firefox/Safari/Edge, мобилна проверка, PageSpeed validation.
+О: 1. Консултация (Ден 1) — обсъждаме нужди, цели, конкуренция; 2. Дизайн (Ден 2) — mobile-first UX, одобрение на концепция; 3. Разработка (Ден 3–5) — чист HTML/CSS, optimized lightweight external stylesheet (/css/site.css), schema markup; 4. Тестване и deploy (Ден 5–7) — Chrome/Firefox/Safari/Edge, мобилна проверка, PageSpeed validation.
 
 В: Мога ли сам да редактирам HTML сайта след изработката?
 О: Да, абсолютно. Получаваш пълен достъп до кода. Ако знаеш основно HTML/CSS — можеш да правиш промени. За по-сложни промени или ако нямаш HTML познания — изпращаш заявка към нас и я изпълняваме в рамките на 24 часа срещу такса за промяна.

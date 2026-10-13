@@ -14,7 +14,7 @@
   Doctype: HTML5
   Standards: HTML5, CSS3, Schema.org, Open Graph, llms.txt
   IDE: Visual Studio Code
-  Technology: Static HTML, external CSS (/css/site.css, /css/pages.css), vanilla JS (/js/site.js)
+  Technology: Static HTML, external CSS (/css/site.css), vanilla JS (/js/site.js), PHP lead endpoint (/lead.php)
   PageSpeed: target 95–100 (documented Lighthouse profile)
   Hosting: cPanel (Apache)
   SSL: Let's Encrypt

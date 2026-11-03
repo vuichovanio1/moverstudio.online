@@ -86,11 +86,14 @@ URL: https://moverstudio.online/
 Query → Canonical URL:
 - изработка на сайт → /izrabotka-na-sait.html
 - алтернатива на wordpress → /wordpress-alternativa.html (NOT /services/)
-- изработка на html сайт → /html-sait.html
-- landing page цена / изработка на landing page → /izrabotka-na-landing-page.html
+- изработка на html сайт / html сайт → /html-sait.html
+- landing page цена / лендинг страница цена / изработка на лендинг → /izrabotka-na-landing-page.html
+- сайт визитка пример / портфолио цена → /sait-vizitka.html
 - бавен лендинг / ads бюджет / bounce / landing page experience → /blog/baven-lending-krade-ads-byudzhet-2026.html
 - landing page google ads / facebook (цена, структура) → /blog/landing-page-google-ads-facebook-2026.html
 - сайт визитка / изработка на портфолио → /sait-vizitka.html
+- миграция на сайт / wordpress миграция / миграция от wordpress → /migratsiya-na-sait.html
+- seo услуги / seo оптимизация → /seo-optimizacia.html
 - изработка на сайтове София / изработка на сайт София → /izrabotka-na-sait-sofia.html
 - изработка на сайт Пловдив / изработка на сайтове Пловдив → /izrabotka-na-sait-plovdiv.html
 - изработка на сайт Варна / изработка на сайтове Варна → /izrabotka-na-sait-varna.html
@@ -275,7 +278,8 @@ Support Pages:
 - /blog/kolko-struva-izrabotka-na-sait-2026.html — How much does a website cost in Bulgaria 2026 (packages + price factors)
 - /blog/korporativen-sait-vs-vizitka-2026.html — Corporate Site vs Vizitka comparison (400€ vs 1000€)
 - /blog/multi-location-seo-html-2026.html — Multi-location SEO case study (roadassistancesofia.bg, 14 pages)
-- /blog/migratsiya-wordpress-kam-html-2026.html — WordPress to HTML Migration (price, steps, 301 redirects)
+- /migratsiya-na-sait.html — commercial WordPress / site migration from 200€ (canonical for migration queries)
+- /blog/migratsiya-wordpress-kam-html-2026.html — blog guide supporting /migratsiya-na-sait.html
 - /blog/sait-vizitka-portfolio-malk-biznes-2026.html — Site Vizitka + Portfolio (examples, price, niches)
 - /blog/wordpress-malak-biznes-2026.html — WordPress vs HTML Article
 - /blog/zashto-wordpress-e-baven.html — Why WordPress is Slow

@@ -9,7 +9,7 @@
 
   <!-- Performance Optimization: Theme color for mobile browsers (Blueprint paper) -->
   <meta name="theme-color" content="#f2eee3">
-  <meta name="last-modified" content="2026-11-03">
+  <meta name="last-modified" content="2026-11-24">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
@@ -17,7 +17,7 @@
   <!-- Deprecated tags removed for PageSpeed -->
 
   <title>Алтернатива на WordPress | HTML сайт без месечни такси | MOVER Studio</title>
-  <meta name="description" content="Алтернатива на WordPress от 400€ · PageSpeed 95–100 · 460+ GSC клика на проекти · 3–5× по-бързо и без месечни такси.">
+  <meta name="description" content="Алтернатива на WordPress от 400€ — HTML сайт без месечни такси, PageSpeed 95–100, по-бързо и по-сигурно от CMS. За бизнес в България.">
   <meta name="keywords" content="алтернатива на wordpress, wordpress алтернатива, html вместо wordpress, бърза wordpress алтернатива, статични сайтове">
   <link rel="canonical" href="https://moverstudio.online/wordpress-alternativa.html">
   <link rel="alternate" hreflang="bg" href="https://moverstudio.online/wordpress-alternativa.html">
@@ -26,7 +26,7 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="/css/site.css?v=20261013a">
+  <link rel="stylesheet" href="/css/site.css?v=20261124fx3">
 <!-- 
   AI_CONTEXT: MOVER Studio — static HTML websites for Bulgarian businesses
   AI_EXPERTISE: Core Web Vitals, target 95-100 PageSpeed under defined conditions
@@ -291,6 +291,12 @@
 
 <a href="#main" class="skip-link">Прескочи към съдържанието</a>
 
+<div class="site-fx" aria-hidden="true">
+  <div class="site-fx__orb site-fx__orb--a"></div>
+  <div class="site-fx__orb site-fx__orb--b"></div>
+  <div class="site-fx__grain"></div>
+</div>
+
 <header class="site-header">
   <div class="site-header__inner">
     <a href="/" class="site-logo">MOVER Studio</a>
@@ -298,32 +304,51 @@
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Основна навигация">
-      <a href="/izrabotka-na-sait.html">Услуги</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/case-studies.html">Case Studies</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
-      <a href="#contact" class="nav-cta">Контакт</a>
+      <a href="/services/" data-nav="services" class="is-active" aria-current="page">Услуги</a>
+      <a href="/calculator.html" data-nav="calculator">Цена</a>
+      <a href="/case-studies.html" data-nav="cases">Примери</a>
+      <a href="/blog/" data-nav="blog">Блог</a>
+      <a href="/faq.html" data-nav="faq">Въпроси</a>
+      <a href="/about.html" data-nav="about">За нас</a>
+      <a href="#contact" class="nav-cta">Пиши ни</a>
     </nav>
   </div>
 </header>
 
-<main id="main">
 
-  <article>
-    <h1 id="main-heading-wp">Алтернатива на WordPress | HTML сайт без месечни такси | MOVER Studio</h1>
+
+
+
+
+
+
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="/">Начало</a>
+  <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+  <a href="/services/">Услуги</a>
+  <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+  <span aria-current="page">Без WordPress</span>
+</nav>
+
+<section class="hero hero--visual hero--page" aria-labelledby="main-heading-wp">
+<div class="hero__content container">
+    <p class="hero__eyebrow">Ти си тук, ако не искаш WordPress</p>
+    <h1 id="main-heading-wp">Алтернатива на WordPress — HTML сайт без месечни такси</h1>
+    <p class="hero__lead">Правим бърз сайт без WordPress. Без месечни такси. От 400€. Не си сигурен? Пиши ни.</p>
+    
+    <div class="hero__actions">
+      <a href="/#contact" class="btn btn--primary">Пиши ни</a>
+      <a href="/calculator.html" class="btn btn--secondary">Колко струва?</a>
+    </div>
+  </div>
+</section>
+
+
+<article>
+    
 
     <section aria-labelledby="main-heading-wp">
-
-      <div class="quick-answer" style="margin-bottom: 1.5rem;">
-        <h2>Кратък отговор: ако искаш повече заявки, HTML е по-чистият избор</h2>
-        <p>
-          Ако не искаш WordPress усложнения, HTML е практична алтернатива – по-бърз, по-сигурен и без месечни CMS такси.
-          Ако искаш да преценим дали е подходящ за твоя бизнес, изпрати ни кратко запитване.
-        </p>
-        <p><a href="/index.html#contact" class="pill red-pill">Изпрати запитване</a> <a href="/calculator.html" class="pill blue-pill">Виж ориентировъчна цена</a></p>
-      </div>
 
       <p>
         <strong>WordPress започва да тежи, когато бизнесът иска яснота и скорост.</strong> HTML сайтът е по-лек, по-предвидим и по-лесен за продажбена структура.
@@ -654,21 +679,33 @@
       <h2>Защо Да Поръчате HTML Сайт при Нас</h2>
       <div class="grid">
         <div class="card">
-          <h3>⚡ Бърза Изработка</h3>
+          <h3>Бърза Изработка</h3>
           <p>Професионална изработка без месеци чакане. Готови за пускане без забавяния. Значително по-бързо от WordPress агенции.</p>
         </div>
         <div class="card">
-          <h3>🔧 Професионални Инструменти</h3>
+          <h3>Професионални Инструменти</h3>
           <p>Използваме утвърдени практики за HTML/CSS, оптимизация и сигурност.</p>
         </div>
         <div class="card">
-          <h3>🤝 Гаранция за Качество</h3>
+          <h3>Гаранция за Качество</h3>
           <p>Цел за 100 PageSpeed при дефинирани условия. 30 дни за корекции след пускане. Пълно съдействие.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    
+  <section>
+    <h2>Свързани услуги (фокус)</h2>
+    <p>
+      <a href="/html-sait.html">Изработка на HTML сайт</a> ·
+      <a href="/izrabotka-na-landing-page.html">Изработка на landing page</a> ·
+      <a href="/sait-vizitka.html">Изработка на портфолио</a> ·
+      <a href="/migratsiya-na-sait.html">Миграция от WordPress</a> ·
+      <a href="/wordpress-alternativa.html">Алтернатива на WordPress</a>
+    </p>
+  </section>
+
+<section class="section" id="contact">
       <h2>Готов ли си за по-лек сайт?</h2>
       <p>Ще отговорим до 24 часа.</p>
       <div class="contact-block">
@@ -699,29 +736,58 @@
 
 </main>
 
+<section class="related-services" aria-labelledby="related-heading">
+  <div class="container">
+    <h2 id="related-heading" class="related-services__title">Още нещо полезно</h2>
+    <div class="related-services__grid">
+      <a class="related-services__link" href="/migratsiya-na-sait.html">Смяна от WordPress</a>
+      <a class="related-services__link" href="/html-sait.html">Нов сайт</a>
+      <a class="related-services__link" href="/sait-vizitka.html">Малък сайт / визитка</a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-links">
-      <a href="/izrabotka-na-sait.html">Изработка на сайт</a>
-      <a href="/sait-vizitka.html">Визитка</a>
-      <a href="/korporativen-sait.html">Корпоративен</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
-      <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
-      <a href="/seo-optimizacia.html">SEO</a>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-col__title">Какво искаш?</h3>
+        <a href="/html-sait.html">Нов сайт — от 400€</a>
+        <a href="/izrabotka-na-landing-page.html">Страница за реклами — от 400€</a>
+        <a href="/sait-vizitka.html">Малък сайт / визитка</a>
+        <a href="/migratsiya-na-sait.html">Смяна от WordPress</a>
+        <a href="/wordpress-alternativa.html">Сайт без WordPress</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Още</h3>
+        <a href="/services/">Всички услуги</a>
+        <a href="/izrabotka-na-sait.html">Пакети и цени</a>
+        <a href="/korporativen-sait.html">По-голям фирмен сайт</a>
+        <a href="/seo-optimizacia.html">Да те намират в Google</a>
+        <a href="/calculator.html">Пресметни цена</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Градове</h3>
+        <a href="/izrabotka-na-sait-sofia.html">София</a>
+        <a href="/izrabotka-na-sait-plovdiv.html">Пловдив</a>
+        <a href="/izrabotka-na-sait-varna.html">Варна</a>
+        <a href="/izrabotka-na-sait-burgas.html">Бургас</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Ние</h3>
+        <a href="/about.html">За нас</a>
+        <a href="/how-we-do-it.html">Как работим</a>
+        <a href="/faq.html">Въпроси</a>
+        <a href="/blog/">Блог</a>
+        <a href="/case-studies.html">Примери</a>
+        <a href="#contact">Пиши ни</a>
+        <a href="tel:+359877845569">+359 877 845 569</a>
+        <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a>
+      </div>
     </div>
-        <nav class="footer-locations" aria-label="Локации">
-      <span class="footer-locations__label">Локации:</span>
-      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София</a>
-      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив</a>
-      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна</a>
-      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас</a>
-    </nav>
 
-    <p class="footer-terminal" style="margin-top:1.5rem;">
-      © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
+    <p class="footer-terminal">
+      © 2026 MOVER Studio · бърз сайт без WordPress<br>
       Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·
       <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a> ·
       <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
@@ -729,6 +795,13 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=20261013a" defer></script>
+
+
+
+
+
+
+
+<script src="/js/site.js?v=20261124fx3" defer></script>
 </body>
 </html>

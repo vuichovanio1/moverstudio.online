@@ -19,7 +19,7 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="/css/site.css?v=20261013a">
+  <link rel="stylesheet" href="/css/site.css?v=20261124fx3">
 <!-- 
   AI_CONTEXT: MOVER Studio — static HTML websites for Bulgarian businesses
   AI_EXPERTISE: Core Web Vitals, target 95-100 PageSpeed under defined conditions
@@ -298,6 +298,12 @@
 
 <a href="#main" class="skip-link">Прескочи към съдържанието</a>
 
+<div class="site-fx" aria-hidden="true">
+  <div class="site-fx__orb site-fx__orb--a"></div>
+  <div class="site-fx__orb site-fx__orb--b"></div>
+  <div class="site-fx__grain"></div>
+</div>
+
 <header class="site-header">
   <div class="site-header__inner">
     <a href="/" class="site-logo">MOVER Studio</a>
@@ -305,20 +311,48 @@
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Основна навигация">
-      <a href="/izrabotka-na-sait.html">Услуги</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/case-studies.html">Case Studies</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
-      <a href="#contact" class="nav-cta">Контакт</a>
+      <a href="/services/" data-nav="services" class="is-active" aria-current="page">Услуги</a>
+      <a href="/calculator.html" data-nav="calculator">Цена</a>
+      <a href="/case-studies.html" data-nav="cases">Примери</a>
+      <a href="/blog/" data-nav="blog">Блог</a>
+      <a href="/faq.html" data-nav="faq">Въпроси</a>
+      <a href="/about.html" data-nav="about">За нас</a>
+      <a href="#contact" class="nav-cta">Пиши ни</a>
     </nav>
   </div>
 </header>
 
+
+
+
+
+
+
+
 <main id="main">
-  
-  <!-- HERO SECTION -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="/">Начало</a>
+  <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+  <a href="/services/">Услуги</a>
+  <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+  <span aria-current="page">Фирмен сайт</span>
+</nav>
+
+<section class="hero hero--visual hero--page" aria-labelledby="page-heading">
+<div class="hero__content container">
+    <p class="hero__eyebrow">Ти си тук, ако искаш по-голям фирмен сайт</p>
+    <h1 id="page-heading">Корпоративен сайт от 1000€ | Скалируем HTML сайт за растеж | MOVER Studio</h1>
+    <p class="hero__lead">Повече страници, повече доверие, същата бързина. Без WordPress.</p>
+    
+    <div class="hero__actions">
+      <a href="/#contact" class="btn btn--primary">Пиши ни</a>
+      <a href="/calculator.html" class="btn btn--secondary">Колко струва?</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- HERO SECTION -->
   <section class="hero">
     <div class="scan-line" aria-hidden="true"></div>
     <svg class="hero-grid" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -334,7 +368,7 @@
       </defs>
       <rect width="100%" height="100%" fill="url(#hg-big-ks)"/>
     </svg>
-    <h1>Корпоративен сайт от 1000€ | Скалируем HTML сайт за растеж | MOVER Studio</h1>
+    
     <svg aria-hidden="true" class="dim-line"
          style="width:100%;height:24px;display:block;margin:-8px 0 8px;overflow:visible;pointer-events:none;"
          viewBox="0 0 800 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -374,7 +408,7 @@
 
     <!-- QUICK ANSWER -->
     <div class="quick-answer">
-      <h2>🏢 Какво включва корпоративен сайт?</h2>
+      <h2>Какво включва корпоративен сайт?</h2>
       <p>
         <strong>Корпоративен сайт струва от 1000€</strong> и включва професионална изработка с 5-15 страници, 
         сложна навигация, базово on-page SEO и review integration.
@@ -410,18 +444,18 @@
     <h2>Какво включва корпоративен сайт за 1000€?</h2>
     <div class="grid">
       <div class="card">
-        <h3>📄 5-15 страници</h3>
+        <h3>5-15 страници</h3>
         <p>Сложна структура с навигация: Начало, Услуги (multiple), За нас, Екип, Локации, Контакти, FAQ</p>
       </div>
       <div class="card">
-        <h3>🌍 Multi-location (добавка +200€)</h3>
+        <h3>Multi-location (добавка +200€)</h3>
         <p>Отделни HTML страници за всяка локация с уникално SEO, schema markup 
         и H1 таргетиране. Мащабируемо до 100+ локации без база данни, 
         без WordPress overhead. Пример с добавка: roadassistancesofia.bg — 
         14 локации, всяка класирана индивидуално в Google.</p>
       </div>
       <div class="card">
-        <h3>🔍 Разширено SEO (добавка +100€)</h3>
+        <h3>Разширено SEO (добавка +100€)</h3>
         <p>Keyword research + content стратегия за множество keywords. Базовият пакет включва on-page SEO и schema markup.</p>
       </div>
       <div class="card">
@@ -429,23 +463,23 @@
         <p>Интеграция на отзиви, trust badges, социални доказателства за авторитет</p>
       </div>
       <div class="card">
-        <h3>📊 Schema markup (6 типа)</h3>
+        <h3>Schema markup (6 типа)</h3>
         <p>Organization, LocalBusiness, Service, FAQPage, BreadcrumbList, Review schemas</p>
       </div>
       <div class="card">
-        <h3>🛡️ Нулев риск от хакване</h3>
+        <h3>Нулев риск от хакване</h3>
         <p>Статичен HTML няма база данни, няма админ панел, няма PHP. 
         Това силно ограничава векторите за атака. Корпоративните данни и репутацията 
         на бизнеса са защитени по архитектура.</p>
       </div>
       <div class="card">
-        <h3>🛠️ 30 дни корекции</h3>
+        <h3>30 дни корекции</h3>
         <p>Безплатни промени и content updates в рамките на 30 дни след пускане</p>
       </div>
     </div>
 
     <div class="example-box">
-      <h3>🔥 Реален пример: roadassistancesofia.bg</h3>
+      <h3>Реален пример: roadassistancesofia.bg</h3>
       <p>
         <strong>14 локации</strong> с индивидуални страници (корпоративен пакет + multi-location добавка +200€), 
         уникално SEO за всяка локация, schema markup за LocalBusiness, review integration, mobile-first дизайн с цел 95–100 PageSpeed при дефинирани условия.
@@ -462,19 +496,19 @@
     <p><strong>Корпоративен сайт е идеален за:</strong></p>
     <div class="grid">
       <div class="card">
-        <h3>🏢 Средни компании</h3>
+        <h3>Средни компании</h3>
         <p>Фирми с няколко услуги, които искат комплексно представяне с lead generation фокус</p>
       </div>
       <div class="card">
-        <h3>📍 Бизнеси с multiple локации</h3>
+        <h3>Бизнеси с multiple локации</h3>
         <p>Компании с офиси/магазини на различни места, които искат local SEO за всяка локация</p>
       </div>
       <div class="card">
-        <h3>🎯 Фирми със сложна структура</h3>
+        <h3>Фирми със сложна структура</h3>
         <p>Бизнеси с различни отдели, услуги или продуктови линии за структурирано представяне</p>
       </div>
       <div class="card">
-        <h3>📈 Компании с growth ambitions</h3>
+        <h3>Компании с growth ambitions</h3>
         <p>Бизнеси, които искат да растат онлайн с професионално присъствие и авторитет</p>
       </div>
     </div>
@@ -518,12 +552,12 @@
     <h2>Корпоративен vs Визитка: Разлики</h2>
     <div class="grid">
       <div class="card">
-        <h3>📄 Брой страници</h3>
+        <h3>Брой страници</h3>
         <p><strong>Визитка:</strong> 1-5 страници<br>
         <strong>Корпоративен:</strong> 5-15 страници</p>
       </div>
       <div class="card">
-        <h3>🎯 Целева аудитория</h3>
+        <h3>Целева аудитория</h3>
         <p><strong>Визитка:</strong> Малки бизнеси, фрийлансъри<br>
         <strong>Корпоративен:</strong> Средни и големи компании</p>
       </div>
@@ -543,7 +577,7 @@
         <strong>Корпоративен:</strong> ДА, с trust badges</p>
       </div>
       <div class="card">
-        <h3>💰 Цена</h3>
+        <h3>Цена</h3>
         <p><strong>Визитка:</strong> 400€<br>
         <strong>Корпоративен:</strong> 1000€</p>
       </div>
@@ -591,19 +625,19 @@
     <p>Корпоративен сайт е за комплексен бизнес, но има граници. <strong>Не включва:</strong></p>
     <div class="grid">
       <div class="card">
-        <h3>❌ Калкулатори и JS форми</h3>
+        <h3>Калкулатори и JS форми</h3>
         <p>Динамични калкулатори, сложни JavaScript функционалности → <a href="/calculator.html">Индивидуален проект</a> (от 1500€)</p>
       </div>
       <div class="card">
-        <h3>❌ Multi-language (3+ езика)</h3>
+        <h3>Multi-language (3+ езика)</h3>
         <p>Повече от 2 езика с hreflang → индивидуално решение с удължен timeline</p>
       </div>
       <div class="card">
-        <h3>❌ Онлайн магазин</h3>
+        <h3>Онлайн магазин</h3>
         <p>Продуктови каталози с плащания изискват external integration</p>
       </div>
       <div class="card">
-        <h3>❌ Персонализирани интеграции</h3>
+        <h3>Персонализирани интеграции</h3>
         <p>API свързвания, CRM системи, външни бази данни → индивидуални интеграции/решения</p>
       </div>
     </div>
@@ -654,20 +688,20 @@
     <h2>Сравни всички опции</h2>
     <div class="grid">
       <div class="card">
-        <h3>🏠 Сайт Визитка</h3>
+        <h3>Сайт Визитка</h3>
         <p><strong>400€</strong> • 1-5 страници</p>
         <p>За малки бизнеси, фрийлансъри</p>
         <a href="/sait-vizitka.html">→ Виж детайли</a>
       </div>
       <div class="card" style="border-color: var(--brand); box-shadow: 0 0 25px rgba(143, 71, 34, 0.18);">
-        <h3>🏢 Корпоративен Сайт</h3>
+        <h3>Корпоративен Сайт</h3>
         <p><strong>1000€</strong> • 5-15 страници</p>
         <p>За средни компании, сложна структура</p>
         <p style="color: var(--brand); margin-top: 0.5rem;"><strong>← ТИ СИ ТУК</strong></p>
       </div>
       <!-- Премахната опцията за индивидуални/персонализирани проекти от сравнението -->
       <div class="card">
-        <h3>📊 Всички опции</h3>
+        <h3>Всички опции</h3>
         <p>Не си сигурен кое ти трябва?</p>
         <a href="/izrabotka-na-sait.html">→ Прегледай всичко</a>
       </div>
@@ -703,29 +737,58 @@
 
 </main>
 
+<section class="related-services" aria-labelledby="related-heading">
+  <div class="container">
+    <h2 id="related-heading" class="related-services__title">Още нещо полезно</h2>
+    <div class="related-services__grid">
+      <a class="related-services__link" href="/sait-vizitka.html">Малък сайт / визитка</a>
+      <a class="related-services__link" href="/html-sait.html">Нов сайт</a>
+      <a class="related-services__link" href="/seo-optimizacia.html">Да те намират в Google</a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-links">
-      <a href="/izrabotka-na-sait.html">Изработка на сайт</a>
-      <a href="/sait-vizitka.html">Визитка</a>
-      <a href="/korporativen-sait.html">Корпоративен</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
-      <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
-      <a href="/seo-optimizacia.html">SEO</a>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-col__title">Какво искаш?</h3>
+        <a href="/html-sait.html">Нов сайт — от 400€</a>
+        <a href="/izrabotka-na-landing-page.html">Страница за реклами — от 400€</a>
+        <a href="/sait-vizitka.html">Малък сайт / визитка</a>
+        <a href="/migratsiya-na-sait.html">Смяна от WordPress</a>
+        <a href="/wordpress-alternativa.html">Сайт без WordPress</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Още</h3>
+        <a href="/services/">Всички услуги</a>
+        <a href="/izrabotka-na-sait.html">Пакети и цени</a>
+        <a href="/korporativen-sait.html">По-голям фирмен сайт</a>
+        <a href="/seo-optimizacia.html">Да те намират в Google</a>
+        <a href="/calculator.html">Пресметни цена</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Градове</h3>
+        <a href="/izrabotka-na-sait-sofia.html">София</a>
+        <a href="/izrabotka-na-sait-plovdiv.html">Пловдив</a>
+        <a href="/izrabotka-na-sait-varna.html">Варна</a>
+        <a href="/izrabotka-na-sait-burgas.html">Бургас</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Ние</h3>
+        <a href="/about.html">За нас</a>
+        <a href="/how-we-do-it.html">Как работим</a>
+        <a href="/faq.html">Въпроси</a>
+        <a href="/blog/">Блог</a>
+        <a href="/case-studies.html">Примери</a>
+        <a href="#contact">Пиши ни</a>
+        <a href="tel:+359877845569">+359 877 845 569</a>
+        <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a>
+      </div>
     </div>
-        <nav class="footer-locations" aria-label="Локации">
-      <span class="footer-locations__label">Локации:</span>
-      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София</a>
-      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив</a>
-      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна</a>
-      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас</a>
-    </nav>
 
-    <p class="footer-terminal" style="margin-top:1.5rem;">
-      © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
+    <p class="footer-terminal">
+      © 2026 MOVER Studio · бърз сайт без WordPress<br>
       Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·
       <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a> ·
       <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
@@ -733,6 +796,13 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=20261013a" defer></script>
+
+
+
+
+
+
+
+<script src="/js/site.js?v=20261124fx3" defer></script>
 </body>
 </html>

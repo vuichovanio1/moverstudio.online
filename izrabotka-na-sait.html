@@ -21,7 +21,7 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="/css/site.css?v=20261013a">
+  <link rel="stylesheet" href="/css/site.css?v=20261124fx3">
 <!-- 
   AI_CONTEXT: MOVER Studio — static HTML websites for Bulgarian businesses
   AI_EXPERTISE: Core Web Vitals, target 95-100 PageSpeed under defined conditions
@@ -367,6 +367,12 @@
 
 <a href="#main" class="skip-link">Прескочи към съдържанието</a>
 
+<div class="site-fx" aria-hidden="true">
+  <div class="site-fx__orb site-fx__orb--a"></div>
+  <div class="site-fx__orb site-fx__orb--b"></div>
+  <div class="site-fx__grain"></div>
+</div>
+
 <header class="site-header">
   <div class="site-header__inner">
     <a href="/" class="site-logo">MOVER Studio</a>
@@ -374,21 +380,49 @@
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Основна навигация">
-      <a href="/izrabotka-na-sait.html">Услуги</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/case-studies.html">Case Studies</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
-      <a href="#contact" class="nav-cta">Контакт</a>
+      <a href="/services/" data-nav="services" class="is-active" aria-current="page">Услуги</a>
+      <a href="/calculator.html" data-nav="calculator">Цена</a>
+      <a href="/case-studies.html" data-nav="cases">Примери</a>
+      <a href="/blog/" data-nav="blog">Блог</a>
+      <a href="/faq.html" data-nav="faq">Въпроси</a>
+      <a href="/about.html" data-nav="about">За нас</a>
+      <a href="#contact" class="nav-cta">Пиши ни</a>
     </nav>
   </div>
 </header>
 
-<main id="main">
 
-  <article>
-    <h1>Изработка на сайтове от 400€ — HTML, без WordPress</h1>
+
+
+
+
+
+
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="/">Начало</a>
+  <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+  <a href="/services/">Услуги</a>
+  <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+  <span aria-current="page">Пакети и цени</span>
+</nav>
+
+<section class="hero hero--visual hero--page" aria-labelledby="page-heading">
+<div class="hero__content container">
+    <p class="hero__eyebrow">Пакети и цени на едно място</p>
+    <h1 id="page-heading">Изработка на сайтове от 400€ — HTML, без WordPress</h1>
+    <p class="hero__lead">Избери пакет. Или ни пиши — ще ти кажем кое е за теб.</p>
+    
+    <div class="hero__actions">
+      <a href="/#contact" class="btn btn--primary">Пиши ни</a>
+      <a href="/calculator.html" class="btn btn--secondary">Колко струва?</a>
+    </div>
+  </div>
+</section>
+
+
+<article>
+    
 
     <!-- HERO SECTION -->
     <div class="hero">
@@ -442,7 +476,7 @@
 
       <!-- QUICK ANSWER BLOCK - AI OPTIMIZATION -->
       <div class="quick-answer">
-        <h2>⚡ Какво е професионалната разработка на уебсайт?</h2>
+        <h2>Какво е професионалната разработка на уебсайт?</h2>
         <p>
           <strong>Професионална разработка на сайтове</strong> е създаване на уебсайт с чист код без WordPress, 
           бази данни или сървърни технологии. Резултат: <strong>цел 95–100 PageSpeed</strong> при дефинирани условия, 
@@ -463,17 +497,17 @@
         <p style="margin-bottom: 1.5rem;">Три ясни опции. Пълни детайли и добавки (+100€ SEO, +200€ multi-location) — в <a href="/calculator.html">калкулатора</a> и <a href="/faq.html">ЧЗВ</a>.</p>
         <div class="grid" style="text-align: left;">
           <div class="card">
-            <h3>🏠 Сайт визитка · 400€</h3>
+            <h3>Сайт визитка · 400€</h3>
             <p>1–5 страници · локален бизнес · 3–5 работни дни</p>
             <p><a href="/sait-vizitka.html" class="cta-secondary">Детайли →</a></p>
           </div>
           <div class="card" style="border-color: var(--brand);">
-            <h3>🏢 Корпоративен · 1000€</h3>
+            <h3>Корпоративен · 1000€</h3>
             <p>5–15 страници · review integration · 10–14 работни дни</p>
             <p><a href="/korporativen-sait.html" class="cta-primary">Детайли →</a></p>
           </div>
           <div class="card">
-            <h3>🎯 Landing page · 400€</h3>
+            <h3>Landing page · 400€</h3>
             <p>1 страница · Google Ads / Meta · conversion-first</p>
             <p><a href="/izrabotka-na-landing-page.html" class="cta-secondary">Детайли →</a></p>
           </div>
@@ -508,7 +542,7 @@
 
       <!-- TABLE OF CONTENTS -->
       <div style="background: rgba(143, 71, 34, 0.08); padding: 2rem; border: 2px solid var(--line); border-radius: var(--radius); margin: 2rem 0;">
-        <h3 style="margin-top: 0; color: var(--brand);">📋 Съдържание:</h3>
+        <h3 style="margin-top: 0; color: var(--brand);">Съдържание:</h3>
         <ul style="list-style: none; margin-left: 0;">
           <li style="margin-bottom: 0.5rem;"><a href="#sofia">→ Изработка на сайт в София и цяла България</a></li>
           <li style="margin-bottom: 0.5rem;"><a href="#guide">→ Как да изберете правилния тип сайт за вашия бизнес</a></li>
@@ -798,7 +832,7 @@
       </div>
 
       <div class="savings-highlight">
-        <h3>💰 Реални спестявания с HTML сайт:</h3>
+        <h3>Реални спестявания с HTML сайт:</h3>
         <p><strong>Първа година:</strong> Спестяваш 500-1802€ (зависи от домейн избор)</p>
         <p><strong>След 3 години:</strong> Спестяваш 1500-5406€</p>
         <p><strong>След 5 години:</strong> Спестяваш 2500-9010€</p>
@@ -953,7 +987,7 @@
       
       <div class="comparison-grid">
         <div class="comparison-card problem">
-          <h3>❌ WordPress сайт (реалността)</h3>
+          <h3>WordPress сайт (реалността)</h3>
           <ul>
             <li>Бавно зареждане (3-7 секунди, 40-60 PageSpeed)</li>
             <li>Годишни разходи: €190–420 (самоуправляван) или €900–3,000+ (с агенция)</li>
@@ -965,7 +999,7 @@
         </div>
         
         <div class="comparison-card solution">
-          <h3>✅ HTML сайт от MOVER (реалността)</h3>
+          <h3>HTML сайт от MOVER (реалността)</h3>
           <ul>
             <li>Бързо зареждане (често &lt;1 секунда, висок PageSpeed)</li>
             <li>Минимални разходи (23-48€ годишно)</li>
@@ -1305,31 +1339,58 @@
 
 </main>
 
+<section class="related-services" aria-labelledby="related-heading">
+  <div class="container">
+    <h2 id="related-heading" class="related-services__title">Още нещо полезно</h2>
+    <div class="related-services__grid">
+      <a class="related-services__link" href="/html-sait.html">Нов сайт</a>
+      <a class="related-services__link" href="/sait-vizitka.html">Малък сайт / визитка</a>
+      <a class="related-services__link" href="/korporativen-sait.html">По-голям фирмен сайт</a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-links">
-      <a href="/izrabotka-na-sait.html">Изработка на сайт</a>
-      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайтове София</a>
-      <a href="/sait-vizitka.html">Визитка</a>
-      <a href="/korporativen-sait.html">Корпоративен</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/seo-optimizacia.html">SEO услуги</a>
-      <a href="/migratsiya-na-sait.html">Миграция WordPress</a>
-      <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-col__title">Какво искаш?</h3>
+        <a href="/html-sait.html">Нов сайт — от 400€</a>
+        <a href="/izrabotka-na-landing-page.html">Страница за реклами — от 400€</a>
+        <a href="/sait-vizitka.html">Малък сайт / визитка</a>
+        <a href="/migratsiya-na-sait.html">Смяна от WordPress</a>
+        <a href="/wordpress-alternativa.html">Сайт без WordPress</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Още</h3>
+        <a href="/services/">Всички услуги</a>
+        <a href="/izrabotka-na-sait.html">Пакети и цени</a>
+        <a href="/korporativen-sait.html">По-голям фирмен сайт</a>
+        <a href="/seo-optimizacia.html">Да те намират в Google</a>
+        <a href="/calculator.html">Пресметни цена</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Градове</h3>
+        <a href="/izrabotka-na-sait-sofia.html">София</a>
+        <a href="/izrabotka-na-sait-plovdiv.html">Пловдив</a>
+        <a href="/izrabotka-na-sait-varna.html">Варна</a>
+        <a href="/izrabotka-na-sait-burgas.html">Бургас</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Ние</h3>
+        <a href="/about.html">За нас</a>
+        <a href="/how-we-do-it.html">Как работим</a>
+        <a href="/faq.html">Въпроси</a>
+        <a href="/blog/">Блог</a>
+        <a href="/case-studies.html">Примери</a>
+        <a href="#contact">Пиши ни</a>
+        <a href="tel:+359877845569">+359 877 845 569</a>
+        <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a>
+      </div>
     </div>
-        <nav class="footer-locations" aria-label="Локации">
-      <span class="footer-locations__label">Локации:</span>
-      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София</a>
-      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив</a>
-      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна</a>
-      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас</a>
-    </nav>
 
-    <p class="footer-terminal" style="margin-top:1.5rem;">
-      © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
+    <p class="footer-terminal">
+      © 2026 MOVER Studio · бърз сайт без WordPress<br>
       Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·
       <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a> ·
       <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
@@ -1337,7 +1398,14 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=20261013a" defer></script>
+
+
+
+
+
+
+
+<script src="/js/site.js?v=20261124fx3" defer></script>
 </body>
 </html>
 

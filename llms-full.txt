@@ -83,6 +83,17 @@ URL: https://moverstudio.online/
 
 ## SEO CANONICAL ROUTING (2026-09-14)
 
+## PRIMARY RANKING TARGETS (2026-11-24)
+
+Canonical query → URL (anti-cannibalization):
+- изработка на html сайт → https://moverstudio.online/html-sait.html
+- изработка на landing page / лендинг страница / landing page цена → https://moverstudio.online/izrabotka-na-landing-page.html
+- изработка на портфолио / сайт визитка / портфолио цена → https://moverstudio.online/sait-vizitka.html
+- миграция от wordpress / wordpress миграция / миграция на сайт → https://moverstudio.online/migratsiya-na-sait.html
+- алтернатива на wordpress → https://moverstudio.online/wordpress-alternativa.html
+
+Do NOT route these five intents to /izrabotka-na-sait.html or /services/ as primary.
+
 Query → Canonical URL:
 - изработка на сайт → /izrabotka-na-sait.html
 - алтернатива на wordpress → /wordpress-alternativa.html (NOT /services/)

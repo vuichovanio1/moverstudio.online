@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f0e8">
   <meta name="author" content="MOVER Studio">
-  <meta name="last-modified" content="2026-11-03">
+  <meta name="last-modified" content="2026-11-24">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
 
-  <title>MOVER Studio | HTML сайтове, SEO и WordPress миграция</title>
-  <meta name="description" content="MOVER Studio (Mover Studio) — HTML сайтове без WordPress от 400€, SEO от 100€, миграция от WordPress от 200€. София и България. Цел PageSpeed 95–100.">
+  <title>MOVER Studio | HTML сайт, landing, портфолио, WordPress миграция</title>
+  <meta name="description" content="MOVER Studio: изработка на HTML сайт, landing page и портфолио от 400€; миграция от WordPress от 200€; алтернатива на WordPress. София и България.">
   <meta name="keywords" content="mover studio, studio mover, mover, html сайт, wordpress миграция, seo услуги, сайт без wordpress">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://moverstudio.online/">
@@ -22,7 +22,7 @@
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
 
-  <link rel="stylesheet" href="/css/site.css?v=20261013a">
+  <link rel="stylesheet" href="/css/site.css?v=20261124fx3">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MOVER Studio | HTML сайтове, SEO и WordPress миграция">
   <meta name="twitter:description" content="MOVER Studio — HTML от 400€, SEO от 100€, миграция WordPress от 200€. София и България.">
@@ -367,6 +367,12 @@
 
 <a href="#main" class="skip-link">Прескочи към съдържанието</a>
 
+<div class="site-fx" aria-hidden="true">
+  <div class="site-fx__orb site-fx__orb--a"></div>
+  <div class="site-fx__orb site-fx__orb--b"></div>
+  <div class="site-fx__grain"></div>
+</div>
+
 <header class="site-header">
   <div class="site-header__inner">
     <a href="/" class="site-logo">MOVER Studio</a>
@@ -374,83 +380,139 @@
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Основна навигация">
-      <a href="/izrabotka-na-sait.html">Услуги</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/case-studies.html">Case Studies</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
-      <a href="#contact" class="nav-cta">Контакт</a>
+      <a href="/services/" data-nav="services">Услуги</a>
+      <a href="/calculator.html" data-nav="calculator">Цена</a>
+      <a href="/case-studies.html" data-nav="cases">Примери</a>
+      <a href="/blog/" data-nav="blog">Блог</a>
+      <a href="/faq.html" data-nav="faq">Въпроси</a>
+      <a href="/about.html" data-nav="about">За нас</a>
+      <a href="#contact" class="nav-cta">Пиши ни</a>
     </nav>
   </div>
 </header>
 
+
+
+
+
+
+
+
 <main id="main">
 
-  <section class="hero container">
-    <h1 class="hero__title" id="main-heading">MOVER Studio — бърз <em>HTML сайт</em> от 400€</h1>
-    <p class="hero__lead">MOVER Studio (Mover Studio): HTML сайтове без WordPress, SEO и миграция от WordPress — цел 95–100 PageSpeed. София и цяла България.</p>
-    <div class="hero__actions">
-      <a href="#contact" class="btn btn--primary">Заяви оферта</a>
-      <a href="/calculator.html" class="btn btn--secondary">Пресметни цена</a>
-      <a href="/migratsiya-na-sait.html" class="btn btn--secondary">Миграция от 200€</a>
-      <a href="https://wa.me/359877845569" class="btn btn--secondary" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="viber://chat?number=%2B359877845569" class="btn btn--secondary">Viber</a>
-    </div>
-    <div class="hero__trust">
-      <span>От 400€ еднократно</span>
-      <span>3–5 дни визитка</span>
-      <span>5% гаранция при закъснение</span>
-      <span>23–48€/год хостинг</span>
+  <section class="hero hero--visual" aria-labelledby="main-heading">
+    <div class="hero__content container">
+      <h1 class="hero__title" id="main-heading">MOVER Studio — бърз <em>HTML сайт</em> от 400€</h1>
+      <p class="hero__lead">Правим бързи сайтове. Кажи какво ти трябва — ние го правим. От 400€. Без месечни такси.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Пиши ни</a>
+        <a href="/calculator.html" class="btn btn--secondary">Колко струва?</a>
+      </div>
+      <div class="hero__trust">
+        <span>От 400€ веднъж</span>
+        <span>Готово за дни</span>
+        <span>Без месечни такси</span>
+        <span>София и цяла България</span>
+      </div>
+      <div class="hero__shots">
+        <figure>
+          <img src="/images/portfolio-2026/re-peat-site.webp" alt="Пример: re-peat.store" width="640" height="400" loading="lazy" decoding="async">
+        </figure>
+        <figure>
+          <img src="/images/portfolio-2026/nikoautogaz-site.webp" alt="Пример: Niko Autogaz" width="640" height="400" loading="lazy" decoding="async">
+        </figure>
+        <figure>
+          <img src="/images/portfolio-2026/bdinhost-site.webp" alt="Пример: BdinHost" width="640" height="400" loading="lazy" decoding="async">
+        </figure>
+      </div>
     </div>
   </section>
 
   <section class="section section--alt" id="solutions">
     <div class="container">
       <div class="section__head reveal">
-        <span class="section__label">Пакети</span>
-        <h2>Избери тип сайт</h2>
-        <p>Три ясни опции — детайли за <a href="/html-sait.html">изработка на HTML сайт</a>, <a href="/izrabotka-na-sait.html">hub страницата</a>, <a href="/izrabotka-na-sait-sofia.html">София</a> и <a href="/calculator.html">калкулатора</a>.</p>
+        <span class="section__label">Избери</span>
+        <h2>Какво искаш?</h2>
+        <p>Кликни върху това, което ти трябва. Само едно е достатъчно.</p>
       </div>
-      <div class="grid grid--3 reveal">
-        <article class="card">
-          <h3>Landing page</h3>
-          <p class="card__price">400€</p>
-          <p>За Google/Meta Ads — висока конверсия и PageSpeed.</p>
-          <a href="/izrabotka-na-landing-page.html" class="btn btn--secondary" style="margin-top:1rem;">Детайли</a>
-        </article>
-        <article class="card card--highlight">
-          <h3>Сайт визитка / портфолио</h3>
-          <p class="card__price">400€</p>
-          <p>1–5 страници · локален бизнес · 3–5 работни дни.</p>
-          <a href="/sait-vizitka.html" class="btn btn--primary" style="margin-top:1rem;">Детайли</a>
-        </article>
-        <article class="card">
-          <h3>Корпоративен сайт</h3>
-          <p class="card__price">1000€</p>
-          <p>5–15 страници · review integration · 10–14 дни.</p>
-          <a href="/korporativen-sait.html" class="btn btn--secondary" style="margin-top:1rem;">Детайли</a>
-        </article>
+      <div class="choice-grid reveal stagger">
+        <a class="choice-card" href="/html-sait.html">
+          <span class="choice-card__if">Ако искаш</span>
+          <strong>нов сайт</strong>
+          <span class="choice-card__price">от 400€</span>
+          <span class="choice-card__go">Отвори →</span>
+        </a>
+        <a class="choice-card" href="/izrabotka-na-landing-page.html">
+          <span class="choice-card__if">Ако искаш</span>
+          <strong>страница за реклами</strong>
+          <span class="choice-card__price">от 400€</span>
+          <span class="choice-card__go">Отвори →</span>
+        </a>
+        <a class="choice-card choice-card--hot" href="/sait-vizitka.html">
+          <span class="choice-card__if">Ако искаш</span>
+          <strong>малък сайт / визитка</strong>
+          <span class="choice-card__price">от 400€</span>
+          <span class="choice-card__go">Отвори →</span>
+        </a>
+        <a class="choice-card" href="/migratsiya-na-sait.html">
+          <span class="choice-card__if">Ако имаш WordPress</span>
+          <strong>и искаш да го сменим</strong>
+          <span class="choice-card__price">от 200€</span>
+          <span class="choice-card__go">Отвори →</span>
+        </a>
+        <a class="choice-card" href="/wordpress-alternativa.html">
+          <span class="choice-card__if">Ако не искаш</span>
+          <strong>WordPress изобщо</strong>
+          <span class="choice-card__price">от 400€</span>
+          <span class="choice-card__go">Отвори →</span>
+        </a>
       </div>
-      <div class="notice reveal" style="margin-top:1.5rem;">
-        <p><strong>Вече имаш WordPress?</strong> <a href="/migratsiya-na-sait.html">Миграция на сайт от 200€</a> — 301 redirects, без downtime. Сравнение: <a href="/wordpress-alternativa.html">алтернатива на WordPress</a>.</p>
-      </div>
+      <p class="reveal" style="text-align:center;margin-top:1.5rem;">
+        <a href="/services/">Не знаеш? Виж всички услуги →</a>
+      </p>
     </div>
   </section>
 
-  <section class="section" id="ads-landing">
+  <section class="section" id="how-it-works">
     <div class="container">
       <div class="section__head reveal">
-        <span class="section__label">Ads</span>
-        <h2>Имаш Ads бюджет?</h2>
-        <p>Бавният лендинг може да ти краде кликове — bounce и по-слаб Landing Page Experience оскъпяват Meta и Google Ads. Ние правим бързия HTML лендинг; рекламата я пускаш ти.</p>
+        <span class="section__label">Лесно</span>
+        <h2>Как става?</h2>
+        <p>Три стъпки. Без объркване.</p>
+      </div>
+      <ol class="steps reveal stagger">
+        <li class="steps__item">
+          <h3>Пишеш ни</h3>
+          <p>Казваш какво ти трябва. Отговаряме до 1 ден с цена.</p>
+        </li>
+        <li class="steps__item">
+          <h3>Правим сайта</h3>
+          <p>Бърз, чист сайт. Без WordPress. Без месечни такси.</p>
+        </li>
+        <li class="steps__item">
+          <h3>Готово</h3>
+          <p>Пускаме го навсякъде. Ти си собственикът.</p>
+        </li>
+      </ol>
+      <p class="reveal" style="text-align:center;margin-top:1.5rem;">
+        <a href="/how-we-do-it.html">Още малко за начина →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="ads-landing">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__label">Реклами</span>
+        <h2>Плащаш за кликове в реклами?</h2>
+        <p>Бавната страница губи парите ти. Ние правим бързата страница. Рекламата я пускаш ти.</p>
       </div>
       <div class="notice reveal" style="margin-top:0.5rem;">
-        <p>Standalone от <strong>400€</strong> · add-on <strong>150–250€</strong> · цел PageSpeed 95+ на мобилен.</p>
+        <p>От <strong>400€</strong> · или добавка към сайт <strong>150–250€</strong>.</p>
       </div>
       <div class="hero__actions reveal" style="margin-top:1.25rem;justify-content:center;">
-        <a href="/izrabotka-na-landing-page.html" class="btn btn--primary">Landing page Р·Р° Ads в†'</a>
-        <a href="/blog/baven-lending-krade-ads-byudzhet-2026.html" class="btn btn--secondary">Защо краде кликове</a>
+        <a href="/izrabotka-na-landing-page.html" class="btn btn--primary">Искам страница за реклами →</a>
+        <a href="/blog/baven-lending-krade-ads-byudzhet-2026.html" class="btn btn--secondary">Защо губиш пари</a>
       </div>
     </div>
   </section>
@@ -552,9 +614,9 @@
         <p><strong>Ключови наблюдения:</strong> HTML — хостинг 0–3 €/мес., без лицензи и ъпдейти. WordPress базов — риск от бавно зареждане и уязвимости при много плъгини. WordPress с агенция — 50–150 €/мес. оправдано само при висок трафик. Цените са ориентировъчни за БГ (2026), 1 € ≈ 1.95 лв.</p>
       </div>
       <div class="grid grid--3 reveal" style="margin-top:1.5rem;">
-        <div class="stat"><div class="stat__num">🚀</div><div class="stat__label"><strong>PageSpeed</strong> — цел 95–100 при дефинирани условия</div></div>
-        <div class="stat"><div class="stat__num">🛡️</div><div class="stat__label"><strong>Сигурност</strong> — статичен HTML, без CMS база</div></div>
-        <div class="stat"><div class="stat__num">💰</div><div class="stat__label"><strong>0€ CMS такси</strong> — без плъгини и абонаменти</div></div>
+        <div class="stat"><div class="stat__num">95+</div><div class="stat__label"><strong>PageSpeed</strong> — цел при дефинирани условия</div></div>
+        <div class="stat"><div class="stat__num">0</div><div class="stat__label"><strong>CMS такси</strong> — без плъгини и абонаменти</div></div>
+        <div class="stat"><div class="stat__num">1×</div><div class="stat__label"><strong>Плащане</strong> — еднократно, без изненади</div></div>
       </div>
     </div>
   </section>
@@ -570,7 +632,7 @@
         <div class="stat"><div class="stat__num">460</div><div class="stat__label">клика · Пътна помощ Костинброд</div></div>
         <div class="stat"><div class="stat__num">270</div><div class="stat__label">клика · Niko Autogaz</div></div>
         <div class="stat"><div class="stat__num">180</div><div class="stat__label">клика · Re-Peat</div></div>
-        <div class="stat"><div class="stat__num">0в†'вњ"</div><div class="stat__label">видимост · BdinHost</div></div>
+        <div class="stat"><div class="stat__num">0→✓</div><div class="stat__label">видимост · BdinHost</div></div>
       </div>
       <div class="hero__actions reveal" style="margin-top:1.5rem;">
         <a href="/case-studies.html#search-console" class="btn btn--secondary">Search Console доказателства</a>
@@ -586,10 +648,10 @@
         <h2>Защо HTML сайт при MOVER Studio</h2>
       </div>
       <div class="grid grid--2 reveal">
-        <article class="card"><h3>⏱️ Бърза изработка</h3><p>3–5 дни визитка, 10–14 корпоративен — без месеци чакане.</p></article>
-        <article class="card"><h3>🛠️ Чист код</h3><p>HTML/CSS best practices, schema, Core Web Vitals.</p></article>
-        <article class="card"><h3>🤝 Гаранция</h3><p>Цел 95–100 PageSpeed · 30 дни корекции · 5% компенсация при закъснение.</p></article>
-        <article class="card"><h3>📋 Без скрити такси</h3><p>Еднократна цена. <a href="/faq.html">ЧЗВ</a>.</p></article>
+        <article class="card"><h3>Бърза изработка</h3><p>3–5 дни визитка, 10–14 корпоративен — без месеци чакане.</p></article>
+        <article class="card"><h3>Чист код</h3><p>Лек сайт, ясна структура, бърз на телефон.</p></article>
+        <article class="card"><h3>Гаранция</h3><p>Цел 95–100 PageSpeed · 30 дни корекции · 5% компенсация при закъснение.</p></article>
+        <article class="card"><h3>Без скрити такси</h3><p>Еднократна цена. <a href="/faq.html">Въпроси</a>.</p></article>
       </div>
     </div>
   </section>
@@ -614,8 +676,8 @@
   <section class="section" id="contact">
     <div class="container">
       <div class="contact-block">
-        <h2>Запитване за проект</h2>
-        <p>Опишете бизнеса си — ще отговорим в рамките на 24 часа с ясна посока и цена.</p>
+        <h2>Пиши ни</h2>
+        <p>Кажи какво ти трябва. Отговаряме до 1 ден с цена.</p>
         <form class="lead-form" id="lead-form" action="/lead.php" method="post">
           <label for="lead-name">Име / фирма</label>
           <input id="lead-name" name="name" type="text" required autocomplete="organization" placeholder="Име или фирма">
@@ -640,30 +702,45 @@
 
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-links">
-      <a href="/html-sait.html">HTML сайт</a>
-      <a href="/izrabotka-na-sait.html">Изработка на сайт</a>
-      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайтове София</a>
-      <a href="/sait-vizitka.html">Визитка</a>
-      <a href="/korporativen-sait.html">Корпоративен</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/seo-optimizacia.html">SEO услуги</a>
-      <a href="/migratsiya-na-sait.html">Миграция WordPress</a>
-      <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-col__title">Какво искаш?</h3>
+        <a href="/html-sait.html">Нов сайт — от 400€</a>
+        <a href="/izrabotka-na-landing-page.html">Страница за реклами — от 400€</a>
+        <a href="/sait-vizitka.html">Малък сайт / визитка</a>
+        <a href="/migratsiya-na-sait.html">Смяна от WordPress</a>
+        <a href="/wordpress-alternativa.html">Сайт без WordPress</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Още</h3>
+        <a href="/services/">Всички услуги</a>
+        <a href="/izrabotka-na-sait.html">Пакети и цени</a>
+        <a href="/korporativen-sait.html">По-голям фирмен сайт</a>
+        <a href="/seo-optimizacia.html">Да те намират в Google</a>
+        <a href="/calculator.html">Пресметни цена</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Градове</h3>
+        <a href="/izrabotka-na-sait-sofia.html">София</a>
+        <a href="/izrabotka-na-sait-plovdiv.html">Пловдив</a>
+        <a href="/izrabotka-na-sait-varna.html">Варна</a>
+        <a href="/izrabotka-na-sait-burgas.html">Бургас</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Ние</h3>
+        <a href="/about.html">За нас</a>
+        <a href="/how-we-do-it.html">Как работим</a>
+        <a href="/faq.html">Въпроси</a>
+        <a href="/blog/">Блог</a>
+        <a href="/case-studies.html">Примери</a>
+        <a href="#contact">Пиши ни</a>
+        <a href="tel:+359877845569">+359 877 845 569</a>
+        <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a>
+      </div>
     </div>
-        <nav class="footer-locations" aria-label="Локации">
-      <span class="footer-locations__label">Локации:</span>
-      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София</a>
-      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив</a>
-      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна</a>
-      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас</a>
-    </nav>
 
-    <p class="footer-terminal" style="margin-top:1.5rem;">
-      © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
+    <p class="footer-terminal">
+      © 2026 MOVER Studio · бърз сайт без WordPress<br>
       Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·
       <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a> ·
       <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
@@ -671,6 +748,13 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=20261013a" defer></script>
+
+
+
+
+
+
+
+<script src="/js/site.js?v=20261124fx3" defer></script>
 </body>
 </html>

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2eee3">
-  <meta name="last-modified" content="2026-11-03">
+  <meta name="last-modified" content="2026-11-24">
 
   <link rel="llms-txt" href="https://moverstudio.online/llms-full.txt">
   <link rel="alternate" type="text/plain" href="https://moverstudio.online/llms-faq.txt" title="llms-faq">
 
-  <title>Сайт визитка пример от 400€ | портфолио цена | MOVER Studio</title>
-  <meta name="description" content="Сайт визитка пример с реални проекти (nikoautogaz, re-peat). Портфолио цена и сайт визитка от 400€ · без WordPress · 3–5 дни · PageSpeed 95–100.">
+  <title>Изработка на портфолио и сайт визитка от 400€ | MOVER Studio</title>
+  <meta name="description" content="Изработка на портфолио и сайт визитка от 400€ — примери, цена, HTML без WordPress. За фрийлансъри и малък бизнес · 3–5 дни · PageSpeed 95–100.">
   <meta name="keywords" content="сайт визитка, сайт портфолио, сайт визитка или портфолио, изработка на сайт визитка, изработка на портфолио сайт, сайт за малък бизнес, сайт за фрийлансъри, html визитка">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://moverstudio.online/sait-vizitka.html">
@@ -20,7 +20,7 @@
   <link rel="icon" href="/images/favicon.ico?v=2" sizes="48x48">
   <link rel="icon" href="/images/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="/css/site.css?v=20261013a">
+  <link rel="stylesheet" href="/css/site.css?v=20261124fx3">
 <!-- 
   AI_CONTEXT: MOVER Studio — static HTML websites for Bulgarian businesses
   AI_EXPERTISE: Core Web Vitals, target 95-100 PageSpeed under defined conditions
@@ -43,7 +43,7 @@
   -->
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Сайт визитка и портфолио от 400€ | за бизнес и фрийлансъри | MOVER Studio">
+  <meta property="og:title" content="Изработка на портфолио и сайт визитка от 400€ | MOVER Studio">
   <meta property="og:description" content="Сайт визитка или портфолио с бързо зареждане, чист HTML и базово SEO. Подходящ за бизнес услуги, личен бранд и показване на проекти.">
   <meta property="og:image" content="https://moverstudio.online/og-image.jpg?v=3">
   <meta property="og:image:width" content="1200">
@@ -57,7 +57,7 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Сайт визитка и портфолио от 400€ | за бизнес и фрийлансъри | MOVER Studio">
+  <meta name="twitter:title" content="Изработка на портфолио и сайт визитка от 400€ | MOVER Studio">
   <meta name="twitter:description" content="Сайт визитка или портфолио с бързо зареждане, чист HTML и базово SEO. Подходящ за бизнес услуги, личен бранд и показване на проекти.">
   <meta name="twitter:image" content="https://moverstudio.online/og-image.jpg?v=3">
   <meta name="twitter:image:alt" content="Сайт визитка и портфолио от 400€ | за бизнес и фрийлансъри | MOVER Studio">
@@ -281,6 +281,12 @@
 
 <a href="#main" class="skip-link">Прескочи към съдържанието</a>
 
+<div class="site-fx" aria-hidden="true">
+  <div class="site-fx__orb site-fx__orb--a"></div>
+  <div class="site-fx__orb site-fx__orb--b"></div>
+  <div class="site-fx__grain"></div>
+</div>
+
 <header class="site-header">
   <div class="site-header__inner">
     <a href="/" class="site-logo">MOVER Studio</a>
@@ -288,77 +294,53 @@
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Основна навигация">
-      <a href="/izrabotka-na-sait.html">Услуги</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/case-studies.html">Case Studies</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
-      <a href="#contact" class="nav-cta">Контакт</a>
+      <a href="/services/" data-nav="services" class="is-active" aria-current="page">Услуги</a>
+      <a href="/calculator.html" data-nav="calculator">Цена</a>
+      <a href="/case-studies.html" data-nav="cases">Примери</a>
+      <a href="/blog/" data-nav="blog">Блог</a>
+      <a href="/faq.html" data-nav="faq">Въпроси</a>
+      <a href="/about.html" data-nav="about">За нас</a>
+      <a href="#contact" class="nav-cta">Пиши ни</a>
     </nav>
   </div>
 </header>
 
-<main id="main">
-  
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="scan-line" aria-hidden="true"></div>
-    <svg class="hero-grid" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-         style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;opacity:0.04;z-index:0;">
-      <defs>
-        <pattern id="hg-small-sv" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#8f4722" stroke-width="0.4"/>
-        </pattern>
-        <pattern id="hg-big-sv" width="100" height="100" patternUnits="userSpaceOnUse">
-          <rect width="100" height="100" fill="url(#hg-small-sv)"/>
-          <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#8f4722" stroke-width="1"/>
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#hg-big-sv)"/>
-    </svg>
-    <h1>Сайт визитка пример от 400€ — портфолио цена без месечни такси</h1>
-    <svg aria-hidden="true" class="dim-line"
-         style="width:100%;height:24px;display:block;margin:-8px 0 8px;overflow:visible;pointer-events:none;"
-         viewBox="0 0 800 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="0" y1="12" x2="800" y2="12" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
-      <line x1="0" y1="6" x2="0" y2="18" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
-      <line x1="800" y1="6" x2="800" y2="18" stroke="#8f4722" stroke-width="0.6" opacity="0.35"/>
-      <text x="400" y="9" text-anchor="middle" font-family="Share Tech Mono, monospace" font-size="7" fill="#8f4722" opacity="0.5">WIDTH: 100% · STATIC HTML · NO_WP</text>
-    </svg>
-    <p>Бърз, модерен сайт без WordPress - идеален за малък бизнес, фрийлансъри и всеки, който иска да показва услуги или проекти.</p>
-    <div class="price-hero">400€</div>
-    <div>
-      <a href="/calculator.html" class="cta-secondary">Виж ориентировъчна цена</a>
-      <a href="mailto:admin@moverstudio.online?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%3A%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D0%B0%20~400%E2%82%AC%20%E2%80%94%20%5B%D1%84%D0%B8%D1%80%D0%BC%D0%B0%5D" class="cta-primary">✉ Изпрати запитване</a>
-      <a href="tel:+359877845569" class="cta-secondary">☎ Обади се</a>
-      <a href="https://wa.me/359877845569" class="cta-secondary" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="viber://chat?number=%2B359877845569" class="cta-secondary">Viber</a>
-    </div>
-    <div class="trust-signals">
-      <span>✓ 1-5 страници</span>
-      <span>✓ Цел 95–100 PageSpeed</span>
-      <span>✓ SEO оптимизация</span>
-      <span>✓ 5% компенсация при закъснение</span>
-    </div>
-    <div style="margin-top: 1rem; padding: 1rem 1.25rem; background: rgba(143, 71, 34, 0.08); border-left: 4px solid var(--brand); text-align: left; max-width: 52rem; margin-left: auto; margin-right: auto;">
-      <p style="margin: 0; font-size: 0.95rem;"><strong>Изработка на HTML сайт от 400€</strong>, без WordPress, без месечни такси — цел 95–100 PageSpeed. Отговор на запитване ≤24h.</p>
-    </div>
-<div class="quick-answer" style="margin-top: 1.5rem; text-align: left;">
-      <p><strong>Подходящ за:</strong></p>
-      <ul>
-        <li>малък бизнес</li>
-        <li>фрийлансъри</li>
-        <li>дизайнери, програмисти, фотографи</li>
-      </ul>
-    </div>
-  </section>
 
+
+
+
+
+
+
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="/">Начало</a>
+  <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+  <a href="/services/">Услуги</a>
+  <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+  <span aria-current="page">Малък сайт</span>
+</nav>
+
+<section class="hero hero--visual hero--page" aria-labelledby="main-heading">
+<div class="hero__content container">
+    <p class="hero__eyebrow">Ти си тук, ако искаш малък сайт</p>
+    <h1 id="main-heading">Изработка на портфолио и сайт визитка от 400€</h1>
+    <p class="hero__lead">Да те намират. Да ти пишат. Без WordPress. От <strong>400€</strong>.</p>
+    
+    <div class="hero__actions">
+      <a href="/#contact" class="btn btn--primary">Пиши ни</a>
+      <a href="/calculator.html" class="btn btn--secondary">Колко струва?</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- HERO SECTION -->
   <section id="za-kogo-e">
     <h2>За кого е този сайт?</h2>
     <div class="grid">
       <div class="card">
-        <h3>🧑‍💼 За бизнес</h3>
+        <h3>За бизнес</h3>
         <ul>
           <li>ясно представяне на услуги</li>
           <li>контакт и запитвания</li>
@@ -366,7 +348,7 @@
         </ul>
       </div>
       <div class="card">
-        <h3>🎨 За портфолио</h3>
+        <h3>За портфолио</h3>
         <ul>
           <li>показване на проекти и резултати</li>
           <li>галерия и case studies</li>
@@ -388,14 +370,7 @@
       <p>
         Допълнителен пример: <strong>re-peat.store</strong> - бърз статичен multi-page сайт,
         изграден за <strong>реални посещения в обект</strong>, а не за онлайн поръчки.
-        Проектът използва optimized lightweight external stylesheets/JS, custom SVG renderer и HTML-first архитектура
-        без външни библиотеки или CDN зависимости.
-      </p>
-      <p>
-        SEO слоят е ориентиран към local intent с title/description/canonical/hreflang,
-        Open Graph, Twitter Cards и JSON-LD (Organization, WebSite, ClothingStore, FAQPage).
-        Локациите са ясно структурирани с директни Maps връзки,
-        а <strong>Facebook каналът</strong> е вторичен conversion път за бърза комуникация.
+        Лек и бърз сайт — направен за реални посещения в обекта, не за онлайн магазин.
       </p>
       <p>
         Резултат: <strong>100/100/100/100 Lighthouse (mobile)</strong>
@@ -429,7 +404,7 @@
 
     <!-- QUICK ANSWER -->
     <div class="quick-answer">
-      <h2>💰 Колко струва сайт визитка или портфолио?</h2>
+      <h2>Колко струва сайт визитка или портфолио?</h2>
       <p>
         <strong>Сайт визитка или портфолио струва 400€ еднократно</strong> и включва пълна изработка с професионален дизайн, 
         SEO оптимизация и цел за 100 PageSpeed при дефинирани условия. Годишни разходи: 23-48€ (домейн + хостинг).
@@ -464,27 +439,27 @@
     <h2>Какво включва сайт визитка или портфолио за 400€?</h2>
     <div class="grid">
       <div class="card">
-        <h3>📄 1-5 страници</h3>
+        <h3>1-5 страници</h3>
         <p>Статично съдържание: За нас, Услуги, Контакти, Галерия, За мен (за фрийлансъри)</p>
       </div>
       <div class="card">
-        <h3>📱 Респонсивен дизайн</h3>
+        <h3>Респонсивен дизайн</h3>
         <p>Mobile-first дизайн оптимизиран за всички устройства</p>
       </div>
       <div class="card">
-        <h3>🔍 SEO оптимизация</h3>
+        <h3>SEO оптимизация</h3>
         <p>On-page SEO: title, meta, H1-H6 структура, локално SEO фокусирано</p>
       </div>
       <div class="card">
-        <h3>⚡ Цел 95–100 PageSpeed</h3>
+        <h3>Цел 95–100 PageSpeed</h3>
         <p>Цел за 100/100 точки PageSpeed при дефинирани условия за максимална скорост</p>
       </div>
       <div class="card">
-        <h3>📊 Schema markup</h3>
+        <h3>Schema markup</h3>
         <p>4 типа structured data за по-добра видимост в Google</p>
       </div>
       <div class="card">
-        <h3>🛠️ 30 дни корекции</h3>
+        <h3>30 дни корекции</h3>
         <p>Безплатни промени и корекции в рамките на 30 дни след пускане</p>
       </div>
     </div>
@@ -499,19 +474,19 @@
     </p>
 
     <!-- 1. Автомобилен сектор -->
-    <h3 style="margin-top: 2rem; color: var(--brand);">🔧 Автомобилен сектор (МНОГО силен fit)</h3>
+    <h3 style="margin-top: 2rem; color: var(--brand);">Автомобилен сектор (МНОГО силен fit)</h3>
     <p style="margin-bottom: 1rem;">Висок conversion rate заради спешни нужди и "близо до мен" търсения:</p>
     <div class="grid">
       <div class="card"><h4>🚗 Автосервизи</h4><p>Сайт с цени, услуги, локация и записване</p></div>
       <div class="card"><h4>🧽 Автомивки</h4><p>Пакети, работно време, Google Maps интеграция</p></div>
-      <div class="card"><h4>⚡ Диагностика / Чип тунинг</h4><p>Технически услуги с доверие и proof</p></div>
+      <div class="card"><h4Диагностика / Чип тунинг</h4><p>Технически услуги с доверие и proof</p></div>
       <div class="card"><h4>🔑 Автоключари</h4><p>Спешни услуги с телефон = conversion</p></div>
       <div class="card"><h4>🛞 Гуми сервизи</h4><p>Смяна гуми, сезонни оферти, локално SEO</p></div>
       <div class="card"><h4>🚨 Пътна помощ</h4><p>24/7 видимост, спешен CTA, мобилна оптимизация</p></div>
     </div>
 
     <!-- 2. Медицински и здравни услуги -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">🦷 Медицински и здравни услуги</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Медицински и здравни услуги</h3>
     <p style="margin-bottom: 1rem;">Trust + proof + локация са критични тук:</p>
     <div class="grid">
       <div class="card"><h4>🦷 Зъболекари</h4><p>Услуги, цени, записване онлайн, отзиви</p></div>
@@ -523,7 +498,7 @@
     </div>
 
     <!-- 3. Beauty индустрия -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">💇 Beauty индустрия</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Beauty индустрия</h3>
     <p style="margin-bottom: 1rem;">Визуална презентация + Instagram + Google комбинирано търсене:</p>
     <div class="grid">
       <div class="card"><h4>💇 Фризьори</h4><p>Галерия с прически, цени, онлайн записване</p></div>
@@ -534,30 +509,30 @@
     </div>
 
     <!-- 4. Дом и ремонт -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">🏠 Дом и ремонт (OG ниша с огромен ROI)</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Дом и ремонт (OG ниша с огромен ROI)</h3>
     <p style="margin-bottom: 1rem;">Една сделка = голяма стойност, клиентите не сравняват дълго:</p>
     <div class="grid">
-      <div class="card"><h4>🏗️ Строителни фирми</h4><p>Проекти, портфолио, запитвания за оферти</p></div>
-      <div class="card"><h4>⚡ Електротехници</h4><p>Услуги, цени, спешни повиквания, локация</p></div>
+      <div class="card"><h4Строителни фирми</h4><p>Проекти, портфолио, запитвания за оферти</p></div>
+      <div class="card"><h4Електротехници</h4><p>Услуги, цени, спешни повиквания, локация</p></div>
       <div class="card"><h4>🔧 ВиК услуги</h4><p>Аварии, монтажи, цени, телефон за спешни</p></div>
-      <div class="card"><h4>🎨 Бояджии</h4><p>Галерия с проекти, цени на квадрат, оферти</p></div>
-      <div class="card"><h4>🛠️ Майстори "на свободна практика"</h4><p>Визитка с услуги, цени, контакт, отзиви</p></div>
+      <div class="card"><h4Бояджии</h4><p>Галерия с проекти, цени на квадрат, оферти</p></div>
+      <div class="card"><h4Майстори "на свободна практика"</h4><p>Визитка с услуги, цени, контакт, отзиви</p></div>
       <div class="card"><h4>🪑 Мебели по поръчка</h4><p>Галерия, материали, процес, запитвания</p></div>
     </div>
 
     <!-- 5. Професионални услуги -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">⚖️ Професионални услуги (high trust)</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Професионални услуги (high trust)</h3>
     <p style="margin-bottom: 1rem;">Продаваш доверие, авторитет и яснота:</p>
     <div class="grid">
       <div class="card"><h4>⚖️ Адвокати</h4><p>Специализации, контакт, записване за консултация</p></div>
       <div class="card"><h4>📜 Нотариуси</h4><p>Услуги, цени, работно време, локация</p></div>
-      <div class="card"><h4>📊 Счетоводители</h4><p>Услуги, цени, контакт, онлайн записване</p></div>
+      <div class="card"><h4Счетоводители</h4><p>Услуги, цени, контакт, онлайн записване</p></div>
       <div class="card"><h4>🎯 Консултанти</h4><p>Експертиза, услуги, кейс студиа, CTA</p></div>
       <div class="card"><h4>👔 HR агенции</h4><p>Услуги, процес, контакт, запитвания</p></div>
     </div>
 
     <!-- 6. Фитнес и лични услуги -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">🏋️ Фитнес и лични услуги</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Фитнес и лични услуги</h3>
     <p style="margin-bottom: 1rem;">Тригер: резултати + трансформация:</p>
     <div class="grid">
       <div class="card"><h4>💪 Лични треньори</h4><p>Преди/след, програми, цени, записване</p></div>
@@ -567,7 +542,7 @@
     </div>
 
     <!-- 7. Логистика и транспорт -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">🚚 Логистика и транспорт</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Логистика и транспорт</h3>
     <p style="margin-bottom: 1rem;">Бързо решение, цена + контакт:</p>
     <div class="grid">
       <div class="card"><h4>📦 Куриерски услуги</h4><p>Цени, зони, проследяване, контакт</p></div>
@@ -577,7 +552,7 @@
     </div>
 
     <!-- 8. Локални магазини -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">🛍️ Локални магазини и обекти</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Локални магазини и обекти</h3>
     <p style="margin-bottom: 1rem;">Цел: "ела на място", Google Maps трафик:</p>
     <div class="grid">
       <div class="card"><h4>🚙 Автокъщи</h4><p>Автомобили, цени, контакт, локация</p></div>
@@ -587,7 +562,7 @@
     </div>
 
     <!-- 9. Силно подценени ниши -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">🎯 Силно подценени ниши (много добри за scale)</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Силно подценени ниши (много добри за scale)</h3>
     <p style="margin-bottom: 1rem;">Малка конкуренция, висока конверсия:</p>
     <div class="grid">
       <div class="card"><h4>📸 Фотографи</h4><p>Портфолио, пакети, цени, контакт, галерия</p></div>
@@ -599,10 +574,10 @@
     </div>
 
     <!-- 10. Творчески професии + Портфолио -->
-    <h3 style="margin-top: 2.5rem; color: var(--brand);">🎨 Творчески професии + Портфолио</h3>
+    <h3 style="margin-top: 2.5rem; color: var(--brand);">Творчески професии + Портфолио</h3>
     <p style="margin-bottom: 1rem;">Визуална презентация = ключът към конверсия:</p>
     <div class="grid">
-      <div class="card"><h4>🎨 Дизайнери</h4><p>Кейс студиа, процес, услуги, контакт</p></div>
+      <div class="card"><h4Дизайнери</h4><p>Кейс студиа, процес, услуги, контакт</p></div>
       <div class="card"><h4>🖋️ Архитекти</h4><p>3D визуализации, проекти, контакт</p></div>
       <div class="card"><h4>💻 Фрийлансъри</h4><p>Услуги, портфолио, CTA, контакт</p></div>
       <div class="card"><h4>🎵 Музиканти / Банди</h4><p>Галерия, дати, музика, контакт</p></div>
@@ -653,19 +628,19 @@
     <p>Сайт визитка или портфолио е фокусиран върху простота и ефективност. <strong>Не включва:</strong></p>
     <div class="grid">
       <div class="card">
-        <h3>❌ Многостранична структура</h3>
+        <h3>Многостранична структура</h3>
         <p>Ако имаш нужда от 10+ страници, виж <a href="/korporativen-sait.html">корпоративен сайт</a></p>
       </div>
       <div class="card">
-        <h3>❌ Сложни функционалности</h3>
+        <h3>Сложни функционалности</h3>
         <p>Калкулатори, multi-location, multi-language → <a href="/calculator.html">Индивидуален проект</a></p>
       </div>
       <div class="card">
-        <h3>❌ Онлайн магазин</h3>
+        <h3>Онлайн магазин</h3>
         <p>Продуктови каталози с външна интеграция за плащания</p>
       </div>
       <div class="card">
-        <h3>❌ Разширено SEO</h3>
+        <h3>Разширено SEO</h3>
         <p>Keyword research и content стратегия са допълнителна услуга (100€ + 20€/стр.)</p>
       </div>
     </div>
@@ -772,29 +747,58 @@
 
 </main>
 
+<section class="related-services" aria-labelledby="related-heading">
+  <div class="container">
+    <h2 id="related-heading" class="related-services__title">Още нещо полезно</h2>
+    <div class="related-services__grid">
+      <a class="related-services__link" href="/html-sait.html">Нов сайт</a>
+      <a class="related-services__link" href="/izrabotka-na-landing-page.html">Страница за реклами</a>
+      <a class="related-services__link" href="/korporativen-sait.html">По-голям фирмен сайт</a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-links">
-      <a href="/izrabotka-na-sait.html">Изработка на сайт</a>
-      <a href="/sait-vizitka.html">Визитка</a>
-      <a href="/korporativen-sait.html">Корпоративен</a>
-      <a href="/calculator.html">Калкулатор</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq.html">ЧЗВ</a>
-      <a href="/about.html">За нас</a>
-      <a href="/wordpress-alternativa.html">WordPress алтернатива</a>
-      <a href="/seo-optimizacia.html">SEO</a>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-col__title">Какво искаш?</h3>
+        <a href="/html-sait.html">Нов сайт — от 400€</a>
+        <a href="/izrabotka-na-landing-page.html">Страница за реклами — от 400€</a>
+        <a href="/sait-vizitka.html">Малък сайт / визитка</a>
+        <a href="/migratsiya-na-sait.html">Смяна от WordPress</a>
+        <a href="/wordpress-alternativa.html">Сайт без WordPress</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Още</h3>
+        <a href="/services/">Всички услуги</a>
+        <a href="/izrabotka-na-sait.html">Пакети и цени</a>
+        <a href="/korporativen-sait.html">По-голям фирмен сайт</a>
+        <a href="/seo-optimizacia.html">Да те намират в Google</a>
+        <a href="/calculator.html">Пресметни цена</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Градове</h3>
+        <a href="/izrabotka-na-sait-sofia.html">София</a>
+        <a href="/izrabotka-na-sait-plovdiv.html">Пловдив</a>
+        <a href="/izrabotka-na-sait-varna.html">Варна</a>
+        <a href="/izrabotka-na-sait-burgas.html">Бургас</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title">Ние</h3>
+        <a href="/about.html">За нас</a>
+        <a href="/how-we-do-it.html">Как работим</a>
+        <a href="/faq.html">Въпроси</a>
+        <a href="/blog/">Блог</a>
+        <a href="/case-studies.html">Примери</a>
+        <a href="#contact">Пиши ни</a>
+        <a href="tel:+359877845569">+359 877 845 569</a>
+        <a href="mailto:admin@moverstudio.online">admin@moverstudio.online</a>
+      </div>
     </div>
-        <nav class="footer-locations" aria-label="Локации">
-      <span class="footer-locations__label">Локации:</span>
-      <a href="/izrabotka-na-sait-sofia.html">Изработка на сайт София</a>
-      <a href="/izrabotka-na-sait-plovdiv.html">Изработка на сайт Пловдив</a>
-      <a href="/izrabotka-na-sait-varna.html">Изработка на сайт Варна</a>
-      <a href="/izrabotka-na-sait-burgas.html">Изработка на сайт Бургас</a>
-    </nav>
 
-    <p class="footer-terminal" style="margin-top:1.5rem;">
-      © 2026 MOVER Studio · HTML без WordPress · цел 95–100 PageSpeed<br>
+    <p class="footer-terminal">
+      © 2026 MOVER Studio · бърз сайт без WordPress<br>
       Хостинг: <a href="https://bdinhost.com" target="_blank" rel="noopener">BDinHost</a> ·
       <a href="https://patna-pomosht-kostinbrod.bg/" target="_blank" rel="noopener">Пътна помощ Костинброд</a> ·
       <a href="https://minibagerkb.eu/" target="_blank" rel="noopener">Минибагер Костинброд</a>
@@ -802,7 +806,14 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=20261013a" defer></script>
+
+
+
+
+
+
+
+<script src="/js/site.js?v=20261124fx3" defer></script>
 </body>
 </html>
 

@@ -4,6 +4,12 @@
   /* Mobile navigation */
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.site-nav');
+  function closeNav() {
+    if (!toggle || !nav) return;
+    toggle.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
       var open = toggle.getAttribute('aria-expanded') === 'true';
@@ -12,13 +18,22 @@
       document.body.style.overflow = open ? '' : 'hidden';
     });
     nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        toggle.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('is-open');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeNav);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeNav();
+    });
+    document.addEventListener('click', function (e) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(e.target) || toggle.contains(e.target)) return;
+      closeNav();
     });
   }
+
+  /* Pause decorative motion when tab is hidden (saves CPU) */
+  document.addEventListener('visibilitychange', function () {
+    document.documentElement.classList.toggle('tab-hidden', document.hidden);
+  });
 
   /* Scroll reveal — respects reduced motion */
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
